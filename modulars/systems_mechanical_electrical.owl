@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#"
+     xml:base="http://www.semanticweb.org/immersedTunnelOnto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical">
+        <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Mechanical and Electrical Systems</rdfs:label>
+        <rdfs:comment xml:lang="en">
+            Consolidated mechanical and electrical systems for immersed tunnels.
+            Includes ventilation, lighting (excluding emergency), power supply, control, and communication systems.
+            Based on GB/T 51318-2019 and JTG 2120-2020 standards.
+            
+            CONSOLIDATES:
+            - Ventilation systems from mechanical_electrical_systems.owl
+            - Normal lighting systems from mechanical_electrical_systems.owl  
+            - Electrical systems from ancillary_structures_traffic_engineering.owl
+            - Control systems from ancillary_structures_traffic_engineering.owl
+            
+            EXCLUDES:
+            - Emergency lighting (moved to systems_safety_emergency.owl)
+            - Fire protection systems (moved to systems_safety_emergency.owl)
+            - Drainage systems (moved to systems_drainage_utilities.owl)
+        </rdfs:comment>
+        <owl:versionInfo>3.0.0 - Consolidated</owl:versionInfo>
+        <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+    </owl:Ontology>
+
+    <!-- =====================================================
+         BASE SYSTEM CLASSES
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem">
+        <rdfs:label xml:lang="en">Mechanical System</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for all mechanical systems in immersed tunnel projects.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem">
+        <rdfs:label xml:lang="en">Electrical System</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for all electrical systems in immersed tunnel projects.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ControlSystem">
+        <rdfs:label xml:lang="en">Control System</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for all control and automation systems in immersed tunnel projects.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem">
+        <rdfs:label xml:lang="en">Communication System</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for all communication systems in immersed tunnel projects.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         VENTILATION SYSTEMS
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem">
+        <rdfs:label xml:lang="en">Ventilation System</rdfs:label>
+        <rdfs:comment xml:lang="en">Complete ventilation system for immersed tunnels including air supply, exhaust, and circulation components per JTG 2120-2020 Section 15.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment">
+        <rdfs:label xml:lang="en">Ventilation Equipment</rdfs:label>
+        <rdfs:comment xml:lang="en">Equipment used in tunnel ventilation systems.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem"/>
+    </owl:Class>
+
+    <!-- Jet Fans -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#JetFan">
+        <rdfs:label xml:lang="en">Jet Fan</rdfs:label>
+        <rdfs:comment xml:lang="en">Jet fans for longitudinal ventilation in immersed tunnels, providing thrust and air circulation.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReversibleJetFan">
+        <rdfs:label xml:lang="en">Reversible Jet Fan</rdfs:label>
+        <rdfs:comment xml:lang="en">Reversible jet fan capable of bidirectional airflow for flexible ventilation control.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JetFan"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireResistantJetFan">
+        <rdfs:label xml:lang="en">Fire Resistant Jet Fan</rdfs:label>
+        <rdfs:comment xml:lang="en">Fire-resistant jet fan designed to operate during emergency conditions and smoke extraction.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JetFan"/>
+    </owl:Class>
+
+    <!-- Ventilation Ducts -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct">
+        <rdfs:label xml:lang="en">Ventilation Duct</rdfs:label>
+        <rdfs:comment xml:lang="en">Ducts for air distribution in tunnel ventilation systems.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SupplyAirDuct">
+        <rdfs:label xml:lang="en">Supply Air Duct</rdfs:label>
+        <rdfs:comment xml:lang="en">Ducts for supplying fresh air into the tunnel.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ExhaustAirDuct">
+        <rdfs:label xml:lang="en">Exhaust Air Duct</rdfs:label>
+        <rdfs:comment xml:lang="en">Ducts for removing contaminated air from the tunnel.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct">
+        <rdfs:label xml:lang="en">Smoke Exhaust Duct</rdfs:label>
+        <rdfs:comment xml:lang="en">Independent smoke exhaust ducts with vents ≤60m apart per JTG 2120-2020 Section 15.3.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct"/>
+    </owl:Class>
+
+    <!-- Specialized Ventilation Systems -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MechanicalVentilation">
+        <rdfs:label xml:lang="en">Mechanical Ventilation</rdfs:label>
+        <rdfs:comment xml:lang="en">Mechanical ventilation system for tunnels >1000m per JTG 2120-2020 Section 15.3.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SmokeExtractionSystem">
+        <rdfs:label xml:lang="en">Smoke Extraction System</rdfs:label>
+        <rdfs:comment xml:lang="en">Smoke extraction system for tunnels >3000m per JTG 2120-2020 Section 15.3.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization">
+        <rdfs:label xml:lang="en">Escape Passage Pressurization</rdfs:label>
+        <rdfs:comment xml:lang="en">Mechanical pressurization with ≥30 Pa differential between escape passage and tunnel per JTG 2120-2020 Section 15.3.4.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem"/>
+    </owl:Class>
+
+    <!-- Air Quality Sensors -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor">
+        <rdfs:label xml:lang="en">Air Quality Sensor</rdfs:label>
+        <rdfs:comment xml:lang="en">Sensors for monitoring air quality parameters in tunnels including CO, NO, visibility, and temperature.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#COSensor">
+        <rdfs:label xml:lang="en">CO Sensor</rdfs:label>
+        <rdfs:comment xml:lang="en">Carbon monoxide sensor for air quality monitoring in tunnels.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#NOSensor">
+        <rdfs:label xml:lang="en">NO Sensor</rdfs:label>
+        <rdfs:comment xml:lang="en">Nitrogen oxide sensor for air quality monitoring in tunnels.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VisibilitySensor">
+        <rdfs:label xml:lang="en">Visibility Sensor</rdfs:label>
+        <rdfs:comment xml:lang="en">Visibility sensor for monitoring optical conditions in tunnels.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         LIGHTING SYSTEMS (NORMAL OPERATIONS)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem">
+        <rdfs:label xml:lang="en">Lighting System</rdfs:label>
+        <rdfs:comment xml:lang="en">Normal operational lighting system for immersed tunnels per JTG 2120-2020 Section 15.4. Excludes emergency lighting which is in safety systems.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment">
+        <rdfs:label xml:lang="en">Lighting Equipment</rdfs:label>
+        <rdfs:comment xml:lang="en">Equipment used in tunnel normal lighting systems.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem"/>
+    </owl:Class>
+
+    <!-- LED Tunnel Lights -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight">
+        <rdfs:label xml:lang="en">LED Tunnel Light</rdfs:label>
+        <rdfs:comment xml:lang="en">LED lighting fixtures specifically designed for tunnel applications with high efficiency and long life.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LEDBasicLight">
+        <rdfs:label xml:lang="en">LED Basic Light</rdfs:label>
+        <rdfs:comment xml:lang="en">Basic LED lighting for general tunnel illumination.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LEDCounterBeamLight">
+        <rdfs:label xml:lang="en">LED Counter Beam Light</rdfs:label>
+        <rdfs:comment xml:lang="en">LED counter beam lighting for reducing the black hole effect at tunnel entrances.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight"/>
+    </owl:Class>
+
+    <!-- Lighting Zones -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EntranceLighting">
+        <rdfs:label xml:lang="en">Entrance Lighting</rdfs:label>
+        <rdfs:comment xml:lang="en">High-intensity lighting at tunnel entrances to aid driver adaptation per JTG 2120-2020 Section 15.4.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TransitionLighting">
+        <rdfs:label xml:lang="en">Transition Lighting</rdfs:label>
+        <rdfs:comment xml:lang="en">Gradually reducing lighting levels in transition zones per JTG 2120-2020 Section 15.4.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#InteriorLighting">
+        <rdfs:label xml:lang="en">Interior Lighting</rdfs:label>
+        <rdfs:comment xml:lang="en">Consistent lighting levels throughout the tunnel interior per JTG 2120-2020 Section 15.4.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ExitLighting">
+        <rdfs:label xml:lang="en">Exit Lighting</rdfs:label>
+        <rdfs:comment xml:lang="en">Increased lighting levels approaching tunnel exits per JTG 2120-2020 Section 15.4.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem"/>
+    </owl:Class>
+
+    <!-- Control Equipment -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LightingControlCabinet">
+        <rdfs:label xml:lang="en">Lighting Control Cabinet</rdfs:label>
+        <rdfs:comment xml:lang="en">Control cabinet for managing tunnel lighting systems including dimming and scheduling.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         ELECTRICAL SYSTEMS
+         ===================================================== -->
+
+    <!-- Power Supply Systems -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem">
+        <rdfs:label xml:lang="en">Power Supply System</rdfs:label>
+        <rdfs:comment xml:lang="en">Complete power supply system for tunnel operations per JTG 2120-2020 Section 15.6.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PowerSupplyFacility">
+        <rdfs:label xml:lang="en">Power Supply Facility</rdfs:label>
+        <rdfs:comment xml:lang="en">Power supply facilities including primary and backup power sources per JTG 2120-2020 Section 15.6.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PowerLoadClassification">
+        <rdfs:label xml:lang="en">Power Load Classification</rdfs:label>
+        <rdfs:comment xml:lang="en">Classification of power loads by criticality per JTG 2120-2020 Section 15.6.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ElectricalEquipmentFireRating">
+        <rdfs:label xml:lang="en">Electrical Equipment Fire Rating</rdfs:label>
+        <rdfs:comment xml:lang="en">Fire resistance ratings for electrical equipment per JTG 2120-2020 Section 15.6.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GroundingSystem">
+        <rdfs:label xml:lang="en">Grounding System</rdfs:label>
+        <rdfs:comment xml:lang="en">Electrical grounding and lightning protection system per JTG 2120-2020 Section 15.6.4.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+    </owl:Class>
+
+    <!-- Electrical Infrastructure -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CableDuct">
+        <rdfs:label xml:lang="en">Cable Duct</rdfs:label>
+        <rdfs:comment xml:lang="en">Cable ducts for tunnel electrical systems per JTG 2120-2020 Section 14.1.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ElectricalConduit">
+        <rdfs:label xml:lang="en">Electrical Conduit</rdfs:label>
+        <rdfs:comment xml:lang="en">Electrical conduits for power and control systems per JTG 2120-2020 Section 14.1.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         CONTROL SYSTEMS
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CentralControlSystem">
+        <rdfs:label xml:lang="en">Central Control System</rdfs:label>
+        <rdfs:comment xml:lang="en">Central control system for tunnel operations monitoring and management per JTG 2120-2020 Section 15.7.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AutomationSystem">
+        <rdfs:label xml:lang="en">Automation System</rdfs:label>
+        <rdfs:comment xml:lang="en">Automated control systems for tunnel systems integration and response.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MonitoringControlSystem">
+        <rdfs:label xml:lang="en">Monitoring Control System</rdfs:label>
+        <rdfs:comment xml:lang="en">Systems for monitoring and controlling tunnel mechanical and electrical systems.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlSystem"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         COMMUNICATION SYSTEMS
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#IntercomSystem">
+        <rdfs:label xml:lang="en">Intercom System</rdfs:label>
+        <rdfs:comment xml:lang="en">Intercom communication system for tunnel operations and emergency coordination.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PublicAddressSystem">
+        <rdfs:label xml:lang="en">Public Address System</rdfs:label>
+        <rdfs:comment xml:lang="en">Public address system for operational announcements and information.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DataCommunicationSystem">
+        <rdfs:label xml:lang="en">Data Communication System</rdfs:label>
+        <rdfs:comment xml:lang="en">Data communication systems for tunnel monitoring and control networks.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         PROPERTIES
+         ===================================================== -->
+
+    <!-- Object Properties -->
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem">
+        <rdfs:label xml:lang="en">has Ventilation System</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a tunnel to its ventilation systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem">
+        <rdfs:label xml:lang="en">has Lighting System</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a tunnel to its lighting systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem">
+        <rdfs:label xml:lang="en">has Electrical System</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a tunnel to its electrical systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem">
+        <rdfs:label xml:lang="en">has Control System</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a tunnel to its control systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlSystem"/>
+    </owl:ObjectProperty>
+
+    <!-- Data Properties -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#airFlowRate">
+        <rdfs:label xml:lang="en">air flow rate</rdfs:label>
+        <rdfs:comment xml:lang="en">Air flow rate in cubic meters per second for ventilation systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel">
+        <rdfs:label xml:lang="en">illuminance level</rdfs:label>
+        <rdfs:comment xml:lang="en">Illuminance level in lux for lighting systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LightingSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#powerRating">
+        <rdfs:label xml:lang="en">power rating</rdfs:label>
+        <rdfs:comment xml:lang="en">Power rating in kilowatts for electrical systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF> 

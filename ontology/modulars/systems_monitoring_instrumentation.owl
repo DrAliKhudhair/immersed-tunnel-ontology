@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#"
+     xml:base="http://www.semanticweb.org/immersedTunnelOnto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation">
+        <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Monitoring and Instrumentation Systems</rdfs:label>
+        <rdfs:comment xml:lang="en">
+            Enhanced monitoring and instrumentation systems for immersed tunnels.
+            Comprehensive monitoring including structural health, environmental conditions, and safety systems.
+            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 16 standards.
+            
+            ENHANCED FROM: unified_monitoring_systems.owl
+            CONSOLIDATES:
+            - Structural monitoring systems
+            - Environmental monitoring systems
+            - Risk analysis and data acquisition
+            - Real-time monitoring and alerting
+        </rdfs:comment>
+        <owl:versionInfo>3.0.0 - Enhanced</owl:versionInfo>
+        <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+    </owl:Ontology>
+
+    <!-- =====================================================
+         MONITORING SYSTEM BASE CLASSES
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem">
+        <rdfs:label xml:lang="en">Monitoring System</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive monitoring system for immersed tunnel health and performance assessment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         STRUCTURAL HEALTH MONITORING
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring">
+        <rdfs:label xml:lang="en">Structural Health Monitoring</rdfs:label>
+        <rdfs:comment xml:lang="en">Advanced monitoring system for continuous assessment of structural integrity per JTG 2120-2020 Chapter 16.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#RealTimeMonitoringSystem">
+        <rdfs:label xml:lang="en">Real-Time Monitoring System</rdfs:label>
+        <rdfs:comment xml:lang="en">Real-time monitoring with automated data collection and instant alerting capabilities.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PredictiveMonitoringSystem">
+        <rdfs:label xml:lang="en">Predictive Monitoring System</rdfs:label>
+        <rdfs:comment xml:lang="en">Advanced monitoring system with predictive analytics for maintenance planning.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         MONITORING INSTRUMENTATION
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument">
+        <rdfs:label xml:lang="en">Monitoring Instrument</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for all monitoring instruments and sensors used in tunnel monitoring systems.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StrainMonitoringSystem">
+        <rdfs:label xml:lang="en">Strain Monitoring System</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive strain monitoring using various gauge technologies.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DisplacementMonitoringSystem">
+        <rdfs:label xml:lang="en">Displacement Monitoring System</rdfs:label>
+        <rdfs:comment xml:lang="en">Advanced displacement monitoring with high-precision sensors.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SeismicMonitoringSystem">
+        <rdfs:label xml:lang="en">Seismic Monitoring System</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive seismic monitoring for earthquake response assessment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         DATA ACQUISITION AND ANALYSIS
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DataAcquisitionSystem">
+        <rdfs:label xml:lang="en">Data Acquisition System</rdfs:label>
+        <rdfs:comment xml:lang="en">Automated data collection and processing system for continuous monitoring.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DataAnalysisSystem">
+        <rdfs:label xml:lang="en">Data Analysis System</rdfs:label>
+        <rdfs:comment xml:lang="en">Advanced data analysis including trend analysis and anomaly detection.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AlertingSystem">
+        <rdfs:label xml:lang="en">Alerting System</rdfs:label>
+        <rdfs:comment xml:lang="en">Automated alerting system for threshold violations and emergency conditions.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         PROPERTIES
+         ===================================================== -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMonitoringSystem">
+        <rdfs:label xml:lang="en">has Monitoring System</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a tunnel to its monitoring systems.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#monitoringFrequency">
+        <rdfs:label xml:lang="en">monitoring frequency</rdfs:label>
+        <rdfs:comment xml:lang="en">Data collection frequency in measurements per hour.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF> 

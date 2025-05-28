@@ -1,0 +1,1060 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/properties">
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+  </owl:Ontology>
+  
+  <!-- PROPERTY CATEGORIES FOR BETTER ORGANIZATION -->
+  
+  <!-- Geometric Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty">
+    <rdfs:label xml:lang="en">has Geometric Property</rdfs:label>
+    <rdfs:comment xml:lang="en">Base property for all geometric measurements.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDimension">
+    <rdfs:label xml:lang="en">has Dimension</rdfs:label>
+    <rdfs:comment xml:lang="en">General dimensional property.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension">
+    <rdfs:label xml:lang="en">has Linear Dimension</rdfs:label>
+    <rdfs:comment xml:lang="en">Linear measurement in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDimension"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension">
+    <rdfs:label xml:lang="en">has Area Dimension</rdfs:label>
+    <rdfs:comment xml:lang="en">Area measurement in square meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDimension"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension">
+    <rdfs:label xml:lang="en">has Volume Dimension</rdfs:label>
+    <rdfs:comment xml:lang="en">Volume measurement in cubic meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDimension"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Material Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty">
+    <rdfs:label xml:lang="en">has Material Property</rdfs:label>
+    <rdfs:comment xml:lang="en">Base property for all material characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasStrength">
+    <rdfs:label xml:lang="en">has Strength</rdfs:label>
+    <rdfs:comment xml:lang="en">Strength property in MPa.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDensity">
+    <rdfs:label xml:lang="en">has Density</rdfs:label>
+    <rdfs:comment xml:lang="en">Density property in kg/m³.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus">
+    <rdfs:label xml:lang="en">has Elastic Modulus</rdfs:label>
+    <rdfs:comment xml:lang="en">Elastic modulus in GPa.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Performance Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty">
+    <rdfs:label xml:lang="en">has Performance Property</rdfs:label>
+    <rdfs:comment xml:lang="en">Base property for performance characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity">
+    <rdfs:label xml:lang="en">has Load Capacity</rdfs:label>
+    <rdfs:comment xml:lang="en">Load capacity in kN.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife">
+    <rdfs:label xml:lang="en">has Service Life</rdfs:label>
+    <rdfs:comment xml:lang="en">Expected service life in years.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Tolerance and Deviation Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty">
+    <rdfs:label xml:lang="en">has Tolerance Property</rdfs:label>
+    <rdfs:comment xml:lang="en">Base property for tolerances and deviations.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation">
+    <rdfs:label xml:lang="en">has Maximum Deviation</rdfs:label>
+    <rdfs:comment xml:lang="en">Maximum allowable deviation.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation">
+    <rdfs:label xml:lang="en">has Minimum Deviation</rdfs:label>
+    <rdfs:comment xml:lang="en">Minimum allowable deviation.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Environmental Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty">
+    <rdfs:label xml:lang="en">has Environmental Property</rdfs:label>
+    <rdfs:comment xml:lang="en">Base property for environmental characteristics.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance">
+    <rdfs:label xml:lang="en">has Water Resistance</rdfs:label>
+    <rdfs:comment xml:lang="en">Water resistance rating.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance">
+    <rdfs:label xml:lang="en">has Corrosion Resistance</rdfs:label>
+    <rdfs:comment xml:lang="en">Corrosion resistance rating.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Specific Geometric Properties (inheriting from base properties) -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLength">
+    <rdfs:label xml:lang="en">has Length</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of the component in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasWidth">
+    <rdfs:label xml:lang="en">has Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of the component in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasHeight">
+    <rdfs:label xml:lang="en">has Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of the component in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasThickness">
+    <rdfs:label xml:lang="en">has Thickness</rdfs:label>
+    <rdfs:comment xml:lang="en">Thickness of the component in millimeters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDiameter">
+    <rdfs:label xml:lang="en">has Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Diameter of the component in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Angular Properties for Geometric Parameters -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty">
+    <rdfs:label xml:lang="en">has Angular Property</rdfs:label>
+    <rdfs:comment xml:lang="en">Base property for angular measurements in degrees.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle">
+    <rdfs:label xml:lang="en">has Alpha Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Primary angular parameter (α) for geometric specifications per HPDI classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle">
+    <rdfs:label xml:lang="en">has Alpha1 Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Alpha1 (α1) angle parameter for geometric section positioning in degrees.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AngularParameter"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle">
+    <rdfs:label xml:lang="en">has Alpha2 Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Alpha2 (α2) angle parameter for geometric section positioning in degrees.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AngularParameter"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle">
+    <rdfs:label xml:lang="en">has Beta Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Beta (β) angle parameter for geometric section positioning in degrees.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AngularParameter"/>
+  </owl:DatatypeProperty>
+
+  <!-- Baseline Distance Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance">
+    <rdfs:label xml:lang="en">has Baseline Distance</rdfs:label>
+    <rdfs:comment xml:lang="en">Distance from a reference baseline in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance">
+    <rdfs:label xml:lang="en">has Horizontal Baseline Distance</rdfs:label>
+    <rdfs:comment xml:lang="en">Horizontal distance from the baseline in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance">
+    <rdfs:label xml:lang="en">has Vertical Baseline Distance</rdfs:label>
+    <rdfs:comment xml:lang="en">Vertical distance from the baseline in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance"/>
+  </owl:DatatypeProperty>
+
+  <!-- Position Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition">
+    <rdfs:label xml:lang="en">has Segment Position</rdfs:label>
+    <rdfs:comment xml:lang="en">Position of a segment within the pipe section.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Rebar Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter">
+    <rdfs:label xml:lang="en">has Rebar Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Diameter of reinforcement bar in millimeters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength">
+    <rdfs:label xml:lang="en">has Rebar Length</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of reinforcement bar in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <!-- Chamber and Box Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight">
+    <rdfs:label xml:lang="en">has Net Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Clear net height inside chamber or space in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth">
+    <rdfs:label xml:lang="en">has Net Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Clear net width inside chamber or carriageway in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth">
+    <rdfs:label xml:lang="en">has Left Carriageway Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Clear width of left carriageway in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth">
+    <rdfs:label xml:lang="en">has Right Carriageway Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Clear width of right carriageway in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDepth">
+    <rdfs:label xml:lang="en">has Depth</rdfs:label>
+    <rdfs:comment xml:lang="en">Depth of component or chamber in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <!-- Steel Component Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness">
+    <rdfs:label xml:lang="en">has Steel Plate Thickness</rdfs:label>
+    <rdfs:comment xml:lang="en">Thickness of steel plate in millimeters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasThickness"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing">
+    <rdfs:label xml:lang="en">has Rib Spacing</rdfs:label>
+    <rdfs:comment xml:lang="en">Spacing between ribs in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing">
+    <rdfs:label xml:lang="en">has Stud Spacing</rdfs:label>
+    <rdfs:comment xml:lang="en">Spacing between welding studs in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification">
+    <rdfs:label xml:lang="en">has Stud Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Technical specification of welding stud.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Sacrificial Anode Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter">
+    <rdfs:label xml:lang="en">has Bearing Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Bearing diameter of sacrificial anode in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDiameter"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight">
+    <rdfs:label xml:lang="en">has Leg Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of anode leg in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter">
+    <rdfs:label xml:lang="en">has Leg Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Leg diameter of sacrificial anode in millimeters per HPDI specifications.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeLeg"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius">
+    <rdfs:label xml:lang="en">has Fillet Radius</rdfs:label>
+    <rdfs:comment xml:lang="en">Fillet radius of anode leg in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight">
+    <rdfs:label xml:lang="en">has Anode Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of the anode body in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight">
+    <rdfs:label xml:lang="en">has Base Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of the anode base in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth">
+    <rdfs:label xml:lang="en">has Base Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of the anode base in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Property Constraints and Validation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint">
+    <rdfs:label xml:lang="en">Property Constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">Constraint on property values according to standards.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasConstraint">
+    <rdfs:label xml:lang="en">has Constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">Links a property to its constraints.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint"/>
+  </owl:ObjectProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMinValue">
+    <rdfs:label xml:lang="en">has Minimum Value</rdfs:label>
+    <rdfs:comment xml:lang="en">Minimum allowable value for a property.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue">
+    <rdfs:label xml:lang="en">has Maximum Value</rdfs:label>
+    <rdfs:comment xml:lang="en">Maximum allowable value for a property.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasUnit">
+    <rdfs:label xml:lang="en">has Unit</rdfs:label>
+    <rdfs:comment xml:lang="en">Unit of measurement for a property.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  
+  <!-- Chamber and Box Detailed Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight">
+    <rdfs:label xml:lang="en">has Retaining Wall Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Retaining wall height above design elevation in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth">
+    <rdfs:label xml:lang="en">has Chamber Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of chamber in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth">
+    <rdfs:label xml:lang="en">has Chamber Depth</rdfs:label>
+    <rdfs:comment xml:lang="en">Depth of chamber in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDepth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight">
+    <rdfs:label xml:lang="en">has Chamber Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of chamber in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth">
+    <rdfs:label xml:lang="en">has Reserved Pipe Slot Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of reserved pipe slot in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth">
+    <rdfs:label xml:lang="en">has Reserved Pipe Slot Depth</rdfs:label>
+    <rdfs:comment xml:lang="en">Depth of reserved pipe slot in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDepth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight">
+    <rdfs:label xml:lang="en">has Clear Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Clear height inside structure in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification">
+    <rdfs:label xml:lang="en">has Unit Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Unit specification for equipment or component.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Steel Bundle and Prestressing Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel">
+    <rdfs:label xml:lang="en">has Steel Bundle Model</rdfs:label>
+    <rdfs:comment xml:lang="en">Model specification for steel bundle in prestressed cables.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPositioning">
+    <rdfs:label xml:lang="en">has Positioning</rdfs:label>
+    <rdfs:comment xml:lang="en">Positioning specification for component.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Embedded Bolt Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter">
+    <rdfs:label xml:lang="en">has Embedded Bolt Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Diameter of embedded bolt in millimeters.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDiameter"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength">
+    <rdfs:label xml:lang="en">has Embedded Bolt Length</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of embedded bolt in meters.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLength"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength">
+    <rdfs:label xml:lang="en">has Support Length</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of support structure in meters.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLength"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth">
+    <rdfs:label xml:lang="en">has Support Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of support structure in meters.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight">
+    <rdfs:label xml:lang="en">has Support Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of support structure in meters.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <!-- Waterstop Detailed Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth">
+    <rdfs:label xml:lang="en">has Tube Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of waterstop tube in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight">
+    <rdfs:label xml:lang="en">has Tube Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of waterstop tube in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth">
+    <rdfs:label xml:lang="en">has Top Chamfer Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of top chamfer in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight">
+    <rdfs:label xml:lang="en">has Top Chamfer Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of top chamfer in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance">
+    <rdfs:label xml:lang="en">has Waterstop Centerline Distance</rdfs:label>
+    <rdfs:comment xml:lang="en">Distance from waterstop centerline in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance">
+    <rdfs:label xml:lang="en">has Outer Contour Distance</rdfs:label>
+    <rdfs:comment xml:lang="en">Distance from outer contour in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <!-- Final Joint Specific Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength">
+    <rdfs:label xml:lang="en">has Final Joint Length</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of final joint in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLength"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters">
+    <rdfs:label xml:lang="en">has Section Parameters</rdfs:label>
+    <rdfs:comment xml:lang="en">Section parameters for structural component.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Anti-Corrosion Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification">
+    <rdfs:label xml:lang="en">has Waterstop Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Technical specification for waterstop.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath">
+    <rdfs:label xml:lang="en">has Centerline Path</rdfs:label>
+    <rdfs:comment xml:lang="en">Centerline path on cross-section.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize">
+    <rdfs:label xml:lang="en">has Reserved Hole Size</rdfs:label>
+    <rdfs:comment xml:lang="en">Size of reserved hole in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <!-- Temporary Facility Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight">
+    <rdfs:label xml:lang="en">has Sealing Wall Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of sealing wall in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth">
+    <rdfs:label xml:lang="en">has Upper Chamfer Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of upper chamfer (left/right) in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight">
+    <rdfs:label xml:lang="en">has Upper Chamfer Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of upper chamfer in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth">
+    <rdfs:label xml:lang="en">has Lower Chamfer Width</rdfs:label>
+    <rdfs:comment xml:lang="en">Width of lower chamfer in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasWidth"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight">
+    <rdfs:label xml:lang="en">has Lower Chamfer Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of lower chamfer in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification">
+    <rdfs:label xml:lang="en">has Base Plate Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Technical specification for base plate.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification">
+    <rdfs:label xml:lang="en">has Bracket to Pipe Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Specification for bracket-to-pipe connection.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning">
+    <rdfs:label xml:lang="en">has Longitudinal Positioning</rdfs:label>
+    <rdfs:comment xml:lang="en">Longitudinal positioning specification.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPositioning"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing">
+    <rdfs:label xml:lang="en">has Circumferential Spacing</rdfs:label>
+    <rdfs:comment xml:lang="en">Circumferential spacing in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification">
+    <rdfs:label xml:lang="en">has Water Bag Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Technical specification for water bag.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Tower and Structure Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight">
+    <rdfs:label xml:lang="en">has Tower Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Height of tower structure in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification">
+    <rdfs:label xml:lang="en">has Column Base Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Specification for column base.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification">
+    <rdfs:label xml:lang="en">has Chord Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Specification for chord members.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification">
+    <rdfs:label xml:lang="en">has Web Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Specification for web members.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength">
+    <rdfs:label xml:lang="en">has Protective Cover Length</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of protective cover in meters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLength"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure">
+    <rdfs:label xml:lang="en">has Protective Cover Structure</rdfs:label>
+    <rdfs:comment xml:lang="en">Structural specification for protective cover.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification">
+    <rdfs:label xml:lang="en">has Jack Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Technical specification for jack.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter">
+    <rdfs:label xml:lang="en">has Rod Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Diameter of rod in millimeters.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDiameter"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication">
+    <rdfs:label xml:lang="en">has Backfill Indication</rdfs:label>
+    <rdfs:comment xml:lang="en">Indication for backfill requirements.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- HPDI Specific Properties for Reinforcement -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter">
+    <rdfs:label xml:lang="en">has Rebar Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Diameter of reinforcement bar in millimeters per HPDI specifications.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength">
+    <rdfs:label xml:lang="en">has Rebar Length</rdfs:label>
+    <rdfs:comment xml:lang="en">Length of reinforcement bar in meters per HPDI specifications.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLength"/>
+  </owl:DatatypeProperty>
+
+  <!-- HPDI Angular Parameters (α, α1, α2, β) -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle">
+    <rdfs:label xml:lang="en">has Alpha Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Primary angular parameter (α) for geometric specifications per HPDI classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle">
+    <rdfs:label xml:lang="en">has Alpha1 Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Alpha1 (α1) angle in degrees for geometric section parameters per HPDI classification.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle">
+    <rdfs:label xml:lang="en">has Alpha2 Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Alpha2 (α2) angle in degrees for geometric section parameters per HPDI classification.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle">
+    <rdfs:label xml:lang="en">has Beta Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Beta (β) angle in degrees for geometric section parameters per HPDI classification.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension"/>
+  </owl:DatatypeProperty>
+
+  <!-- HPDI Steel Structure Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification">
+    <rdfs:label xml:lang="en">has Rib Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Technical specification for structural rib per HPDI requirements.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition">
+    <rdfs:label xml:lang="en">has Initial Position</rdfs:label>
+    <rdfs:comment xml:lang="en">Initial position specification for structural component per HPDI requirements.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPositioning"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification">
+    <rdfs:label xml:lang="en">has Stud Specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Technical specification for welding stud per HPDI requirements.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- HPDI Sacrificial Anode Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter">
+    <rdfs:label xml:lang="en">has Bearing Diameter</rdfs:label>
+    <rdfs:comment xml:lang="en">Bearing diameter of sacrificial anode in millimeters per HPDI specifications.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight">
+    <rdfs:label xml:lang="en">has Bearing Height</rdfs:label>
+    <rdfs:comment xml:lang="en">Bearing height of sacrificial anode in millimeters per HPDI specifications.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasHeight"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing">
+    <rdfs:label xml:lang="en">has Bearing Spacing</rdfs:label>
+    <rdfs:comment xml:lang="en">Spacing between sacrificial anode bearings in meters per HPDI specifications.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters">
+    <rdfs:label xml:lang="en">has Coating Parameters</rdfs:label>
+    <rdfs:comment xml:lang="en">Coating parameters for anti-corrosion systems per HPDI specifications.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteStructureAntiCorrosion"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- HPDI Ballast Concrete Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline">
+    <rdfs:label xml:lang="en">has Horizontal Distance From Midline</rdfs:label>
+    <rdfs:comment xml:lang="en">Horizontal distance from midline of bottom surface to baseline per HPDI specifications.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint">
+    <rdfs:label xml:lang="en">has Vertical Distance From Midpoint</rdfs:label>
+    <rdfs:comment xml:lang="en">Vertical distance from midpoint of bottom surface to baseline per HPDI specifications.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension"/>
+  </owl:DatatypeProperty>
+  
+  <!-- HPDI Enhanced Properties (30+ new properties added) -->
+  
+  <!-- Personnel & Organizational Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole">
+    <rdfs:label xml:lang="en">has Personnel Role</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the role assignment for personnel in immersed tunnel projects per HPDI classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea">
+    <rdfs:label xml:lang="en">has Responsibility Area</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines the area of responsibility for personnel roles per HPDI classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification">
+    <rdfs:label xml:lang="en">has Personnel Qualification</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies required qualifications for personnel roles per HPDI classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification">
+    <rdfs:label xml:lang="en">has Personnel Certification</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies certifications required for personnel roles per HPDI classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- Angular Parameters for HPDI Geometric Compliance -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle">
+    <rdfs:label xml:lang="en">has Alpha Angle</rdfs:label>
+    <rdfs:comment xml:lang="en">Primary angular parameter (α) for geometric specifications per HPDI classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+  
+  <!-- =====================================================
+       ACADEMIC PUBLICATION PROPERTIES
+       ===================================================== -->
+       
+  <!-- Academic Paper Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasJournalName">
+    <rdfs:label xml:lang="en">has Journal Name</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of the journal where the academic paper is published.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName">
+    <rdfs:label xml:lang="en">has Conference Name</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of the conference where the academic paper is presented.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDOI">
+    <rdfs:label xml:lang="en">has DOI</rdfs:label>
+    <rdfs:comment xml:lang="en">Digital Object Identifier for the academic publication.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasISBN">
+    <rdfs:label xml:lang="en">has ISBN</rdfs:label>
+    <rdfs:comment xml:lang="en">International Standard Book Number for monographs and books.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasISSN">
+    <rdfs:label xml:lang="en">has ISSN</rdfs:label>
+    <rdfs:comment xml:lang="en">International Standard Serial Number for journal publications.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber">
+    <rdfs:label xml:lang="en">has Volume Number</rdfs:label>
+    <rdfs:comment xml:lang="en">Volume number of the journal or publication series.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber">
+    <rdfs:label xml:lang="en">has Issue Number</rdfs:label>
+    <rdfs:comment xml:lang="en">Issue number of the journal publication.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPageRange">
+    <rdfs:label xml:lang="en">has Page Range</rdfs:label>
+    <rdfs:comment xml:lang="en">Page range of the academic paper or chapter in format 'start-end'.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAuthor">
+    <rdfs:label xml:lang="en">has Author</rdfs:label>
+    <rdfs:comment xml:lang="en">Author(s) of the academic publication.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAbstract">
+    <rdfs:label xml:lang="en">has Abstract</rdfs:label>
+    <rdfs:comment xml:lang="en">Abstract or summary of the academic publication.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasKeywords">
+    <rdfs:label xml:lang="en">has Keywords</rdfs:label>
+    <rdfs:comment xml:lang="en">Keywords or subject terms for the academic publication.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPublisher">
+    <rdfs:label xml:lang="en">has Publisher</rdfs:label>
+    <rdfs:comment xml:lang="en">Publisher of the monograph or scientific publication.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEdition">
+    <rdfs:label xml:lang="en">has Edition</rdfs:label>
+    <rdfs:comment xml:lang="en">Edition number of the monograph.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Monograph"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <!-- =====================================================
+       IMMTD05 MECHANICAL PROPERTIES CLASSES
+       ===================================================== -->
+
+  <!-- Soil and Rock Mechanical Properties -->
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty">
+      <rdfs:label xml:lang="en">Soil Mechanical Property</rdfs:label>
+      <rdfs:comment xml:lang="en">Mechanical properties of soil including shear strength, compressibility, permeability, and elastic modulus for IMMTD05.</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty">
+      <rdfs:label xml:lang="en">Rock Mechanical Property</rdfs:label>
+      <rdfs:comment xml:lang="en">Mechanical properties of rock including uniaxial compressive strength, rock quality designation, and deformation modulus.</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty"/>
+  </owl:Class>
+
+  <!-- =====================================================
+       IMMTD05 MECHANICAL PROPERTIES
+       ===================================================== -->
+
+  <!-- Soil Mechanical Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#shearStrength">
+      <rdfs:label xml:lang="en">shear strength</rdfs:label>
+      <rdfs:comment xml:lang="en">Shear strength of soil in kPa.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#compressibility">
+      <rdfs:label xml:lang="en">compressibility</rdfs:label>
+      <rdfs:comment xml:lang="en">Compressibility of soil in m²/N.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#permeability">
+      <rdfs:label xml:lang="en">permeability</rdfs:label>
+      <rdfs:comment xml:lang="en">Permeability of soil in m/s.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#elasticModulus">
+      <rdfs:label xml:lang="en">elastic modulus</rdfs:label>
+      <rdfs:comment xml:lang="en">Elastic modulus of soil in MPa.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <!-- Rock Mechanical Properties -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength">
+      <rdfs:label xml:lang="en">uniaxial compressive strength</rdfs:label>
+      <rdfs:comment xml:lang="en">Uniaxial compressive strength of rock in MPa.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation">
+      <rdfs:label xml:lang="en">rock quality designation</rdfs:label>
+      <rdfs:comment xml:lang="en">Rock Quality Designation (RQD) percentage indicating rock quality.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#deformationModulus">
+      <rdfs:label xml:lang="en">deformation modulus</rdfs:label>
+      <rdfs:comment xml:lang="en">Deformation modulus of rock in GPa.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+</rdf:RDF> 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    <!-- ========================================= -->
+    <!-- CORE FOUNDATION MODULES (4 modules)      -->
+    <!-- ========================================= -->
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/core" uri="modulars/core.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy" uri="modulars/taxonomy.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy" uri="modulars/meronomy.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/properties" uri="modulars/properties.owl"/>
+    
+    <!-- ========================================= -->
+    <!-- SYSTEM MODULES (6 modules)               -->
+    <!-- ========================================= -->
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_safety_emergency" uri="modulars/systems_safety_emergency.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical" uri="modulars/systems_mechanical_electrical.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_drainage_utilities" uri="modulars/systems_drainage_utilities.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation" uri="modulars/systems_monitoring_instrumentation.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_facilities_temporary_permanent" uri="modulars/systems_facilities_temporary_permanent.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation" uri="modulars/systems_traffic_transportation.owl"/>
+    
+    <!-- ========================================= -->
+    <!-- TECHNICAL & MANAGEMENT MODULES (8 modules) -->
+    <!-- ========================================= -->
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis" uri="modulars/engineering_design_analysis.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/construction_processes_methods" uri="modulars/construction_processes_methods.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/site_environmental_systems" uri="modulars/site_environmental_systems.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/geotechnical_foundation_systems" uri="modulars/geotechnical_foundation_systems.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems" uri="modulars/structural_systems.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components" uri="modulars/structural_systems_components.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/materials_quality_systems" uri="modulars/materials_quality_systems.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/maintenance_operations" uri="modulars/maintenance_operations.owl"/>
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/immersed_tunnel_spatial_extensions" uri="modulars/immersed_tunnel_spatial_extensions.owl"/>
+    
+    <!-- ========================================= -->
+    <!-- MAIN ONTOLOGY                            -->
+    <!-- ========================================= -->
+    <uri name="http://www.semanticweb.org/immersedTunnelOnto" uri="Immersed_Tunnel_Ontology_Modular.owl"/>
+    
+</catalog>

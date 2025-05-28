@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#"
+     xml:base="http://www.semanticweb.org/immersedTunnelOnto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components">
+        <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Structural Systems and Components</rdfs:label>
+        <rdfs:comment xml:lang="en">
+            Enhanced structural systems and components for immersed tunnels.
+            Comprehensive structural design, joints, and reinforcement systems.
+            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 7-8 standards.
+            
+            CONSOLIDATES:
+            - Structural components from structural_components.owl
+            - Joint systems from joint_systems.owl
+            - Reinforcement and prestressing systems
+            - Structural connections and details
+            
+            ENHANCEMENTS:
+            - Advanced structural analysis
+            - Optimized joint design
+            - Smart monitoring integration
+            - Durability enhancement
+        </rdfs:comment>
+        <owl:versionInfo>3.0.0 - Enhanced</owl:versionInfo>
+        <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+    </owl:Ontology>
+
+    <!-- Base Classes -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem">
+        <rdfs:label xml:lang="en">Structural System</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for structural systems and components.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    </owl:Class>
+
+    <!-- Main Structure -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TubeStructure">
+        <rdfs:label xml:lang="en">Tube Structure</rdfs:label>
+        <rdfs:comment xml:lang="en">Main tube structure of immersed tunnel per JTG 2120-2020 Chapter 7.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TubeWall">
+        <rdfs:label xml:lang="en">Tube Wall</rdfs:label>
+        <rdfs:comment xml:lang="en">Reinforced concrete walls of immersed tube structure.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TubeStructure"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TubeSlab">
+        <rdfs:label xml:lang="en">Tube Slab</rdfs:label>
+        <rdfs:comment xml:lang="en">Top and bottom slabs of immersed tube structure.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TubeStructure"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#InternalPartition">
+        <rdfs:label xml:lang="en">Internal Partition</rdfs:label>
+        <rdfs:comment xml:lang="en">Internal partitions dividing tunnel into traffic lanes and service areas.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TubeStructure"/>
+    </owl:Class>
+
+    <!-- Joint Systems -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#JointSystem">
+        <rdfs:label xml:lang="en">Joint System</rdfs:label>
+        <rdfs:comment xml:lang="en">Joint systems connecting tunnel segments per JTG 2120-2020 Chapter 8.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedJoint">
+        <rdfs:label xml:lang="en">Immersed Joint</rdfs:label>
+        <rdfs:comment xml:lang="en">Standard joints between immersed tunnel elements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JointSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterproofSystem">
+        <rdfs:label xml:lang="en">Waterproof System</rdfs:label>
+        <rdfs:comment xml:lang="en">Waterproofing systems for joint sealing and tunnel protection.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JointSystem"/>
+    </owl:Class>
+
+    <!-- Reinforcement Systems -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem">
+        <rdfs:label xml:lang="en">Reinforcement System</rdfs:label>
+        <rdfs:comment xml:lang="en">Steel reinforcement systems for concrete structures.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement">
+        <rdfs:label xml:lang="en">Conventional Reinforcement</rdfs:label>
+        <rdfs:comment xml:lang="en">Conventional steel reinforcement bars and mesh.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement">
+        <rdfs:label xml:lang="en">Prestressed Reinforcement</rdfs:label>
+        <rdfs:comment xml:lang="en">Prestressed tendons and post-tensioning systems.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem"/>
+    </owl:Class>
+
+    <!-- HPDI Specific Prestressed Components -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPrestressedCable">
+        <rdfs:label xml:lang="en">Longitudinal Prestressed Cable</rdfs:label>
+        <rdfs:comment xml:lang="en">Longitudinal prestressed cable with steel bundle model and positioning specifications per HPDI requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement"/>
+    </owl:Class>
+
+    <!-- HPDI Specific Reinforcement Components -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar">
+        <rdfs:label xml:lang="en">Reinforcement Bar</rdfs:label>
+        <rdfs:comment xml:lang="en">Individual reinforcement bar with diameter, length, and support specifications per HPDI requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement"/>
+    </owl:Class>
+
+    <!-- HPDI Steel Shell Structure System -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure">
+        <rdfs:label xml:lang="en">Steel Shell Structure</rdfs:label>
+        <rdfs:comment xml:lang="en">Steel shell structure system for pipe sections combining steel shell with internal concrete per HPDI classification.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <!-- Steel Shell Panels -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#OuterPanel">
+        <rdfs:label xml:lang="en">Outer Panel</rdfs:label>
+        <rdfs:comment xml:lang="en">Outer steel panel of steel shell structure with specified thickness, width, and length per HPDI requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#InnerPanel">
+        <rdfs:label xml:lang="en">Inner Panel</rdfs:label>
+        <rdfs:comment xml:lang="en">Inner steel panel of steel shell structure with specified thickness, width, and length per HPDI requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"/>
+    </owl:Class>
+
+    <!-- Steel Shell Partitions -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPartition">
+        <rdfs:label xml:lang="en">Longitudinal Partition</rdfs:label>
+        <rdfs:comment xml:lang="en">Longitudinal steel partition within steel shell structure per HPDI specifications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TransversePartition">
+        <rdfs:label xml:lang="en">Transverse Partition</rdfs:label>
+        <rdfs:comment xml:lang="en">Transverse steel partition within steel shell structure per HPDI specifications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"/>
+    </owl:Class>
+
+    <!-- HPDI Specific Rib Types -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralRib">
+        <rdfs:label xml:lang="en">Structural Rib</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for structural ribs with specifications, initial position, and spacing per HPDI requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TRib">
+        <rdfs:label xml:lang="en">T Rib</rdfs:label>
+        <rdfs:comment xml:lang="en">T-shaped structural rib with rib specifications, initial position, and spacing per HPDI classification.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralRib"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LRib">
+        <rdfs:label xml:lang="en">L Rib</rdfs:label>
+        <rdfs:comment xml:lang="en">L-shaped structural rib with rib specifications, initial position, and spacing per HPDI classification.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralRib"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FlatRib">
+        <rdfs:label xml:lang="en">Flat Rib</rdfs:label>
+        <rdfs:comment xml:lang="en">Flat structural rib with rib specifications, initial position, and spacing per HPDI classification.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralRib"/>
+    </owl:Class>
+
+    <!-- HPDI Welding Studs -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WeldingStud">
+        <rdfs:label xml:lang="en">Welding Stud</rdfs:label>
+        <rdfs:comment xml:lang="en">Welding studs with stud specifications, initial positions, and spacing per HPDI requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"/>
+    </owl:Class>
+
+    <!-- HPDI Embedded Bolts -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt">
+        <rdfs:label xml:lang="en">Embedded Bolt</rdfs:label>
+        <rdfs:comment xml:lang="en">Embedded bolt component with diameter, length, and support specifications per HPDI requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <!-- Properties -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#structuralThickness">
+        <rdfs:label xml:lang="en">structural thickness</rdfs:label>
+        <rdfs:comment xml:lang="en">Thickness of structural elements in millimeters.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#designStrength">
+        <rdfs:label xml:lang="en">design strength</rdfs:label>
+        <rdfs:comment xml:lang="en">Design strength of structural elements in MPa.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#jointWidth">
+        <rdfs:label xml:lang="en">joint width</rdfs:label>
+        <rdfs:comment xml:lang="en">Width of joint opening in millimeters.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JointSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF> 

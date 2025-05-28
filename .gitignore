@@ -1,0 +1,23 @@
+﻿# Temporary files
+temp_*.owl
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local documentation builds (keep source, ignore local builds)
+/local-docs/
+/test-*/
+
+# Logs
+*.log
+
+# PowerShell execution policy files
+*.ps1.bak

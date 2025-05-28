@@ -1,0 +1,264 @@
+name: Deploy WIDOCO Documentation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Docker
+      uses: docker/setup-buildx-action@v3
+
+    - name: Pull WIDOCO Docker image
+      run: docker pull ghcr.io/dgarijo/widoco:latest
+
+    - name: Setup workspace
+      run: |
+        mkdir -p docs
+        chmod -R 755 .
+
+    - name: Create temporary ontology with relative imports
+      run: |
+        # Create a temporary ontology file with relative imports
+        cp "Immersed_Tunnel_Ontology_Modular.owl" "temp_ontology.owl"
+        
+        # Replace absolute URIs with relative paths for modulars
+        sed -i 's|http://www.semanticweb.org/immersedTunnelOnto/modulars/|modulars/|g' temp_ontology.owl
+        
+        echo "✅ Created temporary ontology with relative imports"
+        
+        # Verify modulars directory exists
+        if [ -d "modulars" ]; then
+          echo "✅ Found modulars directory with $(ls modulars/*.owl | wc -l) modules"
+          ls modulars/
+        else
+          echo "❌ Modulars directory not found!"
+          exit 1
+        fi
+
+    - name: Generate WIDOCO Documentation
+      run: |
+        echo "🚀 Generating WIDOCO documentation..."
+        
+        docker run --rm \
+          -v "$(pwd):/workspace" \
+          -w /workspace \
+          ghcr.io/dgarijo/widoco:latest \
+          -ontFile temp_ontology.owl \
+          -outFolder docs \
+          -rewriteAll \
+          -getOntologyMetadata \
+          -includeImportedOntologies \
+          -webVowl \
+          -includeAnnotationProperties \
+          -includeNamedIndividuals \
+          -displayDirectImportsOnly false \
+          -displaySerializations \
+          -lang en
+        
+        echo "✅ Documentation generation completed"
+
+    - name: Verify documentation
+      run: |
+        echo "📊 Documentation verification:"
+        
+        if [ -f "docs/index-en.html" ]; then
+          SIZE=$(stat -f%z "docs/index-en.html" 2>/dev/null || stat -c%s "docs/index-en.html")
+          echo "✅ Main documentation: ${SIZE} bytes"
+        else
+          echo "❌ Main documentation file missing!"
+          exit 1
+        fi
+        
+        if [ -d "docs/webvowl" ]; then
+          echo "✅ WebVowl visualization included"
+        else
+          echo "⚠️ WebVowl visualization missing"
+        fi
+        
+        echo "📁 Generated files:"
+        find docs -name "*.html" -o -name "*.owl" -o -name "*.ttl" -o -name "*.jsonld" | head -10
+
+    - name: Create custom index page
+      run: |
+        cat > docs/index.html << 'EOF'
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Immersed Tunnel Engineering Ontology - IFC4.3 Ready</title>
+            <style>
+                body {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                    line-height: 1.6;
+                    margin: 0;
+                    padding: 40px 20px;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: #333;
+                    min-height: 100vh;
+                }
+                .container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 40px;
+                    border-radius: 15px;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #2c3e50;
+                    text-align: center;
+                    margin-bottom: 30px;
+                    font-size: 2.5em;
+                }
+                .subtitle {
+                    text-align: center;
+                    color: #7f8c8d;
+                    margin-bottom: 40px;
+                    font-size: 1.2em;
+                }
+                .links {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                    margin: 30px 0;
+                }
+                .link-card {
+                    background: #f8f9fa;
+                    padding: 20px;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    color: #2c3e50;
+                    border: 2px solid #e9ecef;
+                    transition: all 0.3s ease;
+                }
+                .link-card:hover {
+                    border-color: #667eea;
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                }
+                .link-card h3 {
+                    margin: 0 0 10px 0;
+                    color: #667eea;
+                }
+                .link-card p {
+                    margin: 0;
+                    color: #6c757d;
+                    font-size: 0.9em;
+                }
+                .stats {
+                    background: #e8f4f8;
+                    padding: 20px;
+                    border-radius: 10px;
+                    margin: 30px 0;
+                    text-align: center;
+                }
+                .badge {
+                    display: inline-block;
+                    background: #667eea;
+                    color: white;
+                    padding: 5px 15px;
+                    border-radius: 20px;
+                    font-size: 0.8em;
+                    margin: 5px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>🏗️ Immersed Tunnel Engineering Ontology</h1>
+                <p class="subtitle">IFC4.3 Ready • Version 3.1.3 • Comprehensive Modular Architecture</p>
+                
+                <div class="stats">
+                    <div class="badge">19 Modules</div>
+                    <div class="badge">Hundreds of Classes</div>
+                    <div class="badge">Complete Documentation</div>
+                    <div class="badge">WebVowl Visualization</div>
+                    <div class="badge">Multiple Formats</div>
+                </div>
+                
+                <div class="links">
+                    <a href="index-en.html" class="link-card">
+                        <h3>📋 Complete Documentation</h3>
+                        <p>Full WIDOCO-generated documentation with all classes, properties, and relationships</p>
+                    </a>
+                    
+                    <a href="webvowl/index.html" class="link-card">
+                        <h3>🎯 Interactive Visualization</h3>
+                        <p>WebVowl interactive graph visualization of the ontology structure</p>
+                    </a>
+                    
+                    <a href="ontology.owl" class="link-card" download>
+                        <h3>📁 Download OWL File</h3>
+                        <p>Download the main ontology in OWL/XML format</p>
+                    </a>
+                    
+                    <a href="ontology.ttl" class="link-card" download>
+                        <h3>🐢 Download Turtle</h3>
+                        <p>Download the ontology in Turtle format</p>
+                    </a>
+                    
+                    <a href="ontology.jsonld" class="link-card" download>
+                        <h3>🔗 Download JSON-LD</h3>
+                        <p>Download the ontology in JSON-LD format</p>
+                    </a>
+                    
+                    <a href="sections/crossref-en.html" class="link-card">
+                        <h3>🔍 Cross-References</h3>
+                        <p>Detailed cross-reference tables for all ontology elements</p>
+                    </a>
+                </div>
+                
+                <div style="margin-top: 40px; text-align: center; color: #7f8c8d;">
+                    <p>This ontology represents a complete knowledge model for immersed tunnel engineering projects, designed to support IFC4.3 standardization efforts.</p>
+                    <p><strong>Licensed under Creative Commons Attribution 4.0 International License</strong></p>
+                </div>
+            </div>
+        </body>
+        </html>
+        EOF
+        
+        echo "✅ Created custom index page"
+
+    - name: Cleanup temporary files
+      run: |
+        rm -f temp_ontology.owl
+        echo "✅ Cleaned up temporary files"
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './docs'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 

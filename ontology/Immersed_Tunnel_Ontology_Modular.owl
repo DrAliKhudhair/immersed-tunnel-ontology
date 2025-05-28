@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto">
+    
+    <!-- ========================================= -->
+    <!-- CORE FOUNDATION MODULES (4 modules)      -->
+    <!-- ========================================= -->
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/properties"/>
+    
+    <!-- ========================================= -->
+    <!-- SYSTEM MODULES (6 modules)               -->
+    <!-- ========================================= -->
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_safety_emergency"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_drainage_utilities"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_facilities_temporary_permanent"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation"/>
+    
+    <!-- ========================================= -->
+    <!-- TECHNICAL & MANAGEMENT MODULES (9 modules) -->
+    <!-- ========================================= -->
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/construction_processes_methods"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/site_environmental_systems"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/geotechnical_foundation_systems"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/materials_quality_systems"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/maintenance_operations"/>
+    <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/immersed_tunnel_spatial_extensions"/>
+    
+    <!-- ========================================= -->
+    <!-- ONTOLOGY METADATA                        -->
+    <!-- ========================================= -->
+    <rdfs:label xml:lang="en">Immersed Tunnel Engineering Ontology - IFC4.3 Ready</rdfs:label>
+    <rdfs:comment xml:lang="en">
+      Immersed tunnel engineering ontology optimized for IFC4.3 schema development.
+      
+      STREAMLINED FOR IFC4.3 CONTRIBUTION:
+      - Reduced to 19 modules (removed individuals, insufficient, and placeholder modules)
+      - Pure engineering concepts focused on standardization
+      - Eliminated abstract modeling frameworks and minimal placeholder modules
+      - Comprehensive coverage of foundational construction methodology differences
+      - Ready for direct mapping to IFC entities and property sets
+      - Clean modular architecture with foundation + domain modules
+      
+      STRUCTURE:
+      - 4 Foundation Modules: Core semantic infrastructure
+      - 15 Domain Modules: Optimized functional areas with substantial content
+      - Zero abstract frameworks or example instances
+      - Enhanced for schema development and standardization
+      
+      IFC4.3 FOCUS AREAS:
+      - Immersed tunnel elements (standard, transition, special elements)
+      - Marine construction systems (buoyancy control, temporary systems)
+      - Lifecycle management and construction phases
+      - Spatial zones and tolerance modeling
+      - Engineering analysis and validation systems
+      
+      COVERAGE: Complete support for sections 3.4 and 3.5 requirements.
+      STANDARDS: Full compliance with immersed tunnel engineering practices.
+      IFC-READY: Prepared for buildingSMART standardization process.
+    </rdfs:comment>
+    <owl:versionInfo>3.1.3-IFC4.3-ready</owl:versionInfo>
+    <rdfs:seeAlso rdf:resource="https://github.com/immersed-tunnel-ontology"/>
+    <owl:priorVersion rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/v3.1.2"/>
+  </owl:Ontology>
+</rdf:RDF>
