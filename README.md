@@ -10,13 +10,9 @@ A comprehensive modular ontology for immersed tunnel engineering projects, desig
 
 ## 🌐 **Live Documentation**
 
-**Access the complete ontology documentation through these two main portals:**
-
 ### 📋 **[Complete Modules Overview](https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html)**
-Professional interface showcasing all 20 specialized modules with individual documentation and specifications.
 
-### 🎯 **[Interactive WebVOWL Visualization](https://dralikhudhair.github.io/immersed-tunnel-ontology/webvowl/)**
-Interactive semantic visualization of the complete ontology structure and relationships.
+Professional interface showcasing all 20 specialized modules with individual documentation, specifications, and interactive WebVOWL visualizations for each module.
 
 ## 🏗️ **Modular Architecture**
 
@@ -52,8 +48,7 @@ The ontology features **20 specialized modules** organized in three categories:
 ```
 ├── docs/                          # Published documentation (GitHub Pages)
 │   ├── modules_index.html        # Beautiful modules overview page
-│   ├── webvowl/                  # Interactive WebVOWL visualization
-│   ├── modules/                  # Individual module documentation
+│   ├── modules/                  # Individual module documentation with WebVOWL
 │   └── resources/                # CSS, JS, and static assets
 ├── ontology/                      # Source ontology files
 │   ├── Immersed_Tunnel_Ontology_Modular.owl  # Main integrated ontology
@@ -72,7 +67,7 @@ The ontology features **20 specialized modules** organized in three categories:
 
 ### **For End Users:**
 1. 🌐 **Browse Online**: Visit the [Complete Modules Overview](https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html)
-2. 🎨 **Visualize**: Explore the [Interactive WebVOWL Visualization](https://dralikhudhair.github.io/immersed-tunnel-ontology/webvowl/)
+2. 🎨 **Visualize**: Each module includes its own interactive WebVOWL visualization
 3. 📥 **Download**: Get ontology files in your preferred format (OWL, TTL, JSON-LD, N-Triples)
 
 ### **For Developers:**
