@@ -1,5 +1,9 @@
 # Immersed Tunnel Ontology Documentation Guide
 
+> **🛠️ Developer Documentation** - Internal guide for ontology modification and documentation generation  
+> **🎯 For Developers** - Complete workflow for updating ontology and regenerating documentation  
+> **📖 End Users**: See main `README.md` for public documentation and downloads
+
 ## 🚀 **Complete Automation with regenerate_docs.bat**
 
 Your enhanced `regenerate_docs.bat` script handles everything from documentation generation to GitHub Pages deployment automatically.

@@ -1,5 +1,9 @@
 # 🏗️ Immersed Tunnel Engineering Ontology
 
+> **📖 Public Documentation** - Complete ontology for immersed tunnel engineering projects  
+> **🎯 For End Users** - Browse, download, and use this ontology in your projects  
+> **👨‍💻 Developers**: See `README_DOCUMENTATION_GUIDE.md` for modification workflow
+
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Documentation](https://img.shields.io/badge/Documentation-Live-blue.svg)](https://dralikhudhair.github.io/immersed-tunnel-ontology/)
 [![Version](https://img.shields.io/badge/Version-4.0.0--GBT51318--2019-orange.svg)](https://github.com/DrAliKhudhair/immersed-tunnel-ontology/releases)
