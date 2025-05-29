@@ -58,12 +58,8 @@ The ontology features **20 specialized modules** organized in three categories:
 │   ├── modulars/                 # Individual module OWL files (20 modules)
 │   ├── use-cases/               # Use case examples and mappings
 │   └── catalog-v001.xml          # Ontology catalog file
-├── scripts/                       # Documentation generation and automation
-│   ├── documentation/            # Generated documentation source
-│   └── entrypoint.sh            # Docker entrypoint for documentation generation
-├── docker-compose.yml            # Docker setup for documentation generation
-├── Dockerfile                    # Docker configuration
-└── README_DOCUMENTATION_GUIDE.md # Complete documentation guide
+├── .github/workflows/            # Automated documentation deployment
+└── README.md                     # This documentation
 ```
 
 ## 🚀 **Quick Start**
@@ -87,15 +83,14 @@ cd immersed-tunnel-ontology
 # Directory: ontology/modulars/
 ```
 
-### **For Researchers:**
+### **For Integration:**
 
 ```bash
-# Generate fresh documentation
-docker-compose up
+# Direct download of ontology files
+wget https://github.com/DrAliKhudhair/immersed-tunnel-ontology/raw/main/ontology/Immersed_Tunnel_Ontology_Modular.owl
 
-# Serve documentation locally
-python -m http.server 8000
-# Access at: http://localhost:8000/scripts/documentation/modules_index.html
+# Or browse live documentation
+# Visit: https://dralikhudhair.github.io/immersed-tunnel-ontology/
 ```
 
 ## 📥 **Download Options**
@@ -120,22 +115,14 @@ The complete ontology is available in multiple serialization formats:
 ## 🛠️ **Development & Contribution**
 
 ### **Prerequisites**
-- Docker & Docker Compose (for documentation generation)
 - Git (for version control)
 - Ontology editor (Protégé recommended for OWL editing)
 
-### **Documentation Generation**
+### **Automated Documentation**
 
-```bash
-# Using Docker (Recommended)
-docker-compose up --build
+Documentation is automatically generated and deployed via **GitHub Actions** whenever ontology files are updated. The live documentation is available at:
 
-# Using provided automation script
-./regenerate_docs.bat
-
-# Manual WIDOCO generation
-java -jar widoco.jar -ontFile ontology/Immersed_Tunnel_Ontology_Modular.owl -outFolder docs/
-```
+**🌐 https://dralikhudhair.github.io/immersed-tunnel-ontology/**
 
 ### **Contributing**
 
@@ -144,6 +131,8 @@ java -jar widoco.jar -ontFile ontology/Immersed_Tunnel_Ontology_Modular.owl -out
 3. 💾 Commit your changes (`git commit -m 'Add amazing feature'`)
 4. 📤 Push to the branch (`git push origin feature/amazing-feature`)
 5. 🔄 Open a Pull Request
+
+*Note: Documentation will be automatically regenerated and deployed when your changes are merged.*
 
 ## 📊 **Project Statistics**
 
