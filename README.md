@@ -93,15 +93,6 @@ wget https://github.com/DrAliKhudhair/immersed-tunnel-ontology/raw/main/ontology
 # Visit: https://dralikhudhair.github.io/immersed-tunnel-ontology/
 ```
 
-## 📥 **Download Options**
-
-The complete ontology is available in multiple serialization formats:
-
-- **🦉 OWL/XML**: `ontology.owl` - Native OWL format
-- **🐢 Turtle**: `ontology.ttl` - Human-readable RDF format  
-- **📋 JSON-LD**: `ontology.jsonld` - JSON-based linked data format
-- **📄 N-Triples**: `ontology.nt` - Simple RDF triple format
-
 ## 🎯 **Standards Compliance**
 
 ### **Primary Standards:**
@@ -147,35 +138,6 @@ Documentation is automatically generated and deployed via **GitHub Actions** whe
 - **v4.0.0-GBT51318-2019** (Current) - Complete GBT 51318-2019 compliant modular architecture
 - **v3.3.0** - Enhanced structural systems and IFC4.3 readiness
 - **v3.1.0** - Major modular reorganization and standards alignment
-
-## 📞 **Contact & Support**
-
-- **👨‍💻 Author**: Dr. Ali Khudhair
-- **🏛️ Institution**: Engineering Research Center
-- **📧 Email**: Contact via GitHub Issues
-- **🔗 ORCID**: [Add your ORCID if available]
-
-## 🙏 **Acknowledgments**
-
-Special thanks to:
-- **buildingSMART International** - IFC4.3 Working Group
-- **Universidad Politécnica de Madrid** - WIDOCO Development Team  
-- **Chinese National Standards Committee** - GBT 51318-2019 Specification
-- **Infrastructure Research Grant Program** - Funding support
-
-## 📄 **License**
-
-This work is licensed under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
-
-You are free to:
-- **Share** — copy and redistribute the material in any medium or format
-- **Adapt** — remix, transform, and build upon the material for any purpose
-
-## 🔗 **Related Projects**
-
-- [IFC4.3 Infrastructure Extensions](https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/)
-- [WIDOCO Documentation Generator](https://github.com/dgarijo/Widoco)
-- [Building Information Modeling Standards](https://www.iso.org/standard/74039.html)
 
 ---
 
