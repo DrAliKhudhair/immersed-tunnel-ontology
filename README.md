@@ -1,7 +1,7 @@
 # 🏗️ Immersed Tunnel Engineering Ontology
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Documentation](https://img.shields.io/badge/Documentation-Live-blue.svg)](https://draliKhudhair.github.io/immersed-tunnel-ontology/)
+[![Documentation](https://img.shields.io/badge/Documentation-Live-blue.svg)](https://dralikhudhair.github.io/immersed-tunnel-ontology/)
 [![Version](https://img.shields.io/badge/Version-4.0.0--GBT51318--2019-orange.svg)](https://github.com/DrAliKhudhair/immersed-tunnel-ontology/releases)
 
 ## 📖 **Overview**
@@ -10,14 +10,13 @@ A comprehensive modular ontology for immersed tunnel engineering projects, desig
 
 ## 🌐 **Live Documentation**
 
-**➡️ [View Live Documentation](https://draliKhudhair.github.io/immersed-tunnel-ontology/)**
+**Access the complete ontology documentation through these two main portals:**
 
-### Quick Access Links:
+### 📋 **[Complete Modules Overview](https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html)**
+Professional interface showcasing all 20 specialized modules with individual documentation and specifications.
 
-* 📋 [Complete Modules Overview](https://draliKhudhair.github.io/immersed-tunnel-ontology/modules_index.html)
-* 📖 [Main Documentation](https://draliKhudhair.github.io/immersed-tunnel-ontology/index-en.html)
-* 🎯 [Interactive WebVOWL Visualization](https://draliKhudhair.github.io/immersed-tunnel-ontology/webvowl/)
-* 📁 [Download Ontology Files](https://github.com/DrAliKhudhair/immersed-tunnel-ontology/tree/main/ontology)
+### 🎯 **[Interactive WebVOWL Visualization](https://dralikhudhair.github.io/immersed-tunnel-ontology/webvowl/)**
+Interactive semantic visualization of the complete ontology structure and relationships.
 
 ## 🏗️ **Modular Architecture**
 
@@ -52,14 +51,9 @@ The ontology features **20 specialized modules** organized in three categories:
 
 ```
 ├── docs/                          # Published documentation (GitHub Pages)
-│   ├── index.html                # Main landing page (redirects to modules_index.html)
 │   ├── modules_index.html        # Beautiful modules overview page
-│   ├── index-en.html             # Main WIDOCO documentation
 │   ├── webvowl/                  # Interactive WebVOWL visualization
 │   ├── modules/                  # Individual module documentation
-│   │   ├── core/                 # Core module docs with WebVOWL
-│   │   ├── taxonomy/             # Taxonomy module docs
-│   │   └── ...                   # All 20 modules with complete documentation
 │   └── resources/                # CSS, JS, and static assets
 ├── ontology/                      # Source ontology files
 │   ├── Immersed_Tunnel_Ontology_Modular.owl  # Main integrated ontology
@@ -68,8 +62,7 @@ The ontology features **20 specialized modules** organized in three categories:
 │   └── catalog-v001.xml          # Ontology catalog file
 ├── scripts/                       # Documentation generation and automation
 │   ├── documentation/            # Generated documentation source
-│   ├── entrypoint.sh            # Docker entrypoint for documentation generation
-│   └── ...                      # Additional automation scripts
+│   └── entrypoint.sh            # Docker entrypoint for documentation generation
 ├── docker-compose.yml            # Docker setup for documentation generation
 ├── Dockerfile                    # Docker configuration
 └── README_DOCUMENTATION_GUIDE.md # Complete documentation guide
@@ -78,9 +71,8 @@ The ontology features **20 specialized modules** organized in three categories:
 ## 🚀 **Quick Start**
 
 ### **For End Users:**
-
-1. 🌐 **Browse Online**: Visit [the live documentation](https://draliKhudhair.github.io/immersed-tunnel-ontology/)
-2. 🎨 **Visualize**: Explore the [interactive WebVOWL visualization](https://draliKhudhair.github.io/immersed-tunnel-ontology/webvowl/)
+1. 🌐 **Browse Online**: Visit the [Complete Modules Overview](https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html)
+2. 🎨 **Visualize**: Explore the [Interactive WebVOWL Visualization](https://dralikhudhair.github.io/immersed-tunnel-ontology/webvowl/)
 3. 📥 **Download**: Get ontology files in your preferred format (OWL, TTL, JSON-LD, N-Triples)
 
 ### **For Developers:**
