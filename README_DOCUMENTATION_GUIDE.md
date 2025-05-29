@@ -2,7 +2,7 @@
 
 ## 📖 Complete Documentation Generation, Update & GitHub Deployment Guide
 
-This guide provides comprehensive step-by-step instructions for updating your **Immersed Tunnel Ontology**, regenerating documentation with WIDOCO, and deploying to GitHub Pages.
+This guide provides comprehensive step-by-step instructions for updating your **Immersed Tunnel Ontology**, regenerating documentation with WIDOCO, and deploying to GitHub Pages using your enhanced `regenerate_docs.bat` automation script.
 
 ---
 
@@ -372,29 +372,82 @@ When you create new module files:
 
 ---
 
-## 🚀 **Part 2: Regenerating Documentation (Local)**
+## 🚀 **Part 2: Complete Automation with regenerate_docs.bat (Recommended)**
 
-### **Method A: Using Automated Script (Recommended)**
+### **🎯 One-Command Complete Workflow**
+
+Your enhanced `regenerate_docs.bat` script now handles everything from documentation generation to GitHub Pages preparation in a single command:
 
 ```powershell
-# 1. Navigate to project directory
+# Navigate to project directory
 cd "C:\Users\khudh\Desktop\onto-04\onto-02-first standard"
 
-# 2. Run the automated regeneration script
+# Run the complete automation script
 .\regenerate_docs.bat
-
-# The script will:
-# ✅ Clean old documentation
-# ✅ Check Docker availability
-# ✅ Generate new documentation with WIDOCO
-# ✅ Optionally start web server
-
-# 3. Access your documentation at:
-# 📖 Main: http://localhost:8000/scripts/documentation/index-en.html
-# 📋 Modules: http://localhost:8000/scripts/documentation/modules_index.html
 ```
 
-### **Method B: Manual Step-by-Step**
+### **🔄 What the Script Does (5-Step Process):**
+
+```
+[1/5] Cleaning old documentation...
+    ✅ Removes old docs from scripts/documentation/
+
+[2/5] Checking Docker availability...
+    ✅ Verifies Docker Desktop is running
+
+[3/5] Generating new documentation...
+    ✅ Runs WIDOCO with all 20 modules
+    ✅ Creates individual WebVOWL visualizations
+    ✅ Generates multiple format exports (OWL, TTL, JSON-LD, N-Triples)
+
+[4/5] GitHub Pages deployment preparation...
+    ❓ Asks: "Update docs/ folder for GitHub Pages deployment? (y/n)"
+    
+    If YES (y):
+    ✅ Copies all documentation to docs/ folder
+    ✅ Shows git commands for deployment:
+        1. git add .
+        2. git commit -m "Update ontology documentation"
+        3. git push origin main
+        4. Wait for GitHub Actions to deploy
+
+[5/5] Starting web server...
+    ❓ Asks: "Start web server to view documentation locally? (y/n)"
+    
+    If YES (y):
+    ✅ Starts Python HTTP server on port 8000
+    ✅ Shows access URLs:
+        📖 Main: http://localhost:8000/scripts/documentation/index-en.html
+        📋 Index: http://localhost:8000/scripts/documentation/modules_index.html
+        🎨 WebVOWL: http://localhost:8000/scripts/documentation/webvowl/
+```
+
+### **🎯 Complete Workflow Example:**
+
+```powershell
+# After editing your ontology files:
+.\regenerate_docs.bat
+
+# During script execution:
+# - Step 4: Answer "y" to prepare GitHub Pages
+# - Step 5: Answer "y" to test locally (optional)
+
+# Follow the on-screen instructions:
+git add .
+git commit -m "Update ontology: [describe your changes]"
+git push origin main
+
+# Wait 2-3 minutes, then verify at:
+# https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html
+```
+
+---
+
+## 🔧 **Part 3: Manual Alternative (If Needed)**
+
+### **Manual Step-by-Step Process**
+
+Only use this if you need to troubleshoot or prefer manual control:
 
 ```powershell
 # 1. Navigate to project directory
@@ -406,163 +459,68 @@ Remove-Item -Recurse -Force scripts\documentation\* -ErrorAction SilentlyContinu
 # 3. Regenerate documentation
 docker-compose up
 
-# 4. Start web server
+# 4. Copy to GitHub Pages folder
+Copy-Item -Path "scripts\documentation\*" -Destination "docs\" -Recurse -Force
+
+# 5. Test locally (optional)
 python -m http.server 8000
 
-# 5. Verify documentation at:
-# http://localhost:8000/scripts/documentation/modules_index.html
+# 6. Deploy to GitHub
+git add . && git commit -m "Update ontology documentation" && git push origin main
 ```
 
 ---
 
-## 🌐 **Part 3: Deploying to GitHub Pages**
+## 🛠️ **Part 4: Troubleshooting Common Issues**
 
-### **Step 1: Update docs/ Folder for GitHub Pages**
-
-```powershell
-# 1. Navigate to project directory
-cd "C:\Users\khudh\Desktop\onto-04\onto-02-first standard"
-
-# 2. Ensure documentation is generated (run Part 2 first)
-
-# 3. Copy generated documentation to docs/ folder
-Copy-Item -Path "scripts\documentation\*" -Destination "docs\" -Recurse -Force
-
-# 4. Verify docs/ folder structure:
-# docs/
-# ├── index.html (auto-redirects to modules_index.html)
-# ├── modules_index.html (main navigation)
-# ├── index-en.html (WIDOCO main docs)
-# ├── webvowl/ (main visualization)
-# ├── modules/ (20 individual module docs)
-# ├── resources/ (CSS, JS, assets)
-# └── ontology.* (multiple formats)
-```
-
-### **Step 2: Commit and Push to GitHub**
-
-```powershell
-# 1. Check git status
-git status
-
-# 2. Add all updated files
-git add .
-
-# 3. Commit with descriptive message
-git commit -m "Update ontology documentation - [describe your changes]
-
-🔄 Updated Files:
-- ontology/Immersed_Tunnel_Ontology_Modular.owl: [your changes]
-- ontology/modulars/: [modules you modified]
-- Complete WIDOCO documentation regenerated
-- All 20 modules with individual WebVOWL visualizations
-- Professional navigation interface updated"
-
-# 4. Push to GitHub
-git push origin main
-```
-
-### **Step 3: Verify GitHub Pages Deployment**
-
-```powershell
-# 1. Check GitHub Actions
-# Go to: https://github.com/DrAliKhudhair/immersed-tunnel-ontology/actions
-# Wait for "Deploy Documentation to GitHub Pages" workflow to complete
-
-# 2. Access your live documentation:
-# 📋 Main: https://dralikhudhair.github.io/immersed-tunnel-ontology/
-# 📖 Modules: https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html
-
-# 3. Verify all modules are updated and accessible
-```
-
----
-
-## 🔧 **Part 4: Complete Update Workflow (Recommended Process)**
-
-### **Full Update Process (From Ontology Edit to Live Documentation)**
-
-```powershell
-# STEP 1: Navigate to project
-cd "C:\Users\khudh\Desktop\onto-04\onto-02-first standard"
-
-# STEP 2: Edit your ontology files
-# - Update ontology/Immersed_Tunnel_Ontology_Modular.owl
-# - Modify files in ontology/modulars/ as needed
-
-# STEP 3: Regenerate documentation locally
-.\regenerate_docs.bat
-# ✅ This generates fresh WIDOCO docs in scripts/documentation/
-
-# STEP 4: Test locally (optional but recommended)
-# Visit: http://localhost:8000/scripts/documentation/modules_index.html
-# Verify all changes are reflected correctly
-
-# STEP 5: Update GitHub Pages folder
-Copy-Item -Path "scripts\documentation\*" -Destination "docs\" -Recurse -Force
-
-# STEP 6: Commit and push to GitHub
-git add .
-git commit -m "Update ontology: [describe your specific changes]"
-git push origin main
-
-# STEP 7: Verify live deployment
-# Wait 2-3 minutes, then visit:
-# https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html
-```
-
----
-
-## 🛠️ **Part 5: Troubleshooting Common Issues**
-
-### **Issue 1: WIDOCO Generation Fails**
-**Symptoms:** Docker fails to generate documentation
+### **Issue 1: regenerate_docs.bat Fails**
+**Symptoms:** Script stops with error messages
 **Solutions:**
 ```powershell
-# Check ontology file syntax
-# Ensure all .owl files have proper XML headers
+# Check you're in the right directory
+cd "C:\Users\khudh\Desktop\onto-04\onto-02-first standard"
+dir docker-compose.yml  # Should exist
 
+# Ensure Docker Desktop is running
+docker --version
+
+# Check ontology file syntax
+# Verify all .owl files have proper XML headers
+
+# Run with elevated permissions if needed
+# Right-click PowerShell -> "Run as Administrator"
+```
+
+### **Issue 2: Docker Generation Fails**
+**Symptoms:** Step 3 fails during WIDOCO generation
+**Solutions:**
+```powershell
 # Clean Docker cache
 docker system prune -f
 docker-compose build --no-cache
-docker-compose up
 
 # Check for file path issues
 ls ontology/
 ls ontology/modulars/
+
+# Verify all module files have proper structure
 ```
 
-### **Issue 2: GitHub Pages Not Updating**
-**Symptoms:** Live site shows old content
+### **Issue 3: GitHub Pages Not Updating**
+**Symptoms:** Live site shows old content after push
 **Solutions:**
 ```powershell
-# 1. Check GitHub Actions status
+# 1. Verify docs/ folder was updated by the script
+dir docs\
+
+# 2. Check git status shows changes
+git status
+
+# 3. Check GitHub Actions status
 # Go to: https://github.com/DrAliKhudhair/immersed-tunnel-ontology/actions
 
-# 2. Verify docs/ folder was updated
-git status
-# Should show changes in docs/ folder
-
-# 3. Force refresh browser cache
+# 4. Force refresh browser cache
 # Ctrl+F5 or hard refresh
-
-# 4. Check workflow logs for errors
-```
-
-### **Issue 3: Module Documentation Missing**
-**Symptoms:** Some modules not appearing in navigation
-**Solutions:**
-```powershell
-# 1. Verify module files exist
-ls ontology/modulars/
-
-# 2. Check imports in main ontology
-# Ensure ontology/Immersed_Tunnel_Ontology_Modular.owl has:
-# <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/[module_name]"/>
-
-# 3. Regenerate completely
-Remove-Item -Recurse -Force scripts\documentation\* -ErrorAction SilentlyContinue
-.\regenerate_docs.bat
 ```
 
 ### **Issue 4: WebVOWL Visualizations Not Working**
@@ -572,23 +530,34 @@ Remove-Item -Recurse -Force scripts\documentation\* -ErrorAction SilentlyContinu
 # 1. Check module file structure
 # Each .owl file must have proper XML structure
 
-# 2. Verify file sizes are reasonable
-ls -la ontology/modulars/
+# 2. Test with smaller modules first
+# Start with maintenance_operations.owl (3.5KB)
 
-# 3. Test with smaller modules first
-# Start with smaller files like maintenance_operations.owl (3.5KB)
+# 3. Regenerate completely
+.\regenerate_docs.bat
+# Answer "y" to both GitHub Pages and web server options
 ```
 
 ---
 
-## 📝 **Part 6: Quick Reference Commands**
+## 📝 **Part 5: Quick Reference Commands**
 
-### **Complete Update Workflow (One-Liner)**
+### **🚀 Complete Update Workflow (Recommended)**
 ```powershell
-cd "C:\Users\khudh\Desktop\onto-04\onto-02-first standard" && .\regenerate_docs.bat && Copy-Item -Path "scripts\documentation\*" -Destination "docs\" -Recurse -Force && git add . && git commit -m "Update ontology documentation" && git push origin main
+# 1. Edit your ontology files (ontology/ folder)
+# 2. Run automation script:
+.\regenerate_docs.bat
+# 3. Answer "y" to GitHub Pages preparation
+# 4. Follow on-screen git commands
+# 5. Verify live deployment
 ```
 
-### **Documentation URLs**
+### **⚡ Power User One-Liner (After running regenerate_docs.bat with GitHub Pages option)**
+```powershell
+git add . && git commit -m "Update ontology documentation" && git push origin main
+```
+
+### **🌐 Documentation URLs**
 - **Local Development:**
   - Main: `http://localhost:8000/scripts/documentation/modules_index.html`
   - Testing: `http://localhost:8000/scripts/documentation/index-en.html`
@@ -597,41 +566,54 @@ cd "C:\Users\khudh\Desktop\onto-04\onto-02-first standard" && .\regenerate_docs.
   - Main: `https://dralikhudhair.github.io/immersed-tunnel-ontology/modules_index.html`
   - Repository: `https://github.com/DrAliKhudhair/immersed-tunnel-ontology`
 
-### **Essential Files to Monitor**
+### **📁 Essential Files to Monitor**
 - **Main Ontology:** `ontology/Immersed_Tunnel_Ontology_Modular.owl`
 - **Module Files:** `ontology/modulars/*.owl` (19 files)
-- **GitHub Pages:** `docs/` (auto-deployed)
+- **Automation Script:** `regenerate_docs.bat` ⭐
+- **GitHub Pages:** `docs/` (auto-updated by script)
 - **Local Docs:** `scripts/documentation/` (generated)
-- **Automation:** `regenerate_docs.bat`
 
 ---
 
-## ✅ **Part 7: Validation Checklist**
+## ✅ **Part 6: Validation Checklist**
 
-### **Before Committing to GitHub:**
+### **Before Running regenerate_docs.bat:**
 - [ ] All .owl files have proper XML headers
 - [ ] Main ontology imports all required modules
-- [ ] Local documentation generates without errors
-- [ ] All 20 modules appear in modules_index.html
-- [ ] Individual WebVOWL visualizations work
-- [ ] docs/ folder is updated with latest content
+- [ ] Docker Desktop is running
+- [ ] You're in the correct project directory
 
-### **After GitHub Deployment:**
+### **During Script Execution:**
+- [ ] Step 1-3 complete without errors
+- [ ] Choose "y" for GitHub Pages preparation (Step 4)
+- [ ] Choose "y" for local testing (Step 5) - optional
+
+### **After Script Completion:**
+- [ ] `docs/` folder contains updated documentation
+- [ ] Local server shows correct content (if started)
+- [ ] Follow git commands shown by script
 - [ ] GitHub Actions workflow completes successfully
-- [ ] Live site loads at https://dralikhudhair.github.io/immersed-tunnel-ontology/
-- [ ] All module links work correctly
-- [ ] Download links provide correct ontology files
-- [ ] No broken links or missing resources
+- [ ] Live site reflects your changes
 
 ---
 
-## 🎯 **Summary: Your Complete Workflow**
+## 🎯 **Summary: Your Streamlined Workflow**
 
-1. **Edit** your ontology files (`ontology/` folder)
-2. **Regenerate** locally with `.\regenerate_docs.bat`
-3. **Test** at `http://localhost:8000/scripts/documentation/modules_index.html`
-4. **Copy** to GitHub Pages: `Copy-Item scripts\documentation\* docs\ -Recurse -Force`
-5. **Commit** and **push** to GitHub
-6. **Verify** live deployment at your GitHub Pages URL
+### **🔄 The New Simple Process:**
 
-**🎉 Your Immersed Tunnel Ontology documentation is now always up-to-date and professionally presented!** 
+1. **📝 Edit** your ontology files in `ontology/` folder
+2. **🚀 Run** `.\regenerate_docs.bat`
+3. **✅ Answer** "y" to GitHub Pages preparation
+4. **📤 Execute** the git commands shown by the script
+5. **🌐 Verify** your live documentation is updated
+
+### **⭐ Key Benefits:**
+
+- **🎯 One Command**: `.\regenerate_docs.bat` handles everything
+- **🔄 Interactive**: You choose what steps to take
+- **📖 Guided**: Clear instructions for each step
+- **⚡ Fast**: Complete workflow in under 5 minutes
+- **🛡️ Safe**: Validates each step before proceeding
+- **🌐 Professional**: Direct integration with GitHub Pages
+
+**🎉 Your ontology documentation workflow is now completely streamlined and professional!** 
