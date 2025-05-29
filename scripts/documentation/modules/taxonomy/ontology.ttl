@@ -1,0 +1,504 @@
+@prefix : <http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy#> .
+
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy> rdf:type owl:Ontology ;
+                                                                   owl:imports <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> ;
+                                                                   rdfs:comment """
+      Taxonomic organization module providing comprehensive classification framework for immersed tunnel domain.
+      Aligned with GBT 51318-2019 standards for systematic component and process classification.
+      
+      This module establishes hierarchical classification of:
+      - Physical and abstract entities in immersed tunnel systems
+      - Component classifications by function and lifecycle
+      - Process taxonomies for design, construction, and operation
+      - Standards-compliant terminology throughout the classification hierarchy
+    """@en ;
+                                                                   rdfs:label "Immersed Tunnel Ontology - Taxonomic Classification Module"@en ;
+                                                                   owl:versionInfo "3.2.0-GBT51318-2019-compliant" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isEquivalentTo
+<http://www.semanticweb.org/immersedTunnelOnto#isEquivalentTo> rdf:type owl:ObjectProperty ,
+                                                                        owl:SymmetricProperty ,
+                                                                        owl:TransitiveProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                               rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                               rdfs:comment "Equivalence relationship between entities."@en ;
+                                                               rdfs:label "is Equivalent To"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isSimilarTo
+<http://www.semanticweb.org/immersedTunnelOnto#isSimilarTo> rdf:type owl:ObjectProperty ,
+                                                                     owl:SymmetricProperty ;
+                                                            rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                            rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                            rdfs:comment "Similarity relationship between entities."@en ;
+                                                            rdfs:label "is Similar To"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isSubclassOf
+<http://www.semanticweb.org/immersedTunnelOnto#isSubclassOf> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain owl:Class ;
+                                                             rdfs:range owl:Class ;
+                                                             rdfs:comment "Taxonomic relationship indicating class hierarchy."@en ;
+                                                             rdfs:label "is Subclass Of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasCategory
+<http://www.semanticweb.org/immersedTunnelOnto#hasCategory> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:comment "Category classification for the entity."@en ;
+                                                            rdfs:label "has Category"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasClassificationCode
+<http://www.semanticweb.org/immersedTunnelOnto#hasClassificationCode> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:comment "Standard classification code for the entity."@en ;
+                                                                      rdfs:label "has Classification Code"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSubcategory
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcategory> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:comment "Subcategory classification for the entity."@en ;
+                                                               rdfs:label "has Subcategory"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity
+<http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                               rdfs:comment "Abstract concepts, processes, and information entities including design methodologies, standards, and procedural frameworks."@en ;
+                                                               rdfs:label "Abstract Entity"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#AngularParameter
+<http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> ;
+                                                                 rdfs:comment "Angular geometric parameters like α, α1, α2, β angles."@en ;
+                                                                 rdfs:label "Angular Parameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ApprovingAuthority
+<http://www.semanticweb.org/immersedTunnelOnto#ApprovingAuthority> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                   rdfs:comment "Approving authority responsible for final approval of joint design documentation and construction authorization for IMMTD10."@en ;
+                                                                   rdfs:label "Approving Authority"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ClientOwnerSponsor
+<http://www.semanticweb.org/immersedTunnelOnto#ClientOwnerSponsor> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                   rdfs:comment "Client, owner, or project sponsor responsible for project requirements and approval per IMMTD01 use case."@en ;
+                                                                   rdfs:label "Client Owner Sponsor"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ClosureJoint
+<http://www.semanticweb.org/immersedTunnelOnto#ClosureJoint> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                             rdfs:comment "Final connection structure of immersed tunnel system per GBT 51318-2019 Section 2.1.9."@en ;
+                                                             rdfs:label "Closure Joint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConnectionTunnel
+<http://www.semanticweb.org/immersedTunnelOnto#ConnectionTunnel> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                                 rdfs:comment "Tunnel structure connecting both ends of immersed tunnel, typically constructed using cut-and-cover method per GBT 51318-2019 Section 2.1.7."@en ;
+                                                                 rdfs:label "Connection Tunnel"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConstructionDeliverable
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionDeliverable> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> ;
+                                                                        rdfs:comment "Deliverables related to construction phase."@en ;
+                                                                        rdfs:label "Construction Deliverable"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                      rdfs:comment "Personnel involved in construction activities."@en ;
+                                                                      rdfs:label "Construction Personnel"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#Process> ;
+                                                                    rdfs:comment "Processes related to tunnel construction."@en ;
+                                                                    rdfs:label "Construction Process"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConstructionSpecialist
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionSpecialist> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                       rdfs:comment "Construction specialist responsible for construction feasibility analysis and methods optimization for IMMTD05."@en ;
+                                                                       rdfs:label "Construction Specialist"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DesignCoordinator
+<http://www.semanticweb.org/immersedTunnelOnto#DesignCoordinator> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                  rdfs:comment "Design coordinator responsible for coordinating between structural and route alignment design disciplines per IMMTD03 use case."@en ;
+                                                                  rdfs:label "Design Coordinator"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DesignDeliverable
+<http://www.semanticweb.org/immersedTunnelOnto#DesignDeliverable> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> ;
+                                                                  rdfs:comment "Deliverables related to design phase."@en ;
+                                                                  rdfs:label "Design Deliverable"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DesignEngineer
+<http://www.semanticweb.org/immersedTunnelOnto#DesignEngineer> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                               rdfs:comment "Design engineering role responsible for detailed design development per HPDI classification."@en ;
+                                                               rdfs:label "Design Engineer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                rdfs:comment "Personnel involved in design activities."@en ;
+                                                                rdfs:label "Design Personnel"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DesignProcess
+<http://www.semanticweb.org/immersedTunnelOnto#DesignProcess> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#Process> ;
+                                                              rdfs:comment "Processes related to tunnel design and engineering."@en ;
+                                                              rdfs:label "Design Process"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DryDock
+<http://www.semanticweb.org/immersedTunnelOnto#DryDock> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                        rdfs:comment "Prefabrication facility for tunnel elements with launching, floating, mooring, and positioning functions per GBT 51318-2019 Section 2.1.8."@en ;
+                                                        rdfs:label "Dry Dock"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DurabilityEngineer
+<http://www.semanticweb.org/immersedTunnelOnto#DurabilityEngineer> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                   rdfs:comment "Durability engineer responsible for long-term durability analysis and material performance specifications for IMMTD07."@en ;
+                                                                   rdfs:label "Durability Engineer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Element
+<http://www.semanticweb.org/immersedTunnelOnto#Element> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                        rdfs:comment "Basic structural unit of immersed tunnel that is prefabricated and can be floated, immersed, and joined underwater per GBT 51318-2019 Section 2.1.2."@en ;
+                                                        rdfs:label "Element"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#EngineeringPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#EngineeringPersonnel> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalEngineer
+<http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalEngineer> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                      rdfs:comment "Specialist engineer responsible for environmental assessment and mitigation per IMMTD01 use case."@en ;
+                                                                      rdfs:label "Environmental Engineer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Equipment
+<http://www.semanticweb.org/immersedTunnelOnto#Equipment> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                          rdfs:comment "Equipment used in tunnel construction and operation."@en ;
+                                                          rdfs:label "Equipment"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FireExtinguisherBox
+<http://www.semanticweb.org/immersedTunnelOnto#FireExtinguisherBox> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> ;
+                                                                    rdfs:comment "Fire extinguisher box with chamber dimensions and reserved space specifications per HPDI requirements."@en ;
+                                                                    rdfs:label "Fire Extinguisher Box"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FirefightingEquipmentBox
+<http://www.semanticweb.org/immersedTunnelOnto#FirefightingEquipmentBox> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> ;
+                                                                         rdfs:comment "Firefighting equipment box with chamber dimensions and reserved space specifications per HPDI requirements."@en ;
+                                                                         rdfs:label "Firefighting Equipment Box"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FoamWaterSprayValveAssemblyBox
+<http://www.semanticweb.org/immersedTunnelOnto#FoamWaterSprayValveAssemblyBox> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> ;
+                                                                               rdfs:comment "Foam water spray valve assembly box with chamber dimensions and reserved space specifications per HPDI requirements."@en ;
+                                                                               rdfs:label "Foam Water Spray Valve Assembly Box"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent
+<http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                    rdfs:comment "Components related to tunnel foundation systems."@en ;
+                                                                    rdfs:label "Foundation Component"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FoundationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#FoundationSystem> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                                 rdfs:comment "Foundation system for tunnel elements meeting load-bearing, deformation, and stability requirements under all construction and operating conditions."@en ;
+                                                                 rdfs:label "Foundation System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FoundationTreatmentLead
+<http://www.semanticweb.org/immersedTunnelOnto#FoundationTreatmentLead> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> ;
+                                                                        rdfs:comment "Lead personnel responsible for foundation treatment operations per HPDI classification."@en ;
+                                                                        rdfs:label "Foundation Treatment Lead"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                                   rdfs:comment "Parameters defining geometric properties of components."@en ;
+                                                                   rdfs:label "Geometric Parameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalEngineer
+<http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalEngineer> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                     rdfs:comment "Specialist engineer responsible for geotechnical investigation and soil analysis per IMMTD01 use case."@en ;
+                                                                     rdfs:label "Geotechnical Engineer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#HydrodynamicSpecialist
+<http://www.semanticweb.org/immersedTunnelOnto#HydrodynamicSpecialist> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                       rdfs:comment "Specialist responsible for hydrodynamic modeling and analysis per IMMTD01 use case."@en ;
+                                                                       rdfs:label "Hydrodynamic Specialist"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedElementsAssembly
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedElementsAssembly> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                                         rdfs:comment "Complete tunnel formed by connecting all elements together per GBT 51318-2019 Section 2.1.6."@en ;
+                                                                         rdfs:label "Immersed Elements Assembly"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnel
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnel> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                               rdfs:comment "Tunnel formed underwater by floating, immersing, and connecting prefabricated structural units in water areas per GBT 51318-2019 Section 2.1.1."@en ;
+                                                               rdfs:label "Immersed Tunnel"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> rdf:type owl:Class ;
+                                                                     rdfs:comment "Top-level class for all entities in the immersed tunnel domain according to GBT 51318-2019 scope and methodology."@en ;
+                                                                     rdfs:label "Immersed Tunnel Entity"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionTransportationLead
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionTransportationLead> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> ;
+                                                                            rdfs:comment "Lead personnel responsible for immersion and transportation operations per HPDI classification."@en ;
+                                                                            rdfs:label "Immersion Transportation Lead"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#OperationalProcess
+<http://www.semanticweb.org/immersedTunnelOnto#OperationalProcess> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#Process> ;
+                                                                   rdfs:comment "Processes related to tunnel operation and maintenance."@en ;
+                                                                   rdfs:label "Operational Process"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#OutfittingDesigner
+<http://www.semanticweb.org/immersedTunnelOnto#OutfittingDesigner> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#EngineeringPersonnel> ;
+                                                                   rdfs:comment "Specialized designer responsible for segment outfitting design including ballast tanks, survey towers, manholes, guiding facilities, lifting points, cable clamps, and mooring facilities per IMMTD11."@en ;
+                                                                   rdfs:label "Outfitting Designer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity
+<http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                                rdfs:comment "People involved in tunnel projects."@en ;
+                                                                rdfs:label "Personnel Entity"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity
+<http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity> ;
+                                                               rdfs:comment "Physical objects and components in immersed tunnel systems, including structural units, equipment, and constructed elements."@en ;
+                                                               rdfs:label "Physical Entity"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PipeSection
+<http://www.semanticweb.org/immersedTunnelOnto#PipeSection> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                            rdfs:comment "Prefabricated tubular structural element constituting the primary enclosure components of an immersed tunnel system according to GBT 51318-2019 design specifications. Characterized by standardized cross-sectional geometry, connection interfaces, and integrated structural systems for underwater assembly."@en ;
+                                                            rdfs:label "Pipe Section"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PipeTopBackfillLead
+<http://www.semanticweb.org/immersedTunnelOnto#PipeTopBackfillLead> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> ;
+                                                                    rdfs:comment "Lead personnel responsible for pipe top backfill operations per HPDI classification."@en ;
+                                                                    rdfs:label "Pipe Top Backfill Lead"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PipelineEngineer
+<http://www.semanticweb.org/immersedTunnelOnto#PipelineEngineer> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                 rdfs:comment "Pipeline engineer responsible for utility pipeline integration and routing design per IMMTD03 use case."@en ;
+                                                                 rdfs:label "Pipeline Engineer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter
+<http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> ;
+                                                                    rdfs:comment "Parameters defining position relative to baselines and reference points."@en ;
+                                                                    rdfs:label "Positional Parameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PrefabricationLead
+<http://www.semanticweb.org/immersedTunnelOnto#PrefabricationLead> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> ;
+                                                                   rdfs:comment "Lead personnel responsible for prefabrication operations per HPDI classification."@en ;
+                                                                   rdfs:label "Prefabrication Lead"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Process
+<http://www.semanticweb.org/immersedTunnelOnto#Process> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                        rdfs:comment "Processes in tunnel design, construction, and operation."@en ;
+                                                        rdfs:label "Process"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable
+<http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                                   rdfs:comment "Deliverables produced during tunnel projects."@en ;
+                                                                   rdfs:label "Project Deliverable"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader
+<http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                              rdfs:comment "Project leadership role responsible for overall design coordination and project management per HPDI classification."@en ;
+                                                              rdfs:label "Project Leader"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ProjectManager
+<http://www.semanticweb.org/immersedTunnelOnto#ProjectManager> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                               rdfs:comment "Project manager responsible for overall project coordination and management per IMMTD01 use case requirements."@en ;
+                                                               rdfs:label "Project Manager"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Requirement
+<http://www.semanticweb.org/immersedTunnelOnto#Requirement> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                            rdfs:comment "Requirements and specifications for tunnel systems."@en ;
+                                                            rdfs:label "Requirement"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ResearchDeliverable
+<http://www.semanticweb.org/immersedTunnelOnto#ResearchDeliverable> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> ;
+                                                                    rdfs:comment "Deliverables related to research and development."@en ;
+                                                                    rdfs:label "Research Deliverable"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent
+<http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                  rdfs:comment "Components that are reserved spaces or chambers in tunnel structures."@en ;
+                                                                  rdfs:label "Reserved Component"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ShearKey
+<http://www.semanticweb.org/immersedTunnelOnto#ShearKey> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                         rdfs:comment "Structural component providing shear resistance between tunnel elements per GBT 51318-2019 Section 2.1.10."@en ;
+                                                         rdfs:label "Shear Key"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Standard
+<http://www.semanticweb.org/immersedTunnelOnto#Standard> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                         rdfs:comment "Standards and regulations governing tunnel engineering."@en ;
+                                                         rdfs:label "Standard"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#StructuralEngineer
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralEngineer> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                   rdfs:comment "Specialist engineer responsible for structural design and analysis per IMMTD01 use case."@en ;
+                                                                   rdfs:label "Structural Engineer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#SubItemLead
+<http://www.semanticweb.org/immersedTunnelOnto#SubItemLead> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                            rdfs:comment "Sub-item leadership role responsible for specific design component coordination per HPDI classification."@en ;
+                                                            rdfs:label "Sub-Item Lead"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Surveyor
+<http://www.semanticweb.org/immersedTunnelOnto#Surveyor> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                         rdfs:comment "Professional surveyor responsible for topographic and bathymetric surveys per IMMTD02 use case."@en ;
+                                                         rdfs:label "Surveyor"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TechnicalReviewer
+<http://www.semanticweb.org/immersedTunnelOnto#TechnicalReviewer> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                  rdfs:comment "Technical review specialist responsible for design validation and technical assessment per HPDI classification."@en ;
+                                                                  rdfs:label "Technical Reviewer"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TrenchExcavationLead
+<http://www.semanticweb.org/immersedTunnelOnto#TrenchExcavationLead> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> ;
+                                                                     rdfs:comment "Lead personnel responsible for trench excavation operations per HPDI classification."@en ;
+                                                                     rdfs:label "Trench Excavation Lead"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                             rdfs:comment "Complete tunnel systems and major assemblies constituting the immersed tunnel infrastructure."@en ;
+                                                             rdfs:label "Tunnel System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#WaterproofingSpecialist
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofingSpecialist> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                        rdfs:comment "Waterproofing specialist responsible for external waterproofing design and durability specifications for IMMTD07."@en ;
+                                                                        rdfs:label "Waterproofing Specialist"@en .
+
+
+###  http://www.w3.org/2002/07/owl#Class
+owl:Class rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

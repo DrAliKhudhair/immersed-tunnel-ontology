@@ -1,0 +1,867 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy#"
+     xml:base="http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy">
+        <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#aggregates -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#aggregates">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Weak aggregation relationship where parts can exist independently.</rdfs:comment>
+        <rdfs:label xml:lang="en">aggregates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#assemblesInto -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#assemblesInto">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isPartOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Relationship indicating that entities assemble into a larger entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">assembles Into</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#composes -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#composes">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Strong composition relationship where parts cannot exist without the whole.</rdfs:comment>
+        <rdfs:label xml:lang="en">composes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#contains">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:comment xml:lang="en">Relationship indicating that a system has a component.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel"/>
+        <rdfs:comment xml:lang="en">Links project to its construction personnel per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Construction Personnel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
+        <rdfs:comment xml:lang="en">Relationship between project stage and its deliverables.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Deliverable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel"/>
+        <rdfs:comment xml:lang="en">Links project to its design personnel per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Design Personnel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasFoundation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasFoundation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent"/>
+        <rdfs:comment xml:lang="en">Relationship between tunnel system and its foundation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Foundation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter"/>
+        <rdfs:comment xml:lang="en">Relationship between component and its geometric parameters.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Geometric Parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasJoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasJoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PipeSection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JointComponent"/>
+        <rdfs:comment xml:lang="en">Relationship between pipe sections and their joints.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Joint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint"/>
+        <rdfs:comment xml:lang="en">Links a part-whole relationship to its constraints.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Mereological Constraint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">General part-whole relationship where the domain has the range as a part.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">Defines overlapping part relationships in complex assemblies.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Part Overlap</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PipeSection"/>
+        <rdfs:comment xml:lang="en">Relationship between tunnel and its pipe sections.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Pipe Section</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader"/>
+        <rdfs:comment xml:lang="en">Links project to its project leader per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Project Leader</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PipeSection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent"/>
+        <rdfs:comment xml:lang="en">Relationship between pipe section and its reserved chambers.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Reserved Chamber</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent"/>
+        <rdfs:comment xml:lang="en">Relationship between tunnel system and its safety components.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Safety Component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:comment xml:lang="en">Relationship indicating that a component has a subcomponent.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Subcomponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent"/>
+        <rdfs:comment xml:lang="en">Relationship between construction stage and its temporary facilities.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Temporary Facility</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isPartOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#aggregates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Relationship indicating that an entity is assembled from other entities.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Assembled From</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isComponentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isPartOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+        <rdfs:comment xml:lang="en">Relationship indicating that a component belongs to a system.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Component Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isComposedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isComposedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isPartOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#composes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Strong composition relationship where part is composed by whole.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Composed By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Process"/>
+        <rdfs:comment xml:lang="en">Relationship between deliverable and its project stage.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Deliverable Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isComponentOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasFoundation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+        <rdfs:comment xml:lang="en">Relationship between foundation and its tunnel system.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Foundation Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:comment xml:lang="en">Relationship between geometric parameter and its component.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Geometric Parameter Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isJointOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isJointOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isComponentOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasJoint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JointComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PipeSection"/>
+        <rdfs:comment xml:lang="en">Relationship between joint and its pipe sections.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Joint Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Spatial relationship indicating location containment.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Located In</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isMadeOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isMadeOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Material"/>
+        <rdfs:comment xml:lang="en">Relationship indicating the material composition of a component.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Made Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isComponentOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PipeSection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:comment xml:lang="en">Relationship between pipe section and its tunnel.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Pipe Section Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isComponentOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PipeSection"/>
+        <rdfs:comment xml:lang="en">Relationship between reserved chamber and its pipe section.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Reserved Chamber Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isComponentOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+        <rdfs:comment xml:lang="en">Relationship between safety component and its tunnel system.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Safety Component Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isPartOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:comment xml:lang="en">Relationship indicating that a component is a subcomponent of another.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Subcomponent Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#supports"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent"/>
+        <rdfs:comment xml:lang="en">Structural relationship indicating being supported.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Supported By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess"/>
+        <rdfs:comment xml:lang="en">Relationship between temporary facility and its construction stage.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Temporary Facility Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isUsedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isUsedIn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#isMadeOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Material"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:comment xml:lang="en">Relationship indicating where a material is used.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Used In</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#reportsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#reportsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+        <rdfs:comment xml:lang="en">Defines organizational reporting relationships between personnel per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">reports To</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#supervises -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#supervises">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#reportsTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+        <rdfs:comment xml:lang="en">Defines supervision relationships between personnel per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">supervises</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#supports -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#supports">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Structural relationship indicating support.</rdfs:comment>
+        <rdfs:label xml:lang="en">supports</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#contains -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#contains">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Sequence number for assembly order.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Assembly Sequence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasPartCount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPartCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of parts in a whole.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Part Count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Position of a part within the whole.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Part Position</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#isPartOf -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isPartOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#JointComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#JointComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#Material -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Material"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint">
+        <rdfs:comment xml:lang="en">Constraint on part-whole relationships.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mereological Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#PipeSection -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PipeSection"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#Process -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#ObjectProperty -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#contains">
+        <rdfs:comment xml:lang="en">Spatial relationship indicating spatial containment.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo">
+        <rdfs:comment xml:lang="en">Spatial relationship indicating adjacency.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Adjacent To</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy">
+        <rdfs:comment xml:lang="en">Weak aggregation relationship where part is aggregated by whole.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Aggregated By</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo">
+        <rdfs:comment xml:lang="en">Relationship indicating physical connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Connected To</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isPartOf">
+        <rdfs:comment xml:lang="en">General part-whole relationship where the domain is a part of the range.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Part Of</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

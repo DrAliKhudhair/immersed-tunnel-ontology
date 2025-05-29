@@ -1,0 +1,994 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Enhanced engineering design and analysis systems for immersed tunnels.\n            Comprehensive design processes, analysis methods, and engineering evaluation.\n            Based on GB/T 51318-2019 and JTG 2120-2020 standards.\n            \n            CONSOLIDATES:\n            - Design processes from design_processes.owl\n            - Engineering analysis from engineering_analysis.owl\n            - Design requirements and specifications\n            - Technical schemes and methods\n            \n            ENHANCEMENTS:\n            - Integrated design workflow management\n            - Advanced analysis capabilities\n            - Design optimization methods\n            - Validation and verification processes\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Tunnel Ontology - Engineering Design and Analysis"@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0 - Enhanced" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAnalysisSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnalysisSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel project to its analysis systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Analysis System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDesignRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a design system to its requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "has Design Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDesignSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel project to its design systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Design System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTechnicalScheme
+<http://www.semanticweb.org/immersedTunnelOnto#hasTechnicalScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTechnicalScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTechnicalScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TechnicalScheme> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTechnicalScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a design system to its technical schemes."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTechnicalScheme> <http://www.w3.org/2000/01/rdf-schema#label> "has Technical Scheme"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#requiresAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#requiresAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#requiresAnalysis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#requiresAnalysis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#requiresAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a design system to required analysis systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#requiresAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "requires Analysis"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#alignmentCoordination
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentCoordination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentCoordination> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship> .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentCoordination> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentCoordination> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordination requirements between route and cross-section alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentCoordination> <http://www.w3.org/2000/01/rdf-schema#label> "alignment coordination"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#alignmentType
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of route alignment (horizontal, vertical, combined)."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#alignmentType> <http://www.w3.org/2000/01/rdf-schema#label> "alignment type"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#analysisAccuracy
+<http://www.semanticweb.org/immersedTunnelOnto#analysisAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "Required accuracy level for numerical analysis results."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#analysisAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "analysis accuracy"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#approvedAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#approvedAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#approvedAlignment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#approvedAlignment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#approvedAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Approved alignment status and approval details."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#approvedAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "approved alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#basePointCoordinate
+<http://www.semanticweb.org/immersedTunnelOnto#basePointCoordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointCoordinate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointCoordinate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointCoordinate> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordinate of base point for alignment reference."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointCoordinate> <http://www.w3.org/2000/01/rdf-schema#label> "base point coordinate"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#basePointReference
+<http://www.semanticweb.org/immersedTunnelOnto#basePointReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointReference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship> .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to base point for coordinate alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#basePointReference> <http://www.w3.org/2000/01/rdf-schema#label> "base point reference"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#clearanceEnvelope
+<http://www.semanticweb.org/immersedTunnelOnto#clearanceEnvelope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#clearanceEnvelope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> .
+<http://www.semanticweb.org/immersedTunnelOnto#clearanceEnvelope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#clearanceEnvelope> <http://www.w3.org/2000/01/rdf-schema#comment> "Clearance envelope for tunnel geometric design."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#clearanceEnvelope> <http://www.w3.org/2000/01/rdf-schema#label> "clearance envelope"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#comfortCriteria
+<http://www.semanticweb.org/immersedTunnelOnto#comfortCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#comfortCriteria> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint> .
+<http://www.semanticweb.org/immersedTunnelOnto#comfortCriteria> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#comfortCriteria> <http://www.w3.org/2000/01/rdf-schema#comment> "Comfort criteria for vehicle occupants during curve traversal."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#comfortCriteria> <http://www.w3.org/2000/01/rdf-schema#label> "comfort criteria"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#consolidationSettlement
+<http://www.semanticweb.org/immersedTunnelOnto#consolidationSettlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#consolidationSettlement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#consolidationSettlement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#consolidationSettlement> <http://www.w3.org/2000/01/rdf-schema#comment> "Primary consolidation settlement in mm."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#consolidationSettlement> <http://www.w3.org/2000/01/rdf-schema#label> "consolidation settlement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#controlPoints
+<http://www.semanticweb.org/immersedTunnelOnto#controlPoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#controlPoints> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> .
+<http://www.semanticweb.org/immersedTunnelOnto#controlPoints> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#controlPoints> <http://www.w3.org/2000/01/rdf-schema#comment> "Control points for route alignment geometry."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#controlPoints> <http://www.w3.org/2000/01/rdf-schema#label> "control points"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#creastCurveRadius
+<http://www.semanticweb.org/immersedTunnelOnto#creastCurveRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#creastCurveRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius> .
+<http://www.semanticweb.org/immersedTunnelOnto#creastCurveRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#creastCurveRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Crest curve radius for vertical alignment in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#creastCurveRadius> <http://www.w3.org/2000/01/rdf-schema#label> "creast curve radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#curveLocation
+<http://www.semanticweb.org/immersedTunnelOnto#curveLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#curveLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> .
+<http://www.semanticweb.org/immersedTunnelOnto#curveLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#curveLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Location of transition curve along route alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#curveLocation> <http://www.w3.org/2000/01/rdf-schema#label> "curve location"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#cyclicSettlement
+<http://www.semanticweb.org/immersedTunnelOnto#cyclicSettlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#cyclicSettlement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#cyclicSettlement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#cyclicSettlement> <http://www.w3.org/2000/01/rdf-schema#comment> "Settlement under cyclic loading conditions in mm."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#cyclicSettlement> <http://www.w3.org/2000/01/rdf-schema#label> "cyclic settlement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#designCriteria
+<http://www.semanticweb.org/immersedTunnelOnto#designCriteria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#designCriteria> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> .
+<http://www.semanticweb.org/immersedTunnelOnto#designCriteria> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#designCriteria> <http://www.w3.org/2000/01/rdf-schema#comment> "Design criteria for route alignment development."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#designCriteria> <http://www.w3.org/2000/01/rdf-schema#label> "design criteria"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#designJustification
+<http://www.semanticweb.org/immersedTunnelOnto#designJustification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#designJustification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision> .
+<http://www.semanticweb.org/immersedTunnelOnto#designJustification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#designJustification> <http://www.w3.org/2000/01/rdf-schema#comment> "Design justification for structural decisions."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#designJustification> <http://www.w3.org/2000/01/rdf-schema#label> "design justification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#designRadius
+<http://www.semanticweb.org/immersedTunnelOnto#designRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#designRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#HorizontalCurveRadius> .
+<http://www.semanticweb.org/immersedTunnelOnto#designRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#designRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Design radius for horizontal curves in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#designRadius> <http://www.w3.org/2000/01/rdf-schema#label> "design radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#designStandard
+<http://www.semanticweb.org/immersedTunnelOnto#designStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStandard> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStandard> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "Design standard or code reference for the design system."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#designStandard> <http://www.w3.org/2000/01/rdf-schema#label> "design standard"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#designStatus
+<http://www.semanticweb.org/immersedTunnelOnto#designStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Current design status and completion level."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#designStatus> <http://www.w3.org/2000/01/rdf-schema#label> "design status"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#dimensionRationale
+<http://www.semanticweb.org/immersedTunnelOnto#dimensionRationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#dimensionRationale> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision> .
+<http://www.semanticweb.org/immersedTunnelOnto#dimensionRationale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#dimensionRationale> <http://www.w3.org/2000/01/rdf-schema#comment> "Rationale for structural dimension decisions."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#dimensionRationale> <http://www.w3.org/2000/01/rdf-schema#label> "dimension rationale"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#dynamicLoading
+<http://www.semanticweb.org/immersedTunnelOnto#dynamicLoading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#dynamicLoading> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#dynamicLoading> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#dynamicLoading> <http://www.w3.org/2000/01/rdf-schema#comment> "Dynamic loading conditions for settlement analysis."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#dynamicLoading> <http://www.w3.org/2000/01/rdf-schema#label> "dynamic loading"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#elevationDatum
+<http://www.semanticweb.org/immersedTunnelOnto#elevationDatum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#elevationDatum> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#elevationDatum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#elevationDatum> <http://www.w3.org/2000/01/rdf-schema#comment> "Elevation datum reference for vertical alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#elevationDatum> <http://www.w3.org/2000/01/rdf-schema#label> "elevation datum"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#emergencyVehicleAccess
+<http://www.semanticweb.org/immersedTunnelOnto#emergencyVehicleAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#emergencyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#EmergencyServiceClearance> .
+<http://www.semanticweb.org/immersedTunnelOnto#emergencyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#emergencyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Emergency vehicle access requirements and clearance specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#emergencyVehicleAccess> <http://www.w3.org/2000/01/rdf-schema#label> "emergency vehicle access"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#endingPoint
+<http://www.semanticweb.org/immersedTunnelOnto#endingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#endingPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RouteData> .
+<http://www.semanticweb.org/immersedTunnelOnto#endingPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#endingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Ending point coordinates for route alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#endingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "ending point"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates ensuring traffic safety, operational convenience, economic efficiency, and effective emergency response."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#label> "ensures traffic safety"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#entryLength
+<http://www.semanticweb.org/immersedTunnelOnto#entryLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#entryLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> .
+<http://www.semanticweb.org/immersedTunnelOnto#entryLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#entryLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Entry length for transition curve in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#entryLength> <http://www.w3.org/2000/01/rdf-schema#label> "entry length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#exitLength
+<http://www.semanticweb.org/immersedTunnelOnto#exitLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#exitLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> .
+<http://www.semanticweb.org/immersedTunnelOnto#exitLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#exitLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Exit length for transition curve in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#exitLength> <http://www.w3.org/2000/01/rdf-schema#label> "exit length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#geometricConsistency
+<http://www.semanticweb.org/immersedTunnelOnto#geometricConsistency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#geometricConsistency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry> .
+<http://www.semanticweb.org/immersedTunnelOnto#geometricConsistency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#geometricConsistency> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometric consistency verification and validation status."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#geometricConsistency> <http://www.w3.org/2000/01/rdf-schema#label> "geometric consistency"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#gradientChangeRate
+<http://www.semanticweb.org/immersedTunnelOnto#gradientChangeRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#gradientChangeRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius> .
+<http://www.semanticweb.org/immersedTunnelOnto#gradientChangeRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#gradientChangeRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Rate of gradient change for vertical curves in percent per meter."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#gradientChangeRate> <http://www.w3.org/2000/01/rdf-schema#label> "gradient change rate"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#horizontalDatum
+<http://www.semanticweb.org/immersedTunnelOnto#horizontalDatum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#horizontalDatum> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#horizontalDatum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#horizontalDatum> <http://www.w3.org/2000/01/rdf-schema#comment> "Horizontal datum reference for coordinate system."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#horizontalDatum> <http://www.w3.org/2000/01/rdf-schema#label> "horizontal datum"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#immediateSettlement
+<http://www.semanticweb.org/immersedTunnelOnto#immediateSettlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#immediateSettlement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#immediateSettlement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#immediateSettlement> <http://www.w3.org/2000/01/rdf-schema#comment> "Immediate settlement under applied loads in mm."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#immediateSettlement> <http://www.w3.org/2000/01/rdf-schema#label> "immediate settlement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#integrationPointType
+<http://www.semanticweb.org/immersedTunnelOnto#integrationPointType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#integrationPointType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint> .
+<http://www.semanticweb.org/immersedTunnelOnto#integrationPointType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#integrationPointType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of integration point between structural and route design elements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#integrationPointType> <http://www.w3.org/2000/01/rdf-schema#label> "integration point type"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#laneConfiguration
+<http://www.semanticweb.org/immersedTunnelOnto#laneConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#laneConfiguration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TrafficFlowCapacityRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#laneConfiguration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#laneConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Configuration of traffic lanes including number and width specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#laneConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "lane configuration"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#maxLateralAcceleration
+<http://www.semanticweb.org/immersedTunnelOnto#maxLateralAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxLateralAcceleration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxLateralAcceleration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxLateralAcceleration> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum allowable lateral acceleration in m/s²."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#maxLateralAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "max lateral acceleration"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#maximumGradient
+<http://www.semanticweb.org/immersedTunnelOnto#maximumGradient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumGradient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumGradient> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumGradient> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum gradient percentage for vertical alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumGradient> <http://www.w3.org/2000/01/rdf-schema#label> "maximum gradient"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#maximumRadius
+<http://www.semanticweb.org/immersedTunnelOnto#maximumRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#HorizontalCurveRadius> .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum allowable curve radius in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#maximumRadius> <http://www.w3.org/2000/01/rdf-schema#label> "maximum radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#minimumRadius
+<http://www.semanticweb.org/immersedTunnelOnto#minimumRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#minimumRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#minimumRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#minimumRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum radius of curvature in meters for horizontal alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#minimumRadius> <http://www.w3.org/2000/01/rdf-schema#label> "minimum radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#optimizationObjective
+<http://www.semanticweb.org/immersedTunnelOnto#optimizationObjective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#optimizationObjective> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#optimizationObjective> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#optimizationObjective> <http://www.w3.org/2000/01/rdf-schema#comment> "Primary optimization objective function for design including cost minimization, structural performance maximization, constructability enhancement, or multi-criteria optimization approaches."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#optimizationObjective> <http://www.w3.org/2000/01/rdf-schema#label> "optimization objective"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#qualityAssurance
+<http://www.semanticweb.org/immersedTunnelOnto#qualityAssurance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#qualityAssurance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#qualityAssurance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#qualityAssurance> <http://www.w3.org/2000/01/rdf-schema#comment> "Quality assurance measures and verification status."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#qualityAssurance> <http://www.w3.org/2000/01/rdf-schema#label> "quality assurance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#routeIntegration
+<http://www.semanticweb.org/immersedTunnelOnto#routeIntegration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#routeIntegration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry> .
+<http://www.semanticweb.org/immersedTunnelOnto#routeIntegration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#routeIntegration> <http://www.w3.org/2000/01/rdf-schema#comment> "Route integration status and coordination details."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#routeIntegration> <http://www.w3.org/2000/01/rdf-schema#label> "route integration"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#routeLength
+<http://www.semanticweb.org/immersedTunnelOnto#routeLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#routeLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RouteData> .
+<http://www.semanticweb.org/immersedTunnelOnto#routeLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#routeLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Total route length in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#routeLength> <http://www.w3.org/2000/01/rdf-schema#label> "route length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#safetyFactor
+<http://www.semanticweb.org/immersedTunnelOnto#safetyFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#safetyFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#safetyFactor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#safetyFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural safety factor applied in analysis and design calculations to ensure adequate margin against failure under design loads and conditions."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#safetyFactor> <http://www.w3.org/2000/01/rdf-schema#label> "safety factor"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#sagCurveRadius
+<http://www.semanticweb.org/immersedTunnelOnto#sagCurveRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#sagCurveRadius> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius> .
+<http://www.semanticweb.org/immersedTunnelOnto#sagCurveRadius> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#sagCurveRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Sag curve radius for vertical alignment in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#sagCurveRadius> <http://www.w3.org/2000/01/rdf-schema#label> "sag curve radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#secondarySettlement
+<http://www.semanticweb.org/immersedTunnelOnto#secondarySettlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#secondarySettlement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#secondarySettlement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#secondarySettlement> <http://www.w3.org/2000/01/rdf-schema#comment> "Secondary consolidation settlement in mm."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#secondarySettlement> <http://www.w3.org/2000/01/rdf-schema#label> "secondary settlement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#sectionLocation
+<http://www.semanticweb.org/immersedTunnelOnto#sectionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#sectionLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship> .
+<http://www.semanticweb.org/immersedTunnelOnto#sectionLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#sectionLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Location of cross-section relative to route alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#sectionLocation> <http://www.w3.org/2000/01/rdf-schema#label> "section location"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#sightDistance
+<http://www.semanticweb.org/immersedTunnelOnto#sightDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#sightDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#CurveSafetyStandard> .
+<http://www.semanticweb.org/immersedTunnelOnto#sightDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#sightDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Required sight distance for curve safety in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#sightDistance> <http://www.w3.org/2000/01/rdf-schema#label> "sight distance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#spatialLimits
+<http://www.semanticweb.org/immersedTunnelOnto#spatialLimits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#spatialLimits> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> .
+<http://www.semanticweb.org/immersedTunnelOnto#spatialLimits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#spatialLimits> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial limits for tunnel geometric boundaries."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#spatialLimits> <http://www.w3.org/2000/01/rdf-schema#label> "spatial limits"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#speedLimit
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint> .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "Speed limit for curve design in km/h."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#label> "speed limit"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#spiralParameter
+<http://www.semanticweb.org/immersedTunnelOnto#spiralParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#spiralParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> .
+<http://www.semanticweb.org/immersedTunnelOnto#spiralParameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#spiralParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Spiral parameter for transition curve geometry."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#spiralParameter> <http://www.w3.org/2000/01/rdf-schema#label> "spiral parameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#startingPoint
+<http://www.semanticweb.org/immersedTunnelOnto#startingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#startingPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RouteData> .
+<http://www.semanticweb.org/immersedTunnelOnto#startingPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#startingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Starting point coordinates for route alignment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#startingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "starting point"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#structuralBoundaries
+<http://www.semanticweb.org/immersedTunnelOnto#structuralBoundaries> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralBoundaries> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralBoundaries> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralBoundaries> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural boundaries for tunnel geometry."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralBoundaries> <http://www.w3.org/2000/01/rdf-schema#label> "structural boundaries"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#structuralDimensions
+<http://www.semanticweb.org/immersedTunnelOnto#structuralDimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralDimensions> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralDimensions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralDimensions> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural dimensions for route integration."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralDimensions> <http://www.w3.org/2000/01/rdf-schema#label> "structural dimensions"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#structuralIntegration
+<http://www.semanticweb.org/immersedTunnelOnto#structuralIntegration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralIntegration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralIntegration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralIntegration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural integration status and coordination details."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralIntegration> <http://www.w3.org/2000/01/rdf-schema#label> "structural integration"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#structuralMaterialSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#structuralMaterialSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#LoadBearingSpecification> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive specification of structural materials including concrete grades, steel types, strength requirements, and performance characteristics for load-bearing applications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralMaterialSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "structural material specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#superelevation
+<http://www.semanticweb.org/immersedTunnelOnto#superelevation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#superelevation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#CurveSafetyStandard> .
+<http://www.semanticweb.org/immersedTunnelOnto#superelevation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#superelevation> <http://www.w3.org/2000/01/rdf-schema#comment> "Superelevation rate for horizontal curves in percent."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#superelevation> <http://www.w3.org/2000/01/rdf-schema#label> "superelevation"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#timeRate
+<http://www.semanticweb.org/immersedTunnelOnto#timeRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#timeRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SettlementPrediction> .
+<http://www.semanticweb.org/immersedTunnelOnto#SettlementPrediction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#timeRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#timeRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Time rate of settlement development in mm/year."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#timeRate> <http://www.w3.org/2000/01/rdf-schema#label> "time rate"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#totalSegmentHeight
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Total height of tunnel segment including clearances in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentHeight> <http://www.w3.org/2000/01/rdf-schema#label> "total segment height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#totalSegmentWidth
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentWidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Total width of tunnel segment including walls and clearances in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#totalSegmentWidth> <http://www.w3.org/2000/01/rdf-schema#label> "total segment width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#trafficFlowCapacity
+<http://www.semanticweb.org/immersedTunnelOnto#trafficFlowCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#trafficFlowCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TrafficFlowCapacityRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#trafficFlowCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#trafficFlowCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Traffic flow capacity in vehicles per hour for tunnel cross-section design."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#trafficFlowCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "traffic flow capacity"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#transitionLength
+<http://www.semanticweb.org/immersedTunnelOnto#transitionLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#transitionLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> .
+<http://www.semanticweb.org/immersedTunnelOnto#transitionLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#transitionLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of transition curve in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#transitionLength> <http://www.w3.org/2000/01/rdf-schema#label> "transition length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#utilityServiceType
+<http://www.semanticweb.org/immersedTunnelOnto#utilityServiceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#utilityServiceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#utilityServiceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#utilityServiceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of utility service infrastructure requiring integration including electrical systems, water supply, drainage, gas distribution, telecommunications, and fire protection systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#utilityServiceType> <http://www.w3.org/2000/01/rdf-schema#label> "utility service type"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#utilitySpaceRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#utilitySpaceRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#utilitySpaceRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#utilitySpaceRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#utilitySpaceRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Space requirement for utility integration in square meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#utilitySpaceRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "utility space requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceHeight
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VehicleClearance> .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum clearance height for vehicles in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceHeight> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle clearance height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceWidth
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VehicleClearance> .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceWidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum clearance width for vehicles in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#vehicleClearanceWidth> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle clearance width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#vibrationEffect
+<http://www.semanticweb.org/immersedTunnelOnto#vibrationEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#vibrationEffect> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#vibrationEffect> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#vibrationEffect> <http://www.w3.org/2000/01/rdf-schema#comment> "Effect of vibration on settlement behavior."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#vibrationEffect> <http://www.w3.org/2000/01/rdf-schema#label> "vibration effect"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#wallThickness
+<http://www.semanticweb.org/immersedTunnelOnto#wallThickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#wallThickness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> .
+<http://www.semanticweb.org/immersedTunnelOnto#wallThickness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#wallThickness> <http://www.w3.org/2000/01/rdf-schema#comment> "Wall thickness for tunnel segments in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#wallThickness> <http://www.w3.org/2000/01/rdf-schema#label> "wall thickness"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AlignmentDesign
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeneralDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentDesign> <http://www.w3.org/2000/01/rdf-schema#comment> "Design of tunnel alignment coordinating with planning requirements and surrounding infrastructure per JTG 2120-2020 Section 6.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentDesign> <http://www.w3.org/2000/01/rdf-schema#label> "Alignment Design"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AlignmentPrinciple
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentPrinciple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple> .
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Design principles for tunnel alignment considering geotechnical and hydrological constraints per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AlignmentPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "Alignment Principle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem
+<http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for engineering analysis and evaluation systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Analysis System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Base point alignment with coordinate and datum references for consistent positioning."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Base Point Alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#BearingCapacityAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#BearingCapacityAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#BearingCapacityAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#BearingCapacityAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Analysis of foundation bearing capacity and load distribution."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#BearingCapacityAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Bearing Capacity Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry
+<http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Clearance geometry specifications for vehicles, utilities, and emergency services within tunnel cross-section per IMMTD03."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "Clearance Geometry"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CodeCompliance
+<http://www.semanticweb.org/immersedTunnelOnto#CodeCompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CodeCompliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignValidation> .
+<http://www.semanticweb.org/immersedTunnelOnto#CodeCompliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Systematic verification of design compliance with applicable standards, codes, and regulatory requirements for immersed tunnel construction."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CodeCompliance> <http://www.w3.org/2000/01/rdf-schema#label> "Code Compliance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ConstructabilityRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructabilityRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructabilityRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructabilityRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Requirements ensuring design feasibility for construction methods and equipment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructabilityRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Constructability Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TechnicalScheme> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive construction schemes including dry dock, floating, immersion, and jointing methods."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Construction Scheme"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CrossSectionAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#RouteGeometricModel> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Cross-section alignment geometry with section orientation and spatial relationships."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Cross Section Alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CrossSectionDesign
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionDesign> <http://www.w3.org/2000/01/rdf-schema#comment> "Cross-sectional layout design considering traffic requirements, safety facilities, and structural efficiency."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionDesign> <http://www.w3.org/2000/01/rdf-schema#label> "Cross Section Design"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CrossSectionLocation
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionLocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#BasePointAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Cross-section locations with station, chainage, and offset distance specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Cross Section Location"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between cross-section design and route alignment with coordination requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CrossSectionRouteRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Cross Section Route Relationship"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CurveSafetyStandard
+<http://www.semanticweb.org/immersedTunnelOnto#CurveSafetyStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CurveSafetyStandard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SafetyRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#CurveSafetyStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "Safety standards for curve design including sight distance, superelevation, and safety factors."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CurveSafetyStandard> <http://www.w3.org/2000/01/rdf-schema#label> "Curve Safety Standard"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DesignChallenge
+<http://www.semanticweb.org/immersedTunnelOnto#DesignChallenge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignChallenge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignChallenge> <http://www.w3.org/2000/01/rdf-schema#comment> "Critical design challenges including waterproofing, durability, and load-bearing capacity per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignChallenge> <http://www.w3.org/2000/01/rdf-schema#label> "Design Challenge"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple
+<http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Key design principles for immersed tunnel alignment, segment dimensions, and joint requirements per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "Design Principle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Requirements for the design of immersed tunnels per GB/T 51318-2019."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Design Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DesignSystem
+<http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all design and analysis systems in immersed tunnel projects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Design System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DesignValidation
+<http://www.semanticweb.org/immersedTunnelOnto#DesignValidation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignValidation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignValidation> <http://www.w3.org/2000/01/rdf-schema#comment> "Validation and verification processes ensuring design compliance and performance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignValidation> <http://www.w3.org/2000/01/rdf-schema#label> "Design Validation"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Dynamic structural analysis including seismic response evaluation, vibration assessment, and time-dependent loading effects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Dynamic Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Dynamic load settlement analysis including dynamic loading, vibration effects, and cyclic settlement analysis."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DynamicSettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Dynamic Settlement Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EmergencyServiceClearance
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyServiceClearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyServiceClearance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyServiceClearance> <http://www.w3.org/2000/01/rdf-schema#comment> "Clearance specifications for emergency vehicles and evacuation requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyServiceClearance> <http://www.w3.org/2000/01/rdf-schema#label> "Emergency Service Clearance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Environmental requirements for impact mitigation and sustainability."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FinalizedHorizontalAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedHorizontalAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedHorizontalAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedHorizontalAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Finalized horizontal alignment with curve radii, spiral transitions, and tangent lengths."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedHorizontalAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Finalized Horizontal Alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Finalized route alignment with approved design status and quality assurance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedRouteAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Finalized Route Alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FinalizedVerticalAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedVerticalAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedVerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedVerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Finalized vertical alignment with gradient profile, vertical curves, and elevation control."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FinalizedVerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Finalized Vertical Alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FloatingScheme
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme> .
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Floating transportation method based on dock type, navigation conditions, and environmental factors."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Floating Scheme"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FlowAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#FlowAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FlowAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#FlowAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Water flow analysis around tunnel structures during construction and operation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FlowAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FunctionalRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#FunctionalRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FunctionalRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#FunctionalRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Functional requirements for immersed tube including traffic flow capacity, safety standards, and utility integration per IMMTD03."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FunctionalRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Functional Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GeneralDesign
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDesign> <http://www.w3.org/2000/01/rdf-schema#comment> "General design including tunnel alignment, profile, cross-section, elevation, and technical schemes per JTG 2120-2020 Chapter 6."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDesign> <http://www.w3.org/2000/01/rdf-schema#label> "General Design"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeneralDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> <http://www.w3.org/2000/01/rdf-schema#comment> "Design of tunnel geometry including plan profile, vertical alignment, and cross-sectional dimensions per JTG 2120-2020 Section 6.3-6.4."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> <http://www.w3.org/2000/01/rdf-schema#label> "Geometric Design"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Geotechnical analysis including bearing capacity, settlement, and foundation design."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Geotechnical Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GradualConnection
+<http://www.semanticweb.org/immersedTunnelOnto#GradualConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#GradualConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> .
+<http://www.semanticweb.org/immersedTunnelOnto#GradualConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "Gradual connection design for smooth transitions with continuity requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#GradualConnection> <http://www.w3.org/2000/01/rdf-schema#label> "Gradual Connection"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Plan alignment with smooth curves and appropriate curvature for construction and operation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Horizontal Alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#HorizontalCurveRadius
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalCurveRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalCurveRadius> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#HorizontalAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalCurveRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Horizontal curve radii specifications based on vehicle dynamics and safety standards."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#HorizontalCurveRadius> <http://www.w3.org/2000/01/rdf-schema#label> "Horizontal Curve Radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive hydraulic analysis including water flow patterns, pressure distribution, drainage design, and scour assessment around tunnel structures."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Hydraulic Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#HydraulicPerformanceGuideline
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicPerformanceGuideline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicPerformanceGuideline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignGuideline> .
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicPerformanceGuideline> <http://www.w3.org/2000/01/rdf-schema#comment> "Guidelines for hydraulic performance requirements and specifications per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#HydraulicPerformanceGuideline> <http://www.w3.org/2000/01/rdf-schema#label> "Hydraulic Performance Guideline"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersionScheme
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Immersion method based on navigation conditions, hydrological environment, and construction equipment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Immersion Scheme"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry
+<http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> .
+<http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Integrated tunnel geometry with route and structural integration and geometric consistency."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#IntegratedTunnelGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "Integrated Tunnel Geometry"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint
+<http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Integration points and junctions between structural and route design elements per IMMTD03."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Integration Point"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#JointRequirementPrinciple
+<http://www.semanticweb.org/immersedTunnelOnto#JointRequirementPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#JointRequirementPrinciple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple> .
+<http://www.semanticweb.org/immersedTunnelOnto#JointRequirementPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Design principles for joint requirements, waterproofing, and durability specifications per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#JointRequirementPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "Joint Requirement Principle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#JointingScheme
+<http://www.semanticweb.org/immersedTunnelOnto#JointingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#JointingScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ConstructionScheme> .
+<http://www.semanticweb.org/immersedTunnelOnto#JointingScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Final joint scheme determining location and structural form based on construction and operational requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#JointingScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Jointing Scheme"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LoadBearingCapacityChallenge
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingCapacityChallenge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingCapacityChallenge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignChallenge> .
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingCapacityChallenge> <http://www.w3.org/2000/01/rdf-schema#comment> "Design challenges related to structural load-bearing capacity and stability per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingCapacityChallenge> <http://www.w3.org/2000/01/rdf-schema#label> "Load Bearing Capacity Challenge"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LoadBearingSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Load-bearing specifications and structural material requirements for cross-section design per IMMTD03."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LoadBearingSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Load Bearing Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PerformanceRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Performance requirements for structural integrity, safety, and operational efficiency."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Performance Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PerformanceVerification
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceVerification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceVerification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignValidation> .
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceVerification> <http://www.w3.org/2000/01/rdf-schema#comment> "Verification of design performance against requirements and objectives."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PerformanceVerification> <http://www.w3.org/2000/01/rdf-schema#label> "Performance Verification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignGuideline
+<http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignGuideline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignGuideline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignGuideline> <http://www.w3.org/2000/01/rdf-schema#comment> "Preliminary design guidelines and specifications for structural and hydraulic performance per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignGuideline> <http://www.w3.org/2000/01/rdf-schema#label> "Preliminary Design Guideline"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData
+<http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#RouteData> .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> <http://www.w3.org/2000/01/rdf-schema#comment> "Detailed alignment data with design criteria and control points for route development."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteAlignmentData> <http://www.w3.org/2000/01/rdf-schema#label> "Route Alignment Data"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#RouteData
+<http://www.semanticweb.org/immersedTunnelOnto#RouteData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteData> <http://www.w3.org/2000/01/rdf-schema#comment> "Route data including starting and ending points, route length, and alignment parameters for IMMTD04."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteData> <http://www.w3.org/2000/01/rdf-schema#label> "Route Data"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#RouteGeometricModel
+<http://www.semanticweb.org/immersedTunnelOnto#RouteGeometricModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteGeometricModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteGeometricModel> <http://www.w3.org/2000/01/rdf-schema#comment> "3D geometric models representing route and cross-section alignment with coordinate systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#RouteGeometricModel> <http://www.w3.org/2000/01/rdf-schema#label> "Route Geometric Model"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SafetyRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#SafetyRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SafetyRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#SafetyRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Safety requirements for fire protection, emergency evacuation, and operational safety."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SafetyRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ScourAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#ScourAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ScourAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#ScourAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Analysis of seabed scour potential and erosion around tunnel structures."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ScourAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Scour Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionPrinciple
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionPrinciple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignPrinciple> .
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Design principles for segment dimensions and cross-sectional requirements per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Dimension Principle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> <http://www.w3.org/2000/01/rdf-schema#comment> "Dimensional data for tunnel segments including total width, height, and wall thickness per IMMTD03."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> <http://www.w3.org/2000/01/rdf-schema#label> "Segment Dimensional Data"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SeismicAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Seismic analysis for earthquake resistance evaluation including horizontal and vertical force components, strength checks, and deformation limits."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Seismic Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SettlementAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#SettlementAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#SettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Geotechnical analysis of foundation settlement patterns, differential movement, and long-term deformation behavior under operational loads."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Settlement Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SettlementPrediction
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StabilityAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#StabilityAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StabilityAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#StabilityAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural stability analysis including buoyancy control, foundation stability, and overall equilibrium assessment during all construction phases."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StabilityAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Stability Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StaticAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#StaticAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StaticAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#StaticAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Static structural analysis implementing GBT 51318-2019 Section 8.3 pipe section force calculations. Transverse direction calculations per Section 8.3.1 segmented by water depth and soil cover using plane strain models considering: water pressure, soil cover load, lateral earth pressure, lateral water pressure, internal load and ballast. Longitudinal direction calculations per Section 8.3.2 consider structure shape, construction methods, wave forces, and flow velocity. During construction uses 3D numerical simulations for complex cases. During operation employs elastic foundation beam models. Analysis incorporates uneven settlement, temperature change, concrete shrinkage, and joint deformations. Historical soil bearing capacity and construction process data used for settlement estimation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StaticAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Static Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> .
+<http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Static load settlement analysis including immediate, consolidation, and secondary settlement components for IMMTD05."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StaticSettlementAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Static Settlement Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive structural analysis performed during all phases as specified in GBT 51318-2019 Section 8.1.1: prefabrication, towing, mooring, immersion, construction, and operational stages. Analysis assesses strength, deformation, stability, anti-buoyancy, and settlement performance under each condition. Based on most unfavorable load combinations during construction and operation, analysis is conducted in both transverse and longitudinal directions per Section 8.1.2, with structural safety verified under ultimate and serviceability limit states."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Analysis"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralChamberDimensions
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralChamberDimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralChamberDimensions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SegmentDimensionalData> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralChamberDimensions> <http://www.w3.org/2000/01/rdf-schema#comment> "Dimensions of structural chambers and compartments within tunnel cross-section."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralChamberDimensions> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Chamber Dimensions"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural dimension decisions with rationale and design justification for route integration."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralDimensionDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Dimension Decision"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralPerformanceGuideline
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralPerformanceGuideline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralPerformanceGuideline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignGuideline> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralPerformanceGuideline> <http://www.w3.org/2000/01/rdf-schema#comment> "Guidelines for structural performance requirements and specifications per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralPerformanceGuideline> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Performance Guideline"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural design requirements including load-bearing capacity, deformation limits, and stability criteria for immersed tunnel construction."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralRouteIntegration
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRouteIntegration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRouteIntegration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#IntegrationPoint> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRouteIntegration> <http://www.w3.org/2000/01/rdf-schema#comment> "Integration between structural design and route alignment design systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRouteIntegration> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Route Integration"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TechnicalScheme
+<http://www.semanticweb.org/immersedTunnelOnto#TechnicalScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TechnicalScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TechnicalScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical schemes for construction methods and procedures."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TechnicalScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Technical Scheme"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficFlowCapacityRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficFlowCapacityRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficFlowCapacityRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#FunctionalRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficFlowCapacityRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Requirements for traffic flow capacity and lane configuration for immersed tube cross-section design."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficFlowCapacityRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Flow Capacity Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition curve locations and lengths for gradual connections between straight sections and curves."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionCurve> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Curve"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TransitionZone
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#RouteGeometricModel> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Transition zones between straight sections and curves with geometric continuity requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionZone> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Zone"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> <http://www.w3.org/2000/01/rdf-schema#comment> "Geometric boundaries for tunnel structures including spatial limits and clearance envelopes."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelGeometricBoundary> <http://www.w3.org/2000/01/rdf-schema#label> "Tunnel Geometric Boundary"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#UtilityClearance
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityClearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityClearance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityClearance> <http://www.w3.org/2000/01/rdf-schema#comment> "Clearance specifications for utility systems and maintenance access."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityClearance> <http://www.w3.org/2000/01/rdf-schema#label> "Utility Clearance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#FunctionalRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "Requirements for integrating utilities and services within immersed tube cross-section design."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "Utility Integration Requirement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VehicleClearance
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleClearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleClearance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ClearanceGeometry> .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleClearance> <http://www.w3.org/2000/01/rdf-schema#comment> "Clearance specifications for different vehicle types within tunnel lanes."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleClearance> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Clearance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement> .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Vehicle dynamics constraints including lateral acceleration, comfort criteria, and speed limits."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDynamicsConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Dynamics Constraint"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeometricDesign> .
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitudinal profile design meeting drainage, navigation clearance, and safety requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Vertical Alignment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VerticalAlignment> .
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Vertical curve radii for crest and sag curves with gradient change considerations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VerticalCurveRadius> <http://www.w3.org/2000/01/rdf-schema#label> "Vertical Curve Radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WaterproofingChallenge
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofingChallenge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofingChallenge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DesignChallenge> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofingChallenge> <http://www.w3.org/2000/01/rdf-schema#comment> "Design challenges related to waterproofing systems and joint sealing per IMMTD01 use case."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofingChallenge> <http://www.w3.org/2000/01/rdf-schema#label> "Waterproofing Challenge"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,63 @@
+[ {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#MaintenanceSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Base class for maintenance and operational management systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maintenance System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#OperationalManagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Operational management and control systems for tunnel operations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Operational Management"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#MaintenanceSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#PreventiveMaintenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Preventive maintenance procedures and scheduling systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Preventive Maintenance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#MaintenanceSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/maintenance_operations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n            MINIMAL PLACEHOLDER MODULE for maintenance and operational systems.\n            \n            STATUS: Basic framework only - requires significant expansion for comprehensive IFC4.3 coverage.\n            \n            CURRENT SCOPE: Basic maintenance system classification.\n            FUTURE DEVELOPMENT NEEDED:\n            - Detailed maintenance procedures and scheduling\n            - Operational management workflows  \n            - Lifecycle management concepts\n            - Maintenance tracking and reporting\n            - Performance monitoring systems\n            \n            This module provides essential base classes for tunnel lifecycle management\n            but is intentionally minimal in the current IFC4.3 focused development phase.\n        "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersed Tunnel Ontology - Maintenance and Operations"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/core"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0.0 - Minimal Placeholder"
+  } ]
+} ]

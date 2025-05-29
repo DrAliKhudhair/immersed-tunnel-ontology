@@ -1,0 +1,408 @@
+[ {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Conventional steel reinforcement bars and mesh."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Conventional Reinforcement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Embedded bolt component with diameter, length, and support specifications per HPDI requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Embedded Bolt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#FlatRib",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Flat structural rib with rib specifications, initial position, and spacing per HPDI classification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flat Rib"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralRib"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedJoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Standard joints between immersed tunnel elements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersed Joint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#JointSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#InnerPanel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Inner steel panel of steel shell structure with specified thickness, width, and length per HPDI requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Inner Panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#InternalPartition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Internal partitions dividing tunnel into traffic lanes and service areas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Internal Partition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TubeStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#JointSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Joint systems connecting tunnel segments per JTG 2120-2020 Chapter 8."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Joint System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#LRib",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "L-shaped structural rib with rib specifications, initial position, and spacing per HPDI classification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "L Rib"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralRib"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPartition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Longitudinal steel partition within steel shell structure per HPDI specifications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Longitudinal Partition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPrestressedCable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Longitudinal prestressed cable with steel bundle model and positioning specifications per HPDI requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Longitudinal Prestressed Cable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#OuterPanel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Outer steel panel of steel shell structure with specified thickness, width, and length per HPDI requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Outer Panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Prestressed tendons and post-tensioning systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Prestressed Reinforcement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Steel reinforcement element characterized by specified diameter, length, and support requirements according to GBT 51318-2019 reinforcement design standards and HPDI technical specifications for structural concrete applications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reinforcement Bar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Steel reinforcement systems for concrete structures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reinforcement System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Steel shell structure system for pipe sections combining steel shell with internal concrete per HPDI classification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Steel Shell Structure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralRib",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Base class for structural ribs with specifications, initial position, and spacing per HPDI requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Structural Rib"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Base class for structural systems and components."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Structural System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TRib",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "T-shaped structural rib with rib specifications, initial position, and spacing per HPDI classification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "T Rib"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralRib"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TransversePartition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Transverse steel partition within steel shell structure per HPDI specifications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transverse Partition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TubeSlab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Top and bottom slabs of immersed tube structure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tube Slab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TubeStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TubeStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Main tube structure of immersed tunnel per JTG 2120-2020 Chapter 7."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tube Structure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TubeWall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reinforced concrete walls of immersed tube structure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tube Wall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TubeStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#WaterproofSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Waterproofing systems for joint sealing and tunnel protection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Waterproof System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#JointSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#WeldingStud",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Welding studs with stud specifications, initial positions, and spacing per HPDI requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Welding Stud"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#designStrength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Design strength of structural elements in MPa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "design strength"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#jointWidth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Width of joint opening in millimeters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#JointSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "joint width"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#structuralThickness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Thickness of structural elements in millimeters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "structural thickness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n            Enhanced structural systems and components for immersed tunnels.\n            Comprehensive structural design, joints, and reinforcement systems.\n            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 7-8 standards.\n            \n            CONSOLIDATES:\n            - Structural components from structural_components.owl\n            - Joint systems from joint_systems.owl\n            - Reinforcement and prestressing systems\n            - Structural connections and details\n            \n            ENHANCEMENTS:\n            - Advanced structural analysis\n            - Optimized joint design\n            - Smart monitoring integration\n            - Durability enhancement\n        "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersed Tunnel Ontology - Structural Systems and Components"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/core"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0.0 - Enhanced"
+  } ]
+} ]

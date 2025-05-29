@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto/modulars/materials_quality_systems#"
+     xml:base="http://www.semanticweb.org/immersedTunnelOnto/modulars/materials_quality_systems"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/materials_quality_systems">
+        <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+        <rdfs:comment xml:lang="en">
+            Enhanced materials and quality control systems for immersed tunnels.
+            Comprehensive material specifications, testing, and quality assurance.
+            Based on GB/T 51318-2019 and JTG 2120-2020 materials standards.
+            
+            CONSOLIDATES:
+            - Material specifications from material_specifications.owl
+            - Quality control from quality_control.owl
+            - Testing procedures and standards
+            - Material properties and performance
+            
+            ENHANCEMENTS:
+            - Advanced material characterization
+            - Smart quality monitoring
+            - Digital material tracking
+            - Performance optimization
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Materials and Quality Systems</rdfs:label>
+        <owl:versionInfo>3.0.0 - Enhanced</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#compressiveStrength -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#compressiveStrength">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Concrete"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Compressive strength of concrete in MPa.</rdfs:comment>
+        <rdfs:label xml:lang="en">compressive strength</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#yieldStrength -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#yieldStrength">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ReinforcingSteel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Yield strength of reinforcing steel in MPa.</rdfs:comment>
+        <rdfs:label xml:lang="en">yield strength</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#AntiAnchorLayer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AntiAnchorLayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial"/>
+        <rdfs:comment xml:lang="en">Anti-anchor protection layer at tunnel top with specified thickness and positioning per HPDI requirements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Anti-Anchor Layer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#BallastConcrete -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#BallastConcrete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Concrete"/>
+        <rdfs:comment xml:lang="en">Ballast concrete used for weight adjustment and buoyancy control during immersion operations per HPDI specifications.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ballast Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#Concrete -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Concrete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteMaterial"/>
+        <rdfs:comment xml:lang="en">Concrete materials including normal and high-performance concrete.</rdfs:comment>
+        <rdfs:label xml:lang="en">Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ConcreteMaterial -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConcreteMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial"/>
+        <rdfs:comment xml:lang="en">Various types of concrete used in tunnel construction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Concrete Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialSystem"/>
+        <rdfs:comment xml:lang="en">Materials used in construction processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Construction Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#Material -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Material">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Base class for all materials used in tunnel construction per taxonomy module.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#MaterialSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MaterialSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Material"/>
+        <rdfs:comment xml:lang="en">Base class for materials and quality systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#MaterialTesting -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MaterialTesting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#QualityControlSystem"/>
+        <rdfs:comment xml:lang="en">Material testing procedures and standards compliance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material Testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#PrestressedConcrete -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PrestressedConcrete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Concrete"/>
+        <rdfs:comment xml:lang="en">Prestressed concrete (PC) utilized for added tensile resistance and durability per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Prestressed Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#QualityControlSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#QualityControlSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialSystem"/>
+        <rdfs:comment xml:lang="en">Quality control and assurance systems for construction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quality Control System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#QualityInspection -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#QualityInspection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#QualityControlSystem"/>
+        <rdfs:comment xml:lang="en">Construction quality inspection and verification procedures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quality Inspection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ReinforcedConcrete -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcedConcrete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Concrete"/>
+        <rdfs:comment xml:lang="en">Reinforced concrete (RC) structural system for shallow water and short-span applications per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reinforced Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ReinforcingSteel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcingSteel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial"/>
+        <rdfs:comment xml:lang="en">Steel reinforcement bars and prestressing tendons.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reinforcing Steel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#Steel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Steel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelMaterial"/>
+        <rdfs:comment xml:lang="en">Steel reinforcement and structural steel materials.</rdfs:comment>
+        <rdfs:label xml:lang="en">Steel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#SteelMaterial -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SteelMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial"/>
+        <rdfs:comment xml:lang="en">Various types of steel used in tunnel construction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Steel Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#SteelShellConcrete -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SteelShellConcrete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#Concrete"/>
+        <rdfs:comment xml:lang="en">Steel shell concrete (SSC) combining steel shell with internal concrete for long-span or deep-water conditions per HPDI classification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Steel Shell Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#WaterproofingMaterial -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterproofingMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial"/>
+        <rdfs:comment xml:lang="en">Materials used for waterproofing and sealing applications.</rdfs:comment>
+        <rdfs:label xml:lang="en">Waterproofing Material</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

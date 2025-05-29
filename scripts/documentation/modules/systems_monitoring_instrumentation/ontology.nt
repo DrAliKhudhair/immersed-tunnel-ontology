@@ -1,0 +1,119 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Enhanced monitoring and instrumentation systems for immersed tunnels.\n            Comprehensive monitoring including structural health, environmental conditions, and safety systems.\n            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 16 standards.\n            \n            ENHANCED FROM: unified_monitoring_systems.owl\n            CONSOLIDATES:\n            - Structural monitoring systems\n            - Environmental monitoring systems\n            - Risk analysis and data acquisition\n            - Real-time monitoring and alerting\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Tunnel Ontology - Monitoring and Instrumentation Systems"@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_monitoring_instrumentation> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0 - Enhanced" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasMonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its monitoring systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Monitoring System"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#monitoringFrequency
+<http://www.semanticweb.org/immersedTunnelOnto#monitoringFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#monitoringFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> .
+<http://www.semanticweb.org/immersedTunnelOnto#monitoringFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#monitoringFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Data collection frequency in measurements per hour."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#monitoringFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "monitoring frequency"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AlertingSystem
+<http://www.semanticweb.org/immersedTunnelOnto#AlertingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AlertingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#AlertingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated alerting system for threshold violations and emergency conditions."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AlertingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Alerting System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DataAcquisitionSystem
+<http://www.semanticweb.org/immersedTunnelOnto#DataAcquisitionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DataAcquisitionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DataAcquisitionSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated data collection and processing system for continuous monitoring."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DataAcquisitionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Data Acquisition System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DataAnalysisSystem
+<http://www.semanticweb.org/immersedTunnelOnto#DataAnalysisSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DataAnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DataAnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Advanced data analysis including trend analysis and anomaly detection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DataAnalysisSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Data Analysis System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DisplacementMonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#DisplacementMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DisplacementMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> .
+<http://www.semanticweb.org/immersedTunnelOnto#DisplacementMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Advanced displacement monitoring with high-precision sensors."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DisplacementMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Displacement Monitoring System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all monitoring instruments and sensors used in tunnel monitoring systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> <http://www.w3.org/2000/01/rdf-schema#label> "Monitoring Instrument"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive monitoring system for immersed tunnel health and performance assessment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Monitoring System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PredictiveMonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#PredictiveMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PredictiveMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring> .
+<http://www.semanticweb.org/immersedTunnelOnto#PredictiveMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Advanced monitoring system with predictive analytics for maintenance planning."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PredictiveMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Predictive Monitoring System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#RealTimeMonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#RealTimeMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#RealTimeMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring> .
+<http://www.semanticweb.org/immersedTunnelOnto#RealTimeMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Real-time monitoring with automated data collection and instant alerting capabilities."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#RealTimeMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Real-Time Monitoring System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SeismicMonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> .
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive seismic monitoring for earthquake response assessment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SeismicMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Seismic Monitoring System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StrainMonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#StrainMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StrainMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringInstrument> .
+<http://www.semanticweb.org/immersedTunnelOnto#StrainMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprehensive strain monitoring using various gauge technologies."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StrainMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Strain Monitoring System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring> <http://www.w3.org/2000/01/rdf-schema#comment> "Advanced monitoring system for continuous assessment of structural integrity per JTG 2120-2020 Chapter 16."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralHealthMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Health Monitoring"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

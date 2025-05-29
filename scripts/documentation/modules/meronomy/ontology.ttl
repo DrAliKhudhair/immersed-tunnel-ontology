@@ -1,0 +1,558 @@
+@prefix : <http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy#> .
+
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy> rdf:type owl:Ontology ;
+                                                                   owl:imports <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> ,
+                                                                               <http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#aggregates
+<http://www.semanticweb.org/immersedTunnelOnto#aggregates> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPart> ;
+                                                           rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                           rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                           rdfs:comment "Weak aggregation relationship where parts can exist independently."@en ;
+                                                           rdfs:label "aggregates"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#assemblesInto
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> ;
+                                                              owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> ;
+                                                              rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                              rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                              rdfs:comment "Relationship indicating that entities assemble into a larger entity."@en ;
+                                                              rdfs:label "assembles Into"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#composes
+<http://www.semanticweb.org/immersedTunnelOnto#composes> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPart> ;
+                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                         rdfs:comment "Strong composition relationship where parts cannot exist without the whole."@en ;
+                                                         rdfs:label "composes"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#contains
+<http://www.semanticweb.org/immersedTunnelOnto#contains> rdf:type owl:ObjectProperty ;
+                                                         owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> ;
+                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasComponent
+<http://www.semanticweb.org/immersedTunnelOnto#hasComponent> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPart> ;
+                                                             rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                             rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                             rdfs:comment "Relationship indicating that a system has a component."@en ;
+                                                             rdfs:label "has Component"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> ;
+                                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> ;
+                                                                         rdfs:comment "Links project to its construction personnel per HPDI classification."@en ;
+                                                                         rdfs:label "has Construction Personnel"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable
+<http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#Process> ;
+                                                               rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> ;
+                                                               rdfs:comment "Relationship between project stage and its deliverables."@en ;
+                                                               rdfs:label "has Deliverable"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> ;
+                                                                   rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> ;
+                                                                   rdfs:comment "Links project to its design personnel per HPDI classification."@en ;
+                                                                   rdfs:label "has Design Personnel"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasFoundation
+<http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> ;
+                                                              rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                              rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent> ;
+                                                              rdfs:comment "Relationship between tunnel system and its foundation."@en ;
+                                                              rdfs:label "has Foundation"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                      rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> ;
+                                                                      rdfs:comment "Relationship between component and its geometric parameters."@en ;
+                                                                      rdfs:label "has Geometric Parameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasJoint
+<http://www.semanticweb.org/immersedTunnelOnto#hasJoint> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> ;
+                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> ;
+                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#JointComponent> ;
+                                                         rdfs:comment "Relationship between pipe sections and their joints."@en ;
+                                                         rdfs:label "has Joint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain owl:ObjectProperty ;
+                                                                          rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint> ;
+                                                                          rdfs:comment "Links a part-whole relationship to its constraints."@en ;
+                                                                          rdfs:label "has Mereological Constraint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPart
+<http://www.semanticweb.org/immersedTunnelOnto#hasPart> rdf:type owl:ObjectProperty ;
+                                                        owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> ;
+                                                        rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                        rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                        rdfs:comment "General part-whole relationship where the domain has the range as a part."@en ;
+                                                        rdfs:label "has Part"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap> rdf:type owl:ObjectProperty ,
+                                                                        owl:TransitiveProperty ;
+                                                               rdfs:comment "Defines overlapping part relationships in complex assemblies."@en ;
+                                                               rdfs:label "has Part Overlap"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection
+<http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> ;
+                                                               rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> ;
+                                                               rdfs:comment "Relationship between tunnel and its pipe sections."@en ;
+                                                               rdfs:label "has Pipe Section"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader
+<http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> ;
+                                                                 rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader> ;
+                                                                 rdfs:comment "Links project to its project leader per HPDI classification."@en ;
+                                                                 rdfs:label "has Project Leader"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> ;
+                                                                   rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> ;
+                                                                   rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> ;
+                                                                   rdfs:comment "Relationship between pipe section and its reserved chambers."@en ;
+                                                                   rdfs:label "has Reserved Chamber"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent
+<http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> ;
+                                                                   rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                                   rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent> ;
+                                                                   rdfs:comment "Relationship between tunnel system and its safety components."@en ;
+                                                                   rdfs:label "has Safety Component"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPart> ;
+                                                                rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                rdfs:comment "Relationship indicating that a component has a subcomponent."@en ;
+                                                                rdfs:label "has Subcomponent"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility
+<http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess> ;
+                                                                     rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent> ;
+                                                                     rdfs:comment "Relationship between construction stage and its temporary facilities."@en ;
+                                                                     rdfs:label "has Temporary Facility"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> rdf:type owl:ObjectProperty ,
+                                                                      owl:SymmetricProperty ;
+                                                             rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> ;
+                                                               owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#aggregates> ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom
+<http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPart> ;
+                                                                rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                                rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                                rdfs:comment "Relationship indicating that an entity is assembled from other entities."@en ;
+                                                                rdfs:label "is Assembled From"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isComponentOf
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> ;
+                                                              owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> ;
+                                                              rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                              rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                              rdfs:comment "Relationship indicating that a component belongs to a system."@en ;
+                                                              rdfs:label "is Component Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isComposedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> ;
+                                                             owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#composes> ;
+                                                             rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                             rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                             rdfs:comment "Strong composition relationship where part is composed by whole."@en ;
+                                                             rdfs:label "is Composed By"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> rdf:type owl:ObjectProperty ,
+                                                                       owl:SymmetricProperty ;
+                                                              rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf
+<http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf> rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> ;
+                                                                rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> ;
+                                                                rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#Process> ;
+                                                                rdfs:comment "Relationship between deliverable and its project stage."@en ;
+                                                                rdfs:label "is Deliverable Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> ;
+                                                               owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent> ;
+                                                               rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                               rdfs:comment "Relationship between foundation and its tunnel system."@en ;
+                                                               rdfs:label "is Foundation Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf
+<http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf> rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> ;
+                                                                       rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> ;
+                                                                       rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                       rdfs:comment "Relationship between geometric parameter and its component."@en ;
+                                                                       rdfs:label "is Geometric Parameter Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isJointOf
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> ;
+                                                          owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasJoint> ;
+                                                          rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#JointComponent> ;
+                                                          rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> ;
+                                                          rdfs:comment "Relationship between joint and its pipe sections."@en ;
+                                                          rdfs:label "is Joint Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn
+<http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> rdf:type owl:ObjectProperty ,
+                                                                     owl:TransitiveProperty ;
+                                                            rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                            rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                            rdfs:comment "Spatial relationship indicating location containment."@en ;
+                                                            rdfs:label "is Located In"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isMadeOf
+<http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#Material> ;
+                                                         rdfs:comment "Relationship indicating the material composition of a component."@en ;
+                                                         rdfs:label "is Made Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isPartOf
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> rdf:type owl:ObjectProperty ,
+                                                                  owl:TransitiveProperty ;
+                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> ;
+                                                                owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> ;
+                                                                rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> ;
+                                                                rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> ;
+                                                                rdfs:comment "Relationship between pipe section and its tunnel."@en ;
+                                                                rdfs:label "is Pipe Section Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> ;
+                                                                    owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> ;
+                                                                    rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> ;
+                                                                    rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> ;
+                                                                    rdfs:comment "Relationship between reserved chamber and its pipe section."@en ;
+                                                                    rdfs:label "is Reserved Chamber Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> ;
+                                                                    owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> ;
+                                                                    rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent> ;
+                                                                    rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> ;
+                                                                    rdfs:comment "Relationship between safety component and its tunnel system."@en ;
+                                                                    rdfs:label "is Safety Component Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> ;
+                                                                 owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                 rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                 rdfs:comment "Relationship indicating that a component is a subcomponent of another."@en ;
+                                                                 rdfs:label "is Subcomponent Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy> rdf:type owl:ObjectProperty ;
+                                                              owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#supports> ;
+                                                              rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                              rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent> ;
+                                                              rdfs:comment "Structural relationship indicating being supported."@en ;
+                                                              rdfs:label "is Supported By"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf
+<http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf> rdf:type owl:ObjectProperty ;
+                                                                      owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> ;
+                                                                      rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent> ;
+                                                                      rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess> ;
+                                                                      rdfs:comment "Relationship between temporary facility and its construction stage."@en ;
+                                                                      rdfs:label "is Temporary Facility Of"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isUsedIn
+<http://www.semanticweb.org/immersedTunnelOnto#isUsedIn> rdf:type owl:ObjectProperty ;
+                                                         owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> ;
+                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#Material> ;
+                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                         rdfs:comment "Relationship indicating where a material is used."@en ;
+                                                         rdfs:label "is Used In"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#reportsTo
+<http://www.semanticweb.org/immersedTunnelOnto#reportsTo> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                          rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                          rdfs:comment "Defines organizational reporting relationships between personnel per HPDI classification."@en ;
+                                                          rdfs:label "reports To"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#supervises
+<http://www.semanticweb.org/immersedTunnelOnto#supervises> rdf:type owl:ObjectProperty ;
+                                                           owl:inverseOf <http://www.semanticweb.org/immersedTunnelOnto#reportsTo> ;
+                                                           rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                           rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                           rdfs:comment "Defines supervision relationships between personnel per HPDI classification."@en ;
+                                                           rdfs:label "supervises"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#supports
+<http://www.semanticweb.org/immersedTunnelOnto#supports> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent> ;
+                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                         rdfs:comment "Structural relationship indicating support."@en ;
+                                                         rdfs:label "supports"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#contains
+<http://www.semanticweb.org/immersedTunnelOnto#contains> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence
+<http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                                    rdfs:range xsd:integer ;
+                                                                    rdfs:comment "Sequence number for assembly order."@en ;
+                                                                    rdfs:label "has Assembly Sequence"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPartCount
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartCount> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                             rdfs:range xsd:integer ;
+                                                             rdfs:comment "Number of parts in a whole."@en ;
+                                                             rdfs:label "has Part Count"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> ;
+                                                                rdfs:range xsd:string ;
+                                                                rdfs:comment "Position of a part within the whole."@en ;
+                                                                rdfs:label "has Part Position"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#isPartOf
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent
+<http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#JointComponent
+<http://www.semanticweb.org/immersedTunnelOnto#JointComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Material
+<http://www.semanticweb.org/immersedTunnelOnto#Material> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint> rdf:type owl:Class ;
+                                                                       rdfs:comment "Constraint on part-whole relationships."@en ;
+                                                                       rdfs:label "Mereological Constraint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity
+<http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PipeSection
+<http://www.semanticweb.org/immersedTunnelOnto#PipeSection> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Process
+<http://www.semanticweb.org/immersedTunnelOnto#Process> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable
+<http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader
+<http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent
+<http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent
+<http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2002/07/owl#ObjectProperty
+owl:ObjectProperty rdf:type owl:Class .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.semanticweb.org/immersedTunnelOnto#contains> rdfs:comment "Spatial relationship indicating spatial containment."@en ;
+                                                         rdfs:label "contains"@en .
+
+
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> rdfs:comment "Spatial relationship indicating adjacency."@en ;
+                                                             rdfs:label "is Adjacent To"@en .
+
+
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> rdfs:comment "Weak aggregation relationship where part is aggregated by whole."@en ;
+                                                               rdfs:label "is Aggregated By"@en .
+
+
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> rdfs:comment "Relationship indicating physical connection."@en ;
+                                                              rdfs:label "is Connected To"@en .
+
+
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> rdfs:comment "General part-whole relationship where the domain is a part of the range."@en ;
+                                                         rdfs:label "is Part Of"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

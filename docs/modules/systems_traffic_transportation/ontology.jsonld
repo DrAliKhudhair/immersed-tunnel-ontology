@@ -1,0 +1,844 @@
+[ {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#AccessControlSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Systems for controlling vehicle access to tunnel based on size, weight, and hazardous materials."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access Control System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Advance tunnel information signs positioned before tunnel entrance per JTG 2120-2020 Section 15.2.3."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Advance Tunnel Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ApproachRamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ramp structures leading traffic down to tunnel entrance portal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Approach Ramp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#CenterlineMarking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Centerline markings for directional traffic separation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Centerline Marking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#CentralBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Central barrier for directional traffic separation in tunnels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Central Barrier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ClassATrafficImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class A importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Class A Traffic Importance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ClassBTrafficImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class B importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Class B Traffic Importance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ClassCTrafficImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class C importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Class C Traffic Importance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ClassDTrafficImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class D importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Class D Traffic Importance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#CrashBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Impact-absorbing barriers for vehicle crash protection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Crash Barrier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#DirectionalArrow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Directional arrow indicators for traffic flow guidance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Directional Arrow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#EdgelineMarking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Edge markings for roadway boundaries and shoulder definition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Edgeline Marking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#EntrancePortal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tunnel entrance portal with traffic management and safety systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entrance Portal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ExitPortal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tunnel exit portal with traffic management and safety systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Exit Portal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ExitRamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Ramp structures leading traffic up from tunnel exit portal to surface level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Exit Ramp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Systems for detecting over-height vehicles before tunnel entry."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Height Detection System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#IncidentManagementSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Automated incident detection and traffic management response systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Incident Management System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#InductiveLoopDetector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Inductive loop detectors embedded in pavement for vehicle presence detection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Inductive Loop Detector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#LaneControlSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Lane control signals for traffic management and lane closure indication."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lane Control Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#LaneMarking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Lane dividing markings for traffic separation and guidance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lane Marking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ProhibitionSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Prohibition signs for restricted vehicles and activities in tunnel."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Prohibition Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ReflectiveMarking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reflective markings for enhanced visibility in tunnel conditions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reflective Marking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SideBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Side barriers for tunnel wall protection and vehicle guidance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Side Barrier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SpeedControlSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Automated speed monitoring and control systems for tunnel safety."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Speed Control System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Speed limit signs for tunnel traffic control per JTG 2120-2020."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Speed Limit Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traffic barriers for vehicle guidance and safety per JTG 2120-2020 Section 15.2.2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Barrier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Automated traffic control and management systems for tunnel operations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Control System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traffic engineering and ancillary facilities coordinated with main structure and systems per JTG 2120-2020 Section 15.1.1."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Engineering Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Importance classification of immersed tunnel traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Engineering Importance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Systems for guiding traffic through tunnel safely and efficiently."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Guidance System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficLightSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traffic light systems for tunnel entrance/exit control and emergency management."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Light System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Pavement markings for lane guidance and traffic control per JTG 2120-2020 Section 15.2.2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Marking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traffic safety facilities including signs, markings, barriers, and guidance systems per JTG 2120-2020 Section 15.2.1-15.2.2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Safety Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Traffic signs for tunnel guidance and safety per JTG 2120-2020 Section 15.2.2."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Base class for all traffic and transportation systems in immersed tunnel projects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Traffic System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Base class for transportation infrastructure systems in immersed tunnel projects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transportation System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Infrastructure systems for vehicle approach to tunnel including ramps and connections."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tunnel Approach System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelNameSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tunnel name identification signs at entrance and exit per JTG 2120-2020 Section 15.2.3."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tunnel Name Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tunnel entrance and exit portals with traffic control and safety systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tunnel Portal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#VariableMessageSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Electronic variable message signs for dynamic traffic information and warnings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Variable Message Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Systems for detecting and monitoring vehicles in tunnel for traffic management and safety."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle Detection System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#VideoAnalyticsDetector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Video-based vehicle detection using computer vision analytics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Video Analytics Detector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#WarningSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Warning signs for tunnel hazards and safety alerts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Warning Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSign"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Systems for measuring vehicle weight while in motion for overweight detection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Weigh-In-Motion System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#advanceSignSets",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of advance sign sets before tunnel, minimum 3 per JTG 2120-2020 Section 15.2.3."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "advance sign sets"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#barrierHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Height of traffic barrier in meters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "barrier height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#compliesWithJTGD70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates compliance with JTG D70/2 traffic engineering specifications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "complies with JTG D70"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates ensuring traffic safety, operational convenience, economic efficiency, and effective emergency response."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ensures traffic safety"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#hasTrafficControlSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a tunnel to its traffic control systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Traffic Control System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#hasTrafficEngineeringFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links tunnel to its traffic engineering facilities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Traffic Engineering Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSafetyFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links tunnel to its traffic safety facilities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Traffic Safety Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a tunnel to its traffic systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Traffic System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#hasTransportationSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a tunnel to its transportation systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Transportation System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#maxVehicleHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maximum allowed vehicle height in meters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "max vehicle height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#maxVehicleWeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maximum allowed vehicle weight in tons."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "max vehicle weight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto#speedLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Speed limit in kilometers per hour for tunnel traffic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "speed limit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\n            Consolidated traffic and transportation systems for immersed tunnels.\n            Includes traffic engineering facilities, safety systems, signs, barriers, and transportation infrastructure.\n            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 15 standards.\n            \n            CONSOLIDATES:\n            - Traffic engineering facilities from ancillary_structures_traffic_engineering.owl\n            - Traffic safety systems from ancillary_structures_traffic_engineering.owl\n            - Transportation infrastructure and access systems\n            - Traffic monitoring and control systems\n            \n            EXCLUDES:\n            - Emergency lighting and fire systems (moved to systems_safety_emergency.owl)\n            - Electrical power systems (moved to systems_mechanical_electrical.owl)\n            - Monitoring systems (moved to systems_monitoring_instrumentation.owl)\n        "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Immersed Tunnel Ontology - Traffic and Transportation Systems"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/core"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0.0 - Consolidated"
+  } ]
+} ]

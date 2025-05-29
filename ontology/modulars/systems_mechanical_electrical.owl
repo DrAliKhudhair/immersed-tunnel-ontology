@@ -112,7 +112,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct">
         <rdfs:label xml:lang="en">Smoke Exhaust Duct</rdfs:label>
-        <rdfs:comment xml:lang="en">Independent smoke exhaust ducts with vents ≤60m apart per JTG 2120-2020 Section 15.3.5.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Independent smoke exhaust ducts with ventilation openings for emergency smoke removal and air circulation.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct"/>
     </owl:Class>
 
@@ -131,7 +131,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization">
         <rdfs:label xml:lang="en">Escape Passage Pressurization</rdfs:label>
-        <rdfs:comment xml:lang="en">Mechanical pressurization with ≥30 Pa differential between escape passage and tunnel per JTG 2120-2020 Section 15.3.4.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Mechanical pressurization system maintaining positive pressure differential between escape passages and tunnel areas for safety.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem"/>
     </owl:Class>
 

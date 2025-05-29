@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  widoco:
+    build: .
+    volumes:
+      # Mount the current directory to access ontology files
+      - .:/app/workspace
+      # Mount a specific output directory for documentation
+      - ./scripts/documentation:/app/output
+    working_dir: /app/workspace
+    command: >
+      -ontFile ontology/Immersed_Tunnel_Ontology_Modular.owl
+      -outFolder /app/output
+      -includeImportedOntologies
+      -uniteSections
+      -lang en
+      -getOntologyMetadata
+      -webVowl
+      -rewriteAll 

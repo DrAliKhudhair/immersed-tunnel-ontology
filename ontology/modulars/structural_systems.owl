@@ -1,3 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems">
+    <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Structural Systems Module</rdfs:label>
+    <rdfs:comment xml:lang="en">
+      Structural systems module providing comprehensive classification and specifications for immersed tunnel structural design.
+      Aligned with GBT 51318-2019 "Immersed Tunnel Design Standard" covering structural design, joint systems, and foundation integration.
+      
+      This module encompasses:
+      - Settlement-based joint design classes for IMMTD05
+      - Longitudinal structural system design for IMMTD06
+      - Tunnel segment geometry and specifications
+      - Joint design and waterproofing requirements
+      - Foundation integration requirements
+      
+      STANDARDS ALIGNMENT:
+      - Structural design methodology per GBT 51318-2019
+      - Joint design requirements and specifications
+      - Segment division logic and optimization
+    </rdfs:comment>
+    <owl:versionInfo>4.0.0-GBT51318-2019-enhanced</owl:versionInfo>
+  </owl:Ontology>
+
     <!-- =====================================================
          IMMTD05 SETTLEMENT-BASED JOINT DESIGN CLASSES
          ===================================================== -->
@@ -11,7 +34,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DeformationAccommodation">
         <rdfs:label xml:lang="en">Deformation Accommodation</rdfs:label>
-        <rdfs:comment xml:lang="en">Deformation accommodation design including angular, longitudinal, and transverse movement capabilities.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Joint system design for accommodating angular, longitudinal, and transverse deformation under operational and settlement conditions.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SettlementBasedJointDesign"/>
     </owl:Class>
 
@@ -54,7 +77,7 @@
     <!-- Segment Design Classes -->
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelSegment">
         <rdfs:label xml:lang="en">Tunnel Segment</rdfs:label>
-        <rdfs:comment xml:lang="en">Individual tunnel segment with defined geometry, structural properties, and connection requirements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Discrete structural unit constituting a portion of the immersed tunnel assembly, characterized by defined geometric parameters, structural properties, and standardized connection interfaces according to GBT 51318-2019 segmentation design requirements.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralElement"/>
     </owl:Class>
 
@@ -138,7 +161,7 @@
     <!-- Segment Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#segmentLength">
         <rdfs:label xml:lang="en">segment length</rdfs:label>
-        <rdfs:comment xml:lang="en">Length of individual tunnel segment in meters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Longitudinal dimension of tunnel segment expressed in meters, determined by construction constraints, structural requirements, and fabrication limitations according to GBT 51318-2019 segmentation design principles.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSegment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
@@ -225,7 +248,7 @@
     <!-- Waterproofing Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#sealingSystem">
         <rdfs:label xml:lang="en">sealing system</rdfs:label>
-        <rdfs:comment xml:lang="en">Type of sealing system used for joint waterproofing.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Dual waterproofing sealing system configuration including GINA and OMEGA waterstop integration for joint protection.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterproofingRequirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -240,14 +263,14 @@
     <!-- Load Transfer Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#structuralCapacity">
         <rdfs:label xml:lang="en">structural capacity</rdfs:label>
-        <rdfs:comment xml:lang="en">Structural load capacity of joint in kN.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural load-bearing capacity verified through comprehensive structural calculations per GBT 51318-2019 Section 8.1.1 during prefabrication, towing, mooring, immersion, construction, and operational stages. Capacity assessed for strength, deformation, stability, anti-buoyancy, and settlement performance. Analysis based on most unfavorable load combinations per Section 8.1.2 in both transverse and longitudinal directions, with structural safety verified under ultimate and serviceability limit states. Transverse calculations per Section 8.3.1 use plane strain models considering water pressure, soil cover load, lateral earth pressure, and internal load/ballast. Value expressed in kN.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadTransferRequirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#forceDistribution">
         <rdfs:label xml:lang="en">force distribution</rdfs:label>
-        <rdfs:comment xml:lang="en">Force distribution pattern across joint interface.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural force distribution pattern and load transfer mechanism across joint interface connections.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadTransferRequirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -281,21 +304,21 @@
     <!-- Settlement-Based Joint Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#jointFlexibility">
         <rdfs:label xml:lang="en">joint flexibility</rdfs:label>
-        <rdfs:comment xml:lang="en">Joint flexibility requirements for settlement accommodation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Joint flexibility characteristics for accommodating differential settlement and thermal deformation.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SettlementBasedJointDesign"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#accommodatedMovement">
         <rdfs:label xml:lang="en">accommodated movement</rdfs:label>
-        <rdfs:comment xml:lang="en">Maximum movement that can be accommodated by joint design in mm.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Maximum movement accommodation capability for joint deformation under operational and settlement conditions.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SettlementBasedJointDesign"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#sealingRequirement">
         <rdfs:label xml:lang="en">sealing requirement</rdfs:label>
-        <rdfs:comment xml:lang="en">Sealing requirements for joints under settlement conditions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Waterproofing sealing performance requirements under settlement and operational loading conditions.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SettlementBasedJointDesign"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -687,7 +710,7 @@
     <!-- Ballast Layer Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ballastThickness">
         <rdfs:label xml:lang="en">ballast thickness</rdfs:label>
-        <rdfs:comment xml:lang="en">Thickness of ballast layer above tunnel segments in meters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Ballast layer thickness for buoyancy control and structural stability during floating and immersion phases.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BallastLayerDesign"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
@@ -723,7 +746,7 @@
     <!-- Joint Design Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#deformationTolerance">
         <rdfs:label xml:lang="en">deformation tolerance</rdfs:label>
-        <rdfs:comment xml:lang="en">Allowable deformation tolerance for joints in millimeters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Joint deformation tolerance for accommodating movement from settlement, shrinkage, and temperature variation.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JointDeformationTolerance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
@@ -831,7 +854,7 @@
     <!-- Durability Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#minimumCoverDepth">
         <rdfs:label xml:lang="en">minimum cover depth</rdfs:label>
-        <rdfs:comment xml:lang="en">Minimum concrete cover depth for reinforcement protection in millimeters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Minimum concrete cover depth for reinforcement protection based on environmental exposure conditions.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteCover"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
@@ -2263,4 +2286,298 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 
+    <!-- =====================================================
+         GBT 51318-2019 SECTION 7 LOAD CLASSIFICATION SYSTEM
+         ===================================================== -->
+
+    <!-- Load Classification Base Classes -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelLoad">
+        <rdfs:label xml:lang="en">Tunnel Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive classification for all loading conditions acting on immersed tunnel structures according to GBT 51318-2019 Section 7.1.1. Loads are systematically categorized into permanent, variable, and accidental classifications based on temporal characteristics, loading patterns, and probability of occurrence throughout the tunnel service life.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <!-- GBT 51318-2019 Table 7.1.1 Load Categories -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad">
+        <rdfs:label xml:lang="en">Permanent Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Permanent loads that remain essentially constant throughout the service life of the tunnel as defined in GBT 51318-2019 Table 7.1.1. Includes structural self-weight, earth pressure, hydrostatic pressure, concrete shrinkage and creep, loads from structures above, differential settlement, and equipment loads.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad">
+        <rdfs:label xml:lang="en">Variable Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Variable loads that change in magnitude and location during the service life as defined in GBT 51318-2019 Table 7.1.1. Includes internal traffic load (basic variable), water pressure variation, temperature effects, post-construction settlement, crowd load, surface overload, cable tension, water flow/wave effects, immersion lifting loads, maintenance load, and internal air pressure.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AccidentalLoad">
+        <rdfs:label xml:lang="en">Accidental Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Accidental loads with low probability of occurrence but significant structural consequences as defined in GBT 51318-2019 Table 7.1.1. Encompasses seismic load, internal vehicle explosion load, vehicle impact load, anti-terrorism load, ship collision and anchor impact load, and fire load requiring special design consideration for extreme conditions.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLoad"/>
+    </owl:Class>
+
+    <!-- Permanent Load Subclasses (GBT 51318-2019 Table 7.1.1) -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralSelfWeight">
+        <rdfs:label xml:lang="en">Structural Self-Weight</rdfs:label>
+        <rdfs:comment xml:lang="en">Self-weight of the tunnel structure based on design dimensions, concrete thickness, protective coatings, and material density as specified in GBT 51318-2019 Section 7.1.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EarthPressure">
+        <rdfs:label xml:lang="en">Earth Pressure</rdfs:label>
+        <rdfs:comment xml:lang="en">Earth pressure acting on tunnel structure calculated by overburden thickness and unit weight as specified in GBT 51318-2019 Section 7.1.3. Effective weight shall be used for submerged soils.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HydrostaticPressure">
+        <rdfs:label xml:lang="en">Hydrostatic Pressure</rdfs:label>
+        <rdfs:comment xml:lang="en">Hydrostatic pressure on tunnel structure calculated by water depth and water unit weight as specified in GBT 51318-2019 Section 7.1.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConcreteShrinkageCreep">
+        <rdfs:label xml:lang="en">Concrete Shrinkage and Creep</rdfs:label>
+        <rdfs:comment xml:lang="en">Effects of concrete shrinkage and creep on tunnel structure over time as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SuperstructureLoad">
+        <rdfs:label xml:lang="en">Load from Structures Above</rdfs:label>
+        <rdfs:comment xml:lang="en">Loads transmitted from structures or buildings above the tunnel as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DifferentialSettlementFoundation">
+        <rdfs:label xml:lang="en">Differential Settlement of Foundation</rdfs:label>
+        <rdfs:comment xml:lang="en">Effects of differential settlement of foundation and base on tunnel structure as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EquipmentPrestressedLoad">
+        <rdfs:label xml:lang="en">Equipment and Prestressed Concrete Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Equipment load and prestressed concrete load acting on tunnel structure as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PermanentLoad"/>
+    </owl:Class>
+
+    <!-- Variable Load Subclasses - Basic Variable -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#InternalTrafficLoad">
+        <rdfs:label xml:lang="en">Internal Traffic Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Internal traffic load as basic variable load including vehicles and dynamic effects based on current national standards as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.4.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <!-- Variable Load Subclasses - Other Variable -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterPressureVariation">
+        <rdfs:label xml:lang="en">Water Pressure Variation</rdfs:label>
+        <rdfs:comment xml:lang="en">Water pressure variation based on difference between design and frequent water levels as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.4.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TemperatureEffects">
+        <rdfs:label xml:lang="en">Temperature Effects</rdfs:label>
+        <rdfs:comment xml:lang="en">Temperature effects based on annual meteorological and water temperature statistics as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.4.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PostConstructionDifferentialSettlement">
+        <rdfs:label xml:lang="en">Post-Construction Differential Settlement</rdfs:label>
+        <rdfs:comment xml:lang="en">Post-construction differential settlement effects as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CrowdLoad">
+        <rdfs:label xml:lang="en">Crowd Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Crowd load from pedestrians and emergency evacuation scenarios as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SurfaceOverload">
+        <rdfs:label xml:lang="en">Surface Overload</rdfs:label>
+        <rdfs:comment xml:lang="en">Surface overload from activities and temporary structures above the tunnel as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CableTension">
+        <rdfs:label xml:lang="en">Cable Tension</rdfs:label>
+        <rdfs:comment xml:lang="en">Cable tension forces during construction and operation as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterFlowWaveEffects">
+        <rdfs:label xml:lang="en">Water Flow/Wave Effects</rdfs:label>
+        <rdfs:comment xml:lang="en">Water flow and wave effects on tunnel structure as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersionLiftingLoads">
+        <rdfs:label xml:lang="en">Immersion Lifting Loads</rdfs:label>
+        <rdfs:comment xml:lang="en">Immersion lifting loads during construction operations as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MaintenanceLoad">
+        <rdfs:label xml:lang="en">Maintenance Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Maintenance load from equipment and operations during tunnel maintenance as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#InternalAirPressure">
+        <rdfs:label xml:lang="en">Internal Air Pressure</rdfs:label>
+        <rdfs:comment xml:lang="en">Internal air pressure variations in tunnel space as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#VariableLoad"/>
+    </owl:Class>
+
+    <!-- Accidental Load Subclasses -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SeismicLoad">
+        <rdfs:label xml:lang="en">Seismic Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Seismic loads calculated per Chapter 16 requirements as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AccidentalLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VehicleExplosionLoad">
+        <rdfs:label xml:lang="en">Internal Vehicle Explosion Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Internal vehicle explosion load based on single vehicle fuel tank explosion as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AccidentalLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VehicleImpactLoad">
+        <rdfs:label xml:lang="en">Vehicle Impact Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Vehicle impact loads based on national standards as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AccidentalLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AntiTerrorismLoad">
+        <rdfs:label xml:lang="en">Anti-Terrorism Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Anti-terrorism loads per Ministry of Public Security standards as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AccidentalLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ShipCollisionAnchorImpact">
+        <rdfs:label xml:lang="en">Ship Collision/Anchor Impact Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Ship collision and anchor impact loads based on navigation planning, cover thickness, and water depth as specified in GBT 51318-2019 Table 7.1.1 and Section 7.1.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AccidentalLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireLoad">
+        <rdfs:label xml:lang="en">Fire Load</rdfs:label>
+        <rdfs:comment xml:lang="en">Fire load effects on tunnel structure as specified in GBT 51318-2019 Table 7.1.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AccidentalLoad"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         GBT 51318-2019 SECTION 7.2 LOAD COMBINATION SYSTEM
+         ===================================================== -->
+
+    <!-- Load Combination Base Classes -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LoadCombination">
+        <rdfs:label xml:lang="en">Load Combination</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for load combinations considering simultaneous occurrence of loads during construction or operation using both ultimate and serviceability limit states as specified in GBT 51318-2019 Section 7.2.1.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <!-- Limit State Classes -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#UltimateLimitState">
+        <rdfs:label xml:lang="en">Ultimate Limit State</rdfs:label>
+        <rdfs:comment xml:lang="en">Ultimate limit state design verification using γ₀Sd ≤ Rd formula where γ₀ is structural importance factor, Sd is load effect design value, and Rd is structural resistance design value as specified in GBT 51318-2019 Section 7.2.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadCombination"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ServiceabilityLimitState">
+        <rdfs:label xml:lang="en">Serviceability Limit State</rdfs:label>
+        <rdfs:comment xml:lang="en">Serviceability limit state design verification using Sd ≤ C formula where Sd is load effect design value and C is allowable limit value for structure or component as specified in GBT 51318-2019 Section 7.2.6.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadCombination"/>
+    </owl:Class>
+
+    <!-- Structural Importance Classification -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralImportanceLevel">
+        <rdfs:label xml:lang="en">Structural Importance Level</rdfs:label>
+        <rdfs:comment xml:lang="en">Structural importance level classification affecting importance factor γ₀ in ultimate limit state design as specified in GBT 51318-2019 Section 7.2.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Level1SafetyStructure">
+        <rdfs:label xml:lang="en">Level 1 Safety Structure (Main Structure)</rdfs:label>
+        <rdfs:comment xml:lang="en">Main structure with Level 1 safety classification requiring structural importance factor γ₀ ≥ 1.1 as specified in GBT 51318-2019 Section 7.2.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralImportanceLevel"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Level2SafetyStructure">
+        <rdfs:label xml:lang="en">Level 2 Safety Structure (Secondary Structure)</rdfs:label>
+        <rdfs:comment xml:lang="en">Secondary structure with Level 2 safety classification requiring structural importance factor γ₀ ≥ 1.0 as specified in GBT 51318-2019 Section 7.2.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralImportanceLevel"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Level3SafetyStructure">
+        <rdfs:label xml:lang="en">Level 3 Safety Structure (Temporary Structure)</rdfs:label>
+        <rdfs:comment xml:lang="en">Temporary structure with Level 3 safety classification requiring structural importance factor γ₀ ≥ 0.9 as specified in GBT 51318-2019 Section 7.2.3.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralImportanceLevel"/>
+    </owl:Class>
+
+    <!-- Load Combination Types -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#BasicCombination">
+        <rdfs:label xml:lang="en">Basic Combination</rdfs:label>
+        <rdfs:comment xml:lang="en">Basic load combination for ultimate limit state with partial safety factors: permanent loads (unfavorable: 1.2, favorable: ≤1.0) and variable loads (1.4) as specified in GBT 51318-2019 Section 7.2.4.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#UltimateLimitState"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AccidentalCombination">
+        <rdfs:label xml:lang="en">Accidental Combination</rdfs:label>
+        <rdfs:comment xml:lang="en">Accidental load combination for ultimate limit state using formula: Sd = ΣSGk + SAd + ψf1SQ1k + Σψqi SQk as specified in GBT 51318-2019 Section 7.2.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#UltimateLimitState"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PostDamageCombination">
+        <rdfs:label xml:lang="en">Post-Damage Combination</rdfs:label>
+        <rdfs:comment xml:lang="en">Post-damage load combination after accidental events using formula: Sd = ΣSGk + ψf1SQ1k + Σψqi SQk as specified in GBT 51318-2019 Section 7.2.5.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#UltimateLimitState"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StandardCombination">
+        <rdfs:label xml:lang="en">Standard Combination</rdfs:label>
+        <rdfs:comment xml:lang="en">Standard combination for serviceability limit state using formula: Sd = ΣSGk + SQ1k + Σψci SQk as specified in GBT 51318-2019 Section 7.2.7.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ServiceabilityLimitState"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FrequentCombination">
+        <rdfs:label xml:lang="en">Frequent Combination</rdfs:label>
+        <rdfs:comment xml:lang="en">Frequent combination for serviceability limit state using formula: Sd = ΣSGk + ψf1SQ1k + Σψqi SQk as specified in GBT 51318-2019 Section 7.2.8.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ServiceabilityLimitState"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#QuasiPermanentCombination">
+        <rdfs:label xml:lang="en">Quasi-Permanent Combination</rdfs:label>
+        <rdfs:comment xml:lang="en">Quasi-permanent combination for serviceability limit state using formula: Sd = ΣSGk + Σψqi SQk as specified in GBT 51318-2019 Section 7.2.9.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ServiceabilityLimitState"/>
+    </owl:Class>
+
+    <!-- Representative Values Classification -->
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LoadRepresentativeValue">
+        <rdfs:label xml:lang="en">Load Representative Value</rdfs:label>
+        <rdfs:comment xml:lang="en">Representative values for load design including standard value, combination value, frequent value, and quasi-permanent value as specified in GBT 51318-2019 Section 7.1.6.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLoad"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StandardValue">
+        <rdfs:label xml:lang="en">Standard Value</rdfs:label>
+        <rdfs:comment xml:lang="en">Standard value as load representative value based on probability analysis or national standards as specified in GBT 51318-2019 Section 7.1.6.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadRepresentativeValue"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CombinationValue">
+        <rdfs:label xml:lang="en">Combination Value</rdfs:label>
+        <rdfs:comment xml:lang="en">Combination value calculated as standard value × combination coefficient (ψc) for ultimate and serviceability limit states as specified in GBT 51318-2019 Section 7.1.7.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadRepresentativeValue"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FrequentValue">
+        <rdfs:label xml:lang="en">Frequent Value</rdfs:label>
+        <rdfs:comment xml:lang="en">Frequent value calculated as standard value × frequency coefficient (ψf) for frequent combinations as specified in GBT 51318-2019 Section 7.1.8.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadRepresentativeValue"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#QuasiPermanentValue">
+        <rdfs:label xml:lang="en">Quasi-Permanent Value</rdfs:label>
+        <rdfs:comment xml:lang="en">Quasi-permanent value calculated as standard value × quasi-permanent coefficient (ψq) for quasi-permanent combinations as specified in GBT 51318-2019 Section 7.1.8.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadRepresentativeValue"/>
+    </owl:Class>
 </rdf:RDF> 

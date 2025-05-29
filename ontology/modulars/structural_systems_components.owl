@@ -109,7 +109,7 @@
     <!-- HPDI Specific Reinforcement Components -->
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar">
         <rdfs:label xml:lang="en">Reinforcement Bar</rdfs:label>
-        <rdfs:comment xml:lang="en">Individual reinforcement bar with diameter, length, and support specifications per HPDI requirements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Steel reinforcement element characterized by specified diameter, length, and support requirements according to GBT 51318-2019 reinforcement design standards and HPDI technical specifications for structural concrete applications.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement"/>
     </owl:Class>
 

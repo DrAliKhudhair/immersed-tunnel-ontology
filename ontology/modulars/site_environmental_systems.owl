@@ -9,23 +9,30 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/site_environmental_systems">
         <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Site and Environmental Systems</rdfs:label>
         <rdfs:comment xml:lang="en">
-            Enhanced site characterization and environmental systems for immersed tunnels.
-            Comprehensive environmental assessment, monitoring, and protection.
-            Based on GB/T 51318-2019 and JTG 2120-2020 environmental standards.
+            Site characterization and environmental systems module for immersed tunnel engineering aligned with GBT 51318-2019.
+            Defines comprehensive framework for site investigation, environmental assessment, and monitoring systems.
             
-            CONSOLIDATES:
-            - Environmental concepts from multiple modules
-            - Site conditions and characterization
-            - Environmental impact assessment
-            - Environmental monitoring and protection
+            STANDARDS ALIGNMENT:
+            - GBT 51318-2019 Chapter 4: Engineering Survey and Site Investigation methodology
+            - Section 4.3: Phased tunnel investigation framework and requirements
+            - Section 4.2.2: Comprehensive survey data type specifications
+            - Investigation phases: feasibility study, preliminary, detailed, and supplemental
             
-            ENHANCEMENTS:
-            - Comprehensive environmental classification
-            - Advanced site investigation methods
-            - Environmental impact mitigation
-            - Sustainable development practices
+            INVESTIGATION FRAMEWORK:
+            - Phased investigation approach matching design stages
+            - Subaqueous topographic mapping with scale-specific requirements
+            - Water area investigation with systematic borehole arrangements
+            - Hydrological investigation including flow velocity and water characteristics
+            - Integration of underwater and terrestrial survey methodologies
+            
+            MODULE SCOPE:
+            - Site investigation classification and methodology framework
+            - Environmental assessment and monitoring system taxonomy
+            - Survey data type definitions aligned with standard requirements
+            - Environmental protection and sustainability system architecture
+            - Design parameter derivation from investigation data
         </rdfs:comment>
-        <owl:versionInfo>3.0.0 - Enhanced</owl:versionInfo>
+        <owl:versionInfo>3.3.0-ENHANCED-GBT51318-2019-standards-compliant</owl:versionInfo>
         <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
     </owl:Ontology>
 
@@ -35,14 +42,174 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem">
         <rdfs:label xml:lang="en">Environmental System</rdfs:label>
-        <rdfs:comment xml:lang="en">Base class for all environmental systems and site conditions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic framework encompassing all environmental aspects, site conditions, and ecological considerations for immersed tunnel engineering.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SiteSystem">
         <rdfs:label xml:lang="en">Site System</rdfs:label>
-        <rdfs:comment xml:lang="en">Base class for site characterization and investigation systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Comprehensive framework for site characterization, investigation, and survey methodologies supporting tunnel design and construction planning.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         PHASED SITE INVESTIGATION FRAMEWORK (GBT 51318-2019 Section 4.3.1)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation">
+        <rdfs:label xml:lang="en">Site Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic engineering survey and site investigation framework conducted according to technical features, design requirements, and regional conditions of immersed tunnels as specified in GBT 51318-2019 Section 4.3.1. Investigation phases match design stages and ensure accurate and reliable data collection with precision complying with relevant national standards.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FeasibilityStudyInvestigation">
+        <rdfs:label xml:lang="en">Feasibility Study Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Initial phase investigation conducted based on data collection and site visits as specified in GBT 51318-2019 Section 4.3.3. Includes borehole spacing of 400-500m with minimum 2 boreholes and at least one borehole per construction unit or tunnel alignment section. Provides essential data for project viability assessment and preliminary site reconnaissance.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PreliminaryInvestigation">
+        <rdfs:label xml:lang="en">Preliminary Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Intermediate phase investigation providing detailed site characterization for preliminary design development as specified in GBT 51318-2019 Section 4.3.3. Requires minimum 5 boreholes in complex geological areas with 100-300m spacing. General boreholes penetrate 1.5× tunnel height below base while control boreholes reach 2.5× tunnel height in soft soils.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DetailedInvestigation">
+        <rdfs:label xml:lang="en">Detailed Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive investigation phase providing precise site data for final design development and construction documentation as specified in GBT 51318-2019 Section 4.3.3. Utilizes staggered grid arrangement with 30-50m spacing in joint-affected areas and 40-60m spacing on excavation slopes. Essential for construction drawing design stage requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SupplementalInvestigation">
+        <rdfs:label xml:lang="en">Supplemental Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Additional investigation conducted as necessary to address specific design requirements or resolve identified uncertainties.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         SUBAQUEOUS TOPOGRAPHIC MAPPING (GBT 51318-2019 Section 4.3.2)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SubaqueousTopographicMapping">
+        <rdfs:label xml:lang="en">Subaqueous Topographic Mapping</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic underwater topographic survey methodology ensuring seamless integration of underwater and terrestrial measurements as specified in GBT 51318-2019 Section 4.3.2. Scale requirements vary by design stage: feasibility study based on data collection meeting regulatory approval precision, preliminary design at 1:1000-1:2000 scale with 2-3km coverage, and construction drawing design at 1:500-1:1000 scale with 0.5-1km coverage.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FeasibilityStageMapping">
+        <rdfs:label xml:lang="en">Feasibility Stage Mapping</rdfs:label>
+        <rdfs:comment xml:lang="en">Topographic mapping during feasibility study based on data collection and site surveys, with precision meeting regulatory approval requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SubaqueousTopographicMapping"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PreliminaryDesignMapping">
+        <rdfs:label xml:lang="en">Preliminary Design Stage Mapping</rdfs:label>
+        <rdfs:comment xml:lang="en">Topographic mapping for preliminary design with scale range 1:1000 to 1:2000 and coverage extending 2-3 km on both sides of tunnel alignment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SubaqueousTopographicMapping"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionDrawingMapping">
+        <rdfs:label xml:lang="en">Construction Drawing Stage Mapping</rdfs:label>
+        <rdfs:comment xml:lang="en">Detailed topographic mapping for construction documentation with scale range 1:500 to 1:1000 and coverage extending 0.5-1 km on both sides of tunnel alignment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SubaqueousTopographicMapping"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FloatingTransportationAreaMapping">
+        <rdfs:label xml:lang="en">Floating Transportation Area Mapping</rdfs:label>
+        <rdfs:comment xml:lang="en">Extended mapping coverage including element floating transportation area when utilizing movable dry dock construction methodology.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SubaqueousTopographicMapping"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         WATER AREA INVESTIGATION (GBT 51318-2019 Section 4.3.3)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterAreaInvestigation">
+        <rdfs:label xml:lang="en">Water Area Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic underwater investigation methodology with phase-specific borehole spacing and depth requirements for comprehensive subsurface characterization.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation">
+        <rdfs:label xml:lang="en">Borehole Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic drilling investigation for subsurface exploration with phase-specific spacing, depth, and arrangement requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterAreaInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FeasibilityStageBoreholes">
+        <rdfs:label xml:lang="en">Feasibility Stage Boreholes</rdfs:label>
+        <rdfs:comment xml:lang="en">Initial borehole investigation with 400-500m spacing, minimum 2 boreholes, and depth requirements based on soil conditions and tunnel dimensions.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PreliminaryStageBoreholes">
+        <rdfs:label xml:lang="en">Preliminary Stage Boreholes</rdfs:label>
+        <rdfs:comment xml:lang="en">Intermediate borehole investigation with 100-300m spacing, minimum 5 boreholes in complex areas, with general and control borehole depth specifications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DetailedStageBoreholes">
+        <rdfs:label xml:lang="en">Detailed Stage Boreholes</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive borehole investigation using staggered grid arrangement with specific spacing for joint-affected areas (30-50m) and excavation slopes (40-60m).</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SoftSoilBoreholes">
+        <rdfs:label xml:lang="en">Soft Soil Boreholes</rdfs:label>
+        <rdfs:comment xml:lang="en">Borehole investigation in soft soil conditions with depth requirements based on tunnel height multiples and minimum depth specifications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WeatheredRockBoreholes">
+        <rdfs:label xml:lang="en">Weathered Rock Boreholes</rdfs:label>
+        <rdfs:comment xml:lang="en">Borehole investigation in slightly or moderately weathered rock formations with specific depth requirements and cavity penetration protocols.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SiltCoveredBottomInvestigation">
+        <rdfs:label xml:lang="en">Silt-Covered Bottom Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Specialized investigation for river or sea bottoms covered by silt, including thickness measurement and sediment density determination.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterAreaInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FloatingZoneTrenchingInvestigation">
+        <rdfs:label xml:lang="en">Floating Zone Trenching Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Investigation within element floating zones requiring trenching, with borehole arrangement based on regional geology and construction calculation requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterAreaInvestigation"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         HYDROLOGICAL INVESTIGATION (GBT 51318-2019 Section 4.3.3.6)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalInvestigation">
+        <rdfs:label xml:lang="en">Hydrological Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive investigation of water area hydrological characteristics including flow velocity, water level, density, and related parameters affecting tunnel design and construction.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterAreaInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FlowVelocityInvestigation">
+        <rdfs:label xml:lang="en">Flow Velocity Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Investigation of water flow velocity patterns and variations affecting construction planning and structural design considerations.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterLevelInvestigation">
+        <rdfs:label xml:lang="en">Water Level Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Investigation of water level variations including tidal ranges and seasonal fluctuations affecting tunnel positioning and structural loads.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterDensityInvestigation">
+        <rdfs:label xml:lang="en">Water Density Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Investigation of water density characteristics affecting buoyancy calculations and element flotation design parameters.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalInvestigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#RelatedHydrologicalParameters">
+        <rdfs:label xml:lang="en">Related Hydrological Parameters</rdfs:label>
+        <rdfs:comment xml:lang="en">Additional hydrological parameters relevant to tunnel design including temperature variations, salinity, and chemical composition affecting materials and construction.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalInvestigation"/>
     </owl:Class>
 
     <!-- =====================================================
@@ -80,88 +247,36 @@
     </owl:Class>
 
     <!-- =====================================================
-         SITE INVESTIGATION
-         ===================================================== -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation">
-        <rdfs:label xml:lang="en">Site Investigation</rdfs:label>
-        <rdfs:comment xml:lang="en">Comprehensive site investigation for tunnel project development.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteSystem"/>
-    </owl:Class>
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalInvestigation">
-        <rdfs:label xml:lang="en">Geotechnical Investigation</rdfs:label>
-        <rdfs:comment xml:lang="en">Geotechnical site investigation including soil and rock characterization.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
-    </owl:Class>
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HydrographicSurvey">
-        <rdfs:label xml:lang="en">Hydrographic Survey</rdfs:label>
-        <rdfs:comment xml:lang="en">Underwater topographic survey and bathymetric mapping.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
-    </owl:Class>
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation">
-        <rdfs:label xml:lang="en">Environmental Investigation</rdfs:label>
-        <rdfs:comment xml:lang="en">Environmental baseline studies and impact assessment.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
-    </owl:Class>
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterQualityAssessment">
-        <rdfs:label xml:lang="en">Water Quality Assessment</rdfs:label>
-        <rdfs:comment xml:lang="en">Assessment of water quality conditions affecting tunnel construction and operation.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
-    </owl:Class>
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AirQualityAssessment">
-        <rdfs:label xml:lang="en">Air Quality Assessment</rdfs:label>
-        <rdfs:comment xml:lang="en">Assessment of air quality conditions and tunnel ventilation requirements.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
-    </owl:Class>
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#NoiseAssessment">
-        <rdfs:label xml:lang="en">Noise Assessment</rdfs:label>
-        <rdfs:comment xml:lang="en">Assessment of noise levels and acoustic impact evaluation.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
-    </owl:Class>
-
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EcologicalAssessment">
-        <rdfs:label xml:lang="en">Ecological Assessment</rdfs:label>
-        <rdfs:comment xml:lang="en">Assessment of ecological systems and biodiversity impacts.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
-    </owl:Class>
-
-    <!-- =====================================================
          ENVIRONMENTAL MONITORING
          ===================================================== -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalMonitoring">
         <rdfs:label xml:lang="en">Environmental Monitoring</rdfs:label>
-        <rdfs:comment xml:lang="en">Monitoring systems for environmental conditions affecting tunnel performance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic monitoring framework for environmental conditions and parameters affecting tunnel design, construction, and operational performance.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterLevelMonitoring">
         <rdfs:label xml:lang="en">Water Level Monitoring</rdfs:label>
-        <rdfs:comment xml:lang="en">Monitoring of water levels and tidal variations affecting tunnel design.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Continuous monitoring of water level variations and tidal fluctuations affecting tunnel structural design and construction operations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalMonitoring"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CurrentMonitoring">
         <rdfs:label xml:lang="en">Current Monitoring</rdfs:label>
-        <rdfs:comment xml:lang="en">Monitoring of water currents and flow patterns for construction planning.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic monitoring of water current patterns and flow characteristics for construction planning and structural loading analysis.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalMonitoring"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WeatherMonitoring">
         <rdfs:label xml:lang="en">Weather Monitoring</rdfs:label>
-        <rdfs:comment xml:lang="en">Monitoring of meteorological conditions for construction scheduling.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Meteorological monitoring system for construction scheduling and safety planning based on weather condition forecasting.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalMonitoring"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SeabedMonitoring">
         <rdfs:label xml:lang="en">Seabed Monitoring</rdfs:label>
-        <rdfs:comment xml:lang="en">Monitoring of seabed changes and scouring around tunnel structures.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Monitoring of seabed changes, sediment transport, and scour development around tunnel structures for long-term stability assessment.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalMonitoring"/>
     </owl:Class>
 
@@ -313,12 +428,6 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
     </owl:Class>
 
-    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MeteorologicalData">
-        <rdfs:label xml:lang="en">Meteorological Data</rdfs:label>
-        <rdfs:comment xml:lang="en">Wind and wave patterns for construction scheduling and long-term stability analysis.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WeatherMonitoring"/>
-    </owl:Class>
-
     <!-- DESIGN PARAMETERS AND CONSTRAINTS (IMMTD02 Outputs) -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DesignParameter">
@@ -364,202 +473,362 @@
     </owl:Class>
 
     <!-- =====================================================
-         IMMTD02 SPECIFIC PROPERTIES
+         GBT 51318-2019 SURVEY DATA TYPES (Section 4.2.2)
          ===================================================== -->
 
-    <!-- Geological and Physical Properties -->
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#soilComposition">
-        <rdfs:label xml:lang="en">soil composition</rdfs:label>
-        <rdfs:comment xml:lang="en">Soil composition description for stratum lithology analysis.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StratumLithology"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType">
+        <rdfs:label xml:lang="en">Survey Data Type</rdfs:label>
+        <rdfs:comment xml:lang="en">Base class for survey data types systematically categorized according to GBT 51318-2019 Section 4.2.2 comprehensive survey content requirements. Encompasses all data collection categories essential for informed design and construction decision-making.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#rockComposition">
-        <rdfs:label xml:lang="en">rock composition</rdfs:label>
-        <rdfs:comment xml:lang="en">Rock composition description for stratum lithology analysis.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StratumLithology"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CurrentStatusPlanningData">
+        <rdfs:label xml:lang="en">Current Status and Planning Data</rdfs:label>
+        <rdfs:comment xml:lang="en">Current status and planning data including road traffic, urban construction, port terminals, waterway transportation, and shoreline protection as specified in GBT 51318-2019 Section 4.2.2. Essential for comprehensive site assessment and regulatory compliance verification.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#loadBearingCapacity">
-        <rdfs:label xml:lang="en">load bearing capacity</rdfs:label>
-        <rdfs:comment xml:lang="en">Load-bearing capacity of soil/rock in kPa.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalMechanicalParameters"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MeteorologicalData">
+        <rdfs:label xml:lang="en">Meteorological Data</rdfs:label>
+        <rdfs:comment xml:lang="en">Meteorological data including temperature, humidity, rainfall, fog, wind direction, and wind speed parameters. Critical for construction scheduling, safety planning, and operational design considerations as specified in GBT 51318-2019 Section 4.2.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#permeability">
-        <rdfs:label xml:lang="en">permeability</rdfs:label>
-        <rdfs:comment xml:lang="en">Soil permeability coefficient in m/s.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalMechanicalParameters"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalGeologicalData">
+        <rdfs:label xml:lang="en">Hydrological and Geological Data</rdfs:label>
+        <rdfs:comment xml:lang="en">Hydrological and geological data including water level, wave conditions, flow velocity, flow direction, water temperature, water depth, water quality, flood protection standards, river regulation, and river-sea regime changes. Fundamental for hydraulic design and environmental impact assessment as specified in GBT 51318-2019 Section 4.2.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#settlementPotential">
-        <rdfs:label xml:lang="en">settlement potential</rdfs:label>
-        <rdfs:comment xml:lang="en">Settlement potential assessment (Low/Medium/High).</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalMechanicalParameters"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EngineeringGeologySeismicData">
+        <rdfs:label xml:lang="en">Engineering Geology and Seismic Data</rdfs:label>
+        <rdfs:comment xml:lang="en">Engineering geology and seismic data including topography, geology, engineering geology, regional seismic activity, seismic intensity for protection, seismic zoning for design, and basic seismic acceleration for design. Essential for structural design and seismic risk assessment as specified in GBT 51318-2019 Section 4.2.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#cohesion">
-        <rdfs:label xml:lang="en">cohesion</rdfs:label>
-        <rdfs:comment xml:lang="en">Soil cohesion in kPa.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalMechanicalParameters"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AlongLineConstructionData">
+        <rdfs:label xml:lang="en">Along-the-Line Surface and Underground Construction Data</rdfs:label>
+        <rdfs:comment xml:lang="en">Along-the-line surface and underground construction data including buildings, structures, pipelines, cultural relics, military facilities, mineral resources, and hazardous explosive items. Critical for construction safety, risk assessment, and regulatory compliance as specified in GBT 51318-2019 Section 4.2.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#frictionAngle">
-        <rdfs:label xml:lang="en">friction angle</rdfs:label>
-        <rdfs:comment xml:lang="en">Internal friction angle in degrees.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalMechanicalParameters"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalData">
+        <rdfs:label xml:lang="en">Environmental Data</rdfs:label>
+        <rdfs:comment xml:lang="en">Environmental data including atmospheric environment near the tunnel alignment, vehicle exhaust emissions, noise requirements, ecological protection requirements, and surrounding external environmental conditions. Essential for environmental impact assessment and regulatory compliance as specified in GBT 51318-2019 Section 4.2.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType"/>
+    </owl:Class>
 
-    <!-- Hydrological Properties -->
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#groundwaterLevel">
-        <rdfs:label xml:lang="en">groundwater level</rdfs:label>
-        <rdfs:comment xml:lang="en">Groundwater level below surface in meters.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SiteConstructionConditionData">
+        <rdfs:label xml:lang="en">Site Construction Condition Data</rdfs:label>
+        <rdfs:comment xml:lang="en">Site construction condition data including site location, water and power supply systems, construction material sources, equipment accessibility, and machinery deployment requirements. Essential for construction planning, logistics optimization, and resource management as specified in GBT 51318-2019 Section 4.2.2.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SurveyDataType"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#flowRate">
-        <rdfs:label xml:lang="en">flow rate</rdfs:label>
-        <rdfs:comment xml:lang="en">Groundwater flow rate in m³/day.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <!-- =====================================================
+         ENVIRONMENTAL INVESTIGATION AND ASSESSMENT
+         ===================================================== -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#tunnelInteraction">
-        <rdfs:label xml:lang="en">tunnel interaction</rdfs:label>
-        <rdfs:comment xml:lang="en">Description of groundwater interaction with tunnel structure.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalInvestigation">
+        <rdfs:label xml:lang="en">Geotechnical Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic investigation of subsurface soil and rock conditions including material properties, stratification, and engineering characteristics for foundation design.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
 
-    <!-- Meteorological Properties -->
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#windPattern">
-        <rdfs:label xml:lang="en">wind pattern</rdfs:label>
-        <rdfs:comment xml:lang="en">Prevailing wind patterns and seasonal variations.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MeteorologicalData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HydrographicSurvey">
+        <rdfs:label xml:lang="en">Hydrographic Survey</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic underwater topographic survey and bathymetric mapping for accurate spatial definition of construction environment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#wavePattern">
-        <rdfs:label xml:lang="en">wave pattern</rdfs:label>
-        <rdfs:comment xml:lang="en">Wave height, period, and direction patterns for construction planning.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MeteorologicalData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation">
+        <rdfs:label xml:lang="en">Environmental Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive environmental baseline studies and impact assessment for regulatory compliance and sustainable development.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#maxWindSpeed">
-        <rdfs:label xml:lang="en">maximum wind speed</rdfs:label>
-        <rdfs:comment xml:lang="en">Maximum recorded wind speed in m/s.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MeteorologicalData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterQualityAssessment">
+        <rdfs:label xml:lang="en">Water Quality Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic assessment of water quality characteristics and chemical composition affecting construction materials and operational environment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#maxWaveHeight">
-        <rdfs:label xml:lang="en">maximum wave height</rdfs:label>
-        <rdfs:comment xml:lang="en">Maximum significant wave height in meters.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MeteorologicalData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AirQualityAssessment">
+        <rdfs:label xml:lang="en">Air Quality Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Assessment of atmospheric conditions and air quality parameters affecting tunnel ventilation design and operational requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
+    </owl:Class>
 
-    <!-- Geometric and Topographic Properties -->
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#seabedElevation">
-        <rdfs:label xml:lang="en">seabed elevation</rdfs:label>
-        <rdfs:comment xml:lang="en">Seabed elevation relative to datum in meters.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SeabedTopography"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#NoiseAssessment">
+        <rdfs:label xml:lang="en">Noise Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic evaluation of ambient noise levels and acoustic impact assessment for construction and operational phases.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#seabedSlope">
-        <rdfs:label xml:lang="en">seabed slope</rdfs:label>
-        <rdfs:comment xml:lang="en">Seabed slope angle in degrees.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SeabedTopography"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EcologicalAssessment">
+        <rdfs:label xml:lang="en">Ecological Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Assessment of ecological systems, biodiversity impacts, and environmental protection requirements for sustainable construction practices.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalInvestigation"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#boreholeDepth">
-        <rdfs:label xml:lang="en">borehole depth</rdfs:label>
-        <rdfs:comment xml:lang="en">Total depth of geological borehole in meters.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeologicalBoreholeData"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <!-- =====================================================
+         GENERAL DESIGN FRAMEWORK (GBT 51318-2019 Section 5)
+         ===================================================== -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#stratumThickness">
-        <rdfs:label xml:lang="en">stratum thickness</rdfs:label>
-        <rdfs:comment xml:lang="en">Thickness of geological stratum layer in meters.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeologicalStratification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem">
+        <rdfs:label xml:lang="en">General Design System</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive design framework encompassing tunnel alignment, profile, cross-section, elevation, and element floating and immersion design considerations.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#stratumDepth">
-        <rdfs:label xml:lang="en">stratum depth</rdfs:label>
-        <rdfs:comment xml:lang="en">Depth to top of geological stratum in meters.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeologicalStratification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelAlignmentDesign">
+        <rdfs:label xml:lang="en">Tunnel Alignment Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Alignment design framework complying with planning requirements and coordinating relationships with surrounding buildings, navigation, and underground infrastructure.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:Class>
 
-    <!-- Design Parameter Properties -->
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#stabilityFactor">
-        <rdfs:label xml:lang="en">stability factor</rdfs:label>
-        <rdfs:comment xml:lang="en">Calculated stability factor for trench design.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TrenchStabilityParameter"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelProfileDesign">
+        <rdfs:label xml:lang="en">Tunnel Profile Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Longitudinal profile design framework based on topography, geology, and engineering construction conditions meeting long-term planning requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#slopeAngleLimit">
-        <rdfs:label xml:lang="en">slope angle limit</rdfs:label>
-        <rdfs:comment xml:lang="en">Maximum allowable trench slope angle in degrees.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TrenchStabilityParameter"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CrossSectionDesign">
+        <rdfs:label xml:lang="en">Cross-Section Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Cross-sectional design framework meeting tunnel clearance, structural stress, deformation, and buoyancy design requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#jointDeformation">
-        <rdfs:label xml:lang="en">joint deformation</rdfs:label>
-        <rdfs:comment xml:lang="en">Allowable joint deformation limit in mm.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelJointParameter"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ElevationDesign">
+        <rdfs:label xml:lang="en">Elevation Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Elevation design framework ensuring positioning below planned navigation channel depth with adequate protective cover over tunnel roof.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#waterproofingRequirement">
-        <rdfs:label xml:lang="en">waterproofing requirement</rdfs:label>
-        <rdfs:comment xml:lang="en">Waterproofing performance requirement classification.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterproofingSystemParameter"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <!-- =====================================================
+         TUNNEL LOCATION SELECTION (GBT 51318-2019 Section 5.2)
+         ===================================================== -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#structuralConstraint">
-        <rdfs:label xml:lang="en">structural constraint</rdfs:label>
-        <rdfs:comment xml:lang="en">Description of structural design constraints from site conditions.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralDesignConstraint"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelLocationSelection">
+        <rdfs:label xml:lang="en">Tunnel Location Selection</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic framework for tunnel location selection considering geological hazards, seismic activity, hydrological conditions, and environmental factors as specified in GBT 51318-2019 Section 5.2. Must avoid dangerous zones such as landslides, mudslides, and seismic fault fracture zones. Preferably located in hydrologically and morphologically stable, flat riverbed sections where maximum depth does not exceed 50m and flow velocity meets operational requirements for floating and immersion.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#geotechnicalConstraint">
-        <rdfs:label xml:lang="en">geotechnical constraint</rdfs:label>
-        <rdfs:comment xml:lang="en">Description of geotechnical design constraints from soil properties.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalDesignConstraint"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HazardAvoidanceAssessment">
+        <rdfs:label xml:lang="en">Hazard Avoidance Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Assessment framework for avoiding dangerous zones including landslides, mudslides, and seismic fault fracture zones.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLocationSelection"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#alignmentConstraint">
-        <rdfs:label xml:lang="en">alignment constraint</rdfs:label>
-        <rdfs:comment xml:lang="en">Geometric constraints on tunnel alignment from boundary conditions.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricBoundaryCondition"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SeismicLocationAssessment">
+        <rdfs:label xml:lang="en">Seismic Location Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Location assessment based on seismic activity and engineering geological conditions with mitigation measures for unsuitable zones.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLocationSelection"/>
+    </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#trenchDesignConstraint">
-        <rdfs:label xml:lang="en">trench design constraint</rdfs:label>
-        <rdfs:comment xml:lang="en">Geometric constraints on trench design from topographic conditions.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricBoundaryCondition"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalLocationAssessment">
+        <rdfs:label xml:lang="en">Hydrological Location Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Assessment framework for hydrologically and morphologically stable riverbed sections with maximum depth constraints and flow velocity requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLocationSelection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#NavigationalLocationAssessment">
+        <rdfs:label xml:lang="en">Navigational Location Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Location assessment meeting hydrological and navigational conditions while facilitating construction and environmental protection.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLocationSelection"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         GEOMETRIC DESIGN (GBT 51318-2019 Section 5.3)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem">
+        <rdfs:label xml:lang="en">Geometric Design System</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive geometric design framework for tunnel plan layout, profile design, and dimensional specifications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelPlanDesign">
+        <rdfs:label xml:lang="en">Tunnel Plan Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Plan design framework with centerline intersection requirements and alignment specifications for immersed element sections.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#NavigationChannelAlignment">
+        <rdfs:label xml:lang="en">Navigation Channel Alignment</rdfs:label>
+        <rdfs:comment xml:lang="en">Alignment design ensuring tunnel centerline intersects navigation channel centerline and shoreline at a right angle or large angle as specified in GBT 51318-2019 Section 5.3.1. Critical for maintaining navigation safety and optimizing tunnel positioning relative to waterway infrastructure.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelPlanDesign"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ElementSectionAlignment">
+        <rdfs:label xml:lang="en">Element Section Alignment</rdfs:label>
+        <rdfs:comment xml:lang="en">Alignment design for immersed element sections with preference for straight alignment or curvature based on functional and construction requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelPlanDesign"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelLayoutDesign">
+        <rdfs:label xml:lang="en">Tunnel Layout Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Overall tunnel layout design meeting requirements for operation, maintenance, disaster prevention, and emergency rescue.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ProtectiveCoverDesign">
+        <rdfs:label xml:lang="en">Protective Cover Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Design framework ensuring adequate protective cover over tunnel roof and positioning below scour line with special considerations for exposed conditions.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersionJointDesign">
+        <rdfs:label xml:lang="en">Immersion Joint Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Design framework for immersion joints and connection segments ensuring optimal water level conditions and hydraulic pressure requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ElementDimensionDesign">
+        <rdfs:label xml:lang="en">Element Dimension Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Design framework for element length, number, and cross-sectional dimensions based on fabrication, floating, immersion, and structural requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#InternalClearanceDesign">
+        <rdfs:label xml:lang="en">Internal Clearance Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Design framework for tunnel internal clearance meeting architectural, equipment, construction tolerance, and deformation requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DrainageSystemDesign">
+        <rdfs:label xml:lang="en">Drainage System Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Design framework for drainage pump stations at tunnel entrances and lowest points meeting transportation functional requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         CONTROLLED TECHNICAL SCHEMES (GBT 51318-2019 Section 5.4)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ControlledTechnicalScheme">
+        <rdfs:label xml:lang="en">Controlled Technical Scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">Systematic framework for controlled technical schemes including dry dock, connection segments, floating transportation, and immersion methods.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DryDockScheme">
+        <rdfs:label xml:lang="en">Dry Dock Scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">Dry dock scheme determination based on investment, construction schedule, element count, site conditions, navigation, and hydrological factors.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlledTechnicalScheme"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConnectionSegmentScheme">
+        <rdfs:label xml:lang="en">Connection Segment Scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">Connection segment scheme at tunnel ends matching dry dock scheme and prefabrication schedule requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlledTechnicalScheme"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FloatingTransportationScheme">
+        <rdfs:label xml:lang="en">Floating Transportation Scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">Floating transportation method determination based on dock type, navigation conditions, floating distance, hydrology, and meteorological factors.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlledTechnicalScheme"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersionScheme">
+        <rdfs:label xml:lang="en">Immersion Scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">Element immersion method determination based on navigation conditions, hydrological environment, element structure, and construction equipment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlledTechnicalScheme"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FinalJointScheme">
+        <rdfs:label xml:lang="en">Final Joint Scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">Final joint location and structural form determination based on navigation conditions, tunnel depth, dry dock scheme, and construction schedule.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlledTechnicalScheme"/>
+    </owl:Class>
+
+    <!-- =====================================================
+         MATERIALS SPECIFICATION FRAMEWORK (GBT 51318-2019 Section 6)
+         ===================================================== -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MaterialsSpecificationSystem">
+        <rdfs:label xml:lang="en">Materials Specification System</rdfs:label>
+        <rdfs:comment xml:lang="en">Comprehensive materials specification framework based on structural type, load conditions, usage requirements, and environmental factors as specified in GBT 51318-2019 Section 6.0.1. Ensures selection of engineering materials meets safety, reliability, technical advancement, economic reasonableness, and durability principles established in the standard's general provisions.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification">
+        <rdfs:label xml:lang="en">Concrete Specification</rdfs:label>
+        <rdfs:comment xml:lang="en">Concrete specification framework including waterproof concrete requirements, impermeability grades, durability requirements, and strength classifications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialsSpecificationSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MainStructuralConcrete">
+        <rdfs:label xml:lang="en">Main Structural Concrete</rdfs:label>
+        <rdfs:comment xml:lang="en">Main structural concrete specification for immersed tunnel elements adopting waterproof concrete with impermeability grade not lower than P8 as specified in GBT 51318-2019 Section 6.0.2. Minimum strength grade shall not be lower than C35 per Section 6.0.4. Raw materials and mix proportions must meet durability requirements including minimum strength, maximum water-cement ratio, minimum cementitious material content, and requirements for crack resistance, impermeability, freeze-thaw resistance, and corrosion resistance.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PrestressedConcrete">
+        <rdfs:label xml:lang="en">Prestressed Concrete</rdfs:label>
+        <rdfs:comment xml:lang="en">Prestressed concrete specification for immersed tunnel element sections with minimum strength grade not lower than C40 as specified in GBT 51318-2019 Section 6.0.4. Must meet enhanced durability requirements and structural performance criteria for prestressed construction applications in underwater environment.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MicroExpansiveConcrete">
+        <rdfs:label xml:lang="en">Micro-Expansive Concrete</rdfs:label>
+        <rdfs:comment xml:lang="en">Micro-expansive concrete specification for backfill behind elements with impermeability and strength not lower than main structural concrete.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#BallastTankConcrete">
+        <rdfs:label xml:lang="en">Ballast Tank Concrete</rdfs:label>
+        <rdfs:comment xml:lang="en">Ballast tank concrete specification with minimum design strength grade C25 for structural applications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AntiCorrosionConcrete">
+        <rdfs:label xml:lang="en">Anti-Corrosion Concrete</rdfs:label>
+        <rdfs:comment xml:lang="en">Anti-corrosion concrete layer specification with minimum strength grade C20 for protective applications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SteelSpecification">
+        <rdfs:label xml:lang="en">Steel Specification</rdfs:label>
+        <rdfs:comment xml:lang="en">Steel specification framework including structural steel, reinforcement, and specialized steel components with grade classifications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialsSpecificationSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralSteel">
+        <rdfs:label xml:lang="en">Structural Steel</rdfs:label>
+        <rdfs:comment xml:lang="en">Structural steel specification for immersed tunnel element end walls, watertight doors, shear keys, and end closure components using Q235B grade as specified in GBT 51318-2019 Section 6.0.7. Ensures structural integrity and waterproofing performance in underwater construction applications.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSteel">
+        <rdfs:label xml:lang="en">Reinforcement Steel</rdfs:label>
+        <rdfs:comment xml:lang="en">Reinforcement steel specification with main reinforcement bars using HRB400 or HRB500 grades and stirrups using HPB300 or HRB400 grades as specified in GBT 51318-2019 Section 6.0.8. Ensures adequate structural reinforcement performance in immersed tunnel concrete elements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SpecializedMaterialSpecification">
+        <rdfs:label xml:lang="en">Specialized Material Specification</rdfs:label>
+        <rdfs:comment xml:lang="en">Specialized material specification framework including grouting materials, prestressing tendons, waterstops, and support components.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialsSpecificationSystem"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GroutingMaterial">
+        <rdfs:label xml:lang="en">Grouting Material</rdfs:label>
+        <rdfs:comment xml:lang="en">Non-shrink grouting material specification for element end sealing injection with minimum strength grade M25.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SpecializedMaterialSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PrestressingTendon">
+        <rdfs:label xml:lang="en">Prestressing Tendon</rdfs:label>
+        <rdfs:comment xml:lang="en">High-strength low-relaxation steel strand specification for PC tendons with minimum ultimate strength 1860 MPa.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SpecializedMaterialSpecification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterstopSpecification">
+        <rdfs:label xml:lang="en">Waterstop Specification</rdfs:label>
+        <rdfs:comment xml:lang="en">GINA and OMEGA waterstop specification with associated pressure plates and steel components meeting durability requirements.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SpecializedMaterialSpecification"/>
+    </owl:Class>
 
     <!-- =====================================================
          PROPERTIES
@@ -568,93 +837,354 @@
     <!-- Object Properties -->
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalSystem">
         <rdfs:label xml:lang="en">has Environmental System</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a tunnel project to its environmental systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates a tunnel infrastructure with its environmental system framework and site characterization components.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalCategory">
         <rdfs:label xml:lang="en">has Environmental Category</rdfs:label>
-        <rdfs:comment xml:lang="en">Links environmental assessment to category classification.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates environmental assessment with its systematic classification category based on aggressive condition levels.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalCategory"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#requiresProtection">
         <rdfs:label xml:lang="en">requires Protection</rdfs:label>
-        <rdfs:comment xml:lang="en">Links environmental system to required protection measures.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates environmental system with mandatory protection measures and mitigation strategies.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalProtection"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#requiresMonitoring">
         <rdfs:label xml:lang="en">requires Monitoring</rdfs:label>
-        <rdfs:comment xml:lang="en">Links environmental system to required monitoring systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates environmental system with mandatory monitoring systems and measurement protocols.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalSystem"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalMonitoring"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasInvestigationPhase">
+        <rdfs:label xml:lang="en">has Investigation Phase</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates site investigation with its systematic phasing corresponding to design stage requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiteInvestigation"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#includesBoreholeInvestigation">
+        <rdfs:label xml:lang="en">includes Borehole Investigation</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates water area investigation with its constituent borehole investigation components and methodologies.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterAreaInvestigation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
     </owl:ObjectProperty>
 
     <!-- Data Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#environmentalCategory">
         <rdfs:label xml:lang="en">environmental category</rdfs:label>
-        <rdfs:comment xml:lang="en">Environmental category classification (A, B, C, D).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the environmental classification category based on aggressive condition assessment.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalCategory"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#mappingScale">
+        <rdfs:label xml:lang="en">mapping scale</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the cartographic scale requirement for topographic mapping based on design stage precision needs.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SubaqueousTopographicMapping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#coverageWidth">
+        <rdfs:label xml:lang="en">coverage width</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the lateral extent of mapping coverage relative to tunnel alignment centerline.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SubaqueousTopographicMapping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#boreholeSpacing">
+        <rdfs:label xml:lang="en">borehole spacing</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the systematic spacing interval between boreholes based on investigation phase requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#minimumBoreholeCount">
+        <rdfs:label xml:lang="en">minimum borehole count</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the minimum number of boreholes required for adequate site characterization.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#boreholeDepthRequirement">
+        <rdfs:label xml:lang="en">borehole depth requirement</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the required borehole depth based on soil conditions and tunnel dimensional parameters.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#BoreholeInvestigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#waterDepth">
         <rdfs:label xml:lang="en">water depth</rdfs:label>
-        <rdfs:comment xml:lang="en">Water depth at tunnel location in meters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the measured water depth at tunnel location for design reference.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrographicSurvey"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#tidalRange">
         <rdfs:label xml:lang="en">tidal range</rdfs:label>
-        <rdfs:comment xml:lang="en">Tidal range affecting tunnel design in meters.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the tidal variation range affecting tunnel design calculations and construction operations.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterLevelMonitoring"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#currentVelocity">
         <rdfs:label xml:lang="en">current velocity</rdfs:label>
-        <rdfs:comment xml:lang="en">Water current velocity in m/s.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the measured water current velocity affecting construction operations and structural loading.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CurrentMonitoring"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#noiseLevel">
         <rdfs:label xml:lang="en">noise level</rdfs:label>
-        <rdfs:comment xml:lang="en">Ambient noise level in dB(A).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the measured ambient noise level for environmental impact assessment.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#NoiseAssessment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#airQualityIndex">
         <rdfs:label xml:lang="en">air quality index</rdfs:label>
-        <rdfs:comment xml:lang="en">Air quality index measurement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the air quality measurement index for atmospheric condition assessment.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AirQualityAssessment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#turbidity">
         <rdfs:label xml:lang="en">turbidity</rdfs:label>
-        <rdfs:comment xml:lang="en">Water turbidity measurement in NTU.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the water turbidity measurement for water quality characterization.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterQualityAssessment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#carbonFootprint">
         <rdfs:label xml:lang="en">carbon footprint</rdfs:label>
-        <rdfs:comment xml:lang="en">Carbon footprint assessment in CO2 equivalent tons.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the carbon footprint assessment value for lifecycle environmental impact evaluation.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LifecycleAssessment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#energyEfficiencyRating">
         <rdfs:label xml:lang="en">energy efficiency rating</rdfs:label>
-        <rdfs:comment xml:lang="en">Energy efficiency rating for sustainable systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the energy efficiency classification rating for sustainable system assessment.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EnergyEfficiency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#siltThickness">
+        <rdfs:label xml:lang="en">silt thickness</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the measured thickness of silt cover on river or sea bottom affecting excavation requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiltCoveredBottomInvestigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#sedimentDensity">
+        <rdfs:label xml:lang="en">sediment density</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the measured sediment density for geotechnical design parameters.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SiltCoveredBottomInvestigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#waterDensity">
+        <rdfs:label xml:lang="en">water density</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the measured water density affecting buoyancy calculations and structural loading.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterDensityInvestigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasGeneralDesignSystem">
+        <rdfs:label xml:lang="en">has General Design System</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates tunnel infrastructure with its general design system framework including alignment, profile, and technical schemes.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLocationSelection">
+        <rdfs:label xml:lang="en">has Location Selection</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates design system with systematic location selection framework and assessment criteria.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLocationSelection"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricDesign">
+        <rdfs:label xml:lang="en">has Geometric Design</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates design system with geometric design framework and dimensional specifications.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeometricDesignSystem"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasTechnicalScheme">
+        <rdfs:label xml:lang="en">has Technical Scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates design system with controlled technical schemes for construction methodology.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeneralDesignSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ControlledTechnicalScheme"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialsSpecification">
+        <rdfs:label xml:lang="en">has Materials Specification</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates tunnel infrastructure with comprehensive materials specification system and requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialsSpecificationSystem"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#requiresHazardAssessment">
+        <rdfs:label xml:lang="en">requires Hazard Assessment</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates location selection with mandatory hazard avoidance assessment requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelLocationSelection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HazardAvoidanceAssessment"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#includesConcreteSpecification">
+        <rdfs:label xml:lang="en">includes Concrete Specification</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates materials specification with concrete specification framework and grade requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialsSpecificationSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#includesSteelSpecification">
+        <rdfs:label xml:lang="en">includes Steel Specification</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates materials specification with steel specification framework and grade classifications.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#MaterialsSpecificationSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelSpecification"/>
+    </owl:ObjectProperty>
+
+    <!-- Enhanced Data Properties for Design Framework -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#alignmentAngle">
+        <rdfs:label xml:lang="en">alignment angle</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the intersection angle between tunnel centerline and navigation channel centerline or shoreline alignment.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#NavigationChannelAlignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#curvatureRadius">
+        <rdfs:label xml:lang="en">curvature radius</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the curvature radius for element section alignment based on tunnel function and construction technique requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElementSectionAlignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#maximumDepthConstraint">
+        <rdfs:label xml:lang="en">maximum depth constraint</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the maximum depth constraint for tunnel location in stable riverbed sections.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#HydrologicalLocationAssessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#navigationChannelDepth">
+        <rdfs:label xml:lang="en">navigation channel depth</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the planned navigation channel depth for tunnel elevation positioning requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElevationDesign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#protectiveCoverThickness">
+        <rdfs:label xml:lang="en">protective cover thickness</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the required protective cover thickness over tunnel roof for design compliance.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProtectiveCoverDesign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#elementLength">
+        <rdfs:label xml:lang="en">element length</rdfs:label>
+        <rdfs:comment xml:lang="en">Longitudinal dimension of tunnel element expressed in meters, determined by fabrication capacity constraints, transportation limitations, and construction sequence requirements according to GBT 51318-2019 element design specifications.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElementDimensionDesign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#elementCount">
+        <rdfs:label xml:lang="en">element count</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the total number of tunnel elements based on tunnel profile and construction methodology.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ElementDimensionDesign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#internalClearanceHeight">
+        <rdfs:label xml:lang="en">internal clearance height</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the internal clearance height meeting architectural and equipment layout requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#InternalClearanceDesign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#internalClearanceWidth">
+        <rdfs:label xml:lang="en">internal clearance width</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the internal clearance width meeting transportation and safety requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#InternalClearanceDesign"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#floatingDistance">
+        <rdfs:label xml:lang="en">floating distance</rdfs:label>
+        <rdfs:comment xml:lang="en">Floating transportation distance determined per GBT 51318-2019 Section 10.2.5 using historical hydrological and meteorological data analysis (tide level, depth, velocity, gravity, wind speed, wave height). Distance calculated considering optimal floating time windows per Section 10.2.6: dry dock freeboard &gt;100mm, visibility &gt;1000m, flow velocity &lt;1.0m/s, pipe towing velocity &lt;1.0m/s, wave height &lt;0.6m, wind speed &lt;10m/s. Route planning utilizes existing navigation channels where possible per Section 10.1.3. Navigation channel requirements ensure minimum depth Ht &gt;= H - hg + hs where H is external pipe height, hg is freeboard, hs is safety clearance. Value expressed in meters.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FloatingTransportationScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Materials Specification Properties -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#impermeabilityGrade">
+        <rdfs:label xml:lang="en">impermeability grade</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the concrete impermeability grade requirement for waterproofing performance.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#concreteStrengthGrade">
+        <rdfs:label xml:lang="en">concrete strength grade</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the concrete strength grade classification for structural design requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#waterCementRatio">
+        <rdfs:label xml:lang="en">water cement ratio</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the maximum water-cement ratio for concrete durability requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#cementitiousMaterialContent">
+        <rdfs:label xml:lang="en">cementitious material content</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the minimum cementitious material content for concrete durability compliance.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConcreteSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#steelGrade">
+        <rdfs:label xml:lang="en">steel grade</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the steel grade classification for structural and reinforcement applications.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ultimateStrength">
+        <rdfs:label xml:lang="en">ultimate strength</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the minimum ultimate strength requirement for prestressing tendons and steel components.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PrestressingTendon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#groutingStrengthGrade">
+        <rdfs:label xml:lang="en">grouting strength grade</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the strength grade requirement for non-shrink grouting materials in element sealing applications.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GroutingMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#rockwellHardness">
+        <rdfs:label xml:lang="en">rockwell hardness</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the minimum Rockwell hardness requirement for vertical jack pushing ends and specialized steel components.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelSpecification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#performanceGrade">
+        <rdfs:label xml:lang="en">performance grade</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the performance grade classification for fasteners and connection components meeting durability requirements.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#WaterstopSpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 

@@ -1,0 +1,387 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Consolidated traffic and transportation systems for immersed tunnels.\n            Includes traffic engineering facilities, safety systems, signs, barriers, and transportation infrastructure.\n            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 15 standards.\n            \n            CONSOLIDATES:\n            - Traffic engineering facilities from ancillary_structures_traffic_engineering.owl\n            - Traffic safety systems from ancillary_structures_traffic_engineering.owl\n            - Transportation infrastructure and access systems\n            - Traffic monitoring and control systems\n            \n            EXCLUDES:\n            - Emergency lighting and fire systems (moved to systems_safety_emergency.owl)\n            - Electrical power systems (moved to systems_mechanical_electrical.owl)\n            - Monitoring systems (moved to systems_monitoring_instrumentation.owl)\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Tunnel Ontology - Traffic and Transportation Systems"@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0 - Consolidated" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTrafficControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficControlSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficControlSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its traffic control systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Traffic Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTrafficEngineeringFacility
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficEngineeringFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficEngineeringFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficEngineeringFacility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficEngineeringFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Links tunnel to its traffic engineering facilities."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficEngineeringFacility> <http://www.w3.org/2000/01/rdf-schema#label> "has Traffic Engineering Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSafetyFacility
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSafetyFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSafetyFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSafetyFacility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSafetyFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Links tunnel to its traffic safety facilities."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSafetyFacility> <http://www.w3.org/2000/01/rdf-schema#label> "has Traffic Safety Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its traffic systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTrafficSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Traffic System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTransportationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasTransportationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTransportationSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTransportationSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTransportationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its transportation systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTransportationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Transportation System"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#advanceSignSets
+<http://www.semanticweb.org/immersedTunnelOnto#advanceSignSets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#advanceSignSets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign> .
+<http://www.semanticweb.org/immersedTunnelOnto#advanceSignSets> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/immersedTunnelOnto#advanceSignSets> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of advance sign sets before tunnel, minimum 3 per JTG 2120-2020 Section 15.2.3."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#advanceSignSets> <http://www.w3.org/2000/01/rdf-schema#label> "advance sign sets"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#barrierHeight
+<http://www.semanticweb.org/immersedTunnelOnto#barrierHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#barrierHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> .
+<http://www.semanticweb.org/immersedTunnelOnto#barrierHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#barrierHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of traffic barrier in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#barrierHeight> <http://www.w3.org/2000/01/rdf-schema#label> "barrier height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#compliesWithJTGD70
+<http://www.semanticweb.org/immersedTunnelOnto#compliesWithJTGD70> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#compliesWithJTGD70> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#compliesWithJTGD70> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/immersedTunnelOnto#compliesWithJTGD70> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates compliance with JTG D70/2 traffic engineering specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#compliesWithJTGD70> <http://www.w3.org/2000/01/rdf-schema#label> "complies with JTG D70"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates ensuring traffic safety, operational convenience, economic efficiency, and effective emergency response."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ensuresTrafficSafety> <http://www.w3.org/2000/01/rdf-schema#label> "ensures traffic safety"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#maxVehicleHeight
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum allowed vehicle height in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleHeight> <http://www.w3.org/2000/01/rdf-schema#label> "max vehicle height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#maxVehicleWeight
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleWeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleWeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum allowed vehicle weight in tons."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#maxVehicleWeight> <http://www.w3.org/2000/01/rdf-schema#label> "max vehicle weight"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#speedLimit
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign> .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "Speed limit in kilometers per hour for tunnel traffic."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#speedLimit> <http://www.w3.org/2000/01/rdf-schema#label> "speed limit"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AccessControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#AccessControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AccessControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#AccessControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Systems for controlling vehicle access to tunnel based on size, weight, and hazardous materials."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AccessControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Access Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign
+<http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> .
+<http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Advance tunnel information signs positioned before tunnel entrance per JTG 2120-2020 Section 15.2.3."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AdvanceTunnelSign> <http://www.w3.org/2000/01/rdf-schema#label> "Advance Tunnel Sign"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ApproachRamp
+<http://www.semanticweb.org/immersedTunnelOnto#ApproachRamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ApproachRamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ApproachRamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Ramp structures leading traffic down to tunnel entrance portal."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ApproachRamp> <http://www.w3.org/2000/01/rdf-schema#label> "Approach Ramp"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CenterlineMarking
+<http://www.semanticweb.org/immersedTunnelOnto#CenterlineMarking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CenterlineMarking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> .
+<http://www.semanticweb.org/immersedTunnelOnto#CenterlineMarking> <http://www.w3.org/2000/01/rdf-schema#comment> "Centerline markings for directional traffic separation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CenterlineMarking> <http://www.w3.org/2000/01/rdf-schema#label> "Centerline Marking"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CentralBarrier
+<http://www.semanticweb.org/immersedTunnelOnto#CentralBarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CentralBarrier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> .
+<http://www.semanticweb.org/immersedTunnelOnto#CentralBarrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Central barrier for directional traffic separation in tunnels."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CentralBarrier> <http://www.w3.org/2000/01/rdf-schema#label> "Central Barrier"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ClassATrafficImportance
+<http://www.semanticweb.org/immersedTunnelOnto#ClassATrafficImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassATrafficImportance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassATrafficImportance> <http://www.w3.org/2000/01/rdf-schema#comment> "Class A importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassATrafficImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Class A Traffic Importance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ClassBTrafficImportance
+<http://www.semanticweb.org/immersedTunnelOnto#ClassBTrafficImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassBTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassBTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#comment> "Class B importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassBTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Class B Traffic Importance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ClassCTrafficImportance
+<http://www.semanticweb.org/immersedTunnelOnto#ClassCTrafficImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassCTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassCTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#comment> "Class C importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassCTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Class C Traffic Importance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ClassDTrafficImportance
+<http://www.semanticweb.org/immersedTunnelOnto#ClassDTrafficImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassDTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassDTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#comment> "Class D importance for traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ClassDTrafficImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Class D Traffic Importance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CrashBarrier
+<http://www.semanticweb.org/immersedTunnelOnto#CrashBarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrashBarrier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> .
+<http://www.semanticweb.org/immersedTunnelOnto#CrashBarrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Impact-absorbing barriers for vehicle crash protection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CrashBarrier> <http://www.w3.org/2000/01/rdf-schema#label> "Crash Barrier"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DirectionalArrow
+<http://www.semanticweb.org/immersedTunnelOnto#DirectionalArrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DirectionalArrow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DirectionalArrow> <http://www.w3.org/2000/01/rdf-schema#comment> "Directional arrow indicators for traffic flow guidance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DirectionalArrow> <http://www.w3.org/2000/01/rdf-schema#label> "Directional Arrow"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EdgelineMarking
+<http://www.semanticweb.org/immersedTunnelOnto#EdgelineMarking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EdgelineMarking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> .
+<http://www.semanticweb.org/immersedTunnelOnto#EdgelineMarking> <http://www.w3.org/2000/01/rdf-schema#comment> "Edge markings for roadway boundaries and shoulder definition."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EdgelineMarking> <http://www.w3.org/2000/01/rdf-schema#label> "Edgeline Marking"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EntrancePortal
+<http://www.semanticweb.org/immersedTunnelOnto#EntrancePortal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EntrancePortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal> .
+<http://www.semanticweb.org/immersedTunnelOnto#EntrancePortal> <http://www.w3.org/2000/01/rdf-schema#comment> "Tunnel entrance portal with traffic management and safety systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EntrancePortal> <http://www.w3.org/2000/01/rdf-schema#label> "Entrance Portal"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ExitPortal
+<http://www.semanticweb.org/immersedTunnelOnto#ExitPortal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitPortal> <http://www.w3.org/2000/01/rdf-schema#comment> "Tunnel exit portal with traffic management and safety systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitPortal> <http://www.w3.org/2000/01/rdf-schema#label> "Exit Portal"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ExitRamp
+<http://www.semanticweb.org/immersedTunnelOnto#ExitRamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitRamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitRamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Ramp structures leading traffic up from tunnel exit portal to surface level."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitRamp> <http://www.w3.org/2000/01/rdf-schema#label> "Exit Ramp"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem
+<http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Systems for detecting over-height vehicles before tunnel entry."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#HeightDetectionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Height Detection System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#IncidentManagementSystem
+<http://www.semanticweb.org/immersedTunnelOnto#IncidentManagementSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#IncidentManagementSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#IncidentManagementSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated incident detection and traffic management response systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#IncidentManagementSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Incident Management System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#InductiveLoopDetector
+<http://www.semanticweb.org/immersedTunnelOnto#InductiveLoopDetector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#InductiveLoopDetector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#InductiveLoopDetector> <http://www.w3.org/2000/01/rdf-schema#comment> "Inductive loop detectors embedded in pavement for vehicle presence detection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#InductiveLoopDetector> <http://www.w3.org/2000/01/rdf-schema#label> "Inductive Loop Detector"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LaneControlSignal
+<http://www.semanticweb.org/immersedTunnelOnto#LaneControlSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LaneControlSignal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#LaneControlSignal> <http://www.w3.org/2000/01/rdf-schema#comment> "Lane control signals for traffic management and lane closure indication."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LaneControlSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Lane Control Signal"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LaneMarking
+<http://www.semanticweb.org/immersedTunnelOnto#LaneMarking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LaneMarking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> .
+<http://www.semanticweb.org/immersedTunnelOnto#LaneMarking> <http://www.w3.org/2000/01/rdf-schema#comment> "Lane dividing markings for traffic separation and guidance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LaneMarking> <http://www.w3.org/2000/01/rdf-schema#label> "Lane Marking"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ProhibitionSign
+<http://www.semanticweb.org/immersedTunnelOnto#ProhibitionSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ProhibitionSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> .
+<http://www.semanticweb.org/immersedTunnelOnto#ProhibitionSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Prohibition signs for restricted vehicles and activities in tunnel."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ProhibitionSign> <http://www.w3.org/2000/01/rdf-schema#label> "Prohibition Sign"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ReflectiveMarking
+<http://www.semanticweb.org/immersedTunnelOnto#ReflectiveMarking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReflectiveMarking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReflectiveMarking> <http://www.w3.org/2000/01/rdf-schema#comment> "Reflective markings for enhanced visibility in tunnel conditions."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ReflectiveMarking> <http://www.w3.org/2000/01/rdf-schema#label> "Reflective Marking"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SideBarrier
+<http://www.semanticweb.org/immersedTunnelOnto#SideBarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SideBarrier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> .
+<http://www.semanticweb.org/immersedTunnelOnto#SideBarrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Side barriers for tunnel wall protection and vehicle guidance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SideBarrier> <http://www.w3.org/2000/01/rdf-schema#label> "Side Barrier"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SpeedControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated speed monitoring and control systems for tunnel safety."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Speed Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> .
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Speed limit signs for tunnel traffic control per JTG 2120-2020."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SpeedLimitSign> <http://www.w3.org/2000/01/rdf-schema#label> "Speed Limit Sign"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Traffic barriers for vehicle guidance and safety per JTG 2120-2020 Section 15.2.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficBarrier> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Barrier"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated traffic control and management systems for tunnel operations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Traffic engineering and ancillary facilities coordinated with main structure and systems per JTG 2120-2020 Section 15.1.1."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Engineering Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> <http://www.w3.org/2000/01/rdf-schema#comment> "Importance classification of immersed tunnel traffic engineering and affiliated facilities according to JTG 2120-2020 Section 3.0.7."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Engineering Importance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Systems for guiding traffic through tunnel safely and efficiently."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Guidance System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficLightSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficLightSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficLightSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficLightSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Traffic light systems for tunnel entrance/exit control and emergency management."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficLightSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Light System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> <http://www.w3.org/2000/01/rdf-schema#comment> "Pavement markings for lane guidance and traffic control per JTG 2120-2020 Section 15.2.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficMarking> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Marking"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficEngineeringFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Traffic safety facilities including signs, markings, barriers, and guidance systems per JTG 2120-2020 Section 15.2.1-15.2.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Safety Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficSign
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSafetyFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Traffic signs for tunnel guidance and safety per JTG 2120-2020 Section 15.2.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Sign"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all traffic and transportation systems in immersed tunnel projects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TrafficSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for transportation infrastructure systems in immersed tunnel projects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Transportation System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Infrastructure systems for vehicle approach to tunnel including ramps and connections."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelApproachSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Tunnel Approach System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelNameSign
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelNameSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelNameSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelNameSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Tunnel name identification signs at entrance and exit per JTG 2120-2020 Section 15.2.3."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelNameSign> <http://www.w3.org/2000/01/rdf-schema#label> "Tunnel Name Sign"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TransportationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal> <http://www.w3.org/2000/01/rdf-schema#comment> "Tunnel entrance and exit portals with traffic control and safety systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelPortal> <http://www.w3.org/2000/01/rdf-schema#label> "Tunnel Portal"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VariableMessageSign
+<http://www.semanticweb.org/immersedTunnelOnto#VariableMessageSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VariableMessageSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficGuidanceSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#VariableMessageSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Electronic variable message signs for dynamic traffic information and warnings."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VariableMessageSign> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Message Sign"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Systems for detecting and monitoring vehicles in tunnel for traffic management and safety."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Detection System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VideoAnalyticsDetector
+<http://www.semanticweb.org/immersedTunnelOnto#VideoAnalyticsDetector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VideoAnalyticsDetector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#VideoAnalyticsDetector> <http://www.w3.org/2000/01/rdf-schema#comment> "Video-based vehicle detection using computer vision analytics."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VideoAnalyticsDetector> <http://www.w3.org/2000/01/rdf-schema#label> "Video Analytics Detector"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WarningSign
+<http://www.semanticweb.org/immersedTunnelOnto#WarningSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WarningSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TrafficSign> .
+<http://www.semanticweb.org/immersedTunnelOnto#WarningSign> <http://www.w3.org/2000/01/rdf-schema#comment> "Warning signs for tunnel hazards and safety alerts."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WarningSign> <http://www.w3.org/2000/01/rdf-schema#label> "Warning Sign"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem
+<http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VehicleDetectionSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Systems for measuring vehicle weight while in motion for overweight detection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WeighInMotionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Weigh-In-Motion System"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

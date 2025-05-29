@@ -1,0 +1,1290 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/immersedTunnelOnto", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical",
+    "version" : "3.0.0 - Consolidated",
+    "labels" : {
+      "en" : "Immersed Tunnel Ontology - Mechanical and Electrical Systems"
+    },
+    "comments" : {
+      "en" : "\n            Consolidated mechanical and electrical systems for immersed tunnels.\n            Includes ventilation, lighting (excluding emergency), power supply, control, and communication systems.\n            Based on GB/T 51318-2019 and JTG 2120-2020 standards.\n            \n            CONSOLIDATES:\n            - Ventilation systems from mechanical_electrical_systems.owl\n            - Normal lighting systems from mechanical_electrical_systems.owl  \n            - Electrical systems from ancillary_structures_traffic_engineering.owl\n            - Control systems from ancillary_structures_traffic_engineering.owl\n            \n            EXCLUDES:\n            - Emergency lighting (moved to systems_safety_emergency.owl)\n            - Fire protection systems (moved to systems_safety_emergency.owl)\n            - Drainage systems (moved to systems_drainage_utilities.owl)\n        "
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0.0 - Consolidated",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#VisibilitySensor",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VisibilitySensor",
+      "en" : "Visibility Sensor"
+    },
+    "comment" : {
+      "en" : "Visibility sensor for monitoring optical conditions in tunnels."
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#CentralControlSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CentralControlSystem",
+      "en" : "Central Control System"
+    },
+    "comment" : {
+      "en" : "Central control system for tunnel operations monitoring and management per JTG 2120-2020 Section 15.7.1."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LEDTunnelLight",
+      "en" : "LED Tunnel Light"
+    },
+    "subClasses" : [ "12", "13" ],
+    "comment" : {
+      "en" : "LED lighting fixtures specifically designed for tunnel applications with high efficiency and long life."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#MechanicalVentilation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MechanicalVentilation",
+      "en" : "Mechanical Ventilation"
+    },
+    "comment" : {
+      "en" : "Mechanical ventilation system for tunnels >1000m per JTG 2120-2020 Section 15.3.3."
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#AutomationSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AutomationSystem",
+      "en" : "Automation System"
+    },
+    "comment" : {
+      "en" : "Automated control systems for tunnel systems integration and response."
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirQualitySensor",
+      "en" : "Air Quality Sensor"
+    },
+    "subClasses" : [ "36", "37", "3" ],
+    "comment" : {
+      "en" : "Sensors for monitoring air quality parameters in tunnels including CO, NO, visibility, and temperature."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ExitLighting",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExitLighting",
+      "en" : "Exit Lighting"
+    },
+    "comment" : {
+      "en" : "Increased lighting levels approaching tunnel exits per JTG 2120-2020 Section 15.4.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TunnelComponent"
+    },
+    "subClasses" : [ "26", "9", "32", "29" ],
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PowerLoadClassification",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PowerLoadClassification",
+      "en" : "Power Load Classification"
+    },
+    "comment" : {
+      "en" : "Classification of power loads by criticality per JTG 2120-2020 Section 15.6.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ElectricalEquipmentFireRating",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricalEquipmentFireRating",
+      "en" : "Electrical Equipment Fire Rating"
+    },
+    "comment" : {
+      "en" : "Fire resistance ratings for electrical equipment per JTG 2120-2020 Section 15.6.3."
+    },
+    "attributes" : [ "external" ],
+    "id" : "49",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#NOSensor",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NOSensor",
+      "en" : "NO Sensor"
+    },
+    "comment" : {
+      "en" : "Nitrogen oxide sensor for air quality monitoring in tunnels."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#JetFan",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "JetFan",
+      "en" : "Jet Fan"
+    },
+    "subClasses" : [ "20", "17" ],
+    "comment" : {
+      "en" : "Jet fans for longitudinal ventilation in immersed tunnels, providing thrust and air circulation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#COSensor",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "COSensor",
+      "en" : "CO Sensor"
+    },
+    "comment" : {
+      "en" : "Carbon monoxide sensor for air quality monitoring in tunnels."
+    },
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LightingSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightingSystem",
+      "en" : "Lighting System"
+    },
+    "subClasses" : [ "54", "55", "11", "38", "56" ],
+    "comment" : {
+      "en" : "Normal operational lighting system for immersed tunnels per JTG 2120-2020 Section 15.4. Excludes emergency lighting which is in safety systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SmokeExtractionSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SmokeExtractionSystem",
+      "en" : "Smoke Extraction System"
+    },
+    "comment" : {
+      "en" : "Smoke extraction system for tunnels >3000m per JTG 2120-2020 Section 15.3.3."
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#FireResistantJetFan",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FireResistantJetFan",
+      "en" : "Fire Resistant Jet Fan"
+    },
+    "comment" : {
+      "en" : "Fire-resistant jet fan designed to operate during emergency conditions and smoke extraction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CommunicationSystem",
+      "en" : "Communication System"
+    },
+    "subClasses" : [ "58", "64", "62" ],
+    "comment" : {
+      "en" : "Base class for all communication systems in immersed tunnel projects."
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#CableDuct",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CableDuct",
+      "en" : "Cable Duct"
+    },
+    "comment" : {
+      "en" : "Cable ducts for tunnel electrical systems per JTG 2120-2020 Section 14.1.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "67",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LEDCounterBeamLight",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LEDCounterBeamLight",
+      "en" : "LED Counter Beam Light"
+    },
+    "comment" : {
+      "en" : "LED counter beam lighting for reducing the black hole effect at tunnel entrances."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricalSystem",
+      "en" : "Electrical System"
+    },
+    "subClasses" : [ "82", "67", "6", "83", "40", "49" ],
+    "comment" : {
+      "en" : "Base class for all electrical systems in immersed tunnel projects."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ElectricalConduit",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricalConduit",
+      "en" : "Electrical Conduit"
+    },
+    "comment" : {
+      "en" : "Electrical conduits for power and control systems per JTG 2120-2020 Section 14.1.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "83",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LEDBasicLight",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LEDBasicLight",
+      "en" : "LED Basic Light"
+    },
+    "comment" : {
+      "en" : "Basic LED lighting for general tunnel illumination."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImmersedTubeTunnel"
+    },
+    "attributes" : [ "external" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#EntranceLighting",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntranceLighting",
+      "en" : "Entrance Lighting"
+    },
+    "comment" : {
+      "en" : "High-intensity lighting at tunnel entrances to aid driver adaptation per JTG 2120-2020 Section 15.4.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VentilationSystem",
+      "en" : "Ventilation System"
+    },
+    "subClasses" : [ "14", "52", "24", "45" ],
+    "comment" : {
+      "en" : "Complete ventilation system for immersed tunnels including air supply, exhaust, and circulation components per JTG 2120-2020 Section 15.3."
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#TransitionLighting",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransitionLighting",
+      "en" : "Transition Lighting"
+    },
+    "comment" : {
+      "en" : "Gradually reducing lighting levels in transition zones per JTG 2120-2020 Section 15.4.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "54",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LightingControlCabinet",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightingControlCabinet",
+      "en" : "Lighting Control Cabinet"
+    },
+    "comment" : {
+      "en" : "Control cabinet for managing tunnel lighting systems including dimming and scheduling."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VentilationEquipment",
+      "en" : "Ventilation Equipment"
+    },
+    "subClasses" : [ "4", "18", "2" ],
+    "comment" : {
+      "en" : "Equipment used in tunnel ventilation systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightingEquipment",
+      "en" : "Lighting Equipment"
+    },
+    "subClasses" : [ "22", "10" ],
+    "comment" : {
+      "en" : "Equipment used in tunnel normal lighting systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MechanicalSystem",
+      "en" : "Mechanical System"
+    },
+    "subClasses" : [ "15" ],
+    "comment" : {
+      "en" : "Base class for all mechanical systems in immersed tunnel projects."
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SmokeExhaustDuct",
+      "en" : "Smoke Exhaust Duct"
+    },
+    "comment" : {
+      "en" : "Independent smoke exhaust ducts with ventilation openings for emergency smoke removal and air circulation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "77",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#GroundingSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GroundingSystem",
+      "en" : "Grounding System"
+    },
+    "comment" : {
+      "en" : "Electrical grounding and lightning protection system per JTG 2120-2020 Section 15.6.4."
+    },
+    "attributes" : [ "external" ],
+    "id" : "82",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ExhaustAirDuct",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExhaustAirDuct",
+      "en" : "Exhaust Air Duct"
+    },
+    "comment" : {
+      "en" : "Ducts for removing contaminated air from the tunnel."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VentilationDuct",
+      "en" : "Ventilation Duct"
+    },
+    "subClasses" : [ "1", "77", "75" ],
+    "comment" : {
+      "en" : "Ducts for air distribution in tunnel ventilation systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#MonitoringControlSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MonitoringControlSystem",
+      "en" : "Monitoring Control System"
+    },
+    "comment" : {
+      "en" : "Systems for monitoring and controlling tunnel mechanical and electrical systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PowerSupplySystem",
+      "en" : "Power Supply System"
+    },
+    "subClasses" : [ "39", "69" ],
+    "comment" : {
+      "en" : "Complete power supply system for tunnel operations per JTG 2120-2020 Section 15.6."
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#IntercomSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IntercomSystem",
+      "en" : "Intercom System"
+    },
+    "comment" : {
+      "en" : "Intercom communication system for tunnel operations and emergency coordination."
+    },
+    "attributes" : [ "external" ],
+    "id" : "62",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ReversibleJetFan",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReversibleJetFan",
+      "en" : "Reversible Jet Fan"
+    },
+    "comment" : {
+      "en" : "Reversible jet fan capable of bidirectional airflow for flexible ventilation control."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ControlSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ControlSystem",
+      "en" : "Control System"
+    },
+    "subClasses" : [ "35", "8", "60" ],
+    "comment" : {
+      "en" : "Base class for all control and automation systems in immersed tunnel projects."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#InteriorLighting",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InteriorLighting",
+      "en" : "Interior Lighting"
+    },
+    "comment" : {
+      "en" : "Consistent lighting levels throughout the tunnel interior per JTG 2120-2020 Section 15.4.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "56",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PublicAddressSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PublicAddressSystem",
+      "en" : "Public Address System"
+    },
+    "comment" : {
+      "en" : "Public address system for operational announcements and information."
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#DataCommunicationSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataCommunicationSystem",
+      "en" : "Data Communication System"
+    },
+    "comment" : {
+      "en" : "Data communication systems for tunnel monitoring and control networks."
+    },
+    "attributes" : [ "external" ],
+    "id" : "58",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EscapePassagePressurization",
+      "en" : "Escape Passage Pressurization"
+    },
+    "comment" : {
+      "en" : "Mechanical pressurization system maintaining positive pressure differential between escape passages and tunnel areas for safety."
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PowerSupplyFacility",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PowerSupplyFacility",
+      "en" : "Power Supply Facility"
+    },
+    "comment" : {
+      "en" : "Power supply facilities including primary and backup power sources per JTG 2120-2020 Section 15.6.1."
+    },
+    "attributes" : [ "external" ],
+    "id" : "69",
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SupplyAirDuct",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirDuct",
+      "en" : "Supply Air Duct"
+    },
+    "comment" : {
+      "en" : "Ducts for supplying fresh air into the tunnel."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75",
+    "superClasses" : [ "2" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "illuminanceLevel",
+      "en" : "illuminance level"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Illuminance level in lux for lighting systems."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "5"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "18",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "11",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "24",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "range" : "26",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "30",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "30",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "24",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "24",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "30",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "30",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "15",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "15",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "4",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "4",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "range" : "10",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "range" : "15",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "15",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "29",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "9",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "29",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "29",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "9",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "40",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "range" : "6",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "6",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "40",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "6",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "2",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "2",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasElectricalSystem",
+      "en" : "has Electrical System"
+    },
+    "domain" : "79",
+    "comment" : {
+      "en" : "Links a tunnel to its electrical systems."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "78"
+  }, {
+    "range" : "6",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "range" : "6",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasLightingSystem",
+      "en" : "has Lighting System"
+    },
+    "domain" : "79",
+    "comment" : {
+      "en" : "Links a tunnel to its lighting systems."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#airFlowRate",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "airFlowRate",
+      "en" : "air flow rate"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Air flow rate in cubic meters per second for ventilation systems."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasVentilationSystem",
+      "en" : "has Ventilation System"
+    },
+    "domain" : "79",
+    "comment" : {
+      "en" : "Links a tunnel to its ventilation systems."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#powerRating",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "powerRating",
+      "en" : "power rating"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Power rating in kilowatts for electrical systems."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasControlSystem",
+      "en" : "has Control System"
+    },
+    "domain" : "79",
+    "comment" : {
+      "en" : "Links a tunnel to its control systems."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "90"
+  }, {
+    "range" : "32",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "32",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "32",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "32",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "range" : "32",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "range" : "32",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "10",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  } ]
+}

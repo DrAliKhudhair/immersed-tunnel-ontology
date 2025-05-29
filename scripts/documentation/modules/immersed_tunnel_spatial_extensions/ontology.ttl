@@ -1,0 +1,428 @@
+@prefix : <http://www.semanticweb.org/immersedTunnelOnto/modulars/immersed_tunnel_spatial_extensions#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/immersedTunnelOnto/modulars/immersed_tunnel_spatial_extensions#> .
+
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/immersed_tunnel_spatial_extensions> rdf:type owl:Ontology ;
+                                                                                             owl:imports <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> ,
+                                                                                                         <http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy> ,
+                                                                                                         <http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy> ;
+                                                                                             rdfs:comment """
+            Focused extensions for immersed tunnel engineering terminology and spatial concepts.
+            Covers specific immersed tunnel requirements for:
+            1. Immersed tunnel-specific spatial elements (segments, elements, joints, envelopes)
+            2. Non-physical zones specific to immersed tunnel operations
+            3. Immersed tunnel lifecycle and asset management
+            4. Prefabricated element management and tracking
+            5. Immersion-specific project metadata and processes
+            
+            This module focuses exclusively on immersed tunnel engineering terminology.
+        """@en ;
+                                                                                             rdfs:label "Immersed Tunnel Engineering - Spatial Extensions"@en ;
+                                                                                             owl:versionInfo "1.0.0 - Immersed Tunnel Focus" .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#definesImmersedZone
+<http://www.semanticweb.org/immersedTunnelOnto#definesImmersedZone> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                    rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                    rdfs:comment "Relationship indicating that an immersed tunnel element defines or bounds an immersed tunnel zone."@en ;
+                                                                    rdfs:label "defines Immersed Zone"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPhase
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPhase> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                     rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage> ;
+                                                                     rdfs:comment "Relationship linking element to its current construction phase."@en ;
+                                                                     rdfs:label "has Construction Phase"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasElementLifecycleStage
+<http://www.semanticweb.org/immersedTunnelOnto#hasElementLifecycleStage> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                         rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage> ;
+                                                                         rdfs:comment "Relationship linking immersed tunnel elements to their current lifecycle stage."@en ;
+                                                                         rdfs:label "has Element Lifecycle Stage"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTemporarySystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasTemporarySystem> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                   rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#TemporaryConstructionSystem> ;
+                                                                   rdfs:comment "Relationship linking element to temporary construction systems."@en ;
+                                                                   rdfs:label "has Temporary System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#withinImmersionEnvelope
+<http://www.semanticweb.org/immersedTunnelOnto#withinImmersionEnvelope> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                        rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#ImmersionEnvelope> ;
+                                                                        rdfs:comment "Spatial relationship indicating that an element position is within acceptable immersion envelope."@en ;
+                                                                        rdfs:label "within Immersion Envelope"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasActivationDate
+<http://www.semanticweb.org/immersedTunnelOnto#hasActivationDate> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                  rdfs:range xsd:date ;
+                                                                  rdfs:comment "Date when component becomes active during construction or operation."@en ;
+                                                                  rdfs:label "has Activation Date"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBuoyancyControlCapacity
+<http://www.semanticweb.org/immersedTunnelOnto#hasBuoyancyControlCapacity> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#BallastTankSystem> ;
+                                                                           rdfs:range xsd:decimal ;
+                                                                           rdfs:comment "Buoyancy control capacity of ballast tank system (in cubic meters)."@en ;
+                                                                           rdfs:label "has Buoyancy Control Capacity"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDeactivationDate
+<http://www.semanticweb.org/immersedTunnelOnto#hasDeactivationDate> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                    rdfs:range xsd:date ;
+                                                                    rdfs:comment "Date when component is deactivated, removed, or sealed."@en ;
+                                                                    rdfs:label "has Deactivation Date"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasElementSerialNumber
+<http://www.semanticweb.org/immersedTunnelOnto#hasElementSerialNumber> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                       rdfs:range xsd:string ;
+                                                                       rdfs:comment "Unique serial number for immersed tunnel element tracking from prefabrication to installation."@en ;
+                                                                       rdfs:label "has Element Serial Number"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasElementWeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasElementWeight> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                 rdfs:range xsd:decimal ;
+                                                                 rdfs:comment "Total weight of immersed tunnel element including ballast for floating and immersion operations (in tonnes)."@en ;
+                                                                 rdfs:label "has Element Weight"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasFloatingDraft
+<http://www.semanticweb.org/immersedTunnelOnto#hasFloatingDraft> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                 rdfs:range xsd:decimal ;
+                                                                 rdfs:comment "Water depth required for floating immersed tunnel element during transportation and positioning (in meters)."@en ;
+                                                                 rdfs:label "has Floating Draft"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasHydrodynamicConditions
+<http://www.semanticweb.org/immersedTunnelOnto#hasHydrodynamicConditions> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#MarineConstructionEnvironment> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:comment "Description of hydrodynamic conditions affecting marine construction operations."@en ;
+                                                                          rdfs:label "has Hydrodynamic Conditions"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasImmersionDate
+<http://www.semanticweb.org/immersedTunnelOnto#hasImmersionDate> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                 rdfs:range xsd:date ;
+                                                                 rdfs:comment "Date when the immersed tunnel element was successfully immersed and positioned."@en ;
+                                                                 rdfs:label "has Immersion Date"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPlacementTolerance
+<http://www.semanticweb.org/immersedTunnelOnto#hasPlacementTolerance> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ElementPlacementTolerance> ;
+                                                                      rdfs:range xsd:decimal ;
+                                                                      rdfs:comment "Numerical tolerance for element placement accuracy (in mm)."@en ;
+                                                                      rdfs:label "has Placement Tolerance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSeabedVariability
+<http://www.semanticweb.org/immersedTunnelOnto#hasSeabedVariability> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#MarineConstructionEnvironment> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:comment "Description of seabed variability affecting foundation and positioning requirements."@en ;
+                                                                     rdfs:label "has Seabed Variability"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTidalForces
+<http://www.semanticweb.org/immersedTunnelOnto#hasTidalForces> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#MarineConstructionEnvironment> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:comment "Description of tidal forces affecting construction timing and operations."@en ;
+                                                               rdfs:label "has Tidal Forces"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity
+<http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#AirValveSystem
+<http://www.semanticweb.org/immersedTunnelOnto#AirValveSystem> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#BuoyancyControlSystem> ;
+                                                               rdfs:comment "Air valve system for controlled air release and water ingress during immersion operations."@en ;
+                                                               rdfs:label "Air Valve System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#BallastTankSystem
+<http://www.semanticweb.org/immersedTunnelOnto#BallastTankSystem> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#BuoyancyControlSystem> ;
+                                                                  rdfs:comment "Ballast tank system for precise buoyancy control during floating, positioning, and immersion operations."@en ;
+                                                                  rdfs:label "Ballast Tank System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#BuoyancyControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#BuoyancyControlSystem> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                      rdfs:comment "System for controlling element buoyancy during marine operations using ballast tanks and air valves."@en ;
+                                                                      rdfs:label "Buoyancy Control System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage
+<http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                                      rdfs:comment "Specific lifecycle stage for immersed tunnel elements including prefabrication, outfitting, transportation, immersion, and service phases."@en ;
+                                                                      rdfs:label "Element Lifecycle Stage"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ElementPlacementTolerance
+<http://www.semanticweb.org/immersedTunnelOnto#ElementPlacementTolerance> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                          rdfs:comment "Spatial tolerance zone for immersed element final positioning including horizontal and vertical alignment tolerances."@en ;
+                                                                          rdfs:label "Element Placement Tolerance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ElementVerificationEnvelope
+<http://www.semanticweb.org/immersedTunnelOnto#ElementVerificationEnvelope> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                            rdfs:comment "Spatial envelope used for verifying immersed element dimensions, position, and installation compliance."@en ;
+                                                                            rdfs:label "Element Verification Envelope"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FlexibleJoint
+<http://www.semanticweb.org/immersedTunnelOnto#FlexibleJoint> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedElementJoint> ;
+                                                              rdfs:comment "Flexible joint allowing controlled movement between immersed elements due to settlement and thermal effects."@en ;
+                                                              rdfs:label "Flexible Joint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#FloatingZone
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingZone> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                             rdfs:comment "Water area designated for floating operations including maneuvering, positioning, and pre-immersion activities."@en ;
+                                                             rdfs:label "Floating Zone"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#GuidanceSensor
+<http://www.semanticweb.org/immersedTunnelOnto#GuidanceSensor> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                               rdfs:comment "Sensor system active during positioning and immersion phases for precision guidance, then removed or deactivated."@en ;
+                                                               rdfs:label "Guidance Sensor"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#GuideStructure
+<http://www.semanticweb.org/immersedTunnelOnto#GuideStructure> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TemporaryConstructionSystem> ;
+                                                               rdfs:comment "Temporary guide structure for precise positioning and alignment during element placement."@en ;
+                                                               rdfs:label "Guide Structure"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedElementJoint
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedElementJoint> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                     rdfs:comment "Joint connecting adjacent immersed tunnel elements, designed for underwater conditions and element movements."@en ;
+                                                                     rdfs:label "Immersed Element Joint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                      rdfs:comment "Base class for prefabricated immersed tunnel elements including pipe sections and specialized elements."@en ;
+                                                                      rdfs:label "Immersed Tunnel Element"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelFireCompartment
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelFireCompartment> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                              rdfs:comment "Fire compartment designed specifically for immersed tunnel conditions including underwater accessibility constraints."@en ;
+                                                                              rdfs:label "Immersed Tunnel Fire Compartment"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                                   rdfs:comment "Abstract spatial zones specific to immersed tunnel design, construction, and operation."@en ;
+                                                                   rdfs:label "Immersed Tunnel Zone"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionAssembly
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionAssembly> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                  rdfs:comment "Complete assembly of connected immersed tunnel elements forming the underwater tunnel structure."@en ;
+                                                                  rdfs:label "Immersion Assembly"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionControlZone
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionControlZone> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                     rdfs:comment "Water area under controlled access during immersion operations for safety and precision positioning."@en ;
+                                                                     rdfs:label "Immersion Control Zone"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionCorridor
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionCorridor> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                  rdfs:comment "Three-dimensional corridor defining the safe passage route for floating and immersing tunnel elements."@en ;
+                                                                  rdfs:label "Immersion Corridor"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionEnvelope
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionEnvelope> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                  rdfs:comment "Three-dimensional envelope defining acceptable positioning tolerance during element immersion and placement."@en ;
+                                                                  rdfs:label "Immersion Envelope"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionFrame
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionFrame> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TemporaryConstructionSystem> ;
+                                                               rdfs:comment "Temporary frame structure for element guidance and alignment during underwater immersion operations."@en ;
+                                                               rdfs:label "Immersion Frame"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionPhase
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionPhase> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage> ;
+                                                               rdfs:comment "Element phase during immersion and underwater assembly with precision positioning and connection operations."@en ;
+                                                               rdfs:label "Immersion Phase"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ImmersionValve
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersionValve> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                               rdfs:comment "Valve system active only during immersion phase for controlled water ingress, then sealed permanently."@en ;
+                                                               rdfs:label "Immersion Valve"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#JointToleranceZone
+<http://www.semanticweb.org/immersedTunnelOnto#JointToleranceZone> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                   rdfs:comment "Tolerance zone for joint connections between immersed elements including angular and gap tolerances."@en ;
+                                                                   rdfs:label "Joint Tolerance Zone"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#MarineConstructionEnvironment
+<http://www.semanticweb.org/immersedTunnelOnto#MarineConstructionEnvironment> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity> ;
+                                                                              rdfs:comment "Marine environment with tidal forces, seabed variability, and hydrodynamic effects affecting immersed tunnel construction."@en ;
+                                                                              rdfs:label "Marine Construction Environment"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#MarineTransportPhase
+<http://www.semanticweb.org/immersedTunnelOnto#MarineTransportPhase> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage> ;
+                                                                     rdfs:comment "Element phase during marine transport and temporary storage with floating and positioning operations."@en ;
+                                                                     rdfs:label "Marine Transport Phase"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#OperationalPhase
+<http://www.semanticweb.org/immersedTunnelOnto#OperationalPhase> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage> ;
+                                                                 rdfs:comment "Element phase during commissioning and operational service with system activation and performance verification."@en ;
+                                                                 rdfs:label "Operational Phase"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PrefabricationPhase
+<http://www.semanticweb.org/immersedTunnelOnto#PrefabricationPhase> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ElementLifecycleStage> ;
+                                                                    rdfs:comment "Element phase during prefabrication and outfitting in controlled environments with complete system integration."@en ;
+                                                                    rdfs:label "Prefabrication Phase"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#RigidJoint
+<http://www.semanticweb.org/immersedTunnelOnto#RigidJoint> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedElementJoint> ;
+                                                           rdfs:comment "Rigid joint providing structural continuity between immersed elements through prestressing or grouting."@en ;
+                                                           rdfs:label "Rigid Joint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#SpecialElement
+<http://www.semanticweb.org/immersedTunnelOnto#SpecialElement> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                               rdfs:comment "Special immersed tunnel element with non-standard geometry, equipment chambers, or functional requirements."@en ;
+                                                               rdfs:label "Special Element"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#StandardPipeElement
+<http://www.semanticweb.org/immersedTunnelOnto#StandardPipeElement> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                    rdfs:comment "Standard immersed tunnel pipe element with typical cross-section and length specifications."@en ;
+                                                                    rdfs:label "Standard Pipe Element"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TemporaryBulkhead
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryBulkhead> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TemporaryConstructionSystem> ;
+                                                                  rdfs:comment "Temporary bulkhead providing water-tightness during transport and positioning, removed after connection."@en ;
+                                                                  rdfs:label "Temporary Bulkhead"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TemporaryConstructionSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryConstructionSystem> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                            rdfs:comment "Time-bound construction system fundamental to installation phase but removed or deactivated once tunnel is in service."@en ;
+                                                                            rdfs:label "Temporary Construction System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TransitionElement
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionElement> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelElement> ;
+                                                                  rdfs:comment "Transition element connecting immersed tunnel to land approaches or cut-and-cover sections."@en ;
+                                                                  rdfs:label "Transition Element"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#UnderwaterDockingSystem
+<http://www.semanticweb.org/immersedTunnelOnto#UnderwaterDockingSystem> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#TemporaryConstructionSystem> ;
+                                                                        rdfs:comment "System for underwater docking and joint closure between immersed tunnel elements."@en ;
+                                                                        rdfs:label "Underwater Docking System"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#UnderwaterEvacuationZone
+<http://www.semanticweb.org/immersedTunnelOnto#UnderwaterEvacuationZone> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                         rdfs:comment "Evacuation zone designed for immersed tunnel emergency scenarios with underwater escape considerations."@en ;
+                                                                         rdfs:label "Underwater Evacuation Zone"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#UnderwaterMaintenanceZone
+<http://www.semanticweb.org/immersedTunnelOnto#UnderwaterMaintenanceZone> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelZone> ;
+                                                                          rdfs:comment "Zone defined for underwater maintenance operations considering diving access, equipment deployment, and environmental constraints."@en ;
+                                                                          rdfs:label "Underwater Maintenance Zone"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

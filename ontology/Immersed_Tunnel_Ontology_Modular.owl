@@ -36,37 +36,57 @@
     <!-- ========================================= -->
     <!-- ONTOLOGY METADATA                        -->
     <!-- ========================================= -->
-    <rdfs:label xml:lang="en">Immersed Tunnel Engineering Ontology - IFC4.3 Ready</rdfs:label>
+    <rdfs:label xml:lang="en">Immersed Tunnel Engineering Ontology - GBT 51318-2019 Compliant</rdfs:label>
     <rdfs:comment xml:lang="en">
-      Immersed tunnel engineering ontology optimized for IFC4.3 schema development.
+      Comprehensive immersed tunnel engineering ontology aligned with Chinese National Standard GBT 51318-2019 
+      "Immersed Tunnel Design Standard". This ontology provides standardized semantic infrastructure for 
+      tunnel engineering design, construction, and operation processes.
       
-      STREAMLINED FOR IFC4.3 CONTRIBUTION:
-      - Reduced to 19 modules (removed individuals, insufficient, and placeholder modules)
-      - Pure engineering concepts focused on standardization
-      - Eliminated abstract modeling frameworks and minimal placeholder modules
-      - Comprehensive coverage of foundational construction methodology differences
-      - Ready for direct mapping to IFC entities and property sets
-      - Clean modular architecture with foundation + domain modules
+      STANDARDS COMPLIANCE:
+      - GBT 51318-2019: Chinese National Standard for Immersed Tunnel Design (Primary Reference)
+      - IFC4.3: Building SMART International Foundation Classes for Infrastructure
+      - ISO 19650: Organization and digitization of information about buildings and civil engineering works
+      - JTG 2120-2020: Code for Design of Highway Tunnels (Supporting Reference)
       
-      STRUCTURE:
-      - 4 Foundation Modules: Core semantic infrastructure
-      - 15 Domain Modules: Optimized functional areas with substantial content
-      - Zero abstract frameworks or example instances
-      - Enhanced for schema development and standardization
+      CORE TERMINOLOGY DEFINITIONS (GBT 51318-2019 Section 2.1):
+      - Immersed tunnel: A tunnel constructed underwater by floating, immersing, and connecting 
+        prefabricated structural units within aquatic environments
+      - Element: The fundamental structural unit of an immersed tunnel that is prefabricated and 
+        designed for floating, immersion, and underwater connection processes
+      - Floating transportation: The controlled floating and towing of prefabricated tunnel elements 
+        on water surface to designated installation positions
+      - Immersion: The precise sinking process of tunnel elements into predetermined underwater positions
+      - Connection: The alignment and joining process between tunnel elements or between elements 
+        and connection segments
       
-      IFC4.3 FOCUS AREAS:
-      - Immersed tunnel elements (standard, transition, special elements)
-      - Marine construction systems (buoyancy control, temporary systems)
-      - Lifecycle management and construction phases
-      - Spatial zones and tolerance modeling
-      - Engineering analysis and validation systems
+      DESIGN PRINCIPLES (GBT 51318-2019 Section 1):
+      - Structural safety and reliability ensuring integrity under all loading conditions
+      - Technical advancement incorporating engineering best practices and innovations
+      - Economic optimization balancing cost-effectiveness with performance requirements
+      - Durability assurance for long-term operational viability
       
-      COVERAGE: Complete support for sections 3.4 and 3.5 requirements.
-      STANDARDS: Full compliance with immersed tunnel engineering practices.
-      IFC-READY: Prepared for buildingSMART standardization process.
+      SCOPE OF APPLICATION:
+      - Survey and design of immersed tunnel structures utilizing reinforced concrete elements
+      - Implementation of immersed tunnel construction methodologies
+      - Compliance with national standards and regulatory requirements
+      - Support for digital twin and BIM workflows
+      
+      MODULAR ARCHITECTURE:
+      - 4 Foundation Modules: Core semantic infrastructure and taxonomic organization
+      - 15 Domain Modules: Specialized engineering domains with comprehensive coverage
+      - Standards-compliant terminology and definitions throughout all modules
+      - IFC4.3 integration readiness for buildingSMART standardization
     </rdfs:comment>
-    <owl:versionInfo>3.1.3-IFC4.3-ready</owl:versionInfo>
+    <owl:versionInfo>4.0.0-GBT51318-2019-standards-enhanced</owl:versionInfo>
     <rdfs:seeAlso rdf:resource="https://github.com/immersed-tunnel-ontology"/>
-    <owl:priorVersion rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/v3.1.2"/>
+    <rdfs:seeAlso rdf:resource="https://www.gb688.cn/OPENSTD/GBT%2051318-2019"/>
+    <owl:priorVersion rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/v3.3.0"/>
+    
+    <!-- Standards References -->
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+      Primary Standard: GBT 51318-2019 Immersed Tunnel Design Standard
+      Supporting Standards: JTG 2120-2020, IFC4.3, ISO 19650
+      Compliance Level: Full alignment with Chinese National Standard terminology and technical requirements
+    </owl:versionInfo>
   </owl:Ontology>
 </rdf:RDF>

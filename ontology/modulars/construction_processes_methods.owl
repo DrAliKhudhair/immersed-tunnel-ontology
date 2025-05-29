@@ -9,23 +9,28 @@
     <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/construction_processes_methods">
         <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Construction Processes and Methods</rdfs:label>
         <rdfs:comment xml:lang="en">
-            Enhanced construction processes and methods for immersed tunnels.
-            Comprehensive construction stages, methods, and project management.
-            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 13-14 standards.
+            Construction processes and methods module for immersed tunnel systems aligned with GBT 51318-2019.
+            Defines the systematic construction methodology and procedural framework for immersed tunnel construction.
             
-            CONSOLIDATES:
-            - Construction processes from construction_processes.owl
-            - Construction stages and scheduling
-            - Construction methods and techniques
-            - Quality control and safety procedures
+            STANDARDS ALIGNMENT:
+            - GBT 51318-2019: Construction methodology and terminology reference
+            - JTG 2120-2020: Highway tunnel construction procedures
+            - Construction stages follow systematic phasing requirements
+            - Process definitions align with standard construction terminology
             
-            ENHANCEMENTS:
-            - Advanced project management capabilities
-            - Real-time progress monitoring
-            - Risk management and mitigation
-            - Digital construction management
+            PROCESS DEFINITIONS:
+            - Floating transportation: Process of buoyant transport to installation position
+            - Immersion: Controlled descent process to designated underwater position  
+            - Connection: Structural joining process between tunnel elements
+            - Overall methodology framework for systematic construction execution
+            
+            MODULE SCOPE:
+            - Construction process classification and hierarchy
+            - Construction stage definitions and sequencing
+            - Construction method taxonomy and procedures
+            - Quality control and safety management frameworks
         </rdfs:comment>
-        <owl:versionInfo>3.0.0 - Enhanced</owl:versionInfo>
+        <owl:versionInfo>3.2.0-GBT51318-2019-compliant</owl:versionInfo>
         <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
     </owl:Ontology>
 
@@ -35,13 +40,13 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionSystem">
         <rdfs:label xml:lang="en">Construction System</rdfs:label>
-        <rdfs:comment xml:lang="en">Base class for all construction systems and processes in immersed tunnel projects.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic framework encompassing all construction-related processes, methods, and management systems for immersed tunnel projects.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess">
         <rdfs:label xml:lang="en">Construction Process</rdfs:label>
-        <rdfs:comment xml:lang="en">Base class for construction processes and methodologies.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structured sequence of construction activities and methodologies for implementing immersed tunnel construction.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionSystem"/>
     </owl:Class>
 
@@ -51,107 +56,107 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage">
         <rdfs:label xml:lang="en">Construction Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Major stages in immersed tunnel construction per JTG 2120-2020 Chapter 13.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Discrete phase within the overall construction process representing a distinct set of construction activities with defined scope and deliverables.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess"/>
     </owl:Class>
 
     <!-- Preliminary Stages -->
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PreparatoryStage">
         <rdfs:label xml:lang="en">Preparatory Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Preparatory construction stage including site preparation and facility construction.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Initial construction phase encompassing site preparation activities and temporary facility establishment required for subsequent construction operations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DryDockConstructionStage">
         <rdfs:label xml:lang="en">Dry Dock Construction Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Construction of dry dock facility for pipe section prefabrication per JTG 2120-2020 Section 13.1.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase for establishing dry dock facilities that serve as prefabrication yards for tunnel elements, providing controlled environment for element construction and outfitting operations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PreparatoryStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TrenchExcavationStage">
         <rdfs:label xml:lang="en">Trench Excavation Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Underwater trench excavation and preparation per JTG 2120-2020 Section 13.2.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase involving underwater excavation operations to create the trench profile required for tunnel element placement.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PreparatoryStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FoundationTreatmentStage">
         <rdfs:label xml:lang="en">Foundation Treatment Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Foundation preparation and treatment for tunnel placement per JTG 2120-2020 Section 13.3.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase for foundation bed preparation including leveling, compaction, and stabilization to provide suitable bearing conditions for tunnel elements.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PreparatoryStage"/>
     </owl:Class>
 
     <!-- Prefabrication Stages -->
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PrefabricationStage">
         <rdfs:label xml:lang="en">Prefabrication Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Pipe section prefabrication stages in dry dock facility.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase encompassing the controlled manufacture and assembly of tunnel elements in specialized facilities prior to transportation and installation.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PipeSectionPrefabricationStage">
-        <rdfs:label xml:lang="en">Pipe Section Prefabrication Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Structural prefabrication of pipe sections including casting and curing per JTG 2120-2020 Section 13.4.</rdfs:comment>
+        <rdfs:label xml:lang="en">Element Prefabrication Stage</rdfs:label>
+        <rdfs:comment xml:lang="en">Construction phase for structural fabrication of tunnel elements including casting operations, curing processes, and quality verification procedures for reinforced concrete structural units according to GBT 51318-2019 requirements.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PrefabricationStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PipeSectionOutfittingStage">
-        <rdfs:label xml:lang="en">Pipe Section Outfitting Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Outfitting pipe sections with equipment, utilities, and interior finishing per JTG 2120-2020 Section 13.5.</rdfs:comment>
+        <rdfs:label xml:lang="en">Element Outfitting Stage</rdfs:label>
+        <rdfs:comment xml:lang="en">Construction phase for installation and integration of mechanical, electrical, and architectural systems within prefabricated tunnel elements.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PrefabricationStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#QualityControlStage">
         <rdfs:label xml:lang="en">Quality Control Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Quality control and testing of prefabricated pipe sections before transportation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase for comprehensive testing, inspection, and verification of prefabricated elements to ensure compliance with design specifications and performance requirements.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PrefabricationStage"/>
     </owl:Class>
 
     <!-- Transportation and Installation Stages -->
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#InstallationStage">
         <rdfs:label xml:lang="en">Installation Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Installation stages including transportation, floating, immersion, and connection.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase encompassing transportation, positioning, and placement operations for tunnel elements at their final underwater locations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FloatingTransportationStage">
         <rdfs:label xml:lang="en">Floating Transportation Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Floating transportation of pipe sections to installation site per JTG 2120-2020 Section 13.6.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase involving buoyant transportation of prefabricated tunnel elements from fabrication facility to installation location using controlled floating systems and marine operations as defined in GBT 51318-2019 Section 2.1.3.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#InstallationStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersionStage">
         <rdfs:label xml:lang="en">Immersion Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Controlled immersion of pipe sections to final underwater position per JTG 2120-2020 Section 13.7.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase involving controlled descent of tunnel elements from surface to designated underwater position using precision ballast systems and positioning controls as defined in GBT 51318-2019 Section 2.1.4.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#InstallationStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConnectionStage">
         <rdfs:label xml:lang="en">Connection Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Connection and joint sealing between pipe sections per JTG 2120-2020 Section 13.8.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase involving structural joining operations between tunnel elements including alignment procedures, joint pressing, and waterproofing system activation as defined in GBT 51318-2019 Section 2.1.5.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#InstallationStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FinalJointStage">
-        <rdfs:label xml:lang="en">Final Joint Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Final joint installation completing the tunnel structure per JTG 2120-2020 Section 13.9.</rdfs:comment>
+        <rdfs:label xml:lang="en">Closure Joint Stage</rdfs:label>
+        <rdfs:comment xml:lang="en">Construction phase for installation of final connection structure completing the continuous tunnel assembly and achieving structural continuity between all tunnel elements as defined in GBT 51318-2019 Section 2.1.9.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#InstallationStage"/>
     </owl:Class>
 
     <!-- Completion Stages -->
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CompletionStage">
         <rdfs:label xml:lang="en">Completion Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Final completion stages including backfilling and commissioning.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Final construction phase encompassing protective measures, system commissioning, and transition to operational readiness.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#BackfillingStage">
         <rdfs:label xml:lang="en">Backfilling Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Backfilling and protection of installed tunnel sections per JTG 2120-2020 Section 13.10.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase for placement and compaction of protective material around installed tunnel elements to provide structural support and environmental protection.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CompletionStage"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CommissioningStage">
         <rdfs:label xml:lang="en">Commissioning Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">System commissioning and testing before operational handover.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Construction phase for systematic testing and verification of all installed systems to ensure operational readiness and performance compliance.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CompletionStage"/>
     </owl:Class>
 
@@ -161,61 +166,61 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod">
         <rdfs:label xml:lang="en">Construction Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Specific construction methods and techniques for immersed tunnel construction.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic approach or technique for executing specific construction operations within immersed tunnel construction processes.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ExcavationMethod">
         <rdfs:label xml:lang="en">Excavation Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Methods for underwater trench excavation including dredging and cutting.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic approach for underwater material removal and trench formation operations using mechanical or hydraulic techniques.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DredgingMethod">
         <rdfs:label xml:lang="en">Dredging Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Dredging methods for soft soil excavation using specialized equipment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Hydraulic or mechanical excavation technique for removing soft sediments and unconsolidated materials from underwater locations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ExcavationMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#RockCuttingMethod">
         <rdfs:label xml:lang="en">Rock Cutting Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Rock cutting methods for hard formation excavation using specialized equipment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Mechanical cutting technique for removing consolidated rock formations using specialized cutting equipment and controlled fragmentation processes.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ExcavationMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FloatingMethod">
         <rdfs:label xml:lang="en">Floating Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Methods for floating transportation of pipe sections to installation site.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Buoyancy-based transportation technique for moving tunnel elements across water surfaces using controlled flotation systems.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TowingMethod">
         <rdfs:label xml:lang="en">Towing Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Towing methods using tugboats and marine equipment for pipe section transportation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Marine transportation technique using external propulsion systems to move floating tunnel elements to designated installation positions.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FloatingMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SelfFloatingMethod">
         <rdfs:label xml:lang="en">Self-Floating Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Self-floating methods using buoyancy chambers and ballast systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Autonomous flotation technique utilizing integral buoyancy chambers and ballast control systems without external propulsion assistance.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FloatingMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersionMethod">
         <rdfs:label xml:lang="en">Immersion Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Methods for controlled immersion of pipe sections to underwater position.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Controlled descent technique for transitioning tunnel elements from surface flotation to designated underwater placement positions.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#BallastControlMethod">
         <rdfs:label xml:lang="en">Ballast Control Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Ballast control methods for precise depth control during immersion.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Precision weight management technique for achieving controlled buoyancy adjustment during element immersion and positioning operations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersionMethod"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PositioningMethod">
         <rdfs:label xml:lang="en">Positioning Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Precision positioning methods for accurate pipe section placement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Precision placement technique for achieving accurate spatial positioning of tunnel elements within specified tolerances at underwater locations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersionMethod"/>
     </owl:Class>
 
@@ -225,37 +230,37 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ProjectManagement">
         <rdfs:label xml:lang="en">Project Management</rdfs:label>
-        <rdfs:comment xml:lang="en">Project management systems for construction coordination and control.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic framework for coordinating, controlling, and organizing construction activities throughout the project lifecycle.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionSystem"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScheduleManagement">
         <rdfs:label xml:lang="en">Schedule Management</rdfs:label>
-        <rdfs:comment xml:lang="en">Construction schedule management and timeline coordination.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Temporal coordination system for sequencing construction activities and managing project timeline execution.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectManagement"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ResourceManagement">
         <rdfs:label xml:lang="en">Resource Management</rdfs:label>
-        <rdfs:comment xml:lang="en">Management of construction resources including equipment, materials, and personnel.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic allocation and optimization framework for construction resources including equipment, materials, and personnel deployment.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectManagement"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#QualityManagement">
         <rdfs:label xml:lang="en">Quality Management</rdfs:label>
-        <rdfs:comment xml:lang="en">Quality management systems ensuring construction standards and specifications.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic framework for ensuring construction compliance with design specifications, performance standards, and regulatory requirements.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectManagement"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SafetyManagement">
         <rdfs:label xml:lang="en">Safety Management</rdfs:label>
-        <rdfs:comment xml:lang="en">Construction safety management and risk mitigation systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic framework for identifying, assessing, and mitigating construction risks to ensure personnel safety and operational security.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectManagement"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EnvironmentalManagement">
         <rdfs:label xml:lang="en">Environmental Management</rdfs:label>
-        <rdfs:comment xml:lang="en">Environmental protection and impact management during construction.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic framework for minimizing environmental impact and ensuring compliance with environmental protection requirements during construction operations.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectManagement"/>
     </owl:Class>
 
@@ -266,35 +271,35 @@
     <!-- Object Properties -->
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasConstructionSystem">
         <rdfs:label xml:lang="en">has Construction System</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a tunnel project to its construction systems.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates a tunnel infrastructure with its systematic construction framework and methodological components.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionSystem"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasConstructionStage">
         <rdfs:label xml:lang="en">has Construction Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a construction process to its stages.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates a construction process with its constituent phases representing discrete activity sequences.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#usesConstructionMethod">
         <rdfs:label xml:lang="en">uses Construction Method</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a construction stage to its methods.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates a construction stage with the systematic techniques and approaches employed for execution.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#precedesStage">
         <rdfs:label xml:lang="en">precedes Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Indicates precedence relationship between construction stages.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines temporal precedence relationship indicating sequential ordering between construction stages.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#followsStage">
         <rdfs:label xml:lang="en">follows Stage</rdfs:label>
-        <rdfs:comment xml:lang="en">Indicates following relationship between construction stages.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defines temporal succession relationship indicating sequential ordering between construction stages.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#precedesStage"/>
@@ -302,7 +307,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#requiresQualityControl">
         <rdfs:label xml:lang="en">requires Quality Control</rdfs:label>
-        <rdfs:comment xml:lang="en">Links a construction stage to required quality control measures.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Associates a construction stage with mandatory quality assurance and control procedures.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#QualityManagement"/>
     </owl:ObjectProperty>
@@ -310,63 +315,63 @@
     <!-- Data Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#stageDuration">
         <rdfs:label xml:lang="en">stage duration</rdfs:label>
-        <rdfs:comment xml:lang="en">Duration of construction stage in days.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the temporal duration of a construction stage expressed in standard time units.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#stageStartDate">
         <rdfs:label xml:lang="en">stage start date</rdfs:label>
-        <rdfs:comment xml:lang="en">Start date of construction stage.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the temporal commencement point for a construction stage execution period.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#stageEndDate">
         <rdfs:label xml:lang="en">stage end date</rdfs:label>
-        <rdfs:comment xml:lang="en">End date of construction stage.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the temporal completion point for a construction stage execution period.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#stageProgress">
         <rdfs:label xml:lang="en">stage progress</rdfs:label>
-        <rdfs:comment xml:lang="en">Progress percentage of construction stage (0-100).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Quantifies the completion percentage of a construction stage as a decimal value between 0 and 100.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#qualityLevel">
         <rdfs:label xml:lang="en">quality level</rdfs:label>
-        <rdfs:comment xml:lang="en">Quality level achieved in construction stage (A, B, C rating).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the achieved quality classification level for construction stage completion assessment.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionStage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#riskLevel">
         <rdfs:label xml:lang="en">risk level</rdfs:label>
-        <rdfs:comment xml:lang="en">Risk level assessment for construction method (Low, Medium, High).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Categorizes the assessed risk classification for construction method implementation and execution.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#equipmentRequired">
         <rdfs:label xml:lang="en">equipment required</rdfs:label>
-        <rdfs:comment xml:lang="en">Specialized equipment required for construction method.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the categories or types of specialized equipment necessary for construction method execution.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#weatherDependency">
         <rdfs:label xml:lang="en">weather dependency</rdfs:label>
-        <rdfs:comment xml:lang="en">Weather dependency level for construction method execution.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Categorizes the sensitivity level of construction method execution to meteorological conditions.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#environmentalImpact">
         <rdfs:label xml:lang="en">environmental impact</rdfs:label>
-        <rdfs:comment xml:lang="en">Environmental impact assessment level for construction method.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Categorizes the assessed environmental consequence level associated with construction method implementation.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethod"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>

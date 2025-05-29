@@ -9,34 +9,34 @@
   <!-- Geometric Properties -->
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty">
     <rdfs:label xml:lang="en">has Geometric Property</rdfs:label>
-    <rdfs:comment xml:lang="en">Base property for all geometric measurements.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Fundamental geometric measurement property for quantifying spatial dimensions, angular orientations, and geometric relationships of tunnel components according to GBT 51318-2019 dimensional specifications and construction tolerances.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDimension">
     <rdfs:label xml:lang="en">has Dimension</rdfs:label>
-    <rdfs:comment xml:lang="en">General dimensional property.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Quantified spatial measurement property defining component size, extent, or spatial relationship within the immersed tunnel geometric framework. Measured according to GBT 51318-2019 dimensional standards and construction tolerances.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension">
     <rdfs:label xml:lang="en">has Linear Dimension</rdfs:label>
-    <rdfs:comment xml:lang="en">Linear measurement in meters.</rdfs:comment>
+    <rdfs:comment xml:lang="en">One-dimensional spatial measurement expressed in meters, defining length, width, height, thickness, or other linear extents of tunnel components according to metric dimensional standards and GBT 51318-2019 construction specifications.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDimension"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension">
     <rdfs:label xml:lang="en">has Area Dimension</rdfs:label>
-    <rdfs:comment xml:lang="en">Area measurement in square meters.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Two-dimensional spatial measurement expressed in square meters, defining surface areas, cross-sectional areas, or coverage extents of tunnel components according to geometric calculation methods and GBT 51318-2019 design requirements.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDimension"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension">
     <rdfs:label xml:lang="en">has Volume Dimension</rdfs:label>
-    <rdfs:comment xml:lang="en">Volume measurement in cubic meters.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Three-dimensional spatial measurement expressed in cubic meters, defining volumetric capacity, material quantities, or spatial occupation of tunnel components according to geometric calculation methods and GBT 51318-2019 design specifications.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasDimension"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
@@ -44,27 +44,27 @@
   <!-- Material Properties -->
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty">
     <rdfs:label xml:lang="en">has Material Property</rdfs:label>
-    <rdfs:comment xml:lang="en">Base property for all material characteristics.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Fundamental material characteristic property defining mechanical, physical, or chemical attributes of tunnel component materials according to applicable material standards and GBT 51318-2019 material specification requirements.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasStrength">
     <rdfs:label xml:lang="en">has Strength</rdfs:label>
-    <rdfs:comment xml:lang="en">Strength property in MPa.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Material resistance capacity expressed in megapascals (MPa), defining the maximum stress that a material can withstand before failure under specified loading conditions according to material testing standards and GBT 51318-2019 strength requirements.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasDensity">
     <rdfs:label xml:lang="en">has Density</rdfs:label>
-    <rdfs:comment xml:lang="en">Density property in kg/m³.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Material mass per unit volume expressed in kilograms per cubic meter (kg/m³), defining the material density for weight calculations, buoyancy analysis, and structural load determination according to GBT 51318-2019 design methodology.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus">
     <rdfs:label xml:lang="en">has Elastic Modulus</rdfs:label>
-    <rdfs:comment xml:lang="en">Elastic modulus in GPa.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Material stiffness property expressed in gigapascals (GPa), defining the ratio of stress to strain within the elastic deformation range according to material testing standards and structural analysis requirements per GBT 51318-2019.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
@@ -72,20 +72,20 @@
   <!-- Performance Properties -->
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty">
     <rdfs:label xml:lang="en">has Performance Property</rdfs:label>
-    <rdfs:comment xml:lang="en">Base property for performance characteristics.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Functional capability characteristic defining operational capacity, service performance, or behavioral attributes of tunnel components under specified service conditions according to GBT 51318-2019 performance requirements.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity">
     <rdfs:label xml:lang="en">has Load Capacity</rdfs:label>
-    <rdfs:comment xml:lang="en">Load capacity in kN.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Maximum design load resistance expressed in kilonewtons (kN), defining the ultimate load-bearing capacity of structural components under specified loading conditions according to limit state design principles and GBT 51318-2019 safety requirements.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife">
     <rdfs:label xml:lang="en">has Service Life</rdfs:label>
-    <rdfs:comment xml:lang="en">Expected service life in years.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Design operational duration expressed in years, defining the expected functional lifespan of tunnel components under normal service conditions according to durability requirements and GBT 51318-2019 lifecycle specifications.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
@@ -93,20 +93,20 @@
   <!-- Tolerance and Deviation Properties -->
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty">
     <rdfs:label xml:lang="en">has Tolerance Property</rdfs:label>
-    <rdfs:comment xml:lang="en">Base property for tolerances and deviations.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Manufacturing or construction tolerance specification defining acceptable dimensional variance limits for tunnel components according to GBT 51318-2019 quality control requirements and precision fabrication standards.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation">
     <rdfs:label xml:lang="en">has Maximum Deviation</rdfs:label>
-    <rdfs:comment xml:lang="en">Maximum allowable deviation.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Upper limit of acceptable dimensional deviation from nominal design values, expressed in millimeters, according to component-specific tolerance classifications and GBT 51318-2019 quality assurance protocols.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation">
     <rdfs:label xml:lang="en">has Minimum Deviation</rdfs:label>
-    <rdfs:comment xml:lang="en">Minimum allowable deviation.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Lower limit of acceptable dimensional deviation from nominal design values, expressed in millimeters, according to component-specific tolerance classifications and GBT 51318-2019 quality assurance protocols.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </owl:DatatypeProperty>
@@ -114,20 +114,20 @@
   <!-- Environmental Properties -->
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty">
     <rdfs:label xml:lang="en">has Environmental Property</rdfs:label>
-    <rdfs:comment xml:lang="en">Base property for environmental characteristics.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Environmental resistance characteristic defining component performance under marine, atmospheric, or subsurface exposure conditions according to applicable environmental exposure classifications and GBT 51318-2019 durability requirements.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance">
     <rdfs:label xml:lang="en">has Water Resistance</rdfs:label>
-    <rdfs:comment xml:lang="en">Water resistance rating.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Hydrostatic pressure resistance capability expressed according to applicable waterproofing standards and ingress protection ratings, defining component performance under specified water pressure conditions per GBT 51318-2019.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance">
     <rdfs:label xml:lang="en">has Corrosion Resistance</rdfs:label>
-    <rdfs:comment xml:lang="en">Corrosion resistance rating.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Electrochemical degradation resistance classification based on material composition, protective coating systems, and cathodic protection integration according to marine environment exposure standards and GBT 51318-2019 durability specifications.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
@@ -689,7 +689,7 @@
 
   <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication">
     <rdfs:label xml:lang="en">has Backfill Indication</rdfs:label>
-    <rdfs:comment xml:lang="en">Indication for backfill requirements.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Backfill requirements conforming to GBT 51318-2019 Section 11.4 specifications. Backfill materials must be high-quality, well-graded, permeable, non-liquefiable, and durable per Section 11.4.1. Placement follows bottom-up layer-by-layer principle ensuring stability and symmetry per Section 11.4.2 with elevation difference between sides ≤500mm, final deviation ≤300mm. Post-connection lock-in backfill applied both sides of joint with 8-10m length, height not exceeding pipe crown per Section 11.4.3. Top protection backfill minimum thickness ≥1.5m determined by ship grounding, anchoring, and scouring considerations per Section 11.4.4.</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>

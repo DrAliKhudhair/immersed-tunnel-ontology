@@ -1,0 +1,192 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Enhanced structural systems and components for immersed tunnels.\n            Comprehensive structural design, joints, and reinforcement systems.\n            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 7-8 standards.\n            \n            CONSOLIDATES:\n            - Structural components from structural_components.owl\n            - Joint systems from joint_systems.owl\n            - Reinforcement and prestressing systems\n            - Structural connections and details\n            \n            ENHANCEMENTS:\n            - Advanced structural analysis\n            - Optimized joint design\n            - Smart monitoring integration\n            - Durability enhancement\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Tunnel Ontology - Structural Systems and Components"@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems_components> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0 - Enhanced" .
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#designStrength
+<http://www.semanticweb.org/immersedTunnelOnto#designStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStrength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#designStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Design strength of structural elements in MPa."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#designStrength> <http://www.w3.org/2000/01/rdf-schema#label> "design strength"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#jointWidth
+<http://www.semanticweb.org/immersedTunnelOnto#jointWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#jointWidth> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#JointSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#jointWidth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#jointWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of joint opening in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#jointWidth> <http://www.w3.org/2000/01/rdf-schema#label> "joint width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#structuralThickness
+<http://www.semanticweb.org/immersedTunnelOnto#structuralThickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralThickness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralThickness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralThickness> <http://www.w3.org/2000/01/rdf-schema#comment> "Thickness of structural elements in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#structuralThickness> <http://www.w3.org/2000/01/rdf-schema#label> "structural thickness"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement
+<http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement> <http://www.w3.org/2000/01/rdf-schema#comment> "Conventional steel reinforcement bars and mesh."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement> <http://www.w3.org/2000/01/rdf-schema#label> "Conventional Reinforcement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt
+<http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> <http://www.w3.org/2000/01/rdf-schema#comment> "Embedded bolt component with diameter, length, and support specifications per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> <http://www.w3.org/2000/01/rdf-schema#label> "Embedded Bolt"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FlatRib
+<http://www.semanticweb.org/immersedTunnelOnto#FlatRib> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FlatRib> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralRib> .
+<http://www.semanticweb.org/immersedTunnelOnto#FlatRib> <http://www.w3.org/2000/01/rdf-schema#comment> "Flat structural rib with rib specifications, initial position, and spacing per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FlatRib> <http://www.w3.org/2000/01/rdf-schema#label> "Flat Rib"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedJoint
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedJoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedJoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#JointSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedJoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard joints between immersed tunnel elements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedJoint> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Joint"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#InnerPanel
+<http://www.semanticweb.org/immersedTunnelOnto#InnerPanel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#InnerPanel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#InnerPanel> <http://www.w3.org/2000/01/rdf-schema#comment> "Inner steel panel of steel shell structure with specified thickness, width, and length per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#InnerPanel> <http://www.w3.org/2000/01/rdf-schema#label> "Inner Panel"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#InternalPartition
+<http://www.semanticweb.org/immersedTunnelOnto#InternalPartition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#InternalPartition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TubeStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#InternalPartition> <http://www.w3.org/2000/01/rdf-schema#comment> "Internal partitions dividing tunnel into traffic lanes and service areas."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#InternalPartition> <http://www.w3.org/2000/01/rdf-schema#label> "Internal Partition"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#JointSystem
+<http://www.semanticweb.org/immersedTunnelOnto#JointSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#JointSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#JointSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Joint systems connecting tunnel segments per JTG 2120-2020 Chapter 8."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#JointSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Joint System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LRib
+<http://www.semanticweb.org/immersedTunnelOnto#LRib> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LRib> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralRib> .
+<http://www.semanticweb.org/immersedTunnelOnto#LRib> <http://www.w3.org/2000/01/rdf-schema#comment> "L-shaped structural rib with rib specifications, initial position, and spacing per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LRib> <http://www.w3.org/2000/01/rdf-schema#label> "L Rib"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPartition
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPartition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPartition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPartition> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitudinal steel partition within steel shell structure per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPartition> <http://www.w3.org/2000/01/rdf-schema#label> "Longitudinal Partition"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPrestressedCable
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPrestressedCable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPrestressedCable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement> .
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPrestressedCable> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitudinal prestressed cable with steel bundle model and positioning specifications per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LongitudinalPrestressedCable> <http://www.w3.org/2000/01/rdf-schema#label> "Longitudinal Prestressed Cable"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#OuterPanel
+<http://www.semanticweb.org/immersedTunnelOnto#OuterPanel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#OuterPanel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#OuterPanel> <http://www.w3.org/2000/01/rdf-schema#comment> "Outer steel panel of steel shell structure with specified thickness, width, and length per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#OuterPanel> <http://www.w3.org/2000/01/rdf-schema#label> "Outer Panel"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement
+<http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement> <http://www.w3.org/2000/01/rdf-schema#comment> "Prestressed tendons and post-tensioning systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PrestressedReinforcement> <http://www.w3.org/2000/01/rdf-schema#label> "Prestressed Reinforcement"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ConventionalReinforcement> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> <http://www.w3.org/2000/01/rdf-schema#comment> "Steel reinforcement element characterized by specified diameter, length, and support requirements according to GBT 51318-2019 reinforcement design standards and HPDI technical specifications for structural concrete applications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> <http://www.w3.org/2000/01/rdf-schema#label> "Reinforcement Bar"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Steel reinforcement systems for concrete structures."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Reinforcement System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure
+<http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Steel shell structure system for pipe sections combining steel shell with internal concrete per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Steel Shell Structure"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralRib
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRib> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRib> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRib> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for structural ribs with specifications, initial position, and spacing per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralRib> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Rib"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for structural systems and components."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Structural System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TRib
+<http://www.semanticweb.org/immersedTunnelOnto#TRib> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TRib> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralRib> .
+<http://www.semanticweb.org/immersedTunnelOnto#TRib> <http://www.w3.org/2000/01/rdf-schema#comment> "T-shaped structural rib with rib specifications, initial position, and spacing per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TRib> <http://www.w3.org/2000/01/rdf-schema#label> "T Rib"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TransversePartition
+<http://www.semanticweb.org/immersedTunnelOnto#TransversePartition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransversePartition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransversePartition> <http://www.w3.org/2000/01/rdf-schema#comment> "Transverse steel partition within steel shell structure per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TransversePartition> <http://www.w3.org/2000/01/rdf-schema#label> "Transverse Partition"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TubeSlab
+<http://www.semanticweb.org/immersedTunnelOnto#TubeSlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeSlab> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TubeStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeSlab> <http://www.w3.org/2000/01/rdf-schema#comment> "Top and bottom slabs of immersed tube structure."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeSlab> <http://www.w3.org/2000/01/rdf-schema#label> "Tube Slab"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TubeStructure
+<http://www.semanticweb.org/immersedTunnelOnto#TubeStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#StructuralSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Main tube structure of immersed tunnel per JTG 2120-2020 Chapter 7."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Tube Structure"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TubeWall
+<http://www.semanticweb.org/immersedTunnelOnto#TubeWall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeWall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TubeStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeWall> <http://www.w3.org/2000/01/rdf-schema#comment> "Reinforced concrete walls of immersed tube structure."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TubeWall> <http://www.w3.org/2000/01/rdf-schema#label> "Tube Wall"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WaterproofSystem
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#JointSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Waterproofing systems for joint sealing and tunnel protection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterproofSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Waterproof System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WeldingStud
+<http://www.semanticweb.org/immersedTunnelOnto#WeldingStud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WeldingStud> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SteelShellStructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#WeldingStud> <http://www.w3.org/2000/01/rdf-schema#comment> "Welding studs with stud specifications, initial positions, and spacing per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WeldingStud> <http://www.w3.org/2000/01/rdf-schema#label> "Welding Stud"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

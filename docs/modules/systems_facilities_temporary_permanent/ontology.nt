@@ -1,0 +1,125 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_facilities_temporary_permanent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_facilities_temporary_permanent> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_facilities_temporary_permanent> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Consolidated facilities systems for immersed tunnel projects including temporary construction facilities\n            and permanent operational facilities.\n            \n            CONSOLIDATES:\n            - Dry dock facilities from dry_dock_facilities.owl\n            - Auxiliary works systems from auxiliary_works_systems.owl\n            - Temporary construction facilities\n            - Permanent operational facilities\n            - Support infrastructure\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_facilities_temporary_permanent> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Tunnel Ontology - Facilities Systems (Temporary and Permanent)"@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_facilities_temporary_permanent> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0 - Consolidated" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasFacilitySystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasFacilitySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFacilitySystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFacilitySystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFacilitySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel project to its facility systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFacilitySystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Facility System"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#facilityCapacity
+<http://www.semanticweb.org/immersedTunnelOnto#facilityCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#facilityCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#facilityCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#facilityCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Facility operational capacity including load capacity, deck area, and operational requirements for construction and maintenance activities."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#facilityCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "facility capacity"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AuxiliaryWorksSystem
+<http://www.semanticweb.org/immersedTunnelOnto#AuxiliaryWorksSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AuxiliaryWorksSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#AuxiliaryWorksSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Supporting systems and infrastructure for tunnel construction and operation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AuxiliaryWorksSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Auxiliary Works System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CaissonGate
+<http://www.semanticweb.org/immersedTunnelOnto#CaissonGate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CaissonGate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#CaissonGate> <http://www.w3.org/2000/01/rdf-schema#comment> "Gate system for controlling water flow in dry dock operations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CaissonGate> <http://www.w3.org/2000/01/rdf-schema#label> "Caisson Gate"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ConstructionSupportFacility
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionSupportFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionSupportFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionSupportFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Facilities supporting construction activities including offices, workshops, and storage."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionSupportFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Construction Support Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ControlCenter
+<http://www.semanticweb.org/immersedTunnelOnto#ControlCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ControlCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#ControlCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "Central control facility for tunnel operations monitoring and management."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ControlCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Control Center"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DryDockBasin
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockBasin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockBasin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockBasin> <http://www.w3.org/2000/01/rdf-schema#comment> "Main basin structure for segment construction and launching."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockBasin> <http://www.w3.org/2000/01/rdf-schema#label> "Dry Dock Basin"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialized dry dock facility for tunnel segment prefabrication with basin, gate systems, and construction support infrastructure."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Dry Dock Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponseFacility
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponseFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponseFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponseFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialized facilities for emergency response and rescue operations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponseFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Emergency Response Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem
+<http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all facility systems supporting immersed tunnel construction and operation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> <http://www.w3.org/2000/01/rdf-schema#label> "Facility System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FloatingDock
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingDock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingDock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingDock> <http://www.w3.org/2000/01/rdf-schema#comment> "Floating construction facility for segment transportation and positioning with buoyancy control and operational weather requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FloatingDock> <http://www.w3.org/2000/01/rdf-schema#label> "Floating Dock"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MaintenanceFacility
+<http://www.semanticweb.org/immersedTunnelOnto#MaintenanceFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MaintenanceFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#MaintenanceFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Permanent facilities for tunnel maintenance and operational support."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MaintenanceFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility
+<http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Permanent facilities for tunnel operation and maintenance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PermanentFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Permanent Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporary facilities required during construction phase."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Temporary Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

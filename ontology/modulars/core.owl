@@ -1,74 +1,92 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+  <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/core">
+    <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Core Foundation Module</rdfs:label>
+    <rdfs:comment xml:lang="en">
+      Core foundation module establishing fundamental base classes for immersed tunnel engineering ontology.
+      Aligned with GBT 51318-2019 "Immersed Tunnel Design Standard" providing standardized semantic infrastructure.
+      
+      This module defines foundational concepts including:
+      - Calculation stages corresponding to construction phases per GBT 51318-2019 methodology
+      - Limit states for structural analysis and safety verification
+      - Project deliverables and documentation framework
+      - Base component classifications for tunnel elements
+      
+      STANDARDS ALIGNMENT:
+      - Construction stages follow GBT 51318-2019 design methodology
+      - Terminology consistent with Chinese national standard definitions
+      - Structural analysis framework supporting limit state design approach
+    </rdfs:comment>
+    <owl:versionInfo>4.0.0-GBT51318-2019-enhanced</owl:versionInfo>
+  </owl:Ontology>
   
   <!-- =====================================================
-       FUNDAMENTAL BASE CLASSES
+       FUNDAMENTAL BASE CLASSES - GBT 51318-2019 ALIGNED
        ===================================================== -->
   
   <!-- Calculation Stage Classification -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage">
     <rdfs:label xml:lang="en">Calculation Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">The stage for which structural calculations are performed.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Structural analysis phase corresponding to specific loading conditions and construction sequences according to GBT 51318-2019 design methodology. Each stage represents distinct structural behavior and loading scenarios throughout the tunnel construction lifecycle.</rdfs:comment>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PrefabricationStage">
     <rdfs:label xml:lang="en">Prefabrication Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">Stage involving the prefabrication of pipe sections.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Construction phase involving the manufacturing of tunnel elements in controlled dry dock facilities according to GBT 51318-2019 specifications. This stage encompasses concrete curing, prestressing operations, and quality control processes under factory conditions.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage"/>
   </owl:Class>
   
-  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TowingStage">
-    <rdfs:label xml:lang="en">Towing Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">Stage involving the towing of pipe sections.</rdfs:comment>
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FloatingTransportationStage">
+    <rdfs:label xml:lang="en">Floating Transportation Stage</rdfs:label>
+    <rdfs:comment xml:lang="en">Transportation phase where prefabricated tunnel elements are floated on water surface and towed to installation positions as defined in GBT 51318-2019 Section 2.1.3. This stage involves buoyancy control, hydrodynamic loading, and positioning accuracy requirements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#MooringStage">
     <rdfs:label xml:lang="en">Mooring Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">Stage involving the mooring of pipe sections.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Positioning phase involving temporary restraint and precise alignment of tunnel elements before immersion operations. Critical for ensuring compliance with GBT 51318-2019 placement tolerance requirements and joint alignment specifications.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersionStage">
     <rdfs:label xml:lang="en">Immersion Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">Stage involving the immersion of pipe sections.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Installation phase involving controlled submersion of tunnel elements to predetermined underwater positions as defined in GBT 51318-2019 Section 2.1.4. This stage includes ballasting operations, depth control, and underwater positioning accuracy requirements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage"/>
   </owl:Class>
   
-  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PostConnectionStage">
-    <rdfs:label xml:lang="en">Post-Connection Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">Stage after connecting pipe sections.</rdfs:comment>
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConnectionStage">
+    <rdfs:label xml:lang="en">Connection Stage</rdfs:label>
+    <rdfs:comment xml:lang="en">Joining phase involving precise alignment and connection of tunnel elements as defined in GBT 51318-2019 Section 2.1.5. This stage encompasses joint pressing operations, watertight seal installation, and structural continuity establishment between adjacent elements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PostBallastingStage">
     <rdfs:label xml:lang="en">Post-Ballasting Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">Stage after ballasting and backfill.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Stabilization phase following ballasting and backfill operations ensuring structural stability and proper load distribution per GBT 51318-2019 requirements. This stage involves final weight adjustment and foundation settlement monitoring.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#OperationalStage">
     <rdfs:label xml:lang="en">Operational Stage</rdfs:label>
-    <rdfs:comment xml:lang="en">Stage during the operational life of the tunnel.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Service phase during the operational lifecycle of the tunnel including service loads and long-term performance according to GBT 51318-2019 design life requirements. This stage encompasses traffic loading, environmental effects, and structural monitoring over the design service period.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#CalculationStage"/>
   </owl:Class>
   
   <!-- Limit State Classification -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#LimitState">
     <rdfs:label xml:lang="en">Limit State</rdfs:label>
-    <rdfs:comment xml:lang="en">Limit states for structural safety checks.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Structural design criterion defining threshold conditions for structural safety and serviceability verification according to GBT 51318-2019 design principles. Represents boundary conditions beyond which structural performance becomes unacceptable.</rdfs:comment>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#UltimateLimitState">
     <rdfs:label xml:lang="en">Ultimate Limit State</rdfs:label>
-    <rdfs:comment xml:lang="en">Limit state for ultimate conditions in structural safety checks.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Structural capacity verification criterion under maximum design loads ensuring structural integrity and safety per GBT 51318-2019 requirements. Represents conditions associated with structural collapse, overturning, or loss of equilibrium.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LimitState"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ServiceabilityLimitState">
     <rdfs:label xml:lang="en">Serviceability Limit State</rdfs:label>
-    <rdfs:comment xml:lang="en">Limit state for serviceability conditions in structural safety checks.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Functional performance criterion for normal operation conditions ensuring acceptable deformation, vibration, and durability according to GBT 51318-2019 serviceability requirements. Represents conditions affecting normal use and user comfort.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LimitState"/>
   </owl:Class>
   
@@ -78,60 +96,60 @@
        
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable">
     <rdfs:label xml:lang="en">Project Deliverable</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for all deliverables related to an immersed tube tunnel project.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Base class for all project outputs, documentation, and deliverable items related to immersed tunnel engineering projects. Encompasses technical documents, research outputs, and intellectual property generated during project lifecycle.</rdfs:comment>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DesignDocument">
     <rdfs:label xml:lang="en">Design Document</rdfs:label>
-    <rdfs:comment xml:lang="en">Design documentation for an immersed tube tunnel.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Technical documentation containing design specifications, calculations, and drawings for immersed tunnel systems according to GBT 51318-2019 design requirements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConstructionMethodDocument">
     <rdfs:label xml:lang="en">Construction Method Document</rdfs:label>
-    <rdfs:comment xml:lang="en">Documentation of construction methods for an immersed tube tunnel.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Procedural documentation specifying construction methodologies, sequencing, and quality control measures for immersed tunnel implementation.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Patent">
     <rdfs:label xml:lang="en">Patent</rdfs:label>
-    <rdfs:comment xml:lang="en">Patent related to immersed tube tunnel technology.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Intellectual property protection for innovative technologies, methods, or devices related to immersed tunnel engineering and construction.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TechnicalSpecification">
     <rdfs:label xml:lang="en">Technical Specification</rdfs:label>
-    <rdfs:comment xml:lang="en">Detailed technical specification document for components and systems.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Comprehensive technical document defining performance requirements, material properties, dimensional tolerances, and acceptance criteria for tunnel components and systems according to applicable standards.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StandardsAndGuidelines">
     <rdfs:label xml:lang="en">Standards and Guidelines</rdfs:label>
-    <rdfs:comment xml:lang="en">Standards and guidelines developed for immersed tube tunnel projects.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Technical standards, engineering guidelines, and design codes developed for immersed tunnel construction methodologies, quality assurance procedures, and safety protocols.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ResearchReport">
     <rdfs:label xml:lang="en">Research Report</rdfs:label>
-    <rdfs:comment xml:lang="en">Research report on immersed tube tunnel technology.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Scholarly documentation of research findings, experimental results, and technical investigations related to immersed tunnel engineering and technology advancement.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper">
     <rdfs:label xml:lang="en">Academic Paper</rdfs:label>
-    <rdfs:comment xml:lang="en">Academic paper or scientific publication on immersed tube tunnel technology per HPDI deliverable requirements.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Peer-reviewed scholarly publication presenting research findings, theoretical developments, or case studies in immersed tunnel engineering for scientific community dissemination.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Monograph">
     <rdfs:label xml:lang="en">Monograph</rdfs:label>
-    <rdfs:comment xml:lang="en">Detailed scholarly monograph on immersed tube tunnel technology per HPDI deliverable requirements.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Comprehensive scholarly treatise providing detailed analysis and documentation of specific aspects of immersed tunnel technology and engineering practice.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication">
     <rdfs:label xml:lang="en">Scientific Publication</rdfs:label>
-    <rdfs:comment xml:lang="en">General scientific publication including journal articles, conference papers, and academic publications per HPDI requirements.</rdfs:comment>
+    <rdfs:comment xml:lang="en">General category for scientific publications including journal articles, conference papers, and academic publications contributing to the advancement of immersed tunnel engineering knowledge.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable"/>
   </owl:Class>
   
@@ -142,67 +160,67 @@
   <!-- Base Component Classes -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent">
     <rdfs:label xml:lang="en">Tunnel Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for all tunnel components.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Abstract base class representing discrete physical or functional elements within an immersed tunnel system according to GBT 51318-2019 design framework. Provides foundational semantic structure for component classification, property assignment, and relationships within the tunnel system hierarchy.</rdfs:comment>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent">
     <rdfs:label xml:lang="en">Structural Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for all structural components in immersed tunnel systems.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Load-bearing structural element designed to provide mechanical resistance and structural integrity within the immersed tunnel system. Characterized by defined load paths, material properties, and capacity for force transmission according to GBT 51318-2019 structural design principles and limit state verification requirements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FunctionalComponent">
     <rdfs:label xml:lang="en">Functional Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for components that provide specific functional capabilities.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Non-load-bearing element providing specialized operational functionality including environmental protection, system integration, or service delivery within the immersed tunnel infrastructure. Designed according to GBT 51318-2019 functional performance requirements without primary structural load resistance responsibilities.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent">
     <rdfs:label xml:lang="en">Temporary Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for components used temporarily during construction.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Construction-phase element utilized during fabrication, transportation, or installation processes according to GBT 51318-2019 construction methodology. Designed for removal or replacement upon completion of specific construction stages without compromising permanent structural integrity.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PermanentComponent">
     <rdfs:label xml:lang="en">Permanent Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for components that remain as part of the permanent structure.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Integral element forming part of the final immersed tunnel infrastructure designed for operational service life according to GBT 51318-2019 durability requirements. Characterized by design life compatibility with overall tunnel system performance specifications and maintenance protocols.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:Class>
   
   <!-- Specialized Component Classes -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PipeSectionComponent">
     <rdfs:label xml:lang="en">Pipe Section Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for components of pipe sections.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Prefabricated tubular structural element constituting primary tunnel enclosure designed according to GBT 51318-2019 element specifications. Characterized by controlled manufacturing tolerances, integrated connection systems, and suitability for floating transportation and underwater installation procedures.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#JointComponent">
     <rdfs:label xml:lang="en">Joint Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for components of pipe section joints.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Structural connection element facilitating continuity between adjacent tunnel segments while providing watertight sealing and load transfer mechanisms. Designed according to GBT 51318-2019 connection requirements with specified deformation compatibility and environmental resistance properties.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#WaterproofingComponent">
     <rdfs:label xml:lang="en">Waterproofing Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for waterproofing components.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Functional element providing water barrier protection and sealing systems for tunnel structures according to GBT 51318-2019 waterproofing standards and marine environment requirements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FunctionalComponent"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AntiCorrosionComponent">
     <rdfs:label xml:lang="en">Anti-corrosion Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Base class for anti-corrosion components.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Protective element providing corrosion resistance and material degradation prevention for tunnel structures in marine environments according to GBT 51318-2019 durability requirements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FunctionalComponent"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent">
     <rdfs:label xml:lang="en">Safety Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Component related to safety systems and emergency provisions.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Functional element providing safety systems, emergency provisions, and hazard mitigation for tunnel operation according to safety standards and operational requirements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FunctionalComponent"/>
   </owl:Class>
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent">
     <rdfs:label xml:lang="en">Reserved Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Component reserved for future use or equipment installation.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Designated space or provision reserved for future equipment installation, system expansion, or operational requirements not specified in initial design phase.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FunctionalComponent"/>
   </owl:Class>
   
@@ -249,7 +267,7 @@
   <!-- HPDI Specific Waterstop Technologies -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GINAWaterstop">
     <rdfs:label xml:lang="en">GINA Waterstop</rdfs:label>
-    <rdfs:comment xml:lang="en">GINA waterstop system with bolts, crimped steel plates, and round steel waterstop per HPDI specifications.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Primary waterstop system for joint waterproofing using natural rubber gaskets with clamping fixation methods.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionJointWaterproofing"/>
   </owl:Class>
 
@@ -273,7 +291,7 @@
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#OMEGAWaterstop">
     <rdfs:label xml:lang="en">OMEGA Waterstop</rdfs:label>
-    <rdfs:comment xml:lang="en">OMEGA waterstop system with bolts, crimped steel plates, and round steel waterstop per HPDI specifications.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Secondary waterstop system using chloroprene rubber with bolt-and-plate fixation for enhanced joint waterproofing.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ConstructionJointWaterproofing"/>
   </owl:Class>
 
@@ -325,7 +343,7 @@
 
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnode">
     <rdfs:label xml:lang="en">Sacrificial Anode</rdfs:label>
-    <rdfs:comment xml:lang="en">Sacrificial anode system with detailed dimensional specifications including bearing diameter, heights, spacing, and leg specifications.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Electrochemical corrosion protection system utilizing sacrificial metal anodes with specified dimensional characteristics including bearing diameter, heights, spacing, and mounting configurations for marine environment protection.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SteelStructureAntiCorrosion"/>
   </owl:Class>
 
@@ -354,7 +372,7 @@
        
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FinalJoint">
     <rdfs:label xml:lang="en">Final Joint</rdfs:label>
-    <rdfs:comment xml:lang="en">Final joint system connecting immersed tunnel elements.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Final closure joint system connecting the last immersed tunnel element to complete structural continuity with integrated waterproofing and load transfer mechanisms.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#JointComponent"/>
   </owl:Class>
   

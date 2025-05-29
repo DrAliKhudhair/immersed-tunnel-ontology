@@ -81,7 +81,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement">
         <rdfs:label xml:lang="en">Structural Requirement</rdfs:label>
-        <rdfs:comment xml:lang="en">Requirements related to structural design and load-bearing specifications for immersed tunnels.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural design requirements including load-bearing capacity, deformation limits, and stability criteria for immersed tunnel construction.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement"/>
     </owl:Class>
 
@@ -183,31 +183,31 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis">
         <rdfs:label xml:lang="en">Structural Analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Comprehensive structural analysis including static, dynamic, and stability analysis.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Comprehensive structural analysis performed during all phases as specified in GBT 51318-2019 Section 8.1.1: prefabrication, towing, mooring, immersion, construction, and operational stages. Analysis assesses strength, deformation, stability, anti-buoyancy, and settlement performance under each condition. Based on most unfavorable load combinations during construction and operation, analysis is conducted in both transverse and longitudinal directions per Section 8.1.2, with structural safety verified under ultimate and serviceability limit states.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StaticAnalysis">
         <rdfs:label xml:lang="en">Static Analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Static structural analysis under various load combinations and conditions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Static structural analysis implementing GBT 51318-2019 Section 8.3 pipe section force calculations. Transverse direction calculations per Section 8.3.1 segmented by water depth and soil cover using plane strain models considering: water pressure, soil cover load, lateral earth pressure, lateral water pressure, internal load and ballast. Longitudinal direction calculations per Section 8.3.2 consider structure shape, construction methods, wave forces, and flow velocity. During construction uses 3D numerical simulations for complex cases. During operation employs elastic foundation beam models. Analysis incorporates uneven settlement, temperature change, concrete shrinkage, and joint deformations. Historical soil bearing capacity and construction process data used for settlement estimation.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis">
         <rdfs:label xml:lang="en">Dynamic Analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Dynamic analysis including seismic response and vibration analysis.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Dynamic structural analysis including seismic response evaluation, vibration assessment, and time-dependent loading effects.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StabilityAnalysis">
         <rdfs:label xml:lang="en">Stability Analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Stability analysis for buoyancy control and foundation stability.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural stability analysis including buoyancy control, foundation stability, and overall equilibrium assessment during all construction phases.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SeismicAnalysis">
         <rdfs:label xml:lang="en">Seismic Analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Seismic response analysis considering ground motion and soil-structure interaction.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Seismic analysis for earthquake resistance evaluation including horizontal and vertical force components, strength checks, and deformation limits.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#DynamicAnalysis"/>
     </owl:Class>
 
@@ -217,7 +217,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HydraulicAnalysis">
         <rdfs:label xml:lang="en">Hydraulic Analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Hydraulic analysis including flow patterns, pressure distribution, and drainage design.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Comprehensive hydraulic analysis including water flow patterns, pressure distribution, drainage design, and scour assessment around tunnel structures.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#AnalysisSystem"/>
     </owl:Class>
 
@@ -241,7 +241,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SettlementAnalysis">
         <rdfs:label xml:lang="en">Settlement Analysis</rdfs:label>
-        <rdfs:comment xml:lang="en">Analysis of foundation settlement and differential movement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Geotechnical analysis of foundation settlement patterns, differential movement, and long-term deformation behavior under operational loads.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis"/>
     </owl:Class>
 
@@ -263,7 +263,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CodeCompliance">
         <rdfs:label xml:lang="en">Code Compliance</rdfs:label>
-        <rdfs:comment xml:lang="en">Verification of design compliance with standards and regulations.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Systematic verification of design compliance with applicable standards, codes, and regulatory requirements for immersed tunnel construction.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#DesignValidation"/>
     </owl:Class>
 
@@ -361,7 +361,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#utilityServiceType">
         <rdfs:label xml:lang="en">utility service type</rdfs:label>
-        <rdfs:comment xml:lang="en">Type of utility service to be integrated (electrical, water, gas, telecommunications).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Type of utility service infrastructure requiring integration including electrical systems, water supply, drainage, gas distribution, telecommunications, and fire protection systems.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#UtilityIntegrationRequirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -398,7 +398,7 @@
     <!-- Load Bearing and Structural Properties -->
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#structuralMaterialSpecification">
         <rdfs:label xml:lang="en">structural material specification</rdfs:label>
-        <rdfs:comment xml:lang="en">Specification of structural materials for load-bearing requirements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Comprehensive specification of structural materials including concrete grades, steel types, strength requirements, and performance characteristics for load-bearing applications.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#LoadBearingSpecification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -495,7 +495,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#safetyFactor">
         <rdfs:label xml:lang="en">safety factor</rdfs:label>
-        <rdfs:comment xml:lang="en">Safety factor applied in structural analysis and design.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural safety factor applied in analysis and design calculations to ensure adequate margin against failure under design loads and conditions.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#StructuralAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
@@ -509,7 +509,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#optimizationObjective">
         <rdfs:label xml:lang="en">optimization objective</rdfs:label>
-        <rdfs:comment xml:lang="en">Primary objective for design optimization (cost, safety, performance, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Primary optimization objective function for design including cost minimization, structural performance maximization, constructability enhancement, or multi-criteria optimization approaches.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#DesignSystem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -577,7 +577,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralRequirement">
         <rdfs:label xml:lang="en">Structural Requirement</rdfs:label>
-        <rdfs:comment xml:lang="en">Requirements related to structural design and load-bearing specifications for immersed tunnels.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Structural design requirements including load-bearing capacity, deformation limits, and stability criteria for immersed tunnel construction.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#DesignRequirement"/>
     </owl:Class>
 

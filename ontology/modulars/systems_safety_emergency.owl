@@ -108,7 +108,7 @@
     <!-- Fire Detection Sensors (multi-type requirement from JTG 2120-2020) -->
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSensor">
         <rdfs:label xml:lang="en">Fire Detection Sensor</rdfs:label>
-        <rdfs:comment xml:lang="en">Fire detection sensors using ≥2 types with independent circuits per JTG 2120-2020 Section 15.7.5.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Fire detection sensors using multiple types with independent circuit configurations for comprehensive fire monitoring.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSystem"/>
     </owl:Class>
 
@@ -240,7 +240,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyCallBox">
         <rdfs:label xml:lang="en">Emergency Call Box</rdfs:label>
-        <rdfs:comment xml:lang="en">Emergency call boxes installed ≤150m apart per JTG 2120-2020 Section 15.7.3.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Emergency call boxes installed at regular intervals for direct communication with control centers during emergencies.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyCommunicationSystem"/>
     </owl:Class>
 

@@ -1,0 +1,313 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_drainage_utilities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_drainage_utilities> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_drainage_utilities> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Consolidated drainage and utilities systems for immersed tunnels.\n            Unifies all drainage, water supply, pumping, and utility systems.\n            Based on GB/T 51318-2019 and JTG 2120-2020 standards.\n            \n            CONSOLIDATES:\n            - DrainageSystem from mechanical_electrical_systems.owl\n            - TunnelDrainageSystem hierarchy from foundation_systems_components.owl\n            - DrainageSystem from dry_dock_facilities.owl\n            - Water supply systems from ancillary_structures_traffic_engineering.owl\n            \n            UNIFIES:\n            - All drainage system hierarchies into single coherent structure\n            - Pumping systems and equipment\n            - Water supply and distribution systems\n            - Utility infrastructure systems\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_drainage_utilities> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Tunnel Ontology - Drainage and Utilities Systems"@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_drainage_utilities> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0 - Consolidated" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDrainageSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasDrainageSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its drainage systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Drainage System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPumpingSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasPumpingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPumpingSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPumpingSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPumpingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a drainage system to its pumping systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPumpingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Pumping System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWaterSupplySystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterSupplySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterSupplySystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterSupplySystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterSupplySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its water supply systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterSupplySystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Water Supply System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWaterTreatmentSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterTreatmentSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterTreatmentSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterTreatmentSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterTreatmentSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a drainage system to its water treatment systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterTreatmentSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Water Treatment System"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#drainageCapacity
+<http://www.semanticweb.org/immersedTunnelOnto#drainageCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#drainageCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#drainageCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#drainageCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum drainage capacity in cubic meters per hour."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#drainageCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "drainage capacity"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#pipeDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#pipeDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#pipeDiameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> .
+<http://www.semanticweb.org/immersedTunnelOnto#pipeDiameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#pipeDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Internal diameter of drainage pipes in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#pipeDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "pipe diameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#pumpingRate
+<http://www.semanticweb.org/immersedTunnelOnto#pumpingRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#pumpingRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#pumpingRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#pumpingRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Pumping rate in cubic meters per hour."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#pumpingRate> <http://www.w3.org/2000/01/rdf-schema#label> "pumping rate"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#sumpCapacity
+<http://www.semanticweb.org/immersedTunnelOnto#sumpCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#sumpCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SumpPit> .
+<http://www.semanticweb.org/immersedTunnelOnto#sumpCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#sumpCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Storage capacity of sump pit in cubic meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#sumpCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "sump capacity"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#treatmentEfficiency
+<http://www.semanticweb.org/immersedTunnelOnto#treatmentEfficiency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#treatmentEfficiency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#treatmentEfficiency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#treatmentEfficiency> <http://www.w3.org/2000/01/rdf-schema#comment> "Treatment efficiency percentage for water treatment systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#treatmentEfficiency> <http://www.w3.org/2000/01/rdf-schema#label> "treatment efficiency"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#waterPressure
+<http://www.semanticweb.org/immersedTunnelOnto#waterPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#waterPressure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#waterPressure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#waterPressure> <http://www.w3.org/2000/01/rdf-schema#comment> "Water pressure in bar for water supply systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#waterPressure> <http://www.w3.org/2000/01/rdf-schema#label> "water pressure"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ColdRegionPipeline
+<http://www.semanticweb.org/immersedTunnelOnto#ColdRegionPipeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ColdRegionPipeline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ColdRegionPipeline> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialized pipeline systems for cold region applications with freeze protection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ColdRegionPipeline> <http://www.w3.org/2000/01/rdf-schema#label> "Cold Region Pipeline"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CollectionPipe
+<http://www.semanticweb.org/immersedTunnelOnto#CollectionPipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CollectionPipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> .
+<http://www.semanticweb.org/immersedTunnelOnto#CollectionPipe> <http://www.w3.org/2000/01/rdf-schema#comment> "Pipes for collecting water from various drainage points."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CollectionPipe> <http://www.w3.org/2000/01/rdf-schema#label> "Collection Pipe"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DischargePipe
+<http://www.semanticweb.org/immersedTunnelOnto#DischargePipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DischargePipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> .
+<http://www.semanticweb.org/immersedTunnelOnto#DischargePipe> <http://www.w3.org/2000/01/rdf-schema#comment> "Pipes for discharging collected water to treatment or disposal points."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DischargePipe> <http://www.w3.org/2000/01/rdf-schema#label> "Discharge Pipe"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DrainageEquipment
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment used in tunnel drainage systems including pipes, pumps, and collection systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Drainage Equipment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Monitoring and control systems for drainage operations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Drainage Monitoring System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe
+<http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageEquipment> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> <http://www.w3.org/2000/01/rdf-schema#comment> "Pipes for water collection and transport in tunnel drainage systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> <http://www.w3.org/2000/01/rdf-schema#label> "Drainage Pipe"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Unified drainage system for immersed tunnels including collection, transport, and pumping components.\n            Consolidates DrainageSystem concepts from mechanical_electrical_systems.owl, dry_dock_facilities.owl,\n            and TunnelDrainageSystem hierarchy from foundation_systems_components.owl.\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Drainage System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EmergencyPump
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PumpStation> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Emergency pumping equipment for exceptional water inflow conditions."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencyPump> <http://www.w3.org/2000/01/rdf-schema#label> "Emergency Pump"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EmergencySumpPit
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencySumpPit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencySumpPit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#SumpPit> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencySumpPit> <http://www.w3.org/2000/01/rdf-schema#comment> "Emergency sump pit for handling exceptional water inflow during emergencies."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EmergencySumpPit> <http://www.w3.org/2000/01/rdf-schema#label> "Emergency Sump Pit"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FiltrationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#FiltrationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FiltrationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#FiltrationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Filtration systems for water treatment and environmental protection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FiltrationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Filtration System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FireResistantDrainagePipe
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantDrainagePipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantDrainagePipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainagePipe> .
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantDrainagePipe> <http://www.w3.org/2000/01/rdf-schema#comment> "Drainage pipes above traffic lanes with ≥1.0 hour fire resistance per JTG 2120-2020 Section 14.3.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantDrainagePipe> <http://www.w3.org/2000/01/rdf-schema#label> "Fire Resistant Drainage Pipe"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FirefightingWaterSupply
+<http://www.semanticweb.org/immersedTunnelOnto#FirefightingWaterSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FirefightingWaterSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#FirefightingWaterSupply> <http://www.w3.org/2000/01/rdf-schema#comment> "Water supply system specifically for firefighting operations per JTG 2120-2020."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FirefightingWaterSupply> <http://www.w3.org/2000/01/rdf-schema#label> "Firefighting Water Supply"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FlowMeter
+<http://www.semanticweb.org/immersedTunnelOnto#FlowMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FlowMeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#FlowMeter> <http://www.w3.org/2000/01/rdf-schema#comment> "Flow measurement devices for drainage system monitoring."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FlowMeter> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Meter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GeneralDrainageSystem
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDrainageSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "General drainage systems for construction and operational areas."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#GeneralDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#label> "General Drainage System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#InternalTunnelDrainageSystem
+<http://www.semanticweb.org/immersedTunnelOnto#InternalTunnelDrainageSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#InternalTunnelDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelDrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#InternalTunnelDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Internal drainage system for tunnel segments and joints per JTG 2120-2020."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#InternalTunnelDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Internal Tunnel Drainage System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MainPump
+<http://www.semanticweb.org/immersedTunnelOnto#MainPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MainPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PumpStation> .
+<http://www.semanticweb.org/immersedTunnelOnto#MainPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Primary pumping equipment for normal drainage operations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MainPump> <http://www.w3.org/2000/01/rdf-schema#label> "Main Pump"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#OilSeparator
+<http://www.semanticweb.org/immersedTunnelOnto#OilSeparator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#OilSeparator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#OilSeparator> <http://www.w3.org/2000/01/rdf-schema#comment> "Oil separation systems for treating contaminated drainage water."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#OilSeparator> <http://www.w3.org/2000/01/rdf-schema#label> "Oil Separator"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PortalDrainageSystem
+<http://www.semanticweb.org/immersedTunnelOnto#PortalDrainageSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PortalDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelDrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PortalDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Drainage system for tunnel portals and approach areas per JTG 2120-2020."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PortalDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Portal Drainage System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PumpControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#PumpControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated control systems for pump operations and management."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Pump Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PumpStation
+<http://www.semanticweb.org/immersedTunnelOnto#PumpStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Central pumping station for tunnel drainage management."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpStation> <http://www.w3.org/2000/01/rdf-schema#label> "Pump Station"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem
+<http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Complete pumping system for water management in tunnel operations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PumpingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Pumping System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ServiceWaterSystem
+<http://www.semanticweb.org/immersedTunnelOnto#ServiceWaterSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ServiceWaterSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ServiceWaterSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Service water system for cleaning, maintenance, and operational needs."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ServiceWaterSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Service Water System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SettlingTank
+<http://www.semanticweb.org/immersedTunnelOnto#SettlingTank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SettlingTank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#SettlingTank> <http://www.w3.org/2000/01/rdf-schema#comment> "Settling tanks for sediment removal from drainage water."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SettlingTank> <http://www.w3.org/2000/01/rdf-schema#label> "Settling Tank"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StandbyPump
+<http://www.semanticweb.org/immersedTunnelOnto#StandbyPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#StandbyPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PumpStation> .
+<http://www.semanticweb.org/immersedTunnelOnto#StandbyPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Backup pumping equipment for redundancy and maintenance periods."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#StandbyPump> <http://www.w3.org/2000/01/rdf-schema#label> "Standby Pump"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SumpPit
+<http://www.semanticweb.org/immersedTunnelOnto#SumpPit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SumpPit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageEquipment> .
+<http://www.semanticweb.org/immersedTunnelOnto#SumpPit> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection pit for water drainage at the lowest points of the tunnel."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SumpPit> <http://www.w3.org/2000/01/rdf-schema#label> "Sump Pit"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelDrainageSystem
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelDrainageSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Comprehensive drainage system specifically for tunnel operations including portal and internal drainage.\n            Replaces TunnelDrainageSystem from foundation_systems_components.owl.\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelDrainageSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Tunnel Drainage System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#UtilityGallery
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityGallery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityGallery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityGallery> <http://www.w3.org/2000/01/rdf-schema#comment> "Utility galleries for housing pipes, cables, and utility systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityGallery> <http://www.w3.org/2000/01/rdf-schema#label> "Utility Gallery"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure> <http://www.w3.org/2000/01/rdf-schema#comment> "General utility infrastructure supporting tunnel operations."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure> <http://www.w3.org/2000/01/rdf-schema#label> "Utility Infrastructure"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#UtilityShaft
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityShaft> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityShaft> <http://www.w3.org/2000/01/rdf-schema#comment> "Vertical shafts for utility access and maintenance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityShaft> <http://www.w3.org/2000/01/rdf-schema#label> "Utility Shaft"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem
+<http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all utility systems in immersed tunnel projects including drainage, water supply, and other utilities."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> <http://www.w3.org/2000/01/rdf-schema#label> "Utility System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#UtilityTunnel
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityTunnel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#UtilityInfrastructure> .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityTunnel> <http://www.w3.org/2000/01/rdf-schema#comment> "Dedicated utility tunnels for housing utility systems and maintenance access."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#UtilityTunnel> <http://www.w3.org/2000/01/rdf-schema#label> "Utility Tunnel"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WaterLevelSensor
+<http://www.semanticweb.org/immersedTunnelOnto#WaterLevelSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterLevelSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#DrainageMonitoringSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterLevelSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensors for monitoring water levels in drainage systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterLevelSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Water Level Sensor"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem
+<http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Water supply systems for tunnel operations, safety, and maintenance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterSupplySystem> <http://www.w3.org/2000/01/rdf-schema#label> "Water Supply System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem
+<http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#UtilitySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Water treatment systems for drainage water processing and environmental compliance."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#WaterTreatmentSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Water Treatment System"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

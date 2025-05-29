@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersed Tunnel Engineering Ontology - GBT 51318-2019 Compliant Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e3a8a;
+            --accent-blue: #60a5fa;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --border-light: #e5e7eb;
+            --border-medium: #d1d5db;
+            --success-green: #10b981;
+            --warning-orange: #f59e0b;
+            --gradient-primary: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            --gradient-secondary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="20" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(45deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation/Stats Bar */
+        .stats-bar {
+            background: var(--bg-card);
+            padding: 2rem 0;
+            box-shadow: var(--shadow-md);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .intro-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .intro-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .intro-content {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .intro-list {
+            margin: 1rem 0;
+            padding-left: 1rem;
+        }
+
+        .intro-list li {
+            margin: 0.5rem 0;
+            padding-left: 0.5rem;
+        }
+
+        /* Main Documentation Section */
+        .main-docs {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid var(--warning-orange);
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .main-docs::before {
+            content: '⭐';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        /* Category Sections */
+        .category {
+            background: var(--bg-card);
+            margin: 2rem 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .category-header {
+            background: var(--gradient-secondary);
+            padding: 2rem;
+            border-bottom: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .category h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .category-count {
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .category-content {
+            padding: 2rem;
+        }
+
+        /* Module Cards */
+        .module {
+            background: var(--bg-card);
+            margin: 1.5rem 0;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-blue);
+        }
+
+        .module::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .module:hover::before {
+            transform: scaleY(1);
+        }
+
+        .module h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .module p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Links */
+        .links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-secondary);
+            color: var(--primary-blue);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-medium);
+            transition: all 0.3s ease;
+        }
+
+        .links a:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .links a i {
+            font-size: 1rem;
+        }
+
+        /* Footer Section */
+        .footer-info {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-item {
+            text-align: left;
+        }
+
+        .tech-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-value {
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .category:nth-child(1) { animation-delay: 0.1s; }
+        .category:nth-child(2) { animation-delay: 0.2s; }
+        .category:nth-child(3) { animation-delay: 0.3s; }
+        .category:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header h2 {
+                font-size: 1.3rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            .links a {
+                flex: 1;
+                justify-content: center;
+                min-width: 120px;
+            }
+
+            .category-content {
+                padding: 1.5rem;
+            }
+
+            .module {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content loading">
+                <div class="header-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h1>Immersed Tunnel Engineering Ontology</h1>
+        <h2>GBT 51318-2019 Standards Compliant Documentation</h2>
+        <p>Comprehensive semantic infrastructure for tunnel engineering design, construction, and operation processes</p>
+    </div>
+        </div>
+    </header>
+
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid loading">
+                <div class="stat-item">
+                    <span class="stat-number">20</span>
+                    <span class="stat-label">Total Modules</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Foundation Modules</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">System Modules</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Technical Modules</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="intro-section loading">
+                <div class="intro-title">
+                    <i class="fas fa-info-circle"></i>
+                    Documentation Structure Overview
+                </div>
+                <div class="intro-content">
+        <p>This ontology follows the modular architecture specified in GBT 51318-2019 with 20 specialized modules organized into three main categories:</p>
+                    <ul class="intro-list">
+            <li><strong>4 Core Foundation Modules:</strong> Core semantic infrastructure and taxonomic organization</li>
+            <li><strong>6 System Modules:</strong> Operational and safety systems for tunnel infrastructure</li>
+            <li><strong>10 Technical & Management Modules:</strong> Engineering domains with comprehensive coverage</li>
+        </ul>
+    </div>
+            </section>
+
+            <section class="category main-docs loading">
+                <div class="category-header">
+                    <h2>
+                        <i class="fas fa-star"></i>
+                        Main Documentation
+                        <span class="category-count">Primary</span>
+                    </h2>
+                </div>
+                <div class="category-content">
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-book-open"></i>
+                            Complete Modular Ontology
+                        </h3>
+            <p>Main ontology structure with imports from all 19 modules and comprehensive WebVOWL visualization.</p>
+            <div class="links">
+                            <a href="index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Main Documentation
+                            </a>
+                            <a href="webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL Visualization
+                            </a>
+            </div>
+        </div>
+    </div>
+            </section>
+
+            <section class="category loading">
+                <div class="category-header">
+                    <h2>
+                        <i class="fas fa-cube"></i>
+                        Core Foundation Modules
+                        <span class="category-count">4</span>
+                    </h2>
+                </div>
+                <div class="category-content">
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-cog"></i>
+                            core
+                        </h3>
+            <p>Core semantic infrastructure including base classes, fundamental concepts, and project deliverables.</p>
+            <div class="links">
+                            <a href="modules/core/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/core/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-sitemap"></i>
+                            taxonomy
+                        </h3>
+            <p>Taxonomic organization providing comprehensive classification framework for immersed tunnel domain.</p>
+            <div class="links">
+                            <a href="modules/taxonomy/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/taxonomy/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-puzzle-piece"></i>
+                            meronomy
+                        </h3>
+            <p>Part-whole relationships and spatial organization within immersed tunnel systems.</p>
+            <div class="links">
+                            <a href="modules/meronomy/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/meronomy/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-tags"></i>
+                            properties
+                        </h3>
+            <p>Comprehensive property definitions and datatype specifications for ontology attributes.</p>
+            <div class="links">
+                            <a href="modules/properties/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/properties/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+    </div>
+            </section>
+
+            <section class="category loading">
+                <div class="category-header">
+                    <h2>
+                        <i class="fas fa-server"></i>
+                        System Modules
+                        <span class="category-count">6</span>
+                    </h2>
+                </div>
+                <div class="category-content">
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-shield-alt"></i>
+                            systems_safety_emergency
+                        </h3>
+            <p>Safety and emergency systems including fire protection, evacuation, and emergency response.</p>
+            <div class="links">
+                            <a href="modules/systems_safety_emergency/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/systems_safety_emergency/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-bolt"></i>
+                            systems_mechanical_electrical
+                        </h3>
+            <p>Mechanical and electrical systems for tunnel operation and infrastructure support.</p>
+            <div class="links">
+                            <a href="modules/systems_mechanical_electrical/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/systems_mechanical_electrical/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-tint"></i>
+                            systems_drainage_utilities
+                        </h3>
+            <p>Drainage systems and utility infrastructure for tunnel environments.</p>
+            <div class="links">
+                            <a href="modules/systems_drainage_utilities/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/systems_drainage_utilities/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-chart-line"></i>
+                            systems_monitoring_instrumentation
+                        </h3>
+            <p>Monitoring and instrumentation systems for tunnel performance and safety tracking.</p>
+            <div class="links">
+                            <a href="modules/systems_monitoring_instrumentation/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/systems_monitoring_instrumentation/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-building"></i>
+                            systems_facilities_temporary_permanent
+                        </h3>
+            <p>Temporary and permanent facility systems for tunnel construction and operation.</p>
+            <div class="links">
+                            <a href="modules/systems_facilities_temporary_permanent/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/systems_facilities_temporary_permanent/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-road"></i>
+                            systems_traffic_transportation
+                        </h3>
+            <p>Traffic management and transportation systems within tunnel infrastructure.</p>
+            <div class="links">
+                            <a href="modules/systems_traffic_transportation/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/systems_traffic_transportation/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+    </div>
+            </section>
+
+            <section class="category loading">
+                <div class="category-header">
+                    <h2>
+                        <i class="fas fa-tools"></i>
+                        Technical & Management Modules
+                        <span class="category-count">10</span>
+                    </h2>
+                </div>
+                <div class="category-content">
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-drafting-compass"></i>
+                            engineering_design_analysis
+                        </h3>
+            <p>Engineering design methodologies and analysis frameworks for tunnel systems.</p>
+            <div class="links">
+                            <a href="modules/engineering_design_analysis/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/engineering_design_analysis/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-hard-hat"></i>
+                            construction_processes_methods
+                        </h3>
+            <p>Construction processes and methodologies for immersed tunnel projects.</p>
+            <div class="links">
+                            <a href="modules/construction_processes_methods/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/construction_processes_methods/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-leaf"></i>
+                            site_environmental_systems
+                        </h3>
+            <p>Site conditions and environmental systems with GBT 51318-2019 Section 4, 5, 6 compliance.</p>
+            <div class="links">
+                            <a href="modules/site_environmental_systems/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/site_environmental_systems/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-mountain"></i>
+                            geotechnical_foundation_systems
+                        </h3>
+            <p>Geotechnical engineering and foundation systems for tunnel support structures.</p>
+            <div class="links">
+                            <a href="modules/geotechnical_foundation_systems/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/geotechnical_foundation_systems/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-home"></i>
+                            structural_systems
+                        </h3>
+            <p>Main structural systems module with comprehensive structural engineering components and design frameworks.</p>
+            <div class="links">
+                            <a href="modules/structural_systems/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/structural_systems/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-layer-group"></i>
+                            structural_systems_components
+                        </h3>
+            <p>Detailed structural system components and architectural elements for tunnel construction.</p>
+            <div class="links">
+                            <a href="modules/structural_systems_components/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/structural_systems_components/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-vials"></i>
+                            materials_quality_systems
+                        </h3>
+            <p>Materials specification and quality assurance systems aligned with standards.</p>
+            <div class="links">
+                            <a href="modules/materials_quality_systems/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/materials_quality_systems/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-wrench"></i>
+                            maintenance_operations
+                        </h3>
+            <p>Maintenance protocols and operational procedures for tunnel lifecycle management.</p>
+            <div class="links">
+                            <a href="modules/maintenance_operations/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/maintenance_operations/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+        
+        <div class="module">
+                        <h3>
+                            <i class="fas fa-cube"></i>
+                            immersed_tunnel_spatial_extensions
+                        </h3>
+            <p>Spatial modeling and geometric extensions for immersed tunnel infrastructure.</p>
+            <div class="links">
+                            <a href="modules/immersed_tunnel_spatial_extensions/index-en.html" target="_blank">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                            <a href="modules/immersed_tunnel_spatial_extensions/webvowl/" target="_blank">
+                                <i class="fas fa-project-diagram"></i>
+                                WebVOWL
+                            </a>
+            </div>
+        </div>
+    </div>
+            </section>
+
+            <section class="footer-info loading">
+                <div class="footer-title">
+                    <i class="fas fa-info-circle"></i>
+                    Technical Information
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-label">Standards Compliance</div>
+                        <div class="tech-value">Primary: GBT 51318-2019<br>Supporting: JTG 2120-2020, IFC4.3, ISO 19650</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-label">Version</div>
+                        <div class="tech-value">4.0.0-GBT51318-2019-standards-enhanced</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-label">Access Requirement</div>
+                        <div class="tech-value">HTTP server required for CORS compliance</div>
+                    </div>
+                </div>
+            </section>
+    </div>
+    </main>
+
+    <script>
+        // Add smooth scrolling and loading animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove loading class from all elements
+            const loadingElements = document.querySelectorAll('.loading');
+            loadingElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.remove('loading');
+                }, index * 100);
+            });
+
+            // Add click tracking for analytics
+            const links = document.querySelectorAll('a[href*="index-en.html"], a[href*="webvowl"]');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Documentation accessed:', this.href);
+                });
+            });
+        });
+
+        // Add search functionality placeholder
+        function addSearchFunctionality() {
+            // This could be expanded to add a search box for modules
+            console.log('Search functionality can be added here');
+        }
+    </script>
+</body>
+</html>

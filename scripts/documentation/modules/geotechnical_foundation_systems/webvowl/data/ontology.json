@@ -1,0 +1,2250 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/immersedTunnelOnto", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/geotechnical_foundation_systems",
+    "version" : "3.0.0 - Enhanced",
+    "labels" : {
+      "en" : "Immersed Tunnel Ontology - Geotechnical and Foundation Systems"
+    },
+    "comments" : {
+      "en" : "\n            Enhanced geotechnical analysis and foundation systems for immersed tunnels.\n            Comprehensive soil analysis, foundation design, and ground improvement.\n            Based on GB/T 51318-2019 and JTG 2120-2020 Chapter 9-10 standards.\n            \n            CONSOLIDATES:\n            - Geotechnical analysis from geotechnical_analysis.owl\n            - Foundation systems from foundation_systems_components.owl\n            - Soil investigation and characterization\n            - Ground improvement and treatment methods\n            \n            ENHANCEMENTS:\n            - Advanced geotechnical modeling\n            - Foundation optimization\n            - Ground treatment strategies\n            - Stability analysis methods\n        "
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0.0 - Enhanced",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "139",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LithologyAnalysis",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LithologyAnalysis",
+      "en" : "Lithology Analysis"
+    },
+    "comment" : {
+      "en" : "Lithology properties analysis including rock type, mineral composition, and weathering degree."
+    },
+    "attributes" : [ "external" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#GeologicalStratificationModel",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeologicalStratificationModel",
+      "en" : "Geological Stratification Model"
+    },
+    "subClasses" : [ "16", "4" ],
+    "comment" : {
+      "en" : "Geological stratification models with model extent, layer geometry, and spatial accuracy specifications."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SandCushionFoundation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SandCushionFoundation",
+      "en" : "Sand Cushion Foundation"
+    },
+    "comment" : {
+      "en" : "Sand cushion foundation providing uniform support."
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SettlementAnalysis",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SettlementAnalysis",
+      "en" : "Settlement Analysis"
+    },
+    "comment" : {
+      "en" : "Analysis of foundation settlement and differential movement."
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#GravelBedFoundation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GravelBedFoundation",
+      "en" : "Gravel Bed Foundation"
+    },
+    "comment" : {
+      "en" : "Gravel bed foundation for tunnel placement per JTG 2120-2020 Section 9.2."
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#AlluvialSoil",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AlluvialSoil",
+      "en" : "Alluvial Soil"
+    },
+    "comment" : {
+      "en" : "Alluvial soil deposits in river and coastal areas."
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TunnelComponent"
+    },
+    "subClasses" : [ "43" ],
+    "attributes" : [ "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SoilStratification",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoilStratification",
+      "en" : "Soil Stratification"
+    },
+    "subClasses" : [ "0" ],
+    "comment" : {
+      "en" : "Soil and rock stratification analysis including layer thickness and profile characteristics for IMMTD05."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeotechnicalSystem",
+      "en" : "Geotechnical System"
+    },
+    "subClasses" : [ "15", "22", "41", "55" ],
+    "comment" : {
+      "en" : "Base class for geotechnical and foundation systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#GroundImprovement",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GroundImprovement",
+      "en" : "Ground Improvement"
+    },
+    "subClasses" : [ "59", "60", "61" ],
+    "comment" : {
+      "en" : "Ground improvement methods for foundation enhancement."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#FoundationDesignParameter",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FoundationDesignParameter",
+      "en" : "Foundation Design Parameter"
+    },
+    "comment" : {
+      "en" : "Foundation design parameters including foundation depth, width, and bearing level specifications."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#FoundationLayout",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FoundationLayout",
+      "en" : "Foundation Layout"
+    },
+    "comment" : {
+      "en" : "Foundation layout design including foundation alignment, supporting elements, and construction sequence."
+    },
+    "attributes" : [ "external" ],
+    "id" : "86",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#TunnelRouteGeology",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TunnelRouteGeology",
+      "en" : "Tunnel Route Geology"
+    },
+    "comment" : {
+      "en" : "Tunnel route geological analysis with route alignment, geological variation, and critical sections identification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#BearingCapacityAnalysis",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BearingCapacityAnalysis",
+      "en" : "Bearing Capacity Analysis"
+    },
+    "subClasses" : [ "10", "7", "48" ],
+    "comment" : {
+      "en" : "Analysis of foundation bearing capacity and load distribution."
+    },
+    "attributes" : [ "external" ],
+    "id" : "90",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#GeologicalCrossSection",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeologicalCrossSection",
+      "en" : "Geological Cross Section"
+    },
+    "comment" : {
+      "en" : "Cross-sectional geological profiles with section location, profile depth, and layer interface information."
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SlopeStabilityRisk",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SlopeStabilityRisk",
+      "en" : "Slope Stability Risk"
+    },
+    "comment" : {
+      "en" : "Slope instability risk assessment including slope angle, stability factor, and failure mechanism analysis."
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "115" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PileFoundation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PileFoundation",
+      "en" : "Pile Foundation"
+    },
+    "comment" : {
+      "en" : "Deep pile foundation for challenging soil conditions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "122",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#FoundationPlacementDecision",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FoundationPlacementDecision",
+      "en" : "Foundation Placement Decision"
+    },
+    "comment" : {
+      "en" : "Foundation placement decisions with location, type, and placement criteria for route alignment integration per IMMTD04."
+    },
+    "attributes" : [ "external" ],
+    "id" : "85",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SoilBearingCapacity",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoilBearingCapacity",
+      "en" : "Soil Bearing Capacity"
+    },
+    "comment" : {
+      "en" : "Load-bearing capacity analysis for soil layers including allowable bearing pressure and safety factors."
+    },
+    "attributes" : [ "external" ],
+    "id" : "48",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PreloadingTreatment",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PreloadingTreatment",
+      "en" : "Preloading Treatment"
+    },
+    "comment" : {
+      "en" : "Preloading treatment for settlement reduction in soft soils."
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#StabilityAnalysis",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StabilityAnalysis",
+      "en" : "Stability Analysis"
+    },
+    "subClasses" : [ "25" ],
+    "comment" : {
+      "en" : "Stability analysis for slope and foundation systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "115",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#FoundationSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FoundationSystem",
+      "en" : "Foundation System"
+    },
+    "subClasses" : [ "32", "85", "122", "82", "21", "86", "36", "39", "70" ],
+    "comment" : {
+      "en" : "Foundation systems for immersed tunnel support per JTG 2120-2020 Chapter 9."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SoilType",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoilType",
+      "en" : "Soil Type"
+    },
+    "subClasses" : [ "110", "40", "139" ],
+    "comment" : {
+      "en" : "Soil classification for geotechnical analysis."
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#TrenchGeometry",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrenchGeometry",
+      "en" : "Trench Geometry"
+    },
+    "comment" : {
+      "en" : "Trench geometry specifications including trench depth, width, side slope, and excavation profile."
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "119",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#MarineClay",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MarineClay",
+      "en" : "Marine Clay"
+    },
+    "comment" : {
+      "en" : "Marine clay deposits requiring special foundation treatment."
+    },
+    "attributes" : [ "external" ],
+    "id" : "139",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "121",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#VibroCompaction",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VibroCompaction",
+      "en" : "Vibro Compaction"
+    },
+    "comment" : {
+      "en" : "Vibro compaction for soil densification and improvement."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#WeatheredRock",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WeatheredRock",
+      "en" : "Weathered Rock"
+    },
+    "comment" : {
+      "en" : "Weathered rock formations providing stable foundation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "110",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LiquefactionRisk",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LiquefactionRisk",
+      "en" : "Liquefaction Risk"
+    },
+    "comment" : {
+      "en" : "Liquefaction risk assessment including liquefaction potential and soil susceptibility analysis."
+    },
+    "attributes" : [ "external" ],
+    "id" : "117",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalAnalysis",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeotechnicalAnalysis",
+      "en" : "Geotechnical Analysis"
+    },
+    "subClasses" : [ "90", "117", "38", "1", "115", "88", "13" ],
+    "comment" : {
+      "en" : "Geotechnical analysis methods for foundation design."
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SettlementTolerance",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SettlementTolerance",
+      "en" : "Settlement Tolerance"
+    },
+    "comment" : {
+      "en" : "Settlement tolerances including maximum allowable settlement, differential limits, and tolerance criteria."
+    },
+    "attributes" : [ "external" ],
+    "id" : "82",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#AllowableLoadSpecification",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AllowableLoadSpecification",
+      "en" : "Allowable Load Specification"
+    },
+    "comment" : {
+      "en" : "Allowable load specifications including allowable load, load distribution, and loading conditions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SoilMovementRisk",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoilMovementRisk",
+      "en" : "Soil Movement Risk"
+    },
+    "comment" : {
+      "en" : "Soil movement risk assessment including lateral and vertical movement analysis with movement rate prediction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "88",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#LayerBearingAnalysis",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LayerBearingAnalysis",
+      "en" : "Layer Bearing Analysis"
+    },
+    "comment" : {
+      "en" : "Layer-specific bearing capacity analysis with bearing capacity variation and critical layer identification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#RockBearingCapacity",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RockBearingCapacity",
+      "en" : "Rock Bearing Capacity"
+    },
+    "comment" : {
+      "en" : "Load-bearing capacity analysis for rock layers including rock bearing strength and load distribution."
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "90" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SoilCementMixing",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoilCementMixing",
+      "en" : "Soil Cement Mixing"
+    },
+    "comment" : {
+      "en" : "Deep soil cement mixing for ground stabilization."
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "55" ]
+  } ],
+  "property" : [ {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "120",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "128",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "130",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "133",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "151",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "153",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#geologicalVariation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "geologicalVariation",
+      "en" : "geological variation"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Geological variation along tunnel route."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#loadDistribution",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "loadDistribution",
+      "en" : "load distribution"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Load distribution pattern for bearing capacity analysis."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#criticalLayer",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "criticalLayer",
+      "en" : "critical layer"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Identification of critical layers with lowest bearing capacity."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#spatialAccuracy",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "spatialAccuracy",
+      "en" : "spatial accuracy"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Spatial accuracy of geological model in meters."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#criticalSections",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "criticalSections",
+      "en" : "critical sections"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Critical sections along tunnel route requiring special attention."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#failureMechanism",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "failureMechanism",
+      "en" : "failure mechanism"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Potential failure mechanism for slope instability (planar, rotational, wedge)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#foundationWidth",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "foundationWidth",
+      "en" : "foundation width"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Foundation width in meters."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#loadingConditions",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "loadingConditions",
+      "en" : "loading conditions"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "Loading conditions for allowable load specification."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#allowableBearingPressure",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "allowableBearingPressure",
+      "en" : "allowable bearing pressure"
+    },
+    "domain" : "48",
+    "comment" : {
+      "en" : "Allowable bearing pressure for soil layers in kPa."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#profileDepth",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "profileDepth",
+      "en" : "profile depth"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Depth of geological profile investigation in meters."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "52"
+  }, {
+    "range" : "13",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "42",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "13",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ultimateBearingCapacity",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "ultimateBearingCapacity",
+      "en" : "ultimate bearing capacity"
+    },
+    "domain" : "48",
+    "comment" : {
+      "en" : "Ultimate bearing capacity for soil layers in kPa."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#layerGeometry",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "layerGeometry",
+      "en" : "layer geometry"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Geometric representation of geological layers."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#stratificationProfile",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "stratificationProfile",
+      "en" : "stratification profile"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Overall stratification profile description."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#weatheringDegree",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "weatheringDegree",
+      "en" : "weathering degree"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Degree of weathering in rock formations (fresh, slightly, moderately, highly, completely weathered)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#excavationProfile",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "excavationProfile",
+      "en" : "excavation profile"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Trench excavation profile description."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#sideSlope",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "sideSlope",
+      "en" : "side slope"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Trench side slope angle in degrees."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#differentialLimit",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "differentialLimit",
+      "en" : "differential limit"
+    },
+    "domain" : "82",
+    "comment" : {
+      "en" : "Differential settlement limit in mm."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#foundationType",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "foundationType",
+      "en" : "foundation type"
+    },
+    "domain" : "85",
+    "comment" : {
+      "en" : "Type of foundation selected for specific location."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#verticalMovement",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "verticalMovement",
+      "en" : "vertical movement"
+    },
+    "domain" : "88",
+    "comment" : {
+      "en" : "Predicted vertical soil movement in mm."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#stabilityFactor",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "stabilityFactor",
+      "en" : "stability factor"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Factor of safety for slope stability analysis."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#lateralMovement",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "lateralMovement",
+      "en" : "lateral movement"
+    },
+    "domain" : "88",
+    "comment" : {
+      "en" : "Predicted lateral soil movement in mm."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#bearingCapacityVariation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "bearingCapacityVariation",
+      "en" : "bearing capacity variation"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Variation in bearing capacity across different layers."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#allowableLoad",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "allowableLoad",
+      "en" : "allowable load"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "Allowable load for foundation design in kN."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#movementRate",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "movementRate",
+      "en" : "movement rate"
+    },
+    "domain" : "88",
+    "comment" : {
+      "en" : "Rate of soil movement in mm/year."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#routeAlignment",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "routeAlignment",
+      "en" : "route alignment"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Tunnel route alignment for geological analysis."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "99"
+  }, {
+    "range" : "22",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "range" : "22",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#constructionSequence",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "constructionSequence",
+      "en" : "construction sequence"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "Construction sequence for foundation layout implementation."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "107"
+  }, {
+    "range" : "41",
+    "domain" : "110",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#slopeAngle",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "slopeAngle",
+      "en" : "slope angle"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "Slope angle for stability analysis in degrees."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "111"
+  }, {
+    "range" : "22",
+    "domain" : "70",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
+  }, {
+    "range" : "22",
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#supportingElements",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "supportingElements",
+      "en" : "supporting elements"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "Supporting elements in foundation layout design."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#liquidityIndex",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "liquidityIndex",
+      "en" : "liquidity index"
+    },
+    "domain" : "117",
+    "comment" : {
+      "en" : "Liquidity index indicating soil consistency."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#bearingCapacity",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "119",
+    "label" : {
+      "IRI-based" : "bearingCapacity",
+      "en" : "bearing capacity"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Allowable bearing capacity in kPa."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "118"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#bearingLevel",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "121",
+    "label" : {
+      "IRI-based" : "bearingLevel",
+      "en" : "bearing level"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Foundation bearing level elevation in meters."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#layerThickness",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "layerThickness",
+      "en" : "layer thickness"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Thickness of geological layers in meters."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#maxAllowableSettlement",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "maxAllowableSettlement",
+      "en" : "max allowable settlement"
+    },
+    "domain" : "82",
+    "comment" : {
+      "en" : "Maximum allowable settlement in mm."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "124"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#foundationAlignment",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "foundationAlignment",
+      "en" : "foundation alignment"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "Foundation alignment coordinates and orientation."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "126"
+  }, {
+    "range" : "22",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#mineralComposition",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "mineralComposition",
+      "en" : "mineral composition"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Mineral composition of rock and soil layers."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "128"
+  }, {
+    "range" : "22",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#settlementLimit",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "settlementLimit",
+      "en" : "settlement limit"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Maximum allowable settlement in mm."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "130"
+  }, {
+    "range" : "115",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "22",
+    "domain" : "122",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "22",
+    "domain" : "85",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "133"
+  }, {
+    "range" : "90",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "55",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "90",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "90",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#layerIdentification",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "layerIdentification",
+      "en" : "layer identification"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Identification of specific geological layers for bearing analysis."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "138"
+  }, {
+    "range" : "55",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "range" : "43",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#rockBearingStrength",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "rockBearingStrength",
+      "en" : "rock bearing strength"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Bearing strength of rock layers in MPa."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "142"
+  }, {
+    "range" : "55",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "43",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "range" : "43",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "43",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#foundationLocation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "foundationLocation",
+      "en" : "foundation location"
+    },
+    "domain" : "85",
+    "comment" : {
+      "en" : "Location of foundation placement along route alignment."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "148"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#placementCriteria",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "placementCriteria",
+      "en" : "placement criteria"
+    },
+    "domain" : "85",
+    "comment" : {
+      "en" : "Criteria for foundation placement decision including geotechnical and route considerations."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#liquefactionPotential",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "liquefactionPotential",
+      "en" : "liquefaction potential"
+    },
+    "domain" : "117",
+    "comment" : {
+      "en" : "Liquefaction potential index for soil layers."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "150"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#trenchDepth",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "trenchDepth",
+      "en" : "trench depth"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Trench excavation depth in meters."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "151"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#soilSusceptibility",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "soilSusceptibility",
+      "en" : "soil susceptibility"
+    },
+    "domain" : "117",
+    "comment" : {
+      "en" : "Soil susceptibility to liquefaction and other deformation risks."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "152"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#sectionLocation",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "sectionLocation",
+      "en" : "section location"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Location of geological cross-section along tunnel route."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "153"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#trenchWidth",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "trenchWidth",
+      "en" : "trench width"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Trench excavation width in meters."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#layerInterface",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "layerInterface",
+      "en" : "layer interface"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Interface characteristics between geological layers."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "155"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#modelExtent",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "modelExtent",
+      "en" : "model extent"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Spatial extent of geological stratification model."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "156"
+  }, {
+    "range" : "15",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "157"
+  }, {
+    "range" : "15",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#rockType",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "rockType",
+      "en" : "rock type"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "Type of rock formation (sedimentary, igneous, metamorphic)."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "159"
+  }, {
+    "range" : "15",
+    "domain" : "115",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "15",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#toleranceCriteria",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "toleranceCriteria",
+      "en" : "tolerance criteria"
+    },
+    "domain" : "82",
+    "comment" : {
+      "en" : "Criteria for settlement tolerance assessment."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "162"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#stratumLayers",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "stratumLayers",
+      "en" : "stratum layers"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Description of soil and rock stratum layers."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "163"
+  }, {
+    "range" : "15",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "164"
+  }, {
+    "range" : "41",
+    "domain" : "139",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "165"
+  }, {
+    "range" : "41",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "166"
+  }, {
+    "range" : "15",
+    "domain" : "117",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "167"
+  }, {
+    "range" : "15",
+    "domain" : "90",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "168"
+  } ]
+}

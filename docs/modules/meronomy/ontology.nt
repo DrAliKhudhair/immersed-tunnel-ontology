@@ -1,0 +1,493 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/meronomy> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#aggregates
+<http://www.semanticweb.org/immersedTunnelOnto#aggregates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#aggregates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPart> .
+<http://www.semanticweb.org/immersedTunnelOnto#aggregates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#aggregates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#aggregates> <http://www.w3.org/2000/01/rdf-schema#comment> "Weak aggregation relationship where parts can exist independently."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#aggregates> <http://www.w3.org/2000/01/rdf-schema#label> "aggregates"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#assemblesInto
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> .
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating that entities assemble into a larger entity."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#assemblesInto> <http://www.w3.org/2000/01/rdf-schema#label> "assembles Into"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#composes
+<http://www.semanticweb.org/immersedTunnelOnto#composes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#composes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPart> .
+<http://www.semanticweb.org/immersedTunnelOnto#composes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#composes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#composes> <http://www.w3.org/2000/01/rdf-schema#comment> "Strong composition relationship where parts cannot exist without the whole."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#composes> <http://www.w3.org/2000/01/rdf-schema#label> "composes"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#contains
+<http://www.semanticweb.org/immersedTunnelOnto#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#contains> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> .
+<http://www.semanticweb.org/immersedTunnelOnto#contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasComponent
+<http://www.semanticweb.org/immersedTunnelOnto#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasComponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPart> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating that a system has a component."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has Component"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel> <http://www.w3.org/2000/01/rdf-schema#comment> "Links project to its construction personnel per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstructionPersonnel> <http://www.w3.org/2000/01/rdf-schema#label> "has Construction Personnel"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable
+<http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#Process> .
+<http://www.semanticweb.org/immersedTunnelOnto#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> .
+<http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between project stage and its deliverables."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> <http://www.w3.org/2000/01/rdf-schema#label> "has Deliverable"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel> <http://www.w3.org/2000/01/rdf-schema#comment> "Links project to its design personnel per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDesignPersonnel> <http://www.w3.org/2000/01/rdf-schema#label> "has Design Personnel"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasFoundation
+<http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between tunnel system and its foundation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> <http://www.w3.org/2000/01/rdf-schema#label> "has Foundation"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between component and its geometric parameters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Geometric Parameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasJoint
+<http://www.semanticweb.org/immersedTunnelOnto#hasJoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> .
+<http://www.semanticweb.org/immersedTunnelOnto#PipeSection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#JointComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#JointComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between pipe sections and their joints."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJoint> <http://www.w3.org/2000/01/rdf-schema#label> "has Joint"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a part-whole relationship to its constraints."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMereologicalConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has Mereological Constraint"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPart
+<http://www.semanticweb.org/immersedTunnelOnto#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "General part-whole relationship where the domain has the range as a part."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has Part"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines overlapping part relationships in complex assemblies."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartOverlap> <http://www.w3.org/2000/01/rdf-schema#label> "has Part Overlap"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection
+<http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between tunnel and its pipe sections."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> <http://www.w3.org/2000/01/rdf-schema#label> "has Pipe Section"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader
+<http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader> .
+<http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Links project to its project leader per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProjectLeader> <http://www.w3.org/2000/01/rdf-schema#label> "has Project Leader"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between pipe section and its reserved chambers."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> <http://www.w3.org/2000/01/rdf-schema#label> "has Reserved Chamber"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent
+<http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between tunnel system and its safety components."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has Safety Component"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPart> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating that a component has a subcomponent."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> <http://www.w3.org/2000/01/rdf-schema#label> "has Subcomponent"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility
+<http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between construction stage and its temporary facilities."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> <http://www.w3.org/2000/01/rdf-schema#label> "has Temporary Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#aggregates> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom
+<http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPart> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating that an entity is assembled from other entities."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isAssembledFrom> <http://www.w3.org/2000/01/rdf-schema#label> "is Assembled From"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isComponentOf
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating that a component belongs to a system."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Component Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isComposedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#composes> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Strong composition relationship where part is composed by whole."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isComposedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is Composed By"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf
+<http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDeliverable> .
+<http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable> .
+<http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#Process> .
+<http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between deliverable and its project stage."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isDeliverableOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Deliverable Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasFoundation> .
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between foundation and its tunnel system."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isFoundationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Foundation Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf
+<http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between geometric parameter and its component."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isGeometricParameterOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Geometric Parameter Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isJointOf
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasJoint> .
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#JointComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> .
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between joint and its pipe sections."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isJointOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Joint Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn
+<http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial relationship indicating location containment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is Located In"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isMadeOf
+<http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#Material> .
+<http://www.semanticweb.org/immersedTunnelOnto#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating the material composition of a component."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Made Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isPartOf
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPipeSection> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between pipe section and its tunnel."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isPipeSectionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Pipe Section Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasReservedChamber> .
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PipeSection> .
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between reserved chamber and its pipe section."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isReservedChamberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Reserved Chamber Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isComponentOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasSafetyComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between safety component and its tunnel system."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isSafetyComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Safety Component Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#isPartOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasSubcomponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating that a component is a subcomponent of another."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isSubcomponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Subcomponent Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#supports> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural relationship indicating being supported."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is Supported By"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf
+<http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#hasTemporaryFacility> .
+<http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess> .
+<http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between temporary facility and its construction stage."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isTemporaryFacilityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Temporary Facility Of"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isUsedIn
+<http://www.semanticweb.org/immersedTunnelOnto#isUsedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isUsedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#isMadeOf> .
+<http://www.semanticweb.org/immersedTunnelOnto#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#Material> .
+<http://www.semanticweb.org/immersedTunnelOnto#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating where a material is used."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is Used In"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#reportsTo
+<http://www.semanticweb.org/immersedTunnelOnto#reportsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#reportsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#reportsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#reportsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines organizational reporting relationships between personnel per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#reportsTo> <http://www.w3.org/2000/01/rdf-schema#label> "reports To"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#supervises
+<http://www.semanticweb.org/immersedTunnelOnto#supervises> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#supervises> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/immersedTunnelOnto#reportsTo> .
+<http://www.semanticweb.org/immersedTunnelOnto#supervises> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#supervises> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#supervises> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines supervision relationships between personnel per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#supervises> <http://www.w3.org/2000/01/rdf-schema#label> "supervises"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#supports
+<http://www.semanticweb.org/immersedTunnelOnto#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#supports> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural relationship indicating support."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#contains
+<http://www.semanticweb.org/immersedTunnelOnto#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence
+<http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequence number for assembly order."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAssemblySequence> <http://www.w3.org/2000/01/rdf-schema#label> "has Assembly Sequence"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPartCount
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of parts in a whole."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartCount> <http://www.w3.org/2000/01/rdf-schema#label> "has Part Count"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Position of a part within the whole."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPartPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has Part Position"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#isPartOf
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ConstructionPersonnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ConstructionProcess
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DesignPersonnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelProject
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#JointComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#Material
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint on part-whole relationships."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MereologicalConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Mereological Constraint"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PipeSection
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#Process
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ProjectDeliverable
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ProjectLeader
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ReservedComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SafetyComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem
+# 
+# http://www.w3.org/2002/07/owl#ObjectProperty
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/immersedTunnelOnto#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial relationship indicating spatial containment."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+# 
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial relationship indicating adjacency."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isAdjacentTo> <http://www.w3.org/2000/01/rdf-schema#label> "is Adjacent To"@en .
+# 
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Weak aggregation relationship where part is aggregated by whole."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isAggregatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is Aggregated By"@en .
+# 
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating physical connection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isConnectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is Connected To"@en .
+# 
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "General part-whole relationship where the domain is a part of the range."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is Part Of"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

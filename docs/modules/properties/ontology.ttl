@@ -1,0 +1,1151 @@
+@prefix : <http://www.semanticweb.org/immersedTunnelOnto/modulars/properties#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/immersedTunnelOnto/modulars/properties#> .
+
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/properties> rdf:type owl:Ontology ;
+                                                                     owl:imports <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstraint> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain owl:DatatypeProperty ;
+                                                              rdfs:range <http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> ;
+                                                              rdfs:comment "Links a property to its constraints."@en ;
+                                                              rdfs:label "has Constraint"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#compressibility
+<http://www.semanticweb.org/immersedTunnelOnto#compressibility> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> ;
+                                                                rdfs:range xsd:decimal ;
+                                                                rdfs:comment "Compressibility of soil in m²/N."@en ;
+                                                                rdfs:label "compressibility"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#deformationModulus
+<http://www.semanticweb.org/immersedTunnelOnto#deformationModulus> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> ;
+                                                                   rdfs:range xsd:decimal ;
+                                                                   rdfs:comment "Deformation modulus of rock in GPa."@en ;
+                                                                   rdfs:label "deformation modulus"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#elasticModulus
+<http://www.semanticweb.org/immersedTunnelOnto#elasticModulus> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> ;
+                                                               rdfs:range xsd:decimal ;
+                                                               rdfs:comment "Elastic modulus of soil in MPa."@en ;
+                                                               rdfs:label "elastic modulus"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAbstract
+<http://www.semanticweb.org/immersedTunnelOnto#hasAbstract> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper>
+                                                                                        <http://www.semanticweb.org/immersedTunnelOnto#Monograph>
+                                                                                        <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication>
+                                                                                      )
+                                                                        ] ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:comment "Abstract or summary of the academic publication."@en ;
+                                                            rdfs:label "has Abstract"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> ,
+                                                                                  <http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> ;
+                                                               rdfs:comment "Alpha1 (α1) angle in degrees for geometric section parameters per HPDI classification."@en ,
+                                                                            "Alpha1 (α1) angle parameter for geometric section positioning in degrees."@en ;
+                                                               rdfs:label "has Alpha1 Angle"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> ,
+                                                                                  <http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> ;
+                                                               rdfs:comment "Alpha2 (α2) angle in degrees for geometric section parameters per HPDI classification."@en ,
+                                                                            "Alpha2 (α2) angle parameter for geometric section positioning in degrees."@en ;
+                                                               rdfs:label "has Alpha2 Angle"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> ;
+                                                              rdfs:range xsd:double ;
+                                                              rdfs:comment "Primary angular parameter (α) for geometric specifications per HPDI classification."@en ;
+                                                              rdfs:label "has Alpha Angle"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> ;
+                                                                   rdfs:range xsd:decimal ;
+                                                                   rdfs:comment "Base property for angular measurements in degrees."@en ;
+                                                                   rdfs:label "has Angular Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                               rdfs:comment "Height of the anode body in meters."@en ;
+                                                               rdfs:label "has Anode Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDimension> ;
+                                                                 rdfs:range xsd:decimal ;
+                                                                 rdfs:comment "Two-dimensional spatial measurement expressed in square meters, defining surface areas, cross-sectional areas, or coverage extents of tunnel components according to geometric calculation methods and GBT 51318-2019 design requirements."@en ;
+                                                                 rdfs:label "has Area Dimension"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasAuthor
+<http://www.semanticweb.org/immersedTunnelOnto#hasAuthor> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain [ rdf:type owl:Class ;
+                                                                        owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper>
+                                                                                      <http://www.semanticweb.org/immersedTunnelOnto#Monograph>
+                                                                                      <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication>
+                                                                                    )
+                                                                      ] ;
+                                                          rdfs:range xsd:string ;
+                                                          rdfs:comment "Author(s) of the academic publication."@en ;
+                                                          rdfs:label "has Author"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication
+<http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:comment "Backfill requirements conforming to GBT 51318-2019 Section 11.4 specifications. Backfill materials must be high-quality, well-graded, permeable, non-liquefiable, and durable per Section 11.4.1. Placement follows bottom-up layer-by-layer principle ensuring stability and symmetry per Section 11.4.2 with elevation difference between sides ≤500mm, final deviation ≤300mm. Post-connection lock-in backfill applied both sides of joint with 8-10m length, height not exceeding pipe crown per Section 11.4.3. Top protection backfill minimum thickness ≥1.5m determined by ship grounding, anchoring, and scouring considerations per Section 11.4.4."@en ;
+                                                                      rdfs:label "has Backfill Indication"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                              rdfs:comment "Height of the anode base in meters."@en ;
+                                                              rdfs:label "has Base Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:comment "Technical specification for base plate."@en ;
+                                                                          rdfs:label "has Base Plate Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                             rdfs:comment "Width of the anode base in meters."@en ;
+                                                             rdfs:label "has Base Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                    rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter> ;
+                                                                    rdfs:comment "Distance from a reference baseline in meters."@en ;
+                                                                    rdfs:label "has Baseline Distance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> ,
+                                                                                      <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                   rdfs:comment "Bearing diameter of sacrificial anode in meters."@en ,
+                                                                                "Bearing diameter of sacrificial anode in millimeters per HPDI specifications."@en ;
+                                                                   rdfs:label "has Bearing Diameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing> ;
+                                                                 rdfs:comment "Bearing height of sacrificial anode in millimeters per HPDI specifications."@en ;
+                                                                 rdfs:label "has Bearing Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                  rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing> ;
+                                                                  rdfs:comment "Spacing between sacrificial anode bearings in meters per HPDI specifications."@en ;
+                                                                  rdfs:label "has Bearing Spacing"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> ,
+                                                                                <http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> ;
+                                                             rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> ;
+                                                             rdfs:comment "Beta (β) angle in degrees for geometric section parameters per HPDI classification."@en ,
+                                                                          "Beta (β) angle parameter for geometric section positioning in degrees."@en ;
+                                                             rdfs:label "has Beta Angle"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                              rdfs:range xsd:string ;
+                                                                              rdfs:comment "Specification for bracket-to-pipe connection."@en ;
+                                                                              rdfs:label "has Bracket to Pipe Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath
+<http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> ;
+                                                                  rdfs:range xsd:string ;
+                                                                  rdfs:comment "Centerline path on cross-section."@en ;
+                                                                  rdfs:label "has Centerline Path"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDepth> ;
+                                                                rdfs:comment "Depth of chamber in meters."@en ;
+                                                                rdfs:label "has Chamber Depth"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                 rdfs:comment "Height of chamber in meters."@en ;
+                                                                 rdfs:label "has Chamber Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                                rdfs:comment "Width of chamber in meters."@en ;
+                                                                rdfs:label "has Chamber Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:comment "Specification for chord members."@en ;
+                                                                      rdfs:label "has Chord Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                          rdfs:comment "Circumferential spacing in meters."@en ;
+                                                                          rdfs:label "has Circumferential Spacing"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                               rdfs:comment "Clear height inside structure in meters."@en ;
+                                                               rdfs:label "has Clear Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters
+<http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                     rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ConcreteStructureAntiCorrosion> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:comment "Coating parameters for anti-corrosion systems per HPDI specifications."@en ;
+                                                                     rdfs:label "has Coating Parameters"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                           rdfs:range xsd:string ;
+                                                                           rdfs:comment "Specification for column base."@en ;
+                                                                           rdfs:label "has Column Base Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName
+<http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> ;
+                                                                  rdfs:range xsd:string ;
+                                                                  rdfs:comment "Name of the conference where the academic paper is presented."@en ;
+                                                                  rdfs:label "has Conference Name"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> ;
+                                                                       rdfs:range xsd:string ;
+                                                                       rdfs:comment "Electrochemical degradation resistance classification based on material composition, protective coating systems, and cathodic protection integration according to marine environment exposure standards and GBT 51318-2019 durability specifications."@en ;
+                                                                       rdfs:label "has Corrosion Resistance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDOI
+<http://www.semanticweb.org/immersedTunnelOnto#hasDOI> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain [ rdf:type owl:Class ;
+                                                                     owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper>
+                                                                                   <http://www.semanticweb.org/immersedTunnelOnto#Monograph>
+                                                                                   <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication>
+                                                                                 )
+                                                                   ] ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:comment "Digital Object Identifier for the academic publication."@en ;
+                                                       rdfs:label "has DOI"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDensity
+<http://www.semanticweb.org/immersedTunnelOnto#hasDensity> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                           rdfs:range xsd:decimal ;
+                                                           rdfs:comment "Material mass per unit volume expressed in kilograms per cubic meter (kg/m³), defining the material density for weight calculations, buoyancy analysis, and structural load determination according to GBT 51318-2019 design methodology."@en ;
+                                                           rdfs:label "has Density"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDepth
+<http://www.semanticweb.org/immersedTunnelOnto#hasDepth> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                         rdfs:comment "Depth of component or chamber in meters."@en ;
+                                                         rdfs:label "has Depth"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                            rdfs:comment "Diameter of the component in meters."@en ;
+                                                            rdfs:label "has Diameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasDimension> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> ;
+                                                             rdfs:range xsd:decimal ;
+                                                             rdfs:comment "Quantified spatial measurement property defining component size, extent, or spatial relationship within the immersed tunnel geometric framework. Measured according to GBT 51318-2019 dimensional standards and construction tolerances."@en ;
+                                                             rdfs:label "has Dimension"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasEdition
+<http://www.semanticweb.org/immersedTunnelOnto#hasEdition> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#Monograph> ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:comment "Edition number of the monograph."@en ;
+                                                           rdfs:label "has Edition"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus
+<http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                  rdfs:range xsd:decimal ;
+                                                                  rdfs:comment "Material stiffness property expressed in gigapascals (GPa), defining the ratio of stress to strain within the elastic deformation range according to material testing standards and structural analysis requirements per GBT 51318-2019."@en ;
+                                                                  rdfs:label "has Elastic Modulus"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> ;
+                                                                        rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> ;
+                                                                        rdfs:comment "Diameter of embedded bolt in millimeters."@en ;
+                                                                        rdfs:label "has Embedded Bolt Diameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLength> ;
+                                                                      rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> ;
+                                                                      rdfs:comment "Length of embedded bolt in meters."@en ;
+                                                                      rdfs:label "has Embedded Bolt Length"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                         rdfs:comment "Environmental resistance characteristic defining component performance under marine, atmospheric, or subsurface exposure conditions according to applicable environmental exposure classifications and GBT 51318-2019 durability requirements."@en ;
+                                                                         rdfs:label "has Environmental Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius
+<http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                rdfs:comment "Fillet radius of anode leg in meters."@en ;
+                                                                rdfs:label "has Fillet Radius"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLength> ;
+                                                                    rdfs:comment "Length of final joint in meters."@en ;
+                                                                    rdfs:label "has Final Joint Length"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                     rdfs:comment "Fundamental geometric measurement property for quantifying spatial dimensions, angular orientations, and geometric relationships of tunnel components according to GBT 51318-2019 dimensional specifications and construction tolerances."@en ;
+                                                                     rdfs:label "has Geometric Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasHeight> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                          rdfs:comment "Height of the component in meters."@en ;
+                                                          rdfs:label "has Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> ;
+                                                                              rdfs:comment "Horizontal distance from the baseline in meters."@en ;
+                                                                              rdfs:label "has Horizontal Baseline Distance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                                 rdfs:comment "Horizontal distance from midline of bottom surface to baseline per HPDI specifications."@en ;
+                                                                                 rdfs:label "has Horizontal Distance From Midline"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasISBN
+<http://www.semanticweb.org/immersedTunnelOnto#hasISBN> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#Monograph> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:comment "International Standard Book Number for monographs and books."@en ;
+                                                        rdfs:label "has ISBN"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasISSN
+<http://www.semanticweb.org/immersedTunnelOnto#hasISSN> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:comment "International Standard Serial Number for journal publications."@en ;
+                                                        rdfs:label "has ISSN"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition
+<http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> ;
+                                                                   rdfs:comment "Initial position specification for structural component per HPDI requirements."@en ;
+                                                                   rdfs:label "has Initial Position"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber
+<http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:comment "Issue number of the journal publication."@en ;
+                                                               rdfs:label "has Issue Number"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:comment "Technical specification for jack."@en ;
+                                                                     rdfs:label "has Jack Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasJournalName
+<http://www.semanticweb.org/immersedTunnelOnto#hasJournalName> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:comment "Name of the journal where the academic paper is published."@en ;
+                                                               rdfs:label "has Journal Name"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasKeywords
+<http://www.semanticweb.org/immersedTunnelOnto#hasKeywords> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper>
+                                                                                        <http://www.semanticweb.org/immersedTunnelOnto#Monograph>
+                                                                                        <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication>
+                                                                                      )
+                                                                        ] ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:comment "Keywords or subject terms for the academic publication."@en ;
+                                                            rdfs:label "has Keywords"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> ;
+                                                                        rdfs:comment "Clear width of left carriageway in meters."@en ;
+                                                                        rdfs:label "has Left Carriageway Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeLeg> ;
+                                                               rdfs:comment "Leg diameter of sacrificial anode in millimeters per HPDI specifications."@en ;
+                                                               rdfs:label "has Leg Diameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                             rdfs:comment "Height of anode leg in meters."@en ;
+                                                             rdfs:label "has Leg Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasLength> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                          rdfs:comment "Length of the component in meters."@en ;
+                                                          rdfs:label "has Length"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDimension> ;
+                                                                   rdfs:range xsd:decimal ;
+                                                                   rdfs:comment "One-dimensional spatial measurement expressed in meters, defining length, width, height, thickness, or other linear extents of tunnel components according to metric dimensional standards and GBT 51318-2019 construction specifications."@en ;
+                                                                   rdfs:label "has Linear Dimension"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity
+<http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> ;
+                                                                rdfs:range xsd:decimal ;
+                                                                rdfs:comment "Maximum design load resistance expressed in kilonewtons (kN), defining the ultimate load-bearing capacity of structural components under specified loading conditions according to limit state design principles and GBT 51318-2019 safety requirements."@en ;
+                                                                rdfs:label "has Load Capacity"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning
+<http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> ;
+                                                                           rdfs:comment "Longitudinal positioning specification."@en ;
+                                                                           rdfs:label "has Longitudinal Positioning"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                      rdfs:comment "Height of lower chamfer in meters."@en ;
+                                                                      rdfs:label "has Lower Chamfer Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                                     rdfs:comment "Width of lower chamfer in meters."@en ;
+                                                                     rdfs:label "has Lower Chamfer Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                    rdfs:comment "Fundamental material characteristic property defining mechanical, physical, or chemical attributes of tunnel component materials according to applicable material standards and GBT 51318-2019 material specification requirements."@en ;
+                                                                    rdfs:label "has Material Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> ;
+                                                                rdfs:range xsd:decimal ;
+                                                                rdfs:comment "Upper limit of acceptable dimensional deviation from nominal design values, expressed in millimeters, according to component-specific tolerance classifications and GBT 51318-2019 quality assurance protocols."@en ;
+                                                                rdfs:label "has Maximum Deviation"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> ;
+                                                            rdfs:range xsd:decimal ;
+                                                            rdfs:comment "Maximum allowable value for a property."@en ;
+                                                            rdfs:label "has Maximum Value"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> ;
+                                                                rdfs:range xsd:decimal ;
+                                                                rdfs:comment "Lower limit of acceptable dimensional deviation from nominal design values, expressed in millimeters, according to component-specific tolerance classifications and GBT 51318-2019 quality assurance protocols."@en ;
+                                                                rdfs:label "has Minimum Deviation"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasMinValue
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinValue> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> ;
+                                                            rdfs:range xsd:decimal ;
+                                                            rdfs:comment "Minimum allowable value for a property."@en ;
+                                                            rdfs:label "has Minimum Value"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                             rdfs:comment "Clear net height inside chamber or space in meters."@en ;
+                                                             rdfs:label "has Net Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                            rdfs:comment "Clear net width inside chamber or carriageway in meters."@en ;
+                                                            rdfs:label "has Net Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                        rdfs:comment "Distance from outer contour in meters."@en ;
+                                                                        rdfs:label "has Outer Contour Distance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPageRange
+<http://www.semanticweb.org/immersedTunnelOnto#hasPageRange> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain [ rdf:type owl:Class ;
+                                                                           owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper>
+                                                                                         <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication>
+                                                                                       )
+                                                                         ] ;
+                                                             rdfs:range xsd:string ;
+                                                             rdfs:comment "Page range of the academic paper or chapter in format 'start-end'."@en ;
+                                                             rdfs:label "has Page Range"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                       rdfs:comment "Functional capability characteristic defining operational capacity, service performance, or behavioral attributes of tunnel components under specified service conditions according to GBT 51318-2019 performance requirements."@en ;
+                                                                       rdfs:label "has Performance Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:comment "Specifies certifications required for personnel roles per HPDI classification."@en ;
+                                                                          rdfs:label "has Personnel Certification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:comment "Specifies required qualifications for personnel roles per HPDI classification."@en ;
+                                                                          rdfs:label "has Personnel Qualification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                 rdfs:range xsd:string ;
+                                                                 rdfs:comment "Specifies the role assignment for personnel in immersed tunnel projects per HPDI classification."@en ;
+                                                                 rdfs:label "has Personnel Role"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPositioning
+<http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:comment "Positioning specification for component."@en ;
+                                                               rdfs:label "has Positioning"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLength> ;
+                                                                         rdfs:comment "Length of protective cover in meters."@en ;
+                                                                         rdfs:label "has Protective Cover Length"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                            rdfs:range xsd:string ;
+                                                                            rdfs:comment "Structural specification for protective cover."@en ;
+                                                                            rdfs:label "has Protective Cover Structure"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasPublisher
+<http://www.semanticweb.org/immersedTunnelOnto#hasPublisher> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain [ rdf:type owl:Class ;
+                                                                           owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#Monograph>
+                                                                                         <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication>
+                                                                                       )
+                                                                         ] ;
+                                                             rdfs:range xsd:string ;
+                                                             rdfs:comment "Publisher of the monograph or scientific publication."@en ;
+                                                             rdfs:label "has Publisher"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                 rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> ;
+                                                                 rdfs:comment "Diameter of reinforcement bar in millimeters per HPDI specifications."@en ,
+                                                                              "Diameter of reinforcement bar in millimeters."@en ;
+                                                                 rdfs:label "has Rebar Diameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLength> ,
+                                                                                  <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                               rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> ;
+                                                               rdfs:comment "Length of reinforcement bar in meters per HPDI specifications."@en ,
+                                                                            "Length of reinforcement bar in meters."@en ;
+                                                               rdfs:label "has Rebar Length"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                    rdfs:comment "Size of reserved hole in meters."@en ;
+                                                                    rdfs:label "has Reserved Hole Size"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDepth> ;
+                                                                         rdfs:comment "Depth of reserved pipe slot in meters."@en ;
+                                                                         rdfs:label "has Reserved Pipe Slot Depth"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                                         rdfs:comment "Width of reserved pipe slot in meters."@en ;
+                                                                         rdfs:label "has Reserved Pipe Slot Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea
+<http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:comment "Defines the area of responsibility for personnel roles per HPDI classification."@en ;
+                                                                      rdfs:label "has Responsibility Area"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                       rdfs:comment "Retaining wall height above design elevation in meters."@en ;
+                                                                       rdfs:label "has Retaining Wall Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                              rdfs:comment "Spacing between ribs in meters."@en ;
+                                                              rdfs:label "has Rib Spacing"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:comment "Technical specification for structural rib per HPDI requirements."@en ;
+                                                                    rdfs:label "has Rib Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> ;
+                                                                         rdfs:comment "Clear width of right carriageway in meters."@en ;
+                                                                         rdfs:label "has Right Carriageway Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> ;
+                                                               rdfs:comment "Diameter of rod in millimeters."@en ;
+                                                               rdfs:label "has Rod Diameter"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                     rdfs:comment "Height of sealing wall in meters."@en ;
+                                                                     rdfs:label "has Sealing Wall Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters
+<http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:comment "Section parameters for structural component."@en ;
+                                                                     rdfs:label "has Section Parameters"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition
+<http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:comment "Position of a segment within the pipe section."@en ;
+                                                                   rdfs:label "has Segment Position"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife
+<http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> ;
+                                                               rdfs:range xsd:integer ;
+                                                               rdfs:comment "Design operational duration expressed in years, defining the expected functional lifespan of tunnel components under normal service conditions according to durability requirements and GBT 51318-2019 lifecycle specifications."@en ;
+                                                               rdfs:label "has Service Life"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:comment "Model specification for steel bundle in prestressed cables."@en ;
+                                                                    rdfs:label "has Steel Bundle Model"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasThickness> ;
+                                                                       rdfs:comment "Thickness of steel plate in millimeters."@en ;
+                                                                       rdfs:label "has Steel Plate Thickness"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasStrength
+<http://www.semanticweb.org/immersedTunnelOnto#hasStrength> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                            rdfs:range xsd:decimal ;
+                                                            rdfs:comment "Material resistance capacity expressed in megapascals (MPa), defining the maximum stress that a material can withstand before failure under specified loading conditions according to material testing standards and GBT 51318-2019 strength requirements."@en ;
+                                                            rdfs:label "has Strength"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                               rdfs:comment "Spacing between welding studs in meters."@en ;
+                                                               rdfs:label "has Stud Spacing"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:comment "Technical specification for welding stud per HPDI requirements."@en ,
+                                                                                  "Technical specification of welding stud."@en ;
+                                                                     rdfs:label "has Stud Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                                               owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt>
+                                                                                             <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar>
+                                                                                           )
+                                                                             ] ;
+                                                                 rdfs:comment "Height of support structure in meters."@en ;
+                                                                 rdfs:label "has Support Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLength> ;
+                                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                                               owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt>
+                                                                                             <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar>
+                                                                                           )
+                                                                             ] ;
+                                                                 rdfs:comment "Length of support structure in meters."@en ;
+                                                                 rdfs:label "has Support Length"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                                rdfs:domain [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt>
+                                                                                            <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar>
+                                                                                          )
+                                                                            ] ;
+                                                                rdfs:comment "Width of support structure in meters."@en ;
+                                                                rdfs:label "has Support Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasThickness
+<http://www.semanticweb.org/immersedTunnelOnto#hasThickness> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                             rdfs:comment "Thickness of the component in millimeters."@en ;
+                                                             rdfs:label "has Thickness"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> ;
+                                                                     rdfs:comment "Manufacturing or construction tolerance specification defining acceptable dimensional variance limits for tunnel components according to GBT 51318-2019 quality control requirements and precision fabrication standards."@en ;
+                                                                     rdfs:label "has Tolerance Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                    rdfs:comment "Height of top chamfer in meters."@en ;
+                                                                    rdfs:label "has Top Chamfer Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                                   rdfs:comment "Width of top chamfer in meters."@en ;
+                                                                   rdfs:label "has Top Chamfer Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                               rdfs:comment "Height of tower structure in meters."@en ;
+                                                               rdfs:label "has Tower Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                              rdfs:comment "Height of waterstop tube in meters."@en ;
+                                                              rdfs:label "has Tube Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                             rdfs:comment "Width of waterstop tube in meters."@en ;
+                                                             rdfs:label "has Tube Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasUnit
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnit> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain owl:DatatypeProperty ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:comment "Unit of measurement for a property."@en ;
+                                                        rdfs:label "has Unit"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:comment "Unit specification for equipment or component."@en ;
+                                                                     rdfs:label "has Unit Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> ;
+                                                                      rdfs:comment "Height of upper chamfer in meters."@en ;
+                                                                      rdfs:label "has Upper Chamfer Height"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> ;
+                                                                     rdfs:comment "Width of upper chamfer (left/right) in meters."@en ;
+                                                                     rdfs:label "has Upper Chamfer Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> ;
+                                                                            rdfs:comment "Vertical distance from the baseline in meters."@en ;
+                                                                            rdfs:label "has Vertical Baseline Distance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                                rdfs:comment "Vertical distance from midpoint of bottom surface to baseline per HPDI specifications."@en ;
+                                                                                rdfs:label "has Vertical Distance From Midpoint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasDimension> ;
+                                                                   rdfs:range xsd:decimal ;
+                                                                   rdfs:comment "Three-dimensional spatial measurement expressed in cubic meters, defining volumetric capacity, material quantities, or spatial occupation of tunnel components according to geometric calculation methods and GBT 51318-2019 design specifications."@en ;
+                                                                   rdfs:label "has Volume Dimension"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper>
+                                                                                            <http://www.semanticweb.org/immersedTunnelOnto#Monograph>
+                                                                                          )
+                                                                            ] ;
+                                                                rdfs:range xsd:string ;
+                                                                rdfs:comment "Volume number of the journal or publication series."@en ;
+                                                                rdfs:label "has Volume Number"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                         rdfs:range xsd:string ;
+                                                                         rdfs:comment "Technical specification for water bag."@en ;
+                                                                         rdfs:label "has Water Bag Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:comment "Hydrostatic pressure resistance capability expressed according to applicable waterproofing standards and ingress protection ratings, defining component performance under specified water pressure conditions per GBT 51318-2019."@en ;
+                                                                   rdfs:label "has Water Resistance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                                               rdfs:comment "Distance from waterstop centerline in meters."@en ;
+                                                                               rdfs:label "has Waterstop Centerline Distance"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:comment "Technical specification for waterstop."@en ;
+                                                                          rdfs:label "has Waterstop Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:comment "Specification for web members."@en ;
+                                                                    rdfs:label "has Web Specification"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#hasWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasWidth> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> ;
+                                                         rdfs:comment "Width of the component in meters."@en ;
+                                                         rdfs:label "has Width"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#permeability
+<http://www.semanticweb.org/immersedTunnelOnto#permeability> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> ;
+                                                             rdfs:range xsd:decimal ;
+                                                             rdfs:comment "Permeability of soil in m/s."@en ;
+                                                             rdfs:label "permeability"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation
+<http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> ;
+                                                                       rdfs:range xsd:decimal ;
+                                                                       rdfs:comment "Rock Quality Designation (RQD) percentage indicating rock quality."@en ;
+                                                                       rdfs:label "rock quality designation"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#shearStrength
+<http://www.semanticweb.org/immersedTunnelOnto#shearStrength> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> ;
+                                                              rdfs:range xsd:decimal ;
+                                                              rdfs:comment "Shear strength of soil in kPa."@en ;
+                                                              rdfs:label "shear strength"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength
+<http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> ;
+                                                                            rdfs:range xsd:decimal ;
+                                                                            rdfs:comment "Uniaxial compressive strength of rock in MPa."@en ;
+                                                                            rdfs:label "uniaxial compressive strength"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper
+<http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#AngularParameter
+<http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ConcreteStructureAntiCorrosion
+<http://www.semanticweb.org/immersedTunnelOnto#ConcreteStructureAntiCorrosion> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt
+<http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#Monograph
+<http://www.semanticweb.org/immersedTunnelOnto#Monograph> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity
+<http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter
+<http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> rdf:type owl:Class ;
+                                                                   rdfs:comment "Constraint on property values according to standards."@en ;
+                                                                   rdfs:label "Property Constraint"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty> ;
+                                                                       rdfs:comment "Mechanical properties of rock including uniaxial compressive strength, rock quality designation, and deformation modulus."@en ;
+                                                                       rdfs:label "Rock Mechanical Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing
+<http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeLeg
+<http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeLeg> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication
+<http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty> ;
+                                                                       rdfs:comment "Mechanical properties of soil including shear strength, compressibility, permeability, and elastic modulus for IMMTD05."@en ;
+                                                                       rdfs:label "Soil Mechanical Property"@en .
+
+
+###  http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2002/07/owl#DatatypeProperty
+owl:DatatypeProperty rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

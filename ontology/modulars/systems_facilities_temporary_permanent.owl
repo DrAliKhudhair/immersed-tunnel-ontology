@@ -51,7 +51,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility">
         <rdfs:label xml:lang="en">Dry Dock Facility</rdfs:label>
-        <rdfs:comment xml:lang="en">Specialized facility for segment construction including basin, gate systems, and support infrastructure.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specialized dry dock facility for tunnel segment prefabrication with basin, gate systems, and construction support infrastructure.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TemporaryFacility"/>
     </owl:Class>
 
@@ -69,7 +69,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FloatingDock">
         <rdfs:label xml:lang="en">Floating Dock</rdfs:label>
-        <rdfs:comment xml:lang="en">Floating construction facility for segment assembly and transport.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Floating construction facility for segment transportation and positioning with buoyancy control and operational weather requirements.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#DryDockFacility"/>
     </owl:Class>
 
@@ -124,7 +124,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#facilityCapacity">
         <rdfs:label xml:lang="en">facility capacity</rdfs:label>
-        <rdfs:comment xml:lang="en">Operational capacity of the facility.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Facility operational capacity including load capacity, deck area, and operational requirements for construction and maintenance activities.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FacilitySystem"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>

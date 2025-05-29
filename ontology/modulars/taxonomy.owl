@@ -1,6 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/taxonomy">
+    <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Taxonomic Classification Module</rdfs:label>
+    <rdfs:comment xml:lang="en">
+      Taxonomic organization module providing comprehensive classification framework for immersed tunnel domain.
+      Aligned with GBT 51318-2019 standards for systematic component and process classification.
+      
+      This module establishes hierarchical classification of:
+      - Physical and abstract entities in immersed tunnel systems
+      - Component classifications by function and lifecycle
+      - Process taxonomies for design, construction, and operation
+      - Standards-compliant terminology throughout the classification hierarchy
+    </rdfs:comment>
+    <owl:versionInfo>3.2.0-GBT51318-2019-compliant</owl:versionInfo>
     <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
   </owl:Ontology>
   
@@ -9,35 +21,73 @@
   <!-- Top-Level Domain Categories -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity">
     <rdfs:label xml:lang="en">Immersed Tunnel Entity</rdfs:label>
-    <rdfs:comment xml:lang="en">Top-level class for all entities in the immersed tunnel domain.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Top-level class for all entities in the immersed tunnel domain according to GBT 51318-2019 scope and methodology.</rdfs:comment>
   </owl:Class>
   
   <!-- Physical vs Abstract Entities -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity">
     <rdfs:label xml:lang="en">Physical Entity</rdfs:label>
-    <rdfs:comment xml:lang="en">Physical objects and components in immersed tunnel systems.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Physical objects and components in immersed tunnel systems, including structural units, equipment, and constructed elements.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AbstractEntity">
     <rdfs:label xml:lang="en">Abstract Entity</rdfs:label>
-    <rdfs:comment xml:lang="en">Abstract concepts, processes, and information entities.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Abstract concepts, processes, and information entities including design methodologies, standards, and procedural frameworks.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity"/>
   </owl:Class>
   
   <!-- Physical Entity Taxonomy -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem">
     <rdfs:label xml:lang="en">Tunnel System</rdfs:label>
-    <rdfs:comment xml:lang="en">Complete tunnel systems and major assemblies.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Complete tunnel systems and major assemblies constituting the immersed tunnel infrastructure.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
   </owl:Class>
   
-  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent">
-    <rdfs:label xml:lang="en">Tunnel Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Individual components that make up tunnel systems.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity"/>
+  <!-- Tunnel System Taxonomy - GBT 51318-2019 Aligned -->
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnel">
+    <rdfs:label xml:lang="en">Immersed Tunnel</rdfs:label>
+    <rdfs:comment xml:lang="en">Tunnel formed underwater by floating, immersing, and connecting prefabricated structural units in water areas per GBT 51318-2019 Section 2.1.1.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
   </owl:Class>
   
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Element">
+    <rdfs:label xml:lang="en">Element</rdfs:label>
+    <rdfs:comment xml:lang="en">Basic structural unit of immersed tunnel that is prefabricated and can be floated, immersed, and joined underwater per GBT 51318-2019 Section 2.1.2.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedElementsAssembly">
+    <rdfs:label xml:lang="en">Immersed Elements Assembly</rdfs:label>
+    <rdfs:comment xml:lang="en">Complete tunnel formed by connecting all elements together per GBT 51318-2019 Section 2.1.6.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ConnectionTunnel">
+    <rdfs:label xml:lang="en">Connection Tunnel</rdfs:label>
+    <rdfs:comment xml:lang="en">Tunnel structure connecting both ends of immersed tunnel, typically constructed using cut-and-cover method per GBT 51318-2019 Section 2.1.7.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DryDock">
+    <rdfs:label xml:lang="en">Dry Dock</rdfs:label>
+    <rdfs:comment xml:lang="en">Prefabrication facility for tunnel elements with launching, floating, mooring, and positioning functions per GBT 51318-2019 Section 2.1.8.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ClosureJoint">
+    <rdfs:label xml:lang="en">Closure Joint</rdfs:label>
+    <rdfs:comment xml:lang="en">Final connection structure of immersed tunnel system per GBT 51318-2019 Section 2.1.9.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+  </owl:Class>
+  
+  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ShearKey">
+    <rdfs:label xml:lang="en">Shear Key</rdfs:label>
+    <rdfs:comment xml:lang="en">Structural component providing shear resistance between tunnel elements per GBT 51318-2019 Section 2.1.10.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
+  </owl:Class>
+  
+  <!-- Physical Entity Taxonomy -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#Equipment">
     <rdfs:label xml:lang="en">Equipment</rdfs:label>
     <rdfs:comment xml:lang="en">Equipment used in tunnel construction and operation.</rdfs:comment>
@@ -64,32 +114,15 @@
   </owl:Class>
   
   <!-- Component Classification by Function -->
-  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#StructuralComponent">
-    <rdfs:label xml:lang="en">Structural Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Components providing structural support and integrity.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
-  </owl:Class>
-  
-  <!-- Removed WaterproofingComponent class as it's already defined in core.owl with proper FunctionalComponent hierarchy -->
-  
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FoundationComponent">
     <rdfs:label xml:lang="en">Foundation Component</rdfs:label>
     <rdfs:comment xml:lang="en">Components related to tunnel foundation systems.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
   </owl:Class>
   
-  <!-- Component Classification by Lifecycle -->
-  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TemporaryComponent">
-    <rdfs:label xml:lang="en">Temporary Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Components used temporarily during construction.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
-  </owl:Class>
+  <!-- Removed WaterproofingComponent class as it's already defined in core.owl with proper FunctionalComponent hierarchy -->
   
-  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PermanentComponent">
-    <rdfs:label xml:lang="en">Permanent Component</rdfs:label>
-    <rdfs:comment xml:lang="en">Components that remain as part of the permanent structure.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
-  </owl:Class>
+  <!-- Component Classification by Lifecycle - Classes defined in core.owl, referenced here for taxonomy -->
   
   <!-- Process Taxonomy -->
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DesignProcess">
@@ -111,21 +144,15 @@
   </owl:Class>
   
   <!-- Tunnel System Taxonomy -->
-  <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel">
-    <rdfs:label xml:lang="en">Immersed Tube Tunnel</rdfs:label>
-    <rdfs:comment xml:lang="en">Complete immersed tube tunnel system.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
-  </owl:Class>
-  
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PipeSection">
     <rdfs:label xml:lang="en">Pipe Section</rdfs:label>
-    <rdfs:comment xml:lang="en">Individual pipe sections that make up the tunnel.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Prefabricated tubular structural element constituting the primary enclosure components of an immersed tunnel system according to GBT 51318-2019 design specifications. Characterized by standardized cross-sectional geometry, connection interfaces, and integrated structural systems for underwater assembly.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
   </owl:Class>
   
   <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FoundationSystem">
     <rdfs:label xml:lang="en">Foundation System</rdfs:label>
-    <rdfs:comment xml:lang="en">Foundation system supporting the tunnel.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Foundation system for tunnel elements meeting load-bearing, deformation, and stability requirements under all construction and operating conditions.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelSystem"/>
   </owl:Class>
   
@@ -386,13 +413,6 @@
     <rdfs:label xml:lang="en">is Subclass Of</rdfs:label>
     <rdfs:comment xml:lang="en">Taxonomic relationship indicating class hierarchy.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </owl:ObjectProperty>
-  
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#isInstanceOf">
-    <rdfs:label xml:lang="en">is Instance Of</rdfs:label>
-    <rdfs:comment xml:lang="en">Relationship between individuals and their classes.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTunnelEntity"/>
     <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </owl:ObjectProperty>
   

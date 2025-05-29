@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_safety_emergency#"
+     xml:base="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_safety_emergency"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_safety_emergency">
+        <owl:imports rdf:resource="http://www.semanticweb.org/immersedTunnelOnto/modulars/core"/>
+        <rdfs:comment xml:lang="en">
+            Consolidated safety and emergency systems for immersed tunnels.
+            Unifies fire protection, emergency response, evacuation, and safety monitoring systems.
+            Based on GB/T 51318-2019 and JTG 2120-2020 standards.
+            
+            CONSOLIDATES:
+            - Fire protection from mechanical_electrical_systems.owl and ancillary_structures_traffic_engineering.owl
+            - Emergency systems from auxiliary_works_systems.owl
+            - Safety monitoring from multiple modules
+            
+            REPLACES:
+            - Fire protection parts of mechanical_electrical_systems.owl
+            - Emergency parts of auxiliary_works_systems.owl  
+            - Safety parts of ancillary_structures_traffic_engineering.owl
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">Immersed Tunnel Ontology - Safety and Emergency Systems</rdfs:label>
+        <owl:versionInfo>3.0.0 - Consolidated</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasEmergencySystem -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasEmergencySystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem"/>
+        <rdfs:comment xml:lang="en">Links a tunnel to its emergency systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Emergency System</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasFireProtectionSystem -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasFireProtectionSystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem"/>
+        <rdfs:comment xml:lang="en">Links a tunnel to its fire protection systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Fire Protection System</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#hasSafetySystem -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#hasSafetySystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetySystem"/>
+        <rdfs:comment xml:lang="en">Links a tunnel to its safety systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">has Safety System</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#emergencyResponseTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#emergencyResponseTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Maximum response time for emergency systems in seconds.</rdfs:comment>
+        <rdfs:label xml:lang="en">emergency response time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#evacuationCapacity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#evacuationCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EvacuationRoute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Maximum number of people that can be evacuated through the route.</rdfs:comment>
+        <rdfs:label xml:lang="en">evacuation capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#fireResistanceRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/immersedTunnelOnto#fireResistanceRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Fire resistance rating in hours for structural elements.</rdfs:comment>
+        <rdfs:label xml:lang="en">fire resistance rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#AssemblyPoint -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AssemblyPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyExitPlan"/>
+        <rdfs:comment xml:lang="en">Designated safe areas where evacuees gather during emergencies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Assembly Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#AutomaticFireAlarm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#AutomaticFireAlarm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireAlarmSystem"/>
+        <rdfs:comment xml:lang="en">Automatic fire alarm systems connected to detection sensors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Automatic Fire Alarm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#CommunicationCenter -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#CommunicationCenter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyCommunicationSystem"/>
+        <rdfs:comment xml:lang="en">Emergency communication center for coordinating rescue operations and external emergency services.</rdfs:comment>
+        <rdfs:label xml:lang="en">Communication Center</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#DelugeSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#DelugeSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireSuppressionSystem"/>
+        <rdfs:comment xml:lang="en">Deluge fire suppression systems for high-risk areas.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deluge System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencyBroadcastSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyBroadcastSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyCommunicationSystem"/>
+        <rdfs:comment xml:lang="en">Public address system for emergency announcements and evacuation instructions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Broadcast System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencyCallBox -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyCallBox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyCommunicationSystem"/>
+        <rdfs:comment xml:lang="en">Emergency call boxes installed at regular intervals for direct communication with control centers during emergencies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Call Box</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencyCommunicationSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyCommunicationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem"/>
+        <rdfs:comment xml:lang="en">Communication systems for emergency coordination and public announcements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Communication System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencyExitPlan -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyExitPlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EvacuationSystem"/>
+        <rdfs:comment xml:lang="en">Comprehensive evacuation plans and procedures for tunnel emergencies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Exit Plan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencyFloodlight -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyFloodlight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyLightingSystem"/>
+        <rdfs:comment xml:lang="en">High-intensity emergency lighting for critical areas during emergencies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Floodlight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencyLightingSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyLightingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem"/>
+        <rdfs:comment xml:lang="en">Emergency lighting zone for evacuation and safety during power failures or emergencies per JTG 2120-2020 Section 15.4.3.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Lighting System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponse -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem"/>
+        <rdfs:comment xml:lang="en">Emergency response systems and procedures for tunnel operations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencySignage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencySignage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EvacuationSystem"/>
+        <rdfs:comment xml:lang="en">Emergency communication, fire alarms, and evacuation guidance signs per JTG 2120-2020 Section 15.2.5.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency Signage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetySystem"/>
+        <rdfs:comment xml:lang="en">Systems specifically designed for emergency response and evacuation scenarios.</rdfs:comment>
+        <rdfs:label xml:lang="en">Emergency System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EvacuationLight -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EvacuationLight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyLightingSystem"/>
+        <rdfs:comment xml:lang="en">Emergency evacuation lighting to guide occupants to safety exits.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evacuation Light</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EvacuationRoute -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EvacuationRoute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyExitPlan"/>
+        <rdfs:comment xml:lang="en">Designated routes for emergency evacuation with proper signage and lighting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evacuation Route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#EvacuationSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#EvacuationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem"/>
+        <rdfs:comment xml:lang="en">Complete evacuation system including routes, signage, and emergency procedures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evacuation System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ExitSignLight -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ExitSignLight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyLightingSystem"/>
+        <rdfs:comment xml:lang="en">Illuminated exit signs to mark emergency exits and escape routes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exit Sign Light</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireAlarmSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireAlarmSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencySystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionEquipment"/>
+        <rdfs:comment xml:lang="en">Fire alarm system following GB 50116 and GB 16280 standards per JTG 2120-2020 Section 15.7.4.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Alarm System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSensor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSystem"/>
+        <rdfs:comment xml:lang="en">Fire detection sensors using multiple types with independent circuit configurations for comprehensive fire monitoring.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Detection Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionEquipment"/>
+        <rdfs:comment xml:lang="en">Fire detection and alarm systems for early warning and emergency response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Detection System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireProtectionEquipment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem"/>
+        <rdfs:comment xml:lang="en">Equipment used in tunnel fire protection systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Protection Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetySystem"/>
+        <rdfs:comment xml:lang="en">Complete fire protection system for immersed tunnels including detection, suppression, and alarm components meeting resistance requirements by tunnel grade per JTG 2120-2020 Section 14.3.1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Protection System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireResistanceGradeA -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireResistanceGradeA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem"/>
+        <rdfs:comment xml:lang="en">Grade A*/A structures with 2.0 hours minimum fire resistance using RABT curve per JTG 2120-2020 Section 14.3.1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Resistance Grade A</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireResistanceGradeB -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireResistanceGradeB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem"/>
+        <rdfs:comment xml:lang="en">Grade B structures with 1.5 hours minimum fire resistance using RABT standard per JTG 2120-2020 Section 14.3.1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Resistance Grade B</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireResistanceGradeCD -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireResistanceGradeCD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionSystem"/>
+        <rdfs:comment xml:lang="en">Grade C/D structures with 2.0 hours minimum fire resistance using HC temperature curve per JTG 2120-2020 Section 14.3.1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Resistance Grade C/D</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FireSuppressionSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FireSuppressionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireProtectionEquipment"/>
+        <rdfs:comment xml:lang="en">Active fire suppression systems for controlling and extinguishing fires.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fire Suppression System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FixedFireSuppressionSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FixedFireSuppressionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireSuppressionSystem"/>
+        <rdfs:comment xml:lang="en">Fixed installation fire suppression systems including sprinklers and deluge systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fixed Fire Suppression System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#FlameDetector -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#FlameDetector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSystem"/>
+        <rdfs:comment xml:lang="en">Optical flame detection sensors for direct fire detection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flame Detector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#GasDetectionSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#GasDetectionSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetyMonitoringSystem"/>
+        <rdfs:comment xml:lang="en">System for detecting dangerous gases in confined spaces and work areas.</rdfs:comment>
+        <rdfs:label xml:lang="en">Gas Detection System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#HeatDetector -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#HeatDetector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSystem"/>
+        <rdfs:comment xml:lang="en">Heat detection sensors for temperature-based fire detection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Heat Detector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#ManualFireAlarm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#ManualFireAlarm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireAlarmSystem"/>
+        <rdfs:comment xml:lang="en">Manual fire alarm activation points for emergency reporting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Manual Fire Alarm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#PortableExtinguisher -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#PortableExtinguisher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireSuppressionSystem"/>
+        <rdfs:comment xml:lang="en">Portable fire extinguishers strategically placed throughout the tunnel.</rdfs:comment>
+        <rdfs:label xml:lang="en">Portable Extinguisher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#RescueEquipmentStation -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#RescueEquipmentStation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#RescueTeamSetup"/>
+        <rdfs:comment xml:lang="en">Stations with specialized rescue equipment including breathing apparatus, cutting tools, and medical supplies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rescue Equipment Station</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#RescueTeamSetup -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#RescueTeamSetup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#EmergencyResponse"/>
+        <rdfs:comment xml:lang="en">Emergency rescue team organization and equipment for tunnel incidents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rescue Team Setup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#SafetyMonitoringSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SafetyMonitoringSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetySystem"/>
+        <rdfs:comment xml:lang="en">Comprehensive monitoring system for construction and operational safety.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety Monitoring System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#SafetySystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SafetySystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+        <rdfs:comment xml:lang="en">Base class for all safety and emergency systems in immersed tunnel projects.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#SmokeDetector -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SmokeDetector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireDetectionSystem"/>
+        <rdfs:comment xml:lang="en">Smoke detection sensors for early fire warning in tunnel environments.</rdfs:comment>
+        <rdfs:label xml:lang="en">Smoke Detector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#SprinklerSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#SprinklerSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#FireSuppressionSystem"/>
+        <rdfs:comment xml:lang="en">Automatic sprinkler systems for fire suppression in tunnel environments.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sprinkler System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/immersedTunnelOnto#VideoSurveillance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/immersedTunnelOnto#VideoSurveillance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/immersedTunnelOnto#SafetyMonitoringSystem"/>
+        <rdfs:comment xml:lang="en">Video surveillance system with camera coverage requirements per JTG 2120-2020 Section 15.7.2-15.7.3.</rdfs:comment>
+        <rdfs:label xml:lang="en">Video Surveillance</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

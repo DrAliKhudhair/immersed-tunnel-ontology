@@ -1,0 +1,527 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/immersedTunnelOnto", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto/modulars/materials_quality_systems",
+    "version" : "3.0.0 - Enhanced",
+    "labels" : {
+      "en" : "Immersed Tunnel Ontology - Materials and Quality Systems"
+    },
+    "comments" : {
+      "en" : "\n            Enhanced materials and quality control systems for immersed tunnels.\n            Comprehensive material specifications, testing, and quality assurance.\n            Based on GB/T 51318-2019 and JTG 2120-2020 materials standards.\n            \n            CONSOLIDATES:\n            - Material specifications from material_specifications.owl\n            - Quality control from quality_control.owl\n            - Testing procedures and standards\n            - Material properties and performance\n            \n            ENHANCEMENTS:\n            - Advanced material characterization\n            - Smart quality monitoring\n            - Digital material tracking\n            - Performance optimization\n        "
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0.0 - Enhanced",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#BallastConcrete",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BallastConcrete",
+      "en" : "Ballast Concrete"
+    },
+    "comment" : {
+      "en" : "Ballast concrete used for weight adjustment and buoyancy control during immersion operations per HPDI specifications."
+    },
+    "attributes" : [ "external" ],
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#MaterialSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialSystem",
+      "en" : "Material System"
+    },
+    "subClasses" : [ "7", "8" ],
+    "comment" : {
+      "en" : "Base class for materials and quality systems."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#QualityControlSystem",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualityControlSystem",
+      "en" : "Quality Control System"
+    },
+    "subClasses" : [ "11", "12" ],
+    "comment" : {
+      "en" : "Quality control and assurance systems for construction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ReinforcedConcrete",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReinforcedConcrete",
+      "en" : "Reinforced Concrete"
+    },
+    "comment" : {
+      "en" : "Reinforced concrete (RC) structural system for shallow water and short-span applications per HPDI classification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ConcreteMaterial",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConcreteMaterial",
+      "en" : "Concrete Material"
+    },
+    "subClasses" : [ "1" ],
+    "comment" : {
+      "en" : "Various types of concrete used in tunnel construction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ReinforcingSteel",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReinforcingSteel",
+      "en" : "Reinforcing Steel"
+    },
+    "comment" : {
+      "en" : "Steel reinforcement bars and prestressing tendons."
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#QualityInspection",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualityInspection",
+      "en" : "Quality Inspection"
+    },
+    "comment" : {
+      "en" : "Construction quality inspection and verification procedures."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#Steel",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Steel",
+      "en" : "Steel"
+    },
+    "comment" : {
+      "en" : "Steel reinforcement and structural steel materials."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SteelShellConcrete",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SteelShellConcrete",
+      "en" : "Steel Shell Concrete"
+    },
+    "comment" : {
+      "en" : "Steel shell concrete (SSC) combining steel shell with internal concrete for long-span or deep-water conditions per HPDI classification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#Material",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material",
+      "en" : "Material"
+    },
+    "subClasses" : [ "5" ],
+    "comment" : {
+      "en" : "Base class for all materials used in tunnel construction per taxonomy module."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#SteelMaterial",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SteelMaterial",
+      "en" : "Steel Material"
+    },
+    "subClasses" : [ "20" ],
+    "comment" : {
+      "en" : "Various types of steel used in tunnel construction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#WaterproofingMaterial",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterproofingMaterial",
+      "en" : "Waterproofing Material"
+    },
+    "comment" : {
+      "en" : "Materials used for waterproofing and sealing applications."
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PhysicalEntity",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhysicalEntity"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#ConstructionMaterial",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConstructionMaterial",
+      "en" : "Construction Material"
+    },
+    "subClasses" : [ "27", "3", "21", "26", "16" ],
+    "comment" : {
+      "en" : "Materials used in construction processes."
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#AntiAnchorLayer",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AntiAnchorLayer",
+      "en" : "Anti-Anchor Layer"
+    },
+    "comment" : {
+      "en" : "Anti-anchor protection layer at tunnel top with specified thickness and positioning per HPDI requirements."
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#MaterialTesting",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialTesting",
+      "en" : "Material Testing"
+    },
+    "comment" : {
+      "en" : "Material testing procedures and standards compliance."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#PrestressedConcrete",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrestressedConcrete",
+      "en" : "Prestressed Concrete"
+    },
+    "comment" : {
+      "en" : "Prestressed concrete (PC) utilized for added tensile resistance and durability per HPDI classification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#Concrete",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concrete",
+      "en" : "Concrete"
+    },
+    "subClasses" : [ "0", "24", "29", "17" ],
+    "comment" : {
+      "en" : "Concrete materials including normal and high-performance concrete."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "16" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#yieldStrength",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "yieldStrength",
+      "en" : "yield strength"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Yield strength of reinforcing steel in MPa."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "2"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "5",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "8",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "16",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "21",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "23",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.semanticweb.org/immersedTunnelOnto#compressiveStrength",
+    "baseIri" : "http://www.semanticweb.org/immersedTunnelOnto",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "compressiveStrength",
+      "en" : "compressive strength"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Compressive strength of concrete in MPa."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "28"
+  }, {
+    "range" : "1",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "1",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "7",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "range" : "7",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "1",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "7",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "7",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "7",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  } ]
+}

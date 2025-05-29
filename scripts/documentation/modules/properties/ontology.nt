@@ -1,0 +1,1056 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/properties> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a property to its constraints."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has Constraint"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#compressibility
+<http://www.semanticweb.org/immersedTunnelOnto#compressibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#compressibility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#compressibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#compressibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Compressibility of soil in m²/N."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#compressibility> <http://www.w3.org/2000/01/rdf-schema#label> "compressibility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#deformationModulus
+<http://www.semanticweb.org/immersedTunnelOnto#deformationModulus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#deformationModulus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#deformationModulus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#deformationModulus> <http://www.w3.org/2000/01/rdf-schema#comment> "Deformation modulus of rock in GPa."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#deformationModulus> <http://www.w3.org/2000/01/rdf-schema#label> "deformation modulus"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#elasticModulus
+<http://www.semanticweb.org/immersedTunnelOnto#elasticModulus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#elasticModulus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#elasticModulus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#elasticModulus> <http://www.w3.org/2000/01/rdf-schema#comment> "Elastic modulus of soil in MPa."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#elasticModulus> <http://www.w3.org/2000/01/rdf-schema#label> "elastic modulus"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAbstract
+<http://www.semanticweb.org/immersedTunnelOnto#hasAbstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAbstract> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> .
+<http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+<http://www.semanticweb.org/immersedTunnelOnto#Monograph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+<http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAbstract> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAbstract> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract or summary of the academic publication."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAbstract> <http://www.w3.org/2000/01/rdf-schema#label> "has Abstract"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> <http://www.w3.org/2000/01/rdf-schema#comment> "Alpha1 (α1) angle in degrees for geometric section parameters per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> <http://www.w3.org/2000/01/rdf-schema#comment> "Alpha1 (α1) angle parameter for geometric section positioning in degrees."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha1Angle> <http://www.w3.org/2000/01/rdf-schema#label> "has Alpha1 Angle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> <http://www.w3.org/2000/01/rdf-schema#comment> "Alpha2 (α2) angle in degrees for geometric section parameters per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> <http://www.w3.org/2000/01/rdf-schema#comment> "Alpha2 (α2) angle parameter for geometric section positioning in degrees."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlpha2Angle> <http://www.w3.org/2000/01/rdf-schema#label> "has Alpha2 Angle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle> <http://www.w3.org/2000/01/rdf-schema#comment> "Primary angular parameter (α) for geometric specifications per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAlphaAngle> <http://www.w3.org/2000/01/rdf-schema#label> "has Alpha Angle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Base property for angular measurements in degrees."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has Angular Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of the anode body in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAnodeHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Anode Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Two-dimensional spatial measurement expressed in square meters, defining surface areas, cross-sectional areas, or coverage extents of tunnel components according to geometric calculation methods and GBT 51318-2019 design requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAreaDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has Area Dimension"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasAuthor
+<http://www.semanticweb.org/immersedTunnelOnto#hasAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "Author(s) of the academic publication."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "has Author"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication
+<http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication> <http://www.w3.org/2000/01/rdf-schema#comment> "Backfill requirements conforming to GBT 51318-2019 Section 11.4 specifications. Backfill materials must be high-quality, well-graded, permeable, non-liquefiable, and durable per Section 11.4.1. Placement follows bottom-up layer-by-layer principle ensuring stability and symmetry per Section 11.4.2 with elevation difference between sides ≤500mm, final deviation ≤300mm. Post-connection lock-in backfill applied both sides of joint with 8-10m length, height not exceeding pipe crown per Section 11.4.3. Top protection backfill minimum thickness ≥1.5m determined by ship grounding, anchoring, and scouring considerations per Section 11.4.4."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBackfillIndication> <http://www.w3.org/2000/01/rdf-schema#label> "has Backfill Indication"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of the anode base in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Base Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical specification for base plate."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBasePlateSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Base Plate Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of the anode base in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaseWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Base Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Distance from a reference baseline in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has Baseline Distance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Bearing diameter of sacrificial anode in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Bearing diameter of sacrificial anode in millimeters per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Bearing Diameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing> .
+<http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Bearing height of sacrificial anode in millimeters per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Bearing Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing> <http://www.w3.org/2000/01/rdf-schema#comment> "Spacing between sacrificial anode bearings in meters per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBearingSpacing> <http://www.w3.org/2000/01/rdf-schema#label> "has Bearing Spacing"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasAngularDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasAngularProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AngularParameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> <http://www.w3.org/2000/01/rdf-schema#comment> "Beta (β) angle in degrees for geometric section parameters per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> <http://www.w3.org/2000/01/rdf-schema#comment> "Beta (β) angle parameter for geometric section positioning in degrees."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBetaAngle> <http://www.w3.org/2000/01/rdf-schema#label> "has Beta Angle"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification for bracket-to-pipe connection."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasBracketToPipeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Bracket to Pipe Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath
+<http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath> <http://www.w3.org/2000/01/rdf-schema#comment> "Centerline path on cross-section."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCenterlinePath> <http://www.w3.org/2000/01/rdf-schema#label> "has Centerline Path"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDepth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "Depth of chamber in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberDepth> <http://www.w3.org/2000/01/rdf-schema#label> "has Chamber Depth"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of chamber in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Chamber Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of chamber in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChamberWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Chamber Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification for chord members."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasChordSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Chord Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing> <http://www.w3.org/2000/01/rdf-schema#comment> "Circumferential spacing in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCircumferentialSpacing> <http://www.w3.org/2000/01/rdf-schema#label> "has Circumferential Spacing"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Clear height inside structure in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasClearHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Clear Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters
+<http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ConcreteStructureAntiCorrosion> .
+<http://www.semanticweb.org/immersedTunnelOnto#ConcreteStructureAntiCorrosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters> <http://www.w3.org/2000/01/rdf-schema#comment> "Coating parameters for anti-corrosion systems per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCoatingParameters> <http://www.w3.org/2000/01/rdf-schema#label> "has Coating Parameters"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification for column base."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasColumnBaseSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Column Base Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName
+<http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the conference where the academic paper is presented."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasConferenceName> <http://www.w3.org/2000/01/rdf-schema#label> "has Conference Name"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Electrochemical degradation resistance classification based on material composition, protective coating systems, and cathodic protection integration according to marine environment exposure standards and GBT 51318-2019 durability specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasCorrosionResistance> <http://www.w3.org/2000/01/rdf-schema#label> "has Corrosion Resistance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDOI
+<http://www.semanticweb.org/immersedTunnelOnto#hasDOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDOI> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDOI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDOI> <http://www.w3.org/2000/01/rdf-schema#comment> "Digital Object Identifier for the academic publication."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDOI> <http://www.w3.org/2000/01/rdf-schema#label> "has DOI"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDensity
+<http://www.semanticweb.org/immersedTunnelOnto#hasDensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDensity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDensity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDensity> <http://www.w3.org/2000/01/rdf-schema#comment> "Material mass per unit volume expressed in kilograms per cubic meter (kg/m³), defining the material density for weight calculations, buoyancy analysis, and structural load determination according to GBT 51318-2019 design methodology."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDensity> <http://www.w3.org/2000/01/rdf-schema#label> "has Density"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDepth
+<http://www.semanticweb.org/immersedTunnelOnto#hasDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "Depth of component or chamber in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDepth> <http://www.w3.org/2000/01/rdf-schema#label> "has Depth"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Diameter of the component in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Diameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDimension> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantified spatial measurement property defining component size, extent, or spatial relationship within the immersed tunnel geometric framework. Measured according to GBT 51318-2019 dimensional standards and construction tolerances."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has Dimension"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasEdition
+<http://www.semanticweb.org/immersedTunnelOnto#hasEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#comment> "Edition number of the monograph."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEdition> <http://www.w3.org/2000/01/rdf-schema#label> "has Edition"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus
+<http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus> <http://www.w3.org/2000/01/rdf-schema#comment> "Material stiffness property expressed in gigapascals (GPa), defining the ratio of stress to strain within the elastic deformation range according to material testing standards and structural analysis requirements per GBT 51318-2019."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElasticModulus> <http://www.w3.org/2000/01/rdf-schema#label> "has Elastic Modulus"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> .
+<http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Diameter of embedded bolt in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Embedded Bolt Diameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLength> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of embedded bolt in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEmbeddedBoltLength> <http://www.w3.org/2000/01/rdf-schema#label> "has Embedded Bolt Length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Environmental resistance characteristic defining component performance under marine, atmospheric, or subsurface exposure conditions according to applicable environmental exposure classifications and GBT 51318-2019 durability requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has Environmental Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius
+<http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius> <http://www.w3.org/2000/01/rdf-schema#comment> "Fillet radius of anode leg in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFilletRadius> <http://www.w3.org/2000/01/rdf-schema#label> "has Fillet Radius"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLength> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of final joint in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasFinalJointLength> <http://www.w3.org/2000/01/rdf-schema#label> "has Final Joint Length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Fundamental geometric measurement property for quantifying spatial dimensions, angular orientations, and geometric relationships of tunnel components according to GBT 51318-2019 dimensional specifications and construction tolerances."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has Geometric Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of the component in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Horizontal distance from the baseline in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has Horizontal Baseline Distance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline> <http://www.w3.org/2000/01/rdf-schema#comment> "Horizontal distance from midline of bottom surface to baseline per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasHorizontalDistanceFromMidline> <http://www.w3.org/2000/01/rdf-schema#label> "has Horizontal Distance From Midline"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasISBN
+<http://www.semanticweb.org/immersedTunnelOnto#hasISBN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISBN> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISBN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISBN> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Book Number for monographs and books."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISBN> <http://www.w3.org/2000/01/rdf-schema#label> "has ISBN"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasISSN
+<http://www.semanticweb.org/immersedTunnelOnto#hasISSN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISSN> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISSN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISSN> <http://www.w3.org/2000/01/rdf-schema#comment> "International Standard Serial Number for journal publications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasISSN> <http://www.w3.org/2000/01/rdf-schema#label> "has ISSN"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition
+<http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Initial position specification for structural component per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasInitialPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has Initial Position"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber
+<http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Issue number of the journal publication."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasIssueNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has Issue Number"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical specification for jack."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJackSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Jack Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasJournalName
+<http://www.semanticweb.org/immersedTunnelOnto#hasJournalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJournalName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJournalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJournalName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the journal where the academic paper is published."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasJournalName> <http://www.w3.org/2000/01/rdf-schema#label> "has Journal Name"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasKeywords
+<http://www.semanticweb.org/immersedTunnelOnto#hasKeywords> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasKeywords> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasKeywords> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasKeywords> <http://www.w3.org/2000/01/rdf-schema#comment> "Keywords or subject terms for the academic publication."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasKeywords> <http://www.w3.org/2000/01/rdf-schema#label> "has Keywords"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Clear width of left carriageway in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLeftCarriagewayWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Left Carriageway Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeLeg> .
+<http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeLeg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Leg diameter of sacrificial anode in millimeters per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Leg Diameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of anode leg in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLegHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Leg Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of the component in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLength> <http://www.w3.org/2000/01/rdf-schema#label> "has Length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "One-dimensional spatial measurement expressed in meters, defining length, width, height, thickness, or other linear extents of tunnel components according to metric dimensional standards and GBT 51318-2019 construction specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has Linear Dimension"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity
+<http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum design load resistance expressed in kilonewtons (kN), defining the ultimate load-bearing capacity of structural components under specified loading conditions according to limit state design principles and GBT 51318-2019 safety requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLoadCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "has Load Capacity"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning
+<http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitudinal positioning specification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLongitudinalPositioning> <http://www.w3.org/2000/01/rdf-schema#label> "has Longitudinal Positioning"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of lower chamfer in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Lower Chamfer Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of lower chamfer in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLowerChamferWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Lower Chamfer Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Fundamental material characteristic property defining mechanical, physical, or chemical attributes of tunnel component materials according to applicable material standards and GBT 51318-2019 material specification requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has Material Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation> <http://www.w3.org/2000/01/rdf-schema#comment> "Upper limit of acceptable dimensional deviation from nominal design values, expressed in millimeters, according to component-specific tolerance classifications and GBT 51318-2019 quality assurance protocols."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "has Maximum Deviation"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum allowable value for a property."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMaxValue> <http://www.w3.org/2000/01/rdf-schema#label> "has Maximum Value"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation> <http://www.w3.org/2000/01/rdf-schema#comment> "Lower limit of acceptable dimensional deviation from nominal design values, expressed in millimeters, according to component-specific tolerance classifications and GBT 51318-2019 quality assurance protocols."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "has Minimum Deviation"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasMinValue
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum allowable value for a property."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasMinValue> <http://www.w3.org/2000/01/rdf-schema#label> "has Minimum Value"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Clear net height inside chamber or space in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Net Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Clear net width inside chamber or carriageway in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Net Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Distance from outer contour in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasOuterContourDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has Outer Contour Distance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPageRange
+<http://www.semanticweb.org/immersedTunnelOnto#hasPageRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPageRange> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPageRange> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPageRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Page range of the academic paper or chapter in format 'start-end'."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPageRange> <http://www.w3.org/2000/01/rdf-schema#label> "has Page Range"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Functional capability characteristic defining operational capacity, service performance, or behavioral attributes of tunnel components under specified service conditions according to GBT 51318-2019 performance requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has Performance Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies certifications required for personnel roles per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelCertification> <http://www.w3.org/2000/01/rdf-schema#label> "has Personnel Certification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies required qualifications for personnel roles per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelQualification> <http://www.w3.org/2000/01/rdf-schema#label> "has Personnel Qualification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the role assignment for personnel in immersed tunnel projects per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPersonnelRole> <http://www.w3.org/2000/01/rdf-schema#label> "has Personnel Role"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPositioning
+<http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> <http://www.w3.org/2000/01/rdf-schema#comment> "Positioning specification for component."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPositioning> <http://www.w3.org/2000/01/rdf-schema#label> "has Positioning"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLength> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of protective cover in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverLength> <http://www.w3.org/2000/01/rdf-schema#label> "has Protective Cover Length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural specification for protective cover."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasProtectiveCoverStructure> <http://www.w3.org/2000/01/rdf-schema#label> "has Protective Cover Structure"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasPublisher
+<http://www.semanticweb.org/immersedTunnelOnto#hasPublisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#comment> "Publisher of the monograph or scientific publication."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#label> "has Publisher"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Diameter of reinforcement bar in millimeters per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Diameter of reinforcement bar in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Rebar Diameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLength> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of reinforcement bar in meters per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of reinforcement bar in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRebarLength> <http://www.w3.org/2000/01/rdf-schema#label> "has Rebar Length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Size of reserved hole in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedHoleSize> <http://www.w3.org/2000/01/rdf-schema#label> "has Reserved Hole Size"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDepth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "Depth of reserved pipe slot in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotDepth> <http://www.w3.org/2000/01/rdf-schema#label> "has Reserved Pipe Slot Depth"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of reserved pipe slot in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasReservedPipeSlotWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Reserved Pipe Slot Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea
+<http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the area of responsibility for personnel roles per HPDI classification."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasResponsibilityArea> <http://www.w3.org/2000/01/rdf-schema#label> "has Responsibility Area"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Retaining wall height above design elevation in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRetainingWallHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Retaining Wall Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing> <http://www.w3.org/2000/01/rdf-schema#comment> "Spacing between ribs in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpacing> <http://www.w3.org/2000/01/rdf-schema#label> "has Rib Spacing"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical specification for structural rib per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRibSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Rib Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasNetWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Clear width of right carriageway in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRightCarriagewayWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Right Carriageway Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter
+<http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDiameter> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Diameter of rod in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasRodDiameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Rod Diameter"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of sealing wall in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSealingWallHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Sealing Wall Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters
+<http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters> <http://www.w3.org/2000/01/rdf-schema#comment> "Section parameters for structural component."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSectionParameters> <http://www.w3.org/2000/01/rdf-schema#label> "has Section Parameters"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition
+<http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasGeometricProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Position of a segment within the pipe section."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSegmentPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has Segment Position"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife
+<http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasPerformanceProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife> <http://www.w3.org/2000/01/rdf-schema#comment> "Design operational duration expressed in years, defining the expected functional lifespan of tunnel components under normal service conditions according to durability requirements and GBT 51318-2019 lifecycle specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasServiceLife> <http://www.w3.org/2000/01/rdf-schema#label> "has Service Life"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Model specification for steel bundle in prestressed cables."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelBundleModel> <http://www.w3.org/2000/01/rdf-schema#label> "has Steel Bundle Model"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasThickness> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness> <http://www.w3.org/2000/01/rdf-schema#comment> "Thickness of steel plate in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSteelPlateThickness> <http://www.w3.org/2000/01/rdf-schema#label> "has Steel Plate Thickness"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasStrength
+<http://www.semanticweb.org/immersedTunnelOnto#hasStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStrength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Material resistance capacity expressed in megapascals (MPa), defining the maximum stress that a material can withstand before failure under specified loading conditions according to material testing standards and GBT 51318-2019 strength requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStrength> <http://www.w3.org/2000/01/rdf-schema#label> "has Strength"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing> <http://www.w3.org/2000/01/rdf-schema#comment> "Spacing between welding studs in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpacing> <http://www.w3.org/2000/01/rdf-schema#label> "has Stud Spacing"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical specification for welding stud per HPDI requirements."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical specification of welding stud."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasStudSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Stud Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of support structure in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Support Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLength> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of support structure in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportLength> <http://www.w3.org/2000/01/rdf-schema#label> "has Support Length"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of support structure in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasSupportWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Support Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasThickness
+<http://www.semanticweb.org/immersedTunnelOnto#hasThickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasThickness> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasThickness> <http://www.w3.org/2000/01/rdf-schema#comment> "Thickness of the component in millimeters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasThickness> <http://www.w3.org/2000/01/rdf-schema#label> "has Thickness"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty
+<http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturing or construction tolerance specification defining acceptable dimensional variance limits for tunnel components according to GBT 51318-2019 quality control requirements and precision fabrication standards."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasToleranceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has Tolerance Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of top chamfer in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Top Chamfer Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of top chamfer in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTopChamferWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Top Chamfer Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of tower structure in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTowerHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Tower Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of waterstop tube in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Tube Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of waterstop tube in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasTubeWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Tube Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasUnit
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit of measurement for a property."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Unit"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit specification for equipment or component."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUnitSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Unit Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasHeight> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight> <http://www.w3.org/2000/01/rdf-schema#comment> "Height of upper chamfer in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has Upper Chamfer Height"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasWidth> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of upper chamfer (left/right) in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasUpperChamferWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Upper Chamfer Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasBaselineDistance> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Vertical distance from the baseline in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalBaselineDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has Vertical Baseline Distance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Vertical distance from midpoint of bottom surface to baseline per HPDI specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVerticalDistanceFromMidpoint> <http://www.w3.org/2000/01/rdf-schema#label> "has Vertical Distance From Midpoint"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Three-dimensional spatial measurement expressed in cubic meters, defining volumetric capacity, material quantities, or spatial occupation of tunnel components according to geometric calculation methods and GBT 51318-2019 design specifications."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has Volume Dimension"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#Monograph> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Volume number of the journal or publication series."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVolumeNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has Volume Number"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical specification for water bag."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterBagSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Water Bag Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasEnvironmentalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Hydrostatic pressure resistance capability expressed according to applicable waterproofing standards and ingress protection ratings, defining component performance under specified water pressure conditions per GBT 51318-2019."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterResistance> <http://www.w3.org/2000/01/rdf-schema#label> "has Water Resistance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "Distance from waterstop centerline in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopCenterlineDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has Waterstop Centerline Distance"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Technical specification for waterstop."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWaterstopSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Waterstop Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification
+<http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasMaterialProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification for web members."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWebSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "has Web Specification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasWidth
+<http://www.semanticweb.org/immersedTunnelOnto#hasWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWidth> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/immersedTunnelOnto#hasLinearDimension> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of the component in meters."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasWidth> <http://www.w3.org/2000/01/rdf-schema#label> "has Width"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#permeability
+<http://www.semanticweb.org/immersedTunnelOnto#permeability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#permeability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#permeability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#permeability> <http://www.w3.org/2000/01/rdf-schema#comment> "Permeability of soil in m/s."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#permeability> <http://www.w3.org/2000/01/rdf-schema#label> "permeability"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation
+<http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation> <http://www.w3.org/2000/01/rdf-schema#comment> "Rock Quality Designation (RQD) percentage indicating rock quality."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#rockQualityDesignation> <http://www.w3.org/2000/01/rdf-schema#label> "rock quality designation"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#shearStrength
+<http://www.semanticweb.org/immersedTunnelOnto#shearStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#shearStrength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#shearStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#shearStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Shear strength of soil in kPa."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#shearStrength> <http://www.w3.org/2000/01/rdf-schema#label> "shear strength"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength
+<http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniaxial compressive strength of rock in MPa."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#uniaxialCompressiveStrength> <http://www.w3.org/2000/01/rdf-schema#label> "uniaxial compressive strength"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AcademicPaper
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AngularParameter
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ConcreteStructureAntiCorrosion
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EmbeddedBolt
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GeometricParameter
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#Monograph
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PersonnelEntity
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PositionalParameter
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint
+<http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint on property values according to standards."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PropertyConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Property Constraint"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ReinforcementBar
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Mechanical properties of rock including uniaxial compressive strength, rock quality designation, and deformation modulus."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#RockMechanicalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Rock Mechanical Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeBearing
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SacrificialAnodeLeg
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ScientificPublication
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty
+<http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#GeotechnicalProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Mechanical properties of soil including shear strength, compressibility, permeability, and elastic modulus for IMMTD05."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SoilMechanicalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Soil Mechanical Property"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# http://www.w3.org/2002/07/owl#DatatypeProperty
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

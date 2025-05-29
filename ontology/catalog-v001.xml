@@ -2,6 +2,26 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     
     <!-- ========================================= -->
+    <!-- IMMERSED TUNNEL ONTOLOGY CATALOG v3.3.0  -->
+    <!-- GBT 51318-2019 ENHANCED COMPLIANCE       -->
+    <!-- ========================================= -->
+    
+    <!-- 
+    This catalog file maps ontology URIs to their local file locations for the 
+    Immersed Tunnel Engineering Ontology, now enhanced with comprehensive 
+    GBT 51318-2019 "Immersed Tunnel Design Standard" compliance.
+    
+    RECENT ENHANCEMENTS (v3.3.0):
+    - Site Environmental Systems module enhanced with detailed Section 4 requirements
+    - Materials specification system aligned with Section 6 standards  
+    - General design framework incorporating Section 5 requirements
+    - All class definitions enhanced with standards-compliant terminology
+    - Duplicate class definitions resolved (MeteorologicalData cleaned)
+    
+    TOTAL MODULES: 19 (4 Foundation + 6 System + 9 Technical & Management)
+    -->
+    
+    <!-- ========================================= -->
     <!-- CORE FOUNDATION MODULES (4 modules)      -->
     <!-- ========================================= -->
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/core" uri="modulars/core.owl"/>
@@ -20,10 +40,11 @@
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_traffic_transportation" uri="modulars/systems_traffic_transportation.owl"/>
     
     <!-- ========================================= -->
-    <!-- TECHNICAL & MANAGEMENT MODULES (8 modules) -->
+    <!-- TECHNICAL & MANAGEMENT MODULES (9 modules) -->
     <!-- ========================================= -->
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/engineering_design_analysis" uri="modulars/engineering_design_analysis.owl"/>
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/construction_processes_methods" uri="modulars/construction_processes_methods.owl"/>
+    <!-- ENHANCED: Site Environmental Systems with GBT 51318-2019 Section 4, 5, 6 compliance -->
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/site_environmental_systems" uri="modulars/site_environmental_systems.owl"/>
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/geotechnical_foundation_systems" uri="modulars/geotechnical_foundation_systems.owl"/>
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/structural_systems" uri="modulars/structural_systems.owl"/>
@@ -33,8 +54,18 @@
     <uri name="http://www.semanticweb.org/immersedTunnelOnto/modulars/immersed_tunnel_spatial_extensions" uri="modulars/immersed_tunnel_spatial_extensions.owl"/>
     
     <!-- ========================================= -->
-    <!-- MAIN ONTOLOGY                            -->
+    <!-- MAIN ONTOLOGY - GBT 51318-2019 ENHANCED -->
     <!-- ========================================= -->
+    <!-- ENHANCED: Version 3.3.0 with comprehensive GBT 51318-2019 standards compliance -->
     <uri name="http://www.semanticweb.org/immersedTunnelOnto" uri="Immersed_Tunnel_Ontology_Modular.owl"/>
+    
+    <!-- ========================================= -->
+    <!-- STANDARDS REFERENCES                     -->
+    <!-- ========================================= -->
+    <!--
+    Primary Standard: GBT 51318-2019 Immersed Tunnel Design Standard (沉管法隧道设计标准)
+    Supporting Standards: JTG 2120-2020, IFC4.3, ISO 19650
+    Compliance Level: Full alignment with Chinese National Standard terminology and requirements
+    -->
     
 </catalog>

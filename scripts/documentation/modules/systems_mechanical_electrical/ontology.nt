@@ -1,0 +1,346 @@
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/immersedTunnelOnto/modulars/core> .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            Consolidated mechanical and electrical systems for immersed tunnels.\n            Includes ventilation, lighting (excluding emergency), power supply, control, and communication systems.\n            Based on GB/T 51318-2019 and JTG 2120-2020 standards.\n            \n            CONSOLIDATES:\n            - Ventilation systems from mechanical_electrical_systems.owl\n            - Normal lighting systems from mechanical_electrical_systems.owl  \n            - Electrical systems from ancillary_structures_traffic_engineering.owl\n            - Control systems from ancillary_structures_traffic_engineering.owl\n            \n            EXCLUDES:\n            - Emergency lighting (moved to systems_safety_emergency.owl)\n            - Fire protection systems (moved to systems_safety_emergency.owl)\n            - Drainage systems (moved to systems_drainage_utilities.owl)\n        "@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical> <http://www.w3.org/2000/01/rdf-schema#label> "Immersed Tunnel Ontology - Mechanical and Electrical Systems"@en .
+<http://www.semanticweb.org/immersedTunnelOnto/modulars/systems_mechanical_electrical> <http://www.w3.org/2002/07/owl#versionInfo> "3.0.0 - Consolidated" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its control systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its electrical systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Electrical System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its lighting systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasLightingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Lighting System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a tunnel to its ventilation systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#hasVentilationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has Ventilation System"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#airFlowRate
+<http://www.semanticweb.org/immersedTunnelOnto#airFlowRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#airFlowRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#airFlowRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#airFlowRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Air flow rate in cubic meters per second for ventilation systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#airFlowRate> <http://www.w3.org/2000/01/rdf-schema#label> "air flow rate"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel
+<http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Illuminance level in lux for lighting systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#illuminanceLevel> <http://www.w3.org/2000/01/rdf-schema#label> "illuminance level"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#powerRating
+<http://www.semanticweb.org/immersedTunnelOnto#powerRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/immersedTunnelOnto#powerRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#powerRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/immersedTunnelOnto#powerRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Power rating in kilowatts for electrical systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#powerRating> <http://www.w3.org/2000/01/rdf-schema#label> "power rating"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor
+<http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment> .
+<http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensors for monitoring air quality parameters in tunnels including CO, NO, visibility, and temperature."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Air Quality Sensor"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#AutomationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#AutomationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#AutomationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#AutomationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated control systems for tunnel systems integration and response."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#AutomationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Automation System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#COSensor
+<http://www.semanticweb.org/immersedTunnelOnto#COSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#COSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor> .
+<http://www.semanticweb.org/immersedTunnelOnto#COSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Carbon monoxide sensor for air quality monitoring in tunnels."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#COSensor> <http://www.w3.org/2000/01/rdf-schema#label> "CO Sensor"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CableDuct
+<http://www.semanticweb.org/immersedTunnelOnto#CableDuct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CableDuct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#CableDuct> <http://www.w3.org/2000/01/rdf-schema#comment> "Cable ducts for tunnel electrical systems per JTG 2120-2020 Section 14.1.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CableDuct> <http://www.w3.org/2000/01/rdf-schema#label> "Cable Duct"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CentralControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#CentralControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CentralControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#CentralControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Central control system for tunnel operations monitoring and management per JTG 2120-2020 Section 15.7.1."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CentralControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Central Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all communication systems in immersed tunnel projects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Communication System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all control and automation systems in immersed tunnel projects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#DataCommunicationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#DataCommunicationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#DataCommunicationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#DataCommunicationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Data communication systems for tunnel monitoring and control networks."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#DataCommunicationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Data Communication System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ElectricalConduit
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalConduit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalConduit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalConduit> <http://www.w3.org/2000/01/rdf-schema#comment> "Electrical conduits for power and control systems per JTG 2120-2020 Section 14.1.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalConduit> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical Conduit"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ElectricalEquipmentFireRating
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalEquipmentFireRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalEquipmentFireRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalEquipmentFireRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire resistance ratings for electrical equipment per JTG 2120-2020 Section 15.6.3."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalEquipmentFireRating> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical Equipment Fire Rating"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all electrical systems in immersed tunnel projects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EntranceLighting
+<http://www.semanticweb.org/immersedTunnelOnto#EntranceLighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EntranceLighting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#EntranceLighting> <http://www.w3.org/2000/01/rdf-schema#comment> "High-intensity lighting at tunnel entrances to aid driver adaptation per JTG 2120-2020 Section 15.4.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EntranceLighting> <http://www.w3.org/2000/01/rdf-schema#label> "Entrance Lighting"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization
+<http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization> <http://www.w3.org/2000/01/rdf-schema#comment> "Mechanical pressurization system maintaining positive pressure differential between escape passages and tunnel areas for safety."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#EscapePassagePressurization> <http://www.w3.org/2000/01/rdf-schema#label> "Escape Passage Pressurization"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ExhaustAirDuct
+<http://www.semanticweb.org/immersedTunnelOnto#ExhaustAirDuct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExhaustAirDuct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExhaustAirDuct> <http://www.w3.org/2000/01/rdf-schema#comment> "Ducts for removing contaminated air from the tunnel."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ExhaustAirDuct> <http://www.w3.org/2000/01/rdf-schema#label> "Exhaust Air Duct"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ExitLighting
+<http://www.semanticweb.org/immersedTunnelOnto#ExitLighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitLighting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitLighting> <http://www.w3.org/2000/01/rdf-schema#comment> "Increased lighting levels approaching tunnel exits per JTG 2120-2020 Section 15.4.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ExitLighting> <http://www.w3.org/2000/01/rdf-schema#label> "Exit Lighting"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#FireResistantJetFan
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantJetFan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantJetFan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#JetFan> .
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantJetFan> <http://www.w3.org/2000/01/rdf-schema#comment> "Fire-resistant jet fan designed to operate during emergency conditions and smoke extraction."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#FireResistantJetFan> <http://www.w3.org/2000/01/rdf-schema#label> "Fire Resistant Jet Fan"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#GroundingSystem
+<http://www.semanticweb.org/immersedTunnelOnto#GroundingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#GroundingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#GroundingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Electrical grounding and lightning protection system per JTG 2120-2020 Section 15.6.4."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#GroundingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Grounding System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ImmersedTubeTunnel
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#IntercomSystem
+<http://www.semanticweb.org/immersedTunnelOnto#IntercomSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#IntercomSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#IntercomSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Intercom communication system for tunnel operations and emergency coordination."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#IntercomSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Intercom System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#InteriorLighting
+<http://www.semanticweb.org/immersedTunnelOnto#InteriorLighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#InteriorLighting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#InteriorLighting> <http://www.w3.org/2000/01/rdf-schema#comment> "Consistent lighting levels throughout the tunnel interior per JTG 2120-2020 Section 15.4.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#InteriorLighting> <http://www.w3.org/2000/01/rdf-schema#label> "Interior Lighting"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#JetFan
+<http://www.semanticweb.org/immersedTunnelOnto#JetFan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#JetFan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment> .
+<http://www.semanticweb.org/immersedTunnelOnto#JetFan> <http://www.w3.org/2000/01/rdf-schema#comment> "Jet fans for longitudinal ventilation in immersed tunnels, providing thrust and air circulation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#JetFan> <http://www.w3.org/2000/01/rdf-schema#label> "Jet Fan"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LEDBasicLight
+<http://www.semanticweb.org/immersedTunnelOnto#LEDBasicLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDBasicLight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight> .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDBasicLight> <http://www.w3.org/2000/01/rdf-schema#comment> "Basic LED lighting for general tunnel illumination."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDBasicLight> <http://www.w3.org/2000/01/rdf-schema#label> "LED Basic Light"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LEDCounterBeamLight
+<http://www.semanticweb.org/immersedTunnelOnto#LEDCounterBeamLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDCounterBeamLight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight> .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDCounterBeamLight> <http://www.w3.org/2000/01/rdf-schema#comment> "LED counter beam lighting for reducing the black hole effect at tunnel entrances."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDCounterBeamLight> <http://www.w3.org/2000/01/rdf-schema#label> "LED Counter Beam Light"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight
+<http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment> .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight> <http://www.w3.org/2000/01/rdf-schema#comment> "LED lighting fixtures specifically designed for tunnel applications with high efficiency and long life."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LEDTunnelLight> <http://www.w3.org/2000/01/rdf-schema#label> "LED Tunnel Light"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LightingControlCabinet
+<http://www.semanticweb.org/immersedTunnelOnto#LightingControlCabinet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingControlCabinet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment> .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingControlCabinet> <http://www.w3.org/2000/01/rdf-schema#comment> "Control cabinet for managing tunnel lighting systems including dimming and scheduling."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingControlCabinet> <http://www.w3.org/2000/01/rdf-schema#label> "Lighting Control Cabinet"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment
+<http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment used in tunnel normal lighting systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Lighting Equipment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#LightingSystem
+<http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Normal operational lighting system for immersed tunnels per JTG 2120-2020 Section 15.4. Excludes emergency lighting which is in safety systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Lighting System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent> .
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for all mechanical systems in immersed tunnel projects."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Mechanical System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MechanicalVentilation
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalVentilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalVentilation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalVentilation> <http://www.w3.org/2000/01/rdf-schema#comment> "Mechanical ventilation system for tunnels >1000m per JTG 2120-2020 Section 15.3.3."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MechanicalVentilation> <http://www.w3.org/2000/01/rdf-schema#label> "Mechanical Ventilation"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#MonitoringControlSystem
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ControlSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringControlSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Systems for monitoring and controlling tunnel mechanical and electrical systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#MonitoringControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Monitoring Control System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#NOSensor
+<http://www.semanticweb.org/immersedTunnelOnto#NOSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#NOSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor> .
+<http://www.semanticweb.org/immersedTunnelOnto#NOSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Nitrogen oxide sensor for air quality monitoring in tunnels."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#NOSensor> <http://www.w3.org/2000/01/rdf-schema#label> "NO Sensor"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PowerLoadClassification
+<http://www.semanticweb.org/immersedTunnelOnto#PowerLoadClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerLoadClassification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerLoadClassification> <http://www.w3.org/2000/01/rdf-schema#comment> "Classification of power loads by criticality per JTG 2120-2020 Section 15.6.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerLoadClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Power Load Classification"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PowerSupplyFacility
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplyFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplyFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplyFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "Power supply facilities including primary and backup power sources per JTG 2120-2020 Section 15.6.1."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplyFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Power Supply Facility"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#ElectricalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Complete power supply system for tunnel operations per JTG 2120-2020 Section 15.6."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PowerSupplySystem> <http://www.w3.org/2000/01/rdf-schema#label> "Power Supply System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#PublicAddressSystem
+<http://www.semanticweb.org/immersedTunnelOnto#PublicAddressSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#PublicAddressSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#CommunicationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#PublicAddressSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Public address system for operational announcements and information."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#PublicAddressSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Public Address System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#ReversibleJetFan
+<http://www.semanticweb.org/immersedTunnelOnto#ReversibleJetFan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReversibleJetFan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#JetFan> .
+<http://www.semanticweb.org/immersedTunnelOnto#ReversibleJetFan> <http://www.w3.org/2000/01/rdf-schema#comment> "Reversible jet fan capable of bidirectional airflow for flexible ventilation control."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#ReversibleJetFan> <http://www.w3.org/2000/01/rdf-schema#label> "Reversible Jet Fan"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct> .
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct> <http://www.w3.org/2000/01/rdf-schema#comment> "Independent smoke exhaust ducts with ventilation openings for emergency smoke removal and air circulation."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExhaustDuct> <http://www.w3.org/2000/01/rdf-schema#label> "Smoke Exhaust Duct"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SmokeExtractionSystem
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExtractionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExtractionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExtractionSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Smoke extraction system for tunnels >3000m per JTG 2120-2020 Section 15.3.3."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SmokeExtractionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Smoke Extraction System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#SupplyAirDuct
+<http://www.semanticweb.org/immersedTunnelOnto#SupplyAirDuct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#SupplyAirDuct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct> .
+<http://www.semanticweb.org/immersedTunnelOnto#SupplyAirDuct> <http://www.w3.org/2000/01/rdf-schema#comment> "Ducts for supplying fresh air into the tunnel."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#SupplyAirDuct> <http://www.w3.org/2000/01/rdf-schema#label> "Supply Air Duct"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TransitionLighting
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionLighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionLighting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#LightingSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionLighting> <http://www.w3.org/2000/01/rdf-schema#comment> "Gradually reducing lighting levels in transition zones per JTG 2120-2020 Section 15.4.2."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#TransitionLighting> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Lighting"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#TunnelComponent
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment> .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct> <http://www.w3.org/2000/01/rdf-schema#comment> "Ducts for air distribution in tunnel ventilation systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationDuct> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation Duct"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment used in tunnel ventilation systems."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation Equipment"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#MechanicalSystem> .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Complete ventilation system for immersed tunnels including air supply, exhaust, and circulation components per JTG 2120-2020 Section 15.3."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation System"@en .
+# 
+# http://www.semanticweb.org/immersedTunnelOnto#VisibilitySensor
+<http://www.semanticweb.org/immersedTunnelOnto#VisibilitySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/immersedTunnelOnto#VisibilitySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/immersedTunnelOnto#AirQualitySensor> .
+<http://www.semanticweb.org/immersedTunnelOnto#VisibilitySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Visibility sensor for monitoring optical conditions in tunnels."@en .
+<http://www.semanticweb.org/immersedTunnelOnto#VisibilitySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Visibility Sensor"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
