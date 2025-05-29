@@ -5,11 +5,18 @@
 # Development Documentation & Guides
 README_DOCUMENTATION_GUIDE.md
 PROJECT_STRUCTURE.md
+GITHUB_PAGES_SETUP.md
 
 # Development Scripts & Automation
 regenerate_docs.bat
 scripts/documentation/
 scripts/start_webvowl_server.bat
+scripts/entrypoint.sh
+
+# Docker Development Environment (GitHub Actions handles builds)
+docker-compose.yml
+Dockerfile
+.dockerignore
 
 # Local Documentation Generation
 scripts/documentation/
@@ -52,15 +59,21 @@ temp/
 *.tmp
 
 # ====================================================
-# KEEP PUBLIC (Not ignored)
+# MINIMAL PUBLIC REPOSITORY (Not ignored)
 # ====================================================
-# ✅ README.md                    - Public documentation
-# ✅ ontology/                    - Source ontology files  
-# ✅ docs/index.html             - GitHub Pages entry
-# ✅ docs/modules_index.html     - Main navigation
-# ✅ docs/index-en.html          - WIDOCO main docs
-# ✅ docs/ontology.*             - Download files
-# ✅ docs/resources/             - CSS/JS assets
-# ✅ .github/workflows/          - GitHub Actions
-# ✅ docker-compose.yml          - Public Docker setup
-# ✅ Dockerfile                  - Public Docker config
+# ✅ README.md                    - Public documentation only
+# ✅ ontology/                    - Source ontology files (required)
+# ✅ docs/index.html             - GitHub Pages entry point
+# ✅ docs/modules_index.html     - Main navigation page
+# ✅ docs/index-en.html          - WIDOCO main documentation
+# ✅ docs/ontology.*             - Download files (OWL, TTL, etc.)
+# ✅ docs/resources/             - CSS/JS/images for pages
+# ✅ docs/modules/*/index-en.html - Individual module docs
+# ✅ .github/workflows/          - GitHub Actions for auto-deployment
+# ✅ .gitignore                  - This file
+
+# ❌ EXCLUDED (Development only):
+# 🚫 All Docker files            - GitHub Actions handles builds
+# 🚫 Development scripts         - Local automation only  
+# 🚫 Development documentation   - Internal guides only
+# 🚫 Local documentation builds  - Generated locally
