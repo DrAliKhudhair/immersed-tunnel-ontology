@@ -1,23 +1,66 @@
-﻿# Temporary files
-temp_*.owl
-*.tmp
+﻿# ====================================================
+# DEVELOPMENT ENVIRONMENT - LOCAL ONLY
+# ====================================================
 
-# OS generated files
-.DS_Store
-Thumbs.db
+# Development Documentation & Guides
+README_DOCUMENTATION_GUIDE.md
+PROJECT_STRUCTURE.md
 
-# IDE files
+# Development Scripts & Automation
+regenerate_docs.bat
+scripts/documentation/
+scripts/start_webvowl_server.bat
+
+# Local Documentation Generation
+scripts/documentation/
+docs/webvowl/
+docs/modules/*/webvowl/
+
+# ====================================================
+# STANDARD IGNORES
+# ====================================================
+
+# Docker
+.docker/
+Dockerfile.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Local documentation builds (keep source, ignore local builds)
-/local-docs/
-/test-*/
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
 
 # Logs
 *.log
+logs/
 
-# PowerShell execution policy files
-*.ps1.bak
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# ====================================================
+# KEEP PUBLIC (Not ignored)
+# ====================================================
+# ✅ README.md                    - Public documentation
+# ✅ ontology/                    - Source ontology files  
+# ✅ docs/index.html             - GitHub Pages entry
+# ✅ docs/modules_index.html     - Main navigation
+# ✅ docs/index-en.html          - WIDOCO main docs
+# ✅ docs/ontology.*             - Download files
+# ✅ docs/resources/             - CSS/JS assets
+# ✅ .github/workflows/          - GitHub Actions
+# ✅ docker-compose.yml          - Public Docker setup
+# ✅ Dockerfile                  - Public Docker config
