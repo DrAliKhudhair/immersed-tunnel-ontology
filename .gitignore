@@ -23,6 +23,9 @@ scripts/documentation/
 docs/webvowl/
 docs/modules/*/webvowl/
 
+# Ontology Files (source files)
+ontology/
+
 # ====================================================
 # STANDARD IGNORES
 # ====================================================
@@ -62,7 +65,6 @@ temp/
 # MINIMAL PUBLIC REPOSITORY (Not ignored)
 # ====================================================
 # ✅ README.md                    - Public documentation only
-# ✅ ontology/                    - Source ontology files (required)
 # ✅ docs/index.html             - GitHub Pages entry point
 # ✅ docs/modules_index.html     - Main navigation page
 # ✅ docs/index-en.html          - WIDOCO main documentation
@@ -77,3 +79,4 @@ temp/
 # 🚫 Development scripts         - Local automation only  
 # 🚫 Development documentation   - Internal guides only
 # 🚫 Local documentation builds  - Generated locally
+# 🚫 ontology/                   - Source ontology files (development only)
